@@ -9,8 +9,10 @@
 #define LOGIC_ACTIONS_ACTIONHANDLER_H_
 
 class ActionHandler {
+private:
+	TextSet s;
 public:
-	ActionHandler();
+	ActionHandler(TextSet data);
 	virtual ~ActionHandler();
 };
 

@@ -11,7 +11,9 @@ using namespace std;
 
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	CommandExecutor c;
+	TextSet s;
+	ActionHandler a(s);
+	CommandExecutor c(a);
 	c.readConsole();
 	return 0;
 }
