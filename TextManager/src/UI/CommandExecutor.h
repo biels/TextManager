@@ -12,9 +12,10 @@ using namespace std;
 #include <string>
 class CommandExecutor {
 private:
+	ActionHandler a;
 	void executeCommand(vector<string> args);
 public:
-	CommandExecutor();
+	CommandExecutor(ActionHandler a);
 	virtual ~CommandExecutor();
 	void readConsole();
 
