@@ -15,7 +15,7 @@ using namespace std;
 class Text {
 private:
 	string title;
-	string autor;
+	string author;
 	vector<string> content;
 
 public:
@@ -28,7 +28,7 @@ public:
 	virtual ~Text();
 
 	// Modificadores
-	void setAutor(string autor);
+	void setAuthor(string author);
 	/* Pre: El parametre implícit no té autor*/
 	/* Post: L'autor del parametre implícit passa a ser "autor" */
 	void setTitle(string title);
@@ -36,7 +36,7 @@ public:
 	/* Post: El títol del parametre implícit passa a ser "title" */
 
 	// Consultores
-	string getAutor() const;
+	string getAuthor() const;
 	/* Pre: cert */
 	/* Post: el resultat es l'autor del text */
 
