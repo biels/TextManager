@@ -10,7 +10,7 @@
 #include <iostream>
 using namespace std;
 
-CommandExecutor::CommandExecutor() {
+CommandExecutor::CommandExecutor(ActionHandler a) {
 	// TODO Auto-generated constructor stub
 
 }
@@ -22,9 +22,9 @@ CommandExecutor::~CommandExecutor() {
 
 void CommandExecutor::readConsole() {
 	string s;
+	getline(cin, s);
+	istringstream iss (s);
 	vector<string> op;
-	getline (cin, op);
-	istringstream iss (op);
 	while (iss >> s) op.push_back(s);
 	executeCommand(op);
 }
