@@ -10,12 +10,15 @@
 using namespace std;
 #include <vector>
 #include <string>
+#include "../Logic/Actions/ActionHandler.h"
+
 class CommandExecutor {
 private:
 	ActionHandler a;
+	void executeCommand(string args);
 	void executeCommand(vector<string> args);
 public:
-	CommandExecutor(ActionHandler a);
+	CommandExecutor();
 	virtual ~CommandExecutor();
 	void readConsole();
 

@@ -8,10 +8,11 @@
 #include "CommandExecutor.h"
 #include <sstream>
 #include <iostream>
+
+#include "../Logic/Actions/ActionHandler.h"
 using namespace std;
 
-CommandExecutor::CommandExecutor(ActionHandler a) {
-	// TODO Auto-generated constructor stub
+CommandExecutor::CommandExecutor(){
 
 }
 
@@ -21,14 +22,20 @@ CommandExecutor::~CommandExecutor() {
 
 
 void CommandExecutor::readConsole() {
+	string cmd;
+	while(true){
+		getline(cin, cmd);
+		if(cmd == "end")break;
+		executeCommand(cmd);
+	}
+}
+void CommandExecutor::executeCommand(string cmd){
 	string s;
-	getline(cin, s);
-	istringstream iss (s);
+	istringstream iss (cmd);
 	vector<string> op;
 	while (iss >> s) op.push_back(s);
 	executeCommand(op);
 }
-
 void CommandExecutor::executeCommand(vector<string> args) {
-
+	cout << "Cmd executed: " << args[0] << endl;
 }
