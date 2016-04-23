@@ -7,13 +7,16 @@
 //============================================================================
 
 #include <iostream>
+
+#include "Logic/Actions/ActionHandler.h"
+#include "Logic/Data/TextSet.h"
+#include "UI/CommandExecutor.h"
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	TextSet s;
-	ActionHandler a(s);
-	CommandExecutor c(a);
+	CommandExecutor c;
+	cout << "Hello!" << endl;
 	c.readConsole();
+	cout << "See you soon!" << endl;
 	return 0;
 }

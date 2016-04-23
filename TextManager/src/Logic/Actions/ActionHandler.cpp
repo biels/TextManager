@@ -7,12 +7,11 @@
 
 #include "ActionHandler.h"
 
-ActionHandler::ActionHandler() {
-	// TODO Auto-generated constructor stub
+ActionHandler::ActionHandler(){
 
 }
 
 ActionHandler::~ActionHandler() {
-	// TODO Auto-generated destructor stub
+
 }
 

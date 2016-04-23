@@ -7,8 +7,12 @@
 
 #ifndef LOGIC_DATA_TEXTSET_H_
 #define LOGIC_DATA_TEXTSET_H_
+#include "TextSet.h"
+#include "../Entities/Text.h"
 #include <string>
-#include "Text.h"
+using namespace std;
+
+
 class TextSet {
 private:
 
