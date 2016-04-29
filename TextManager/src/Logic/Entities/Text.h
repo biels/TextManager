@@ -91,7 +91,7 @@ public:
 	 * \pre exp és una expressió booleana de paraules.
 	 * \post El resultat són les frases del paràmetre implícit que compleixen exp.
 	 */
-	void printSentenceListByExpression(Expression exp);
+	void printSentenceListByExpression(string expr);
 
 	/** @brief Mostra les frases on hi apareix la seqüència de paraules en el contingut de l'últim text triat.
 	 * \pre word és una seqüència de paraules.
