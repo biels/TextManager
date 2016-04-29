@@ -24,6 +24,9 @@ private:
 	string title;
 	string author;
 	vector<string> content;
+	vector<pair<int,string>> getFrequencyTable();
+	vector<string> getSentenceListByExpression();
+	vector<string> getSentenceListByWord();
 
 public:
 
@@ -52,19 +55,19 @@ public:
 	 * \post El resultat és totes les paraules del text ordenades decreixentment per freqüència.
 	 * En cas d'empat de freqüèencia les paraules s'ordenen creixement, primer per llargada i despréss alfabèticament.
 	 */
-	FrequencyTable getFrequencyTable();
+	void printFrequencyTable();
 
 	/** @brief Mostra les frases del contingut del text triat que compleixen l'expressió.
 	 * \pre exp és una expressió booleana de paraules.
 	 * \post El resultat són les frases del text que compleixen exp.
 	 */
-	SentenceList getSentenceListByExpression(Expression exp);
+	void printSentenceListByExpression(Expression exp);
 
 	/** @brief Mostra les frases on hi apareix la seqüència de paraules en el contingut de l'últim text triat.
 	 * \pre "word" és una seqüència de paraules
 	 * \post El resultat són les frases del text on apareix word.
 	 */
-	SentenceList getSentenceListByWord((Struct) word);
+	void printSentenceListByWord(string word);
 };
 
 #endif /* LOGIC_ENTITIES_TEXT_H_ */
