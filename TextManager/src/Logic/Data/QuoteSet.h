@@ -8,6 +8,9 @@
 #ifndef LOGIC_DATA_QUOTESET_H_
 #define LOGIC_DATA_QUOTESET_H_
 
+#include "../Entities/Quote.h"
+using namespace std;
+
 class QuoteSet {
 private:
 
