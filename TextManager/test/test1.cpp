@@ -9,7 +9,7 @@
 #include <string>
 TEST(TextClass, TitleIntegrity){
 	Text t;
-	//const char* testTitle = "TestTitle";
+	const char* testTitle = "TestTitle";
 	//t.setTitle(testTitle);
 	//EXPECT_TRUE(t.getTitle() == testTitle);
 }

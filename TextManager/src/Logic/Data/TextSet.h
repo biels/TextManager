@@ -9,10 +9,14 @@
 #define LOGIC_DATA_TEXTSET_H_
 #include "TextSet.h"
 #include "../Entities/Text.h"
+#include "../Entities/Quote.h"
 #include <string>
+
 using namespace std;
 
-
+/**@class TextSet
+ * @brief Representa un conjunt de textos
+ */
 class TextSet {
 private:
 	int nextID;
@@ -50,6 +54,10 @@ public:
 	 */
 	bool exists(int id);
 
+	/**@brief Obté un text amb el títol especificat
+	 * \pre Existeix un text amb identificador id
+	 * \post El resultat és el text amb el títol especificat
+	 */
 	Text get(int id);
 	/**@brief Obté un text amb el títol especificat
 	 * \pre Existeix untext amb títol t
