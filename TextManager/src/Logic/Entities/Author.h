@@ -41,7 +41,7 @@ public:
 
 	/** @brief Mostra el cognom de l'autor.
 	 *  \pre Cert.
-	 *  \post El resultat és el cognom del paràmatre implícit.
+	 *  \post El resultat és el cognom del paràmetre implícit.
 	 */
 	string getlastname() const;
 
