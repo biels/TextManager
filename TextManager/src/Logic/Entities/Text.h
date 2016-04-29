@@ -60,7 +60,7 @@ public:
 	 * \pre exp és una expressió booleana de paraules.
 	 * \post El resultat són les frases del text que compleixen exp.
 	 */
-	void printSentenceListByExpression(Expression exp);
+	void printSentenceListByExpression(string exp);
 
 	/** @brief Mostra les frases on hi apareix la seqüència de paraules en el contingut de l'últim text triat.
 	 * \pre "word" és una seqüència de paraules
