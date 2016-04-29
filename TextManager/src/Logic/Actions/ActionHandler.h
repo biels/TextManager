@@ -16,9 +16,13 @@ private:
 public:
 	ActionHandler();
 	virtual ~ActionHandler();
+	//!!!FALTA DOCUMENTAR!!!
+	//Aquí aniria bé documentar exactament cada funció
+	//amb la descripció del pdf de la pràctica
+	//Molt provisional
 	//Texts
 	void afegirText(string titol, string autor, string contingut);
-	void triarText(vector<string>);
+	void triarText(vector<string> words);
 	void eliminarText(string text);
 	void subtitueix(string match, string replace);
 	void textosAutor (string autor);
