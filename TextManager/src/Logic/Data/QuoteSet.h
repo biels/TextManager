@@ -18,11 +18,30 @@ public:
 	QuoteSet();
 	virtual ~QuoteSet();
 
+	/**@brief Afegeix una cita
+	 * \pre Cert
+	 * \post S'ha afegit la cita q al paràmetre implícit
+	 */
 	void add(Quote q);
+
+	/**@brief Elimina una cita
+	 * \pre Cert
+	 * \post Elimina la cita q del paràmetre implícit
+	 */
 	void remove(Quote q);
-	void remove(int id);
+
+	/**@brief Elimina una cita
+	 * \pre Cert
+	 * \post Elimina la cita amb identificador id del paràmetre implícit
+	 */
+	void removeByID(int id);
+
+	/**@brief Comprova si existeix una cita
+	 * \pre Cert
+	 * \post
+	 */
 	bool exists(Quote q);
-	bool exists(int id);
+	bool existsWithID(int id);
 	Quote getByID(int id);
 	QuoteSet getAllByID(int id);
 	QuoteSet getAll();
