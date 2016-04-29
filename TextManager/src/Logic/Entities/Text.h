@@ -24,7 +24,7 @@ private:
 	string title;
 	string author;
 	vector<string> content;
-	vector<pair<int,string>> getFrequencyTable();
+	vector<pair<int,string > > getFrequencyTable();
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
 
