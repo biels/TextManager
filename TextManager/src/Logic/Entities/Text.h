@@ -15,8 +15,7 @@ using namespace std;
 /** @class Text
  *  @brief Representa un contingut que té un autor i un títol.
  *
- *   Els textos poden correspondre a llibres, articles,
- *   manuals, etc.
+ *   Els textos poden correspondre a llibres, articles, manuals, etc.
  */
 
 class Text {
@@ -32,7 +31,7 @@ public:
 
 	/** @brief Creadora per defecte
 	 * \pre Cert
-	 * \post El resultat es un text sense títol, ni autor, ni contingut
+	 * \post El resultat es un text sense títol, ni autor, ni contingut.
 	 */
 	Text();
 
