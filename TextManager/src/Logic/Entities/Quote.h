@@ -8,6 +8,10 @@
 #ifndef LOGIC_ENTITIES_QUOTE_H_
 #define LOGIC_ENTITIES_QUOTE_H_
 
+#include <string>
+
+using namespace std;
+
 /** @class Quote
  * 	@brief Representa una frase o més consecutives d'un text.
  */
@@ -36,7 +40,7 @@ public:
 	 */
 	int getAuthorID();
 
-	/** @rief Estableix l'dentificador de l'autor de la cita.
+	/** @brief Estableix l'dentificador de l'autor de la cita.
 	 *	\pre Cert
 	 *	\post identificator és l'identificador de l'autor del paràmetre implícit.
 	 */
@@ -58,7 +62,7 @@ public:
 	 *	\pre Cert.
 	 *	\post El resultat és l'identificador complet de la cita.
 	 */
-	string getUniqueIdentifier()
+	string getUniqueIdentifier();
 
 };
 
