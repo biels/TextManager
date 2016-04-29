@@ -7,14 +7,16 @@
 
 #ifndef LOGIC_ENTITIES_AUTHOR_H_
 #define LOGIC_ENTITIES_AUTHOR_H_
-
+#include <string>
+using namespace std;
 /** @class Author
  * @brief És una seqüència de paraules que conté nom i cognom d'una sola persona.
  */
 
 class Author {
 private:
-	string name, lastname;
+	string name;
+	string lastname;
 
 public:
 	/** @brief Creadora per defecte
