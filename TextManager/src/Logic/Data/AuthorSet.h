@@ -34,13 +34,13 @@ public:
 	 * \pre Cert
 	 * \post Si el paràmetre implícit conté un autor amb identificador id, aquest s'elimina
 	 */
-	void removeByID(int id);
+	void remove(int id);
 
 	/**@brief Retorna l'autor amb l'identificador especificat
 	 * \pre L'autor amb identificador id existeix
 	 * \post El resultat és la instància de l'autor amb identificador id
 	 */
-	Author getByID(int authorID);
+	Author get(int authorID);
 
 	//Print
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar
