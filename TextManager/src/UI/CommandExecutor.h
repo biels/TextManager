@@ -12,6 +12,10 @@ using namespace std;
 #include <string>
 #include "../Logic/Actions/ActionHandler.h"
 
+/**@class CommandExecutor
+ * @brief Interpreta les comandes que entren pel canal d'entrada estàndar
+ * Aquesta classe s'encarrega únicament de processar la entrada i cridar les accions corresponents a l'ActionHandler
+ */
 class CommandExecutor {
 private:
 	ActionHandler a;
@@ -19,7 +23,12 @@ private:
 	void executeCommand(vector<string> args);
 public:
 	CommandExecutor();
+
 	virtual ~CommandExecutor();
+
+	/**@brief Llegeix el canal d'entrada estàndar
+	 * \post El porgrama finalitzarà la seva execució, perquè l'usuari ho ha demanat
+	 */
 	void readConsole();
 
 };

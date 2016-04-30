@@ -29,7 +29,7 @@ void CommandExecutor::readConsole() {
 		executeCommand(cmd);
 	}
 }
-void CommandExecutor::executeCommand(string cmd){
+void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 	string s;
 	istringstream iss (cmd);
 	vector<string> op;
