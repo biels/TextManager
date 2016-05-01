@@ -29,14 +29,16 @@ void CommandExecutor::readConsole() {
 		executeCommand(cmd);
 	}
 }
-void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
+void CommandExecutor::executeCommand(string cmd){ //Aixï¿½ s'haurï¿½ de millorar
 	string s;
 	istringstream iss (cmd);
 	vector<string> op;
 	while (iss >> s) op.push_back(s);
-	executeCommand(op);
+	//executeCommand(op);
 }
-void CommandExecutor::executeCommand(vector<string> args) {
-	cout << "Cmd executed: " << args[0] << endl;
+void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i, ConditionalExpression ce) {
+	//cout << "Cmd executed: " << args[0] << endl;
 
 }
+
+

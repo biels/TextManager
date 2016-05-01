@@ -6,11 +6,19 @@
  */
 #include "gtest/gtest.h"
 #include "../src/Logic/Entities/Text.h"
+#include "../src/Logic/Actions/DataStructures/ConditionalExpression.h"
 #include <string>
+#include <vector>
+
 TEST(TextClass, TitleIntegrity){
-	Text t;
-	const char* testTitle = "TestTitle";
-	//t.setTitle(testTitle);
-	//EXPECT_TRUE(t.getTitle() == testTitle);
+
+}
+
+TEST(ConditionalExpression, Instantiation){
+	vector<string> v1, v2, v3;
+	ConditionalExpression e;
+	e.op = 1;
+
+
 }
 
