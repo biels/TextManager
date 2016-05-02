@@ -13,8 +13,8 @@ using namespace std;
 #include "../Logic/Actions/ActionHandler.h"
 #include "../Logic/Actions/DataStructures/ConditionalExpression.h"
 /**@class CommandExecutor
- * @brief Interpreta les comandes que entren pel canal d'entrada est�ndar
- * Aquesta classe s'encarrega �nicament de processar la entrada i cridar les accions corresponents a l'ActionHandler
+ * @brief Interpreta les comandes que entren pel canal d'entrada estàndar.
+ * Aquesta classe s'encarrega únicament de processar la entrada i cridar les accions corresponents a l'ActionHandler.
  */
 class CommandExecutor {
 private:
@@ -22,13 +22,14 @@ private:
 	void executeCommand(string args);
 	void executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i, ConditionalExpression ce);
 	static ConditionalExpression parseConditionalExpression(string expr);
+
 public:
 	CommandExecutor();
 
 	virtual ~CommandExecutor();
 
-	/**@brief Llegeix el canal d'entrada est�ndar
-	 * \post El porgrama finalitzar� la seva execuci�, perqu� l'usuari ho ha demanat
+	/**@brief Llegeix el canal d'entrada estàndar.
+	 * \post El programa finalitzarà la seva execució, perquè l'usuari ho ha demanat.
 	 */
 	void readConsole();
 

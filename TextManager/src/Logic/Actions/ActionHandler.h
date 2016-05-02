@@ -12,7 +12,7 @@
 /**
  * @class ActionHandler
  * @brief Gestiona totes les possibles interaccions amb el sistema.
- * Aquesta classe s'encarrega únicament de la interacció amb el sistema de manera conceptual.
+ * Aquesta classe s'encarrega Ãºnicament de la interacciÃ³ amb el sistema de manera conceptual.
  */
 class ActionHandler {
 private:
@@ -21,14 +21,14 @@ public:
 	ActionHandler();
 	virtual ~ActionHandler();
 	//-!!!FALTA DOCUMENTAR!!!
-	//Aquí aniria bé documentar exactament cada funció
-	//amb la descripció del pdf de la pràctica
+	//AquÃ­ aniria bÃ© documentar exactament cada funciÃ³
+	//amb la descripciÃ³ del pdf de la prÃ ctica
 	//Molt provisional
 	//Texts
 
 	/*! Afegeix un text al sistema.
 	 *
-	 * @param titol El títol del text
+	 * @param titol El tÃ­tol del text
 	 * @param autor L'autor del text
 	 * @param contingut El contingut del text, paraula per paraula
 	 */
@@ -42,7 +42,7 @@ public:
 
 	/**@brief Elimina el text seleccionat del sistema
 	 * \pre Hi ha un text seleccionat
-	 * \post El text seleccionat s'ha eliminat. A partir d'aquest moment i fins la propera execució correcta de la funció triarText, es considera que no existeix un últim text triat.
+	 * \post El text seleccionat s'ha eliminat. A partir d'aquest moment i fins la propera execuciÃ³ correcta de la funciÃ³ triarText, es considera que no existeix un Ãºltim text triat.
 	 */
 	void eliminarText();
 	void subtitueix(string match, string replace);

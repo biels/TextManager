@@ -15,7 +15,7 @@
 using namespace std;
 
 /**@class TextSet
- * @brief Representa un conjunt de textos
+ * @brief Representa un conjunt de textos.
  */
 class TextSet {
 private:
@@ -24,50 +24,50 @@ public:
 	TextSet();
 	virtual ~TextSet();
 
-	/**@brief Calcula l'identificador del següent elememnt del conjunt
-	 * \pre Cert
-	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt
+	/**@brief Calcula l'identificador del segÃ¼ent elememnt del conjunt.
+	 * \pre Cert.
+	 * \post El resultat Ã©s l'identificador que ha de tenir el segÃ¼ent element del conjunt.
 	 */
 	int getNextID();
 
-	/**@brief Afegeix un text al conjunt
-	 * \pre Cert
-	 * \post El paràmetre implícit conté el text t
+	/**@brief Afegeix un text al conjunt.
+	 * \pre Cert.
+	 * \post El parÃ metre implÃ­cit contÃ© el text t.
 	 */
 	void add(Text t);
 
-	/**@brief Elimina un text amb identificador id
-	 * \pre Cert
-	 * \post Elimina el text amb identificador id si existeix
+	/**@brief Elimina un text amb identificador id.
+	 * \pre Cert.
+	 * \post Elimina el text amb identificador id si existeix.
 	 */
 	void remove(int id);
 
-	/**@brief Elimina una cita
-	 * \pre Cert
-	 * \post Elimina la cita q del paràmetre implícit
+	/**@brief Elimina una cita.
+	 * \pre Cert.
+	 * \post Elimina la cita q del parÃ metre implÃ­cit.
 	 */
 	void remove(const Quote& q);
 
-	/**@brief Comprova si l'element amb identificador id pertany al conjunt
-	 * \pre Cert
-	 * \post El resultat és cert sí i només sí el text amb identificador id existeix
+	/**@brief Comprova si l'element amb identificador id pertany al conjunt.
+	 * \pre Cert.
+	 * \post El resultat Ã©s cert sÃ­ i nomÃ©s sÃ­ el text amb identificador id existeix.
 	 */
 	bool exists(int id);
 
-	/**@brief Obté un text amb el títol especificat
-	 * \pre Existeix un text amb identificador id
-	 * \post El resultat és el text amb el títol especificat
+	/**@brief ObtÃ© un text amb el tÃ­tol especificat.
+	 * \pre Existeix un text amb identificador id.
+	 * \post El resultat Ã©s el text amb el tÃ­tol especificat.
 	 */
 	Text get(int id);
-	/**@brief Obté un text amb el títol especificat
-	 * \pre Existeix untext amb títol t
-	 * \post El resultat és el text amb el títol especificat
+	/**@brief ObtÃ© un text amb el tÃ­tol especificat.
+	 * \pre Existeix untext amb tÃ­tol t.
+	 * \post El resultat Ã©s el text amb el tÃ­tol especificat.
 	 */
 	Text getByTitle(string t);
 
-	/**@brief Obté tots els textos de l'autor amb identificador authorID
-	 * \pre Existeix un autor amb el títol authorID
-	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id
+	/**@brief ObtÃ© tots els textos de l'autor amb identificador authorID.
+	 * \pre Existeix un autor amb el tÃ­tol authorID.
+	 * \post El resultat Ã©s un conjunt de textos que contÃ© els textos de l'autor id.
 	 */
 	TextSet getAllByAuthor(int id);
 };
