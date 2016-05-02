@@ -20,32 +20,38 @@ public:
 
 	/**@brief Afegeix un autor al conjunt
 	 * \pre Cert
-	 * \post El par‡metre implÌcit contÈ l'autor
+	 * \post El par√†metre impl√≠cit cont√© l'autor
 	 */
 	void add(Author a);
 
 	/**@brief Afegeix un autor al conjunt
 	 * \pre Cert
-	 * \post Si el par‡metre implÌcit contÈ l'autor, aquest s'elimina
+	 * \post Si el par√†metre impl√≠cit cont√© l'autor, aquest s'elimina
 	 */
 	void remove(Author a);
 
 	/**@brief Elimina un autor del conjunt
 	 * \pre Cert
-	 * \post Si el par‡metre implÌcit contÈ un autor amb identificador id, aquest s'elimina
+	 * \post Si el par√†metre impl√≠cit cont√© un autor amb identificador id, aquest s'elimina
 	 */
 	void remove(int id);
 
+	/**@brief Comprova si existeix una cita
+	 * \pre Cert
+	 * \post El resultat √©s cert si i nom√®s si una cita amb identifocador id pertany al conjunt
+	 */
+	bool exists(int id);
+
 	/**@brief Retorna l'autor amb l'identificador especificat
 	 * \pre L'autor amb identificador id existeix
-	 * \post El resultat Ès la inst‡ncia de l'autor amb identificador id
+	 * \post El resultat √©s la inst√†ncia de l'autor amb identificador id
 	 */
 	Author get(int authorID);
 
-	//Print
-	/**@brief Escriu la llista d'autors al canal de sortida est‡ndar
+	//--Output zone--
+	/**@brief Escriu la llista d'autors al canal de sortida est√†ndar
 	 * \pre Cert
-	 * \post S'ha escrit la llista  d'autors al canal de sortida est‡ndar
+	 * \post S'ha escrit la llista  d'autors al canal de sortida est√†ndar
 	 */
 	void printAuthorList();
 };
