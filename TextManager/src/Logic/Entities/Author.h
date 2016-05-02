@@ -10,49 +10,56 @@
 #include <string>
 using namespace std;
 /** @class Author
- *  @brief Representa una seqüència de paraules que conté nom i cognom d'una sola persona.
+ *  @brief Representa un autor, una seqüència de paraules que conté el nom i el cognom d'una sola persona.
  */
 
 class Author {
 private:
+	int id;
 	string name;
-	string lastname;
+	string lastName;
 
 public:
-	/** @brief Creadora per defecte.
+	/** @brief Crea un autor amb l'identificador especificat.
 	 * \pre Cert.
-	 * \post El resultat és un autor sense nom ni cognom.
+	 * \post El resultat és un autor amb l'identificador especificat sense nom ni cognom.
 	 */
-	Author();
+	Author(int id);
 
 	virtual ~Author();
+
+	/**@brief Mostra l'identificador de l'autor
+	 * \pre Cert.
+	 * \post El resultat és l'identificador del paràmetre implícit.
+	 */
+	int getId();
 
 	/** @brief Mostra el nom de l'autor.
 	 *  \pre Cert.
 	 *  \post El resultat és el nom del paràmetre implícit.
 	 */
-	string getname() const;
+	string getName() const;
 
 	/** @brief Estableix el nom de l'autor.
-	 *  \pre El paràmetre implícit no té nom.
+	 *  \pre Cert.
 	 *  \post name és el nom del paràmetre implícit.
 	 */
-	void setname(const string& name);
+	void setName(const string& name);
 
 	/** @brief Mostra el cognom de l'autor.
 	 *  \pre Cert.
 	 *  \post El resultat és el cognom del paràmetre implícit.
 	 */
-	string getlastname() const;
+	string getLastName() const;
 
 	/** @brief Estableix el cognom del paràmetre implícit.
-	 * 	\pre El paràmetre implícit no té cognom.
+	 * 	\pre Cert.
 	 * 	\post lastname és el cognom del paràmetre implícit
 	 */
-	void setlastname(const string& lastname);
+	void setLastName(const string& lastname);
 
-	/** @brief Mostra les inicials de l'autor per crear la referència de l'autor.
-	 * \pre Cert.
+	/** @brief Mostra les inicials de l'autor
+	 * \pre S'han utilitzat amb èxit les accions setName() i setLastName() del paràmetre implícit. @see setName() @see setLastName()
 	 * \post Retorna les incials del paràmtre implícit.
 	 */
 	string getInitials();
