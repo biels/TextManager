@@ -34,6 +34,10 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 	istringstream iss (cmd);
 	vector<string> op;
 	while (iss >> s) op.push_back(s);
+	// IDEA: [keyword], "Multi-word argument string (args_s)", /x (int)/, {array}, (ConditionaExpression), trailing multi word string, ? -> question == true
+	//EXAMPLE: [afegir] [text] "text with multiple words" [?]
+
+
 	//executeCommand(op);
 }
 void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i, ConditionalExpression ce) {

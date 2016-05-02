@@ -22,9 +22,9 @@ private:
 public:
 	/** @brief Creadora per defecte.
 	 * \pre Cert.
-	 * \post Crea una cita sense codi d'dentificació, ni autor ni índexs.
+	 * \post Crea una cita, especificant l'identificador.
 	 */
-	Quote();
+	Quote(int id);
 
 	virtual ~Quote();
 
@@ -35,31 +35,31 @@ public:
 	int getID();
 
 	/** @brief Mostra l'identificador de l'autor de la cita.
-	 * \pre Cert.
+	 * \pre El paràmetre implícit conté la referència a un autor vàlid.
 	 * \post El resultat és l'identificador de l'autor del paràmetre implícit.
 	 */
 	int getAuthorID();
 
-	/** @brief Estableix l'dentificador de l'autor de la cita.
-	 *	\pre Cert
+	/** @brief Estableix l'identificador de l'autor de la cita.
+	 *	\pre Cert.
 	 *	\post identificator és l'identificador de l'autor del paràmetre implícit.
 	 */
 	void setAuthorID(int identificator);
 
-	/** @brief Mostra l'índex on comença la cita.
+	/** @brief Mostra la posició relativa al text on comença la cita.
 	 * 	\pre Cert.
-	 * 	\post El resultat és l'índex on comença el paràmetre implícit.
+	 * 	\post El resultat és l'índex on comença la cita.
 	 */
 	int getStartIndex();
 
-	/**	@brief Mostra l'índex on acaba la cita.
+	/**	@brief Mostra la posició relativa al text on acaba la cita.
 	 * 	\pre Cert.
-	 * 	\post El resultat és l'índex on acaba el paràmetre implícit.
+	 * 	\post El resultat és l'índex on acaba el la cita.
 	 */
 	int getEndIndex();
 
-	/** @brief Mostra l'identificador de l'autor amb les inicials i l'identificador numèric.
-	 *	\pre Cert.
+	/** @brief Mostra la cadena que identifica exclusivament aquesta cita. Aquesta està fromada per les inicials i un nombre auto incremental.
+	 *	\pre El paràmetre implícit conté la referència a un autor vàlid.
 	 *	\post El resultat és l'identificador complet de la cita.
 	 */
 	string getUniqueIdentifier();
