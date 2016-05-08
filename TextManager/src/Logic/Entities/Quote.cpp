@@ -7,7 +7,7 @@
 
 #include "Quote.h"
 
-Quote::Quote() {
+Quote::Quote(int id) {
 	// TODO Auto-generated constructor stub
 
 }

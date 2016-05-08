@@ -7,7 +7,7 @@
 
 #include "Author.h"
 
-Author::Author() {
+Author::Author(int id) {
 	// TODO Auto-generated constructor stub
 
 }

@@ -20,7 +20,7 @@ class CommandExecutor {
 private:
 	ActionHandler a;
 	void executeCommand(string args);
-	void executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i, ConditionalExpression ce);
+	void executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i);
 	static ConditionalExpression parseConditionalExpression(string expr);
 
 public:
