@@ -38,29 +38,56 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 	//EXAMPLE: [afegir] [text] "text with multiple words" [?]
 	vector<string> keywords;
 	bool question = false;
-	bool forceBreak = false;
+	//bool forceBreak = false;
 	vector<string> args_s;
 	vector<int> args_i;
 	int i = 0;
 	while (iss >> s){
-		if(i == 0 || s[0] != '"'){
-			//Is keyword
-			keywords.push_back(s);
-			continue;
-		}
-
-		//Exit
-		if(s == "?"){
+		// ? ending handling
+		if(s == "?"){ // ? endings
 			question = true;
 			break;
 		}
-		if(i >= 2){
+		//Parse string and int (?) args
+
+		string delim0 = "\"{(";
+		string delim1 = "\"})";
+		bool begins_delim = false;
+		unsigned int d_i = 0;
+		while(d_i < delim0.size()){
+			if(s[0] == delim0[d_i]){
+				begins_delim = true;
+				break;
+			}
+			d_i++;
+		}
+		bool is_keyword = !begins_delim;
+
+		// TODO Handle unbounded string args based on numberof args_s (afegir text...) (set is_keyword to false)
+
+
+		if (is_keyword) {
+			//Is keyword
+			keywords.push_back(s);
+			continue;
+		}else{
+			//Is string arg beginning with delim0[d_i]
+			string arg_s = s;
+			while(s[s.length()-1] != delim1[d_i] || s == "****"){
+				iss >> s;
+				arg_s += " " + s;
+			}
+			args_s.push_back(arg_s);
+		}
+
+		//Forced exit conditions
+		if(i >= 1){
 			if(keywords[1] == "text"){
 				string k0 = keywords[0];
-				if (k0 == "eliminar")break;
-
+				if (k0 == "eliminar")break; // eliminar text
+				if (k0 == "triar" && args_s.size() > 0)break;
 			}
-
+			if(keywords[1] == "substitueix" && args_s.size() > 1)break; //substitueix
 		}
 		op.push_back(s);
 		i++;
@@ -68,9 +95,14 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 	executeCommand(keywords, question, args_s, args_i);
 }
 void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i) {
-	cout << "keywords:";
-	for(string s : keywords)cout << " " << s << endl;
-	cout << "question:";
+	//Test display
+	cout << "keywords(" << keywords.size() << "):";
+	for(string s : keywords)cout << " [" << s << "]";
+	cout << endl << "args_s(" << args_s.size() << "):";
+	for(string s : args_s)cout << " [" << s << "]";
+	cout << endl << "question: " << (question ? "yes" : "no") << endl;
+	//Command execution - single context
+
 
 }
 
