@@ -25,7 +25,16 @@ void CommandExecutor::readConsole() {
 	string cmd;
 	while(true){
 		getline(cin, cmd);
-		if(cmd == "end")break;
+		const string mls = "afegir text"; //Multi line special command
+		if (cmd.length() >= mls.length() && cmd.substr(0, mls.length()) == mls) {
+			string lin;
+			while(true){
+				getline(cin, lin);
+				if(lin == "****")break;
+				cmd += '\n' + lin;
+			}
+		}
+		if(cmd == "sortir")break;
 		executeCommand(cmd);
 	}
 }
@@ -50,8 +59,8 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		}
 		//Parse string and int (?) args
 
-		string delim0 = "\"{(";
-		string delim1 = "\"})";
+		string delim0 = "\"{(“";
+		string delim1 = "\"})”";
 		bool begins_delim = false;
 		unsigned int d_i = 0;
 		while(d_i < delim0.size()){
@@ -102,8 +111,20 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	for(string s : args_s)cout << " [" << s << "]";
 	cout << endl << "question: " << (question ? "yes" : "no") << endl;
 	//Command execution - single context
-
-
+	if(question && keywords[0] == "frases"){
+		//frases x y ?
+		if(keywords.size() == 3){
+			int x, y;
+			x = atoi(keywords[1].c_str());
+			y = atoi(keywords[2].c_str());
+			a.frases(x, y);
+			return;
+		}
+		//frases "" ?
+		if(keywords.size() == 2){
+			//starts with...
+		}
+	}
 }
 
 
