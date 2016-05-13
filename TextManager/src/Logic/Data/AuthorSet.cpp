@@ -39,5 +39,5 @@ bool AuthorSet::exists(int id){
 	return m.find(id) != m.end();
 }
 Author AuthorSet::get(int id){
-	return *m.find(id);
+	return (*m.find(id)).second;
 }
