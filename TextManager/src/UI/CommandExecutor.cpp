@@ -117,7 +117,8 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 			int x, y;
 			x = atoi(keywords[1].c_str());
 			y = atoi(keywords[2].c_str());
-			a.frases(x, y);
+			cout << x + 1 << y + 1;
+			//a.frases(x, y);
 			return;
 		}
 		//frases "" ?
