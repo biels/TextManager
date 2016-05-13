@@ -56,13 +56,13 @@ public:
 	 * 	\pre Cert.
 	 * 	\post lastname és el cognom del paràmetre implícit
 	 */
-	void setLastName(const string& lastname);
+	void setLastName(const string& lastName);
 
 	/** @brief Mostra les inicials de l'autor
 	 * \pre S'han utilitzat amb èxit les accions setName() i setLastName() del paràmetre implícit. @see setName() @see setLastName()
 	 * \post Retorna les incials del paràmtre implícit.
 	 */
-	string getInitials();
+	string getInitials() const;
 };
 
 #endif /* LOGIC_ENTITIES_AUTHOR_H_ */

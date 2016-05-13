@@ -8,11 +8,29 @@
 #include "Author.h"
 
 Author::Author(int id) {
-	// TODO Auto-generated constructor stub
+	this->id = id;
 
 }
 
 Author::~Author() {
-	// TODO Auto-generated destructor stub
+
 }
 
+int Author::getId(){
+	return this->id;
+}
+string Author::getName() const{
+	return this->name;
+}
+void Author::setName(const string& name){
+	this->name = name;
+}
+string Author::getLastName() const{
+	return this->lastName;
+}
+void Author::setLastName(const string& lastName){
+	this->lastName = lastName;
+}
+string Author::getInitials() const{
+	return toupper(getName()[0]) + "" + toupper(getLastName()[0]);
+}
