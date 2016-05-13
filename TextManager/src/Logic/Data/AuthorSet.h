@@ -9,13 +9,13 @@
 #define LOGIC_DATA_AUTHORSET_H_
 
 #include "../Entities/Author.h"
-
+#include <map>
 /**@class AuthorSet
  * @brief Representa un conjunt d'autors.
  */
 class AuthorSet {
 private:
-
+	map<int, Author> m;
 public:
 	AuthorSet();
 	virtual ~AuthorSet();
@@ -49,7 +49,7 @@ public:
 	 * \pre L'autor amb identificador id existeix
 	 * \post El resultat és la instància de l'autor amb identificador id
 	 */
-	Author get(int authorID);
+	Author get(int id);
 
 	//--Output zone--
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar
