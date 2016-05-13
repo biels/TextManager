@@ -59,7 +59,7 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		}
 		//Parse string and int (?) args
 
-		string delim0 = "\"{(“";
+		string delim0 = "\"{(“"; //TODO contar parentesis
 		string delim1 = "\"})”";
 		bool begins_delim = false;
 		unsigned int d_i = 0;
@@ -79,7 +79,8 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 			//Is keyword
 			keywords.push_back(s);
 			continue;
-		}else{
+		}
+		else{
 			//Is string arg beginning with delim0[d_i]
 			string arg_s = s;
 			while(s[s.length()-1] != delim1[d_i] || s == "****"){
@@ -117,22 +118,22 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		//frases x y ?
 		if(keywords.size() == 3){
 			int x, y;
-			x = atoi(keywords[1].c_str());
-			y = atoi(keywords[2].c_str());
+			//x = atoi(keywords[1].c_str());
+			//y = atoi(keywords[2].c_str());
 			cout << x + 1 << y + 1;
 			//a.frases(x, y);
 			return;
 		}
 		//frases ".." ? i frases <..> ?
 		if(keywords.size() == 2) {
-			//frases <..> ?
-			if (args[0][0] == '<') {
-
+			//frases <..> ? (sequencia)
+			if (args[0][0] == '"') {
+				//a.frasesSequencia(args[0]);
 				return;
 			}
-			//frases ".." ?
+			//frases ".." ? (expressió)
 			else {
-
+				//a.frasesExpressio(args[0]);
 				return;
 			}
 		}
@@ -170,7 +171,8 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//info cita "<referència>" ?
 		else {
-			//a.frasesExpressio(args_s[0]);
+			string ref = args[0].substr(1, args[0].size()-2);
+			//a.frasesExpressio(ref);
 			return;
 		}
 	}
@@ -198,7 +200,8 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//cites autor "<autor>"
 		else {
-			//a.citesAutor(args_s[0]);
+			string autor = args[0].substr(1, args[0].size()-2);
+			//a.citesAutor(autor);
 			return;
 		}
 	}
@@ -221,19 +224,21 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	}
 	//Afegir text
 	if (!question && keywords[0] == "afegir") {
-		//a.afegirText(args_s[0], args_s[1], args_s[2]);
+		string titol = args[0].substr(1, args[0].size()-2);
+		string autor = args[0].substr(1, args[0].size()-2);
+		//a.afegirText(titol, autor, args_s[2]);
 		return;
 	}
 	//triar text
 	if (!question && keywords[0] == "triar") {
-		//a.triarText(args_s[0]);
+		string s = args[0].substr(1, args[0].size()-2);
+		//a.triarText(s);
 		return;
 	}
 	//subtitueix “<paraula>” per “<paraula2>”
 	if (!question && keywords[0] == "substitueix") {
-		string s = args[0].substr(2, args.size()-2);
-		string t = args[1].substr(2, args.size()-2);
-		cout << s << " " << t << endl;
+		string s = args[0].substr(1, args[0].size()-2);
+		string t = args[1].substr(1, args[1].size()-2);
 		//a.substitueix(s, t);
 		return;
 	}
