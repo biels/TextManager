@@ -21,6 +21,12 @@ public:
 	QuoteSet();
 	virtual ~QuoteSet();
 
+	/**@brief Calcula l'identificador del següent elememnt del conjunt.
+	 * \pre Cert.
+	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
+	 */
+	int getNextID();
+
 	/**@brief Afegeix una cita
 	 * \pre Cert
 	 * \post S'ha afegit la cita q al paràmetre implícit

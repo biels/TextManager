@@ -15,7 +15,15 @@
  */
 class AuthorSet {
 private:
+	int lastID;
 	map<int, Author> m;
+
+	/**@brief Calcula l'identificador del següent elememnt del conjunt.
+	 * \pre Cert.
+	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
+	 */
+	int getNextID();
+
 public:
 	AuthorSet();
 	virtual ~AuthorSet();
@@ -26,6 +34,12 @@ public:
 	 * \post El paràmetre implícit conté l'autor
 	 */
 	void add(Author a);
+
+	/**
+	 * Creates a new element
+	 * \post The result is the newly created element
+	 */
+	Author addNew();
 
 	/**@brief Afegeix un autor al conjunt
 	 * \pre Cert
