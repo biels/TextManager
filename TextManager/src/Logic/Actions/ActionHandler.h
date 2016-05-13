@@ -32,13 +32,13 @@ public:
 	 * @param autor L'autor del text
 	 * @param contingut El contingut del text, paraula per paraula
 	 */
-	void afegirText(string titol, string autor, vector<string> contingut);
+	void afegirText(string titol, string autor, string contingut);
 
 	/**
 	 *
 	 * @param words
 	 */
-	void triarText(vector<string> words);
+	void triarText(string s);
 
 	/**@brief Elimina el text seleccionat del sistema
 	 * \pre Hi ha un text seleccionat
@@ -59,7 +59,10 @@ public:
 	void frasesExpressio(string exp);
 	void frasesSequencia();
 	//Quotes
-
+	void cites();
+	void citesAutor();
+	void totesCites();
+	void eliminarCita();
 };
 
 #endif /* LOGIC_ACTIONS_ACTIONHANDLER_H_ */

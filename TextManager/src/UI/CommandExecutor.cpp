@@ -101,17 +101,19 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		op.push_back(s);
 		i++;
 	}
-	executeCommand(keywords, question, args_s, args_i);
+	executeCommand(keywords, question, args_s);
 }
-void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args_s, vector<int> args_i) {
+
+void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args) {
 	//Test display
 	cout << "keywords(" << keywords.size() << "):";
 	for(string s : keywords)cout << " [" << s << "]";
-	cout << endl << "args_s(" << args_s.size() << "):";
-	for(string s : args_s)cout << " [" << s << "]";
+	cout << endl << "args_s(" << args.size() << "):";
+	for(string s : args)cout << " [" << s << "]";
 	cout << endl << "question: " << (question ? "yes" : "no") << endl;
 	//Command execution - single context
-	if(question && keywords[0] == "frases"){
+
+	if (question && keywords[0] == "frases"){
 		//frases x y ?
 		if(keywords.size() == 3){
 			int x, y;
@@ -121,11 +123,121 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 			//a.frases(x, y);
 			return;
 		}
-		//frases "" ?
-		if(keywords.size() == 2){
-			//starts with...
+		//frases ".." ? i frases <..> ?
+		if(keywords.size() == 2) {
+			//frases <..> ?
+			if (args[0][0] == '<') {
+
+				return;
+			}
+			//frases ".." ?
+			else {
+
+				return;
+			}
 		}
 	}
+	if (question && keywords[0] == "tots") {
+		//tots textos ?
+		if (keywords[1] == "textos") {
+			//a.textos();
+			return ;
+		}
+		//tots autors ?
+		else {
+			//a.autors();
+			return;
+		}
+	}
+	if (question && keywords[0] == "nombre") {
+		//nombre de frases ?
+		if (keywords[2] == "frases") {
+			//a.nombreFrases();
+			return;
+		}
+		//nombre de paraules ?
+		if (keywords[2] == "paraules") {
+			//a.nombreParaules();
+			return;
+		}
+	}
+	//info ? i info cita "<referència>" ?
+	if (question && keywords[0] == "info") {
+		//info ??
+		if (keywords.size() == 2) {
+			//a.info();
+			return;
+		}
+		//info cita "<referència>" ?
+		else {
+			//a.frasesExpressio(args_s[0]);
+			return;
+		}
+	}
+	//autor ?
+	if (question && keywords[0] == "autor") {
+		//a.autor;
+		return;
+	}
+	//contingut ?
+	if (question && keywords[0] == "contingut") {
+		//a.contingut();
+		return;
+	}
+	//taula de frequencies ?
+	if (question && keywords[0] == "taula") {
+		//a.taulaFrequencies();
+		return;
+	}
+	//cites autor "<autor>" ? i cites ?
+	if (question && keywords[0] == "cites") {
+		//cites ?
+		if (keywords.size() == 2) {
+			//a.cites();
+			return;
+		}
+		//cites autor "<autor>"
+		else {
+			//a.citesAutor(args_s[0]);
+			return;
+		}
+	}
+	//totes cites ?
+	if (question && keywords[0] == "totes") {
+		//a.totesCites();
+		return;
+	}
+	if (!question && keywords[0] == "eliminar") {
+		//eliminar text
+		if (keywords[1] == "text") {
+			//a.eliminarText();
+			return;
+		}
+		//eliminar cita
+		else {
+			//a.eliminarCita();
+			return;
+		}
+	}
+	//Afegir text
+	if (!question && keywords[0] == "afegir") {
+		//a.afegirText(args_s[0], args_s[1], args_s[2]);
+		return;
+	}
+	//triar text
+	if (!question && keywords[0] == "triar") {
+		//a.triarText(args_s[0]);
+		return;
+	}
+	//subtitueix “<paraula>” per “<paraula2>”
+	if (!question && keywords[0] == "substitueix") {
+		string s = args[0].substr(2, args.size()-2);
+		string t = args[1].substr(2, args.size()-2);
+		cout << s << " " << t << endl;
+		//a.substitueix(s, t);
+		return;
+	}
 }
+
 
 
