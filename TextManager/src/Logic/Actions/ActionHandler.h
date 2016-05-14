@@ -9,6 +9,14 @@
 #define LOGIC_ACTIONS_ACTIONHANDLER_H_
 
 #include "../Data/TextSet.h"
+#include "../Data/AuthorSet.h"
+#include "../Data/QuoteSet.h"
+#include "../Entities/Author.h"
+#include "../Entities/Quote.h"
+#include "../Entities/Text.h"
+
+#include <iostream>
+
 /**
  * @class ActionHandler
  * @brief Gestiona totes les possibles interaccions amb el sistema.
@@ -16,7 +24,7 @@
  */
 class ActionHandler {
 private:
-	TextSet s;
+	Context c;
 public:
 	ActionHandler();
 	virtual ~ActionHandler();
