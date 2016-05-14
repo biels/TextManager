@@ -28,25 +28,25 @@ public:
 	 * \pre Cert.
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
-	int getNextID();
+	int getNextID() const;
 
 	/**@brief Afegeix un text al conjunt.
 	 * \pre Cert.
 	 * \post El paràmetre implícit conté el text t.
 	 */
-	void add(Text t);
+	void add(const Text& t);
 
 	/**@brief Elimina un text amb identificador id.
 	 * \pre Cert.
 	 * \post Elimina el text amb identificador id si existeix.
 	 */
-	void remove(int id);
+	void removeById(int id);
 
 	/**@brief Elimina una cita.
 	 * \pre Cert.
 	 * \post Elimina la cita q del paràmetre implícit.
 	 */
-	void remove(const Quote& q);
+	void removeByQuote(const Quote& q);
 
 	/**@brief Comprova si l'element amb identificador id pertany al conjunt.
 	 * \pre Cert.

@@ -8,11 +8,42 @@
 #include "TextSet.h"
 
 TextSet::TextSet() {
-	// TODO Auto-generated constructor stub
-
+	this->lastID = 0;
 }
 
 TextSet::~TextSet() {
 	// TODO Auto-generated destructor stub
 }
 
+int TextSet::getNextID() const {
+	++lastID;
+	return lastID;
+}
+
+void TextSet::add(const Text& t) {
+
+}
+
+void TextSet::removeById(int id) {
+
+}
+
+void TextSet::removeByQuote(const Quote& q) {
+
+}
+
+bool TextSet::exists() {
+
+}
+
+Text TextSet::get(int id) {
+
+}
+
+Text TextSet::getByTitle(string t) {
+
+}
+
+TextSet TextSet::getAllByAuthor(int id) {
+
+}
