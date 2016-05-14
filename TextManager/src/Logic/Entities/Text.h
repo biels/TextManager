@@ -21,8 +21,9 @@ using namespace std;
 
 class Text {
 private:
+	int id;
 	string title;
-	string author;
+	int author;
 	vector<string> content;
 	vector<pair<int,string > > getFrequencyTable();
 	vector<string> getSentenceListByExpression();
@@ -34,9 +35,27 @@ public:
 	 * \pre Cert
 	 * \post El resultat es un text sense títol, ni autor, ni contingut.
 	 */
-	Text();
+	Text(int id);
 
 	virtual ~Text();
+
+	/**@brief Mostra l'identificador del text
+	 * \pre Cert.
+	 * \post El resultat és l'identificador del paràmetre implícit.
+	 */
+	int getId() const;
+
+	/** @brief Mostra el títol del text.
+	 *  \pre Cert.
+	 *  \post Retrona el títol del paràmetre implícit.
+	 */
+	string getTitle() const;
+
+	/** @brief Estableix el títol del text.
+	 *  \pre El paràmetre implícit no té títol
+	 *  \post title és el títol del paràmetre implícit.
+	 */
+	void setTitle(const string& title);
 
 	/** @brief Mostra el nom i cognom de l'autor que ha fet el text.
 	 * \pre Cert.
@@ -56,18 +75,6 @@ public:
 	 */
 	void setContent(const vector<string>& content);
 
-	/** @brief Mostra el títol del text.
-	 *  \pre Cert.
-	 *  \post Retrona el títol del paràmetre implícit.
-	 */
-	string getTitle() const;
-
-	/** @brief Estableix el títol del text.
-	 *  \pre El paràmetre implícit no té títol
-	 *  \post title és el títol del paràmetre implícit.
-	 */
-	void setTitle(const string& title);
-
 	/** @brief Mostra el nombre de frases del contingut del text.
 	 *  \pre Cert.
 	 *  \post El resultat és el número de frases del text.
@@ -79,6 +86,8 @@ public:
 	 *  \post El resultat és el número de paraules del paràmetre implícit.
 	 */
 	int getWordCount();
+
+	//Output section
 
 	/** @brief Mostra totes les paraules del text ordenades per freqüència.
 	 * \pre Cert.
