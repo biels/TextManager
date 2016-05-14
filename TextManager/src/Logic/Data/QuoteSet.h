@@ -16,34 +16,41 @@ using namespace std;
  */
 class QuoteSet {
 private:
-
-public:
-	QuoteSet();
-	virtual ~QuoteSet();
+	int lastID;
+	map<int, Quote> m;
 
 	/**@brief Calcula l'identificador del següent elememnt del conjunt.
 	 * \pre Cert.
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
-	int getNextID();
+	int getNextID() const;
 
 	/**@brief Afegeix una cita
 	 * \pre Cert
 	 * \post S'ha afegit la cita q al paràmetre implícit
 	 */
-	void add(Quote q);
+	void add(const Quote& q);
+public:
+	QuoteSet();
+	virtual ~QuoteSet();
 
-	/**@brief Elimina una cita
+	/**@brief Afegeix un text nou al conjunt
 	 * \pre Cert
-	 * \post Elimina la cita q del paràmetre implícit
+	 * \post El resultat és el nou text
 	 */
-	void remove(Quote q);
+	Text addNew();
 
 	/**@brief Elimina una cita
 	 * \pre Cert
 	 * \post Elimina la cita amb identificador id del paràmetre implícit
 	 */
 	void remove(int id);
+
+	/**@brief Elimina una cita
+	 * \pre Cert
+	 * \post Elimina la cita q del paràmetre implícit
+	 */
+	void remove(const Quote& q);
 
 	/**@brief Comprova si existeix una cita
 	 * \pre Cert

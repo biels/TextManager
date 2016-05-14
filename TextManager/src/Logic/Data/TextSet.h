@@ -7,9 +7,10 @@
 
 #ifndef LOGIC_DATA_TEXTSET_H_
 #define LOGIC_DATA_TEXTSET_H_
-#include "TextSet.h"
+
 #include "../Entities/Text.h"
 #include "../Entities/Quote.h"
+#include <map>
 #include <string>
 
 using namespace std;
@@ -20,22 +21,28 @@ using namespace std;
 class TextSet {
 private:
 	int lastID;
-	map<int, Author> m;
+	map<int, Text> m;
 
 	/**@brief Calcula l'identificador del següent elememnt del conjunt.
 	 * \pre Cert.
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
 	int getNextID() const;
-public:
-	TextSet();
-	virtual ~TextSet();
 
 	/**@brief Afegeix un text al conjunt.
 	 * \pre Cert.
 	 * \post El paràmetre implícit conté el text t.
 	 */
 	void add(const Text& t);
+public:
+	TextSet();
+	virtual ~TextSet();
+
+	/**@brief Afegeix un text nou al conjunt
+	 * \pre Cert
+	 * \post El resultat és el nou text
+	 */
+	Text addNew();
 
 	/**@brief Elimina un text amb identificador id.
 	 * \pre Cert.
@@ -43,11 +50,11 @@ public:
 	 */
 	void remove(int id);
 
-	/**@brief Elimina una cita.
-	 * \pre Cert.
-	 * \post Elimina la cita q del paràmetre implícit.
+	/**@brief Elimina un autor del conjunt
+	 * \pre Cert
+	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
 	 */
-	void removeByQuote(const Quote& q);
+	void remove(const Author& a);
 
 	/**@brief Comprova si l'element amb identificador id pertany al conjunt.
 	 * \pre Cert.
@@ -72,6 +79,9 @@ public:
 	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id.
 	 */
 	TextSet getAllByAuthor(int id);
+
+	//Output section
+	//TODO Define print functions (freq table, etc)
 };
 
 #endif /* LOGIC_DATA_TEXTSET_H_ */

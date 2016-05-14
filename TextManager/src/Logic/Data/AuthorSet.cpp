@@ -23,6 +23,7 @@ int AuthorSet::getNextID(){
 Author AuthorSet::addNew(){
 	Author a(getNextID());
 	m.insert(make_pair(a.getId(), a));
+	return get(a.getId());
 }
 
 void AuthorSet::add(Author a){

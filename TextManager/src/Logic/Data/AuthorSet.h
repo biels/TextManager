@@ -23,35 +23,33 @@ private:
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
 	int getNextID();
-
+	/**@brief Afegeix un autor al conjunt
+	 * \pre Cert
+	 * \post El paràmetre implícit conté l'autor
+	 */
+	void add(const Author& a);
 public:
 	AuthorSet();
 	virtual ~AuthorSet();
 	//TODO Getters and setters
 
-	/**@brief Afegeix un autor al conjunt
+	/**@brief Afegeix un autor nou al conjunt
 	 * \pre Cert
-	 * \post El paràmetre implícit conté l'autor
-	 */
-	void add(Author a);
-
-	/**
-	 * Creates a new element
-	 * \post The result is the newly created element
+	 * \post El resultat és el nou autor
 	 */
 	Author addNew();
-
-	/**@brief Afegeix un autor al conjunt
-	 * \pre Cert
-	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
-	 */
-	void remove(Author a);
 
 	/**@brief Elimina un autor del conjunt
 	 * \pre Cert
 	 * \post Si el paràmetre implícit conté un autor amb identificador id, aquest s'elimina
 	 */
 	void remove(int id);
+
+	/**@brief Elimina un autor del conjunt
+	 * \pre Cert
+	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
+	 */
+	void remove(const Author& a);
 
 	/**@brief Comprova si existeix una cita
 	 * \pre Cert
@@ -65,7 +63,7 @@ public:
 	 */
 	Author get(int id);
 
-	//--Output zone--
+	//Output section
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar
 	 * \pre Cert
 	 * \post S'ha escrit la llista  d'autors al canal de sortida estàndar
