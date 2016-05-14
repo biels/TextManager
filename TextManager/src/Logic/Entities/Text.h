@@ -21,6 +21,7 @@ using namespace std;
 
 class Text {
 private:
+	ActionHandler context;
 	int id;
 	string title;
 	int author;
@@ -35,7 +36,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat es un text sense títol, ni autor, ni contingut.
 	 */
-	Text(int id);
+	Text(int id, ActionHandler& context);
 
 	virtual ~Text();
 
@@ -61,7 +62,7 @@ public:
 	 * \pre Cert.
 	 * \post Retorna el nom i cognom del paràmetre implícit.
 	 */
-	Author getAuthor() const;
+	int getAuthor() const;
 
 	/** @brief Estableix un autor al text.
 	 *	\pre El paràmetre implícit no té autor.
@@ -73,7 +74,7 @@ public:
 	 *  \pre El paràmetre implícit no té contingut.
 	 *  \post content és el contingut del paràmetre implícit.
 	 */
-	void setContent(const vector<string>& content);
+	void setContent(const string content);
 
 	/** @brief Mostra el nombre de frases del contingut del text.
 	 *  \pre Cert.

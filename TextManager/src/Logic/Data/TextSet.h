@@ -20,6 +20,7 @@ using namespace std;
  */
 class TextSet {
 private:
+	Context c;
 	int lastID;
 	map<int, Text> m;
 
@@ -27,7 +28,7 @@ private:
 	 * \pre Cert.
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
-	int getNextID() const;
+	int getNextID();
 
 	/**@brief Afegeix un text al conjunt.
 	 * \pre Cert.
@@ -35,7 +36,7 @@ private:
 	 */
 	void add(const Text& t);
 public:
-	TextSet();
+	TextSet(Context& c);
 	virtual ~TextSet();
 
 	/**@brief Afegeix un text nou al conjunt
@@ -54,7 +55,7 @@ public:
 	 * \pre Cert
 	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
 	 */
-	void remove(const Author& a);
+	void remove(const Text& t);
 
 	/**@brief Comprova si l'element amb identificador id pertany al conjunt.
 	 * \pre Cert.
@@ -66,13 +67,13 @@ public:
 	 * \pre Existeix un text amb identificador id.
 	 * \post El resultat és el text amb el títol especificat.
 	 */
-	Text get(int id);
+	Text get(int id) const;
 
 	/**@brief Obté un text amb el títol especificat.
 	 * \pre Existeix untext amb títol t.
 	 * \post El resultat és el text amb el títol especificat.
 	 */
-	Text getByTitle(string t);
+	int findByTitle(string t);
 
 	/**@brief Obté tots els textos de l'autor amb identificador authorID.
 	 * \pre Existeix un autor amb el títol authorID.

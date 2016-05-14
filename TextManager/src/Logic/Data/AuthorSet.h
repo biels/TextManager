@@ -61,7 +61,7 @@ public:
 	 * \pre L'autor amb identificador id existeix
 	 * \post El resultat és la instància de l'autor amb identificador id
 	 */
-	Author get(int id);
+	Author get(int id) const;
 
 	//Output section
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar

@@ -32,7 +32,7 @@ public:
 	 * \pre Cert.
 	 * \post El resultat és l'identificador del paràmetre implícit.
 	 */
-	int getId();
+	int getId() const;
 
 	/** @brief Mostra el nom de l'autor.
 	 *  \pre Cert.

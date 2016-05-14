@@ -16,7 +16,7 @@ Author::~Author() {
 
 }
 
-int Author::getId(){
+int Author::getId() const{
 	return this->id;
 }
 string Author::getName() const{

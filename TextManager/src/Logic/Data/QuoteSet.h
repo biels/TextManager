@@ -9,6 +9,7 @@
 #define LOGIC_DATA_QUOTESET_H_
 
 #include "../Entities/Quote.h"
+#include <map>
 using namespace std;
 
 /**@class QuoteSet
@@ -38,7 +39,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat és el nou text
 	 */
-	Text addNew();
+	Quote addNew();
 
 	/**@brief Elimina una cita
 	 * \pre Cert
@@ -56,13 +57,13 @@ public:
 	 * \pre Cert
 	 * \post El resultat és cert si i nomès si una cita amb identifocador id pertany al conjunt
 	 */
-	bool exists(int id);
+	bool exists(int id) const;
 
 	/**@brief Consulta la cita amb identificador id
 	 * \pre Existeix una cita am identificador id
 	 * \post El resultat és la cita amb identificador id
 	 */
-	Quote get(int id);
+	Quote get(int id) const;
 
 	/**@brief Consulta totes les cites d'un autor amb identificador id
 	 * \pre Existeix un autor amb identificador id
