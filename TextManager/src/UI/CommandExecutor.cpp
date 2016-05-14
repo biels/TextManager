@@ -57,8 +57,8 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 			question = true;
 			break;
 		}
-		//Parse string and int (?) args
-
+		//Parse string args
+		//(({aa bb}) | {cc dd})
 		string delim0 = "\"{(“"; //TODO contar parentesis
 		string delim1 = "\"})”";
 		bool begins_delim = false;
@@ -73,7 +73,9 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		bool is_keyword = !begins_delim;
 
 		// TODO Handle unbounded string args based on numberof args_s (afegir text...) (set is_keyword to false)
-
+		if(i > 1 && keywords.size() > 1 && keywords[0] == "afegir" && keywords[1] == "text" && args_s.size() >= 2){
+			is_keyword = false;
+		}
 
 		if (is_keyword) {
 			//Is keyword
@@ -83,8 +85,9 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		else{
 			//Is string arg beginning with delim0[d_i]
 			string arg_s = s;
-			while(s[s.length()-1] != delim1[d_i] || s == "****"){
+			while(s[s.length()-1] != delim1[d_i] || (d_i== 2)){
 				iss >> s;
+				if(s == "?")break; //(()) ? handling
 				arg_s += " " + s;
 			}
 			args_s.push_back(arg_s);
