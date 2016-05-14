@@ -24,7 +24,7 @@ void TextSet::add(const Text& t) {
 
 }
 
-void TextSet::removeById(int id) {
+void TextSet::remove(int id) {
 
 }
 
@@ -32,8 +32,8 @@ void TextSet::removeByQuote(const Quote& q) {
 
 }
 
-bool TextSet::exists() {
-
+bool TextSet::exists(int id) {
+	return m.find(id) != m.end();
 }
 
 Text TextSet::get(int id) {

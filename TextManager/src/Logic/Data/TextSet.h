@@ -19,16 +19,17 @@ using namespace std;
  */
 class TextSet {
 private:
-	int nextID;
-public:
-	TextSet();
-	virtual ~TextSet();
+	int lastID;
+	map<int, Author> m;
 
 	/**@brief Calcula l'identificador del següent elememnt del conjunt.
 	 * \pre Cert.
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
 	int getNextID() const;
+public:
+	TextSet();
+	virtual ~TextSet();
 
 	/**@brief Afegeix un text al conjunt.
 	 * \pre Cert.
@@ -40,7 +41,7 @@ public:
 	 * \pre Cert.
 	 * \post Elimina el text amb identificador id si existeix.
 	 */
-	void removeById(int id);
+	void remove(int id);
 
 	/**@brief Elimina una cita.
 	 * \pre Cert.
@@ -59,6 +60,7 @@ public:
 	 * \post El resultat és el text amb el títol especificat.
 	 */
 	Text get(int id);
+
 	/**@brief Obté un text amb el títol especificat.
 	 * \pre Existeix untext amb títol t.
 	 * \post El resultat és el text amb el títol especificat.
