@@ -11,7 +11,9 @@
 #include "../Data/TextSet.h"
 #include "../Data/AuthorSet.h"
 #include "../Data/QuoteSet.h"
+
 class Context {
+private:
 	TextSet ts;
 	AuthorSet as;
 	QuoteSet qs;
@@ -19,9 +21,9 @@ class Context {
 public:
 	Context();
 	virtual ~Context();
-	const AuthorSet& getAs() const;
-	const QuoteSet& getQs() const;
-	const TextSet& getTs() const;
+	AuthorSet& getAs();
+	QuoteSet& getQs();
+	TextSet& getTs();
 	int getChosenTextId() const;
 	void setChosenTextId(int chosenTextId);
 };

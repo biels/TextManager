@@ -12,12 +12,17 @@ Context::Context() {
 
 }
 
-const AuthorSet& Context::getAs() const {
+AuthorSet& Context::getAs() {
 	return as;
 }
 
-const QuoteSet& Context::getQs() const {
+QuoteSet& Context::getQs() {
 	return qs;
+}
+
+
+TextSet& Context::getTs() {
+	return ts;
 }
 
 int Context::getChosenTextId() const {
@@ -26,10 +31,6 @@ int Context::getChosenTextId() const {
 
 void Context::setChosenTextId(int chosenTextId) {
 	chosenTextID = chosenTextId;
-}
-
-const TextSet& Context::getTs() const {
-	return ts;
 }
 
 Context::~Context() {
