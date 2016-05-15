@@ -10,6 +10,7 @@
 
 #include <string>
 #include <vector>
+#include "../Actions/Context.h"
 #include "Author.h"
 using namespace std;
 
@@ -21,7 +22,6 @@ using namespace std;
 
 class Text {
 private:
-	ActionHandler context;
 	int id;
 	string title;
 	int author;
@@ -36,7 +36,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat es un text sense títol, ni autor, ni contingut.
 	 */
-	Text(int id, ActionHandler& context);
+	Text(int id);
 
 	virtual ~Text();
 
@@ -62,7 +62,7 @@ public:
 	 * \pre Cert.
 	 * \post Retorna el nom i cognom del paràmetre implícit.
 	 */
-	int getAuthor() const;
+	Author getAuthor() const;
 
 	/** @brief Estableix un autor al text.
 	 *	\pre El paràmetre implícit no té autor.

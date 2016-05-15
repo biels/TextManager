@@ -28,6 +28,6 @@ void Text::setTitle(const string& title){
 	this->title = title;
 }
 
-int Text::getAuthor() const{
-	return this->author;
+Author Text::getAuthor() const{
+	return as.get(author);
 }

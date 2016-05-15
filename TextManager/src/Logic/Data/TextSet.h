@@ -20,7 +20,6 @@ using namespace std;
  */
 class TextSet {
 private:
-	Context c;
 	int lastID;
 	map<int, Text> m;
 
@@ -36,7 +35,7 @@ private:
 	 */
 	void add(const Text& t);
 public:
-	TextSet(Context& c);
+	TextSet();
 	virtual ~TextSet();
 
 	/**@brief Afegeix un text nou al conjunt

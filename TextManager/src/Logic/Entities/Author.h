@@ -7,12 +7,14 @@
 
 #ifndef LOGIC_ENTITIES_AUTHOR_H_
 #define LOGIC_ENTITIES_AUTHOR_H_
+
+//#include "../Actions/Context.h"
 #include <string>
+
 using namespace std;
 /** @class Author
  *  @brief Representa un autor, una seqüència de paraules que conté el nom i el cognom d'una sola persona.
  */
-
 class Author {
 private:
 	int id;
