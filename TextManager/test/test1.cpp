@@ -10,15 +10,15 @@
 #include <string>
 #include <vector>
 
-TEST(TextClass, TitleIntegrity){
-
-}
-
-TEST(ConditionalExpression, Instantiation){
-	vector<string> v1, v2, v3;
-	ConditionalExpression e;
-	e.op = 1;
-
-
-}
+//TEST(TextClass, TitleIntegrity){
+//
+//}
+//
+//TEST(ConditionalExpression, Instantiation){
+//	vector<string> v1, v2, v3;
+//	ConditionalExpression e;
+//	e.op = 1;
+//
+//
+//}
 
