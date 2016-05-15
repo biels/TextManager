@@ -8,7 +8,7 @@
 #include "ActionHandler.h"
 
 ActionHandler::ActionHandler(){
-	this->chosenTextID = -1;
+
 }
 
 ActionHandler::~ActionHandler() {

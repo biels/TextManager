@@ -8,6 +8,7 @@
 #ifndef LOGIC_ACTIONS_ACTIONHANDLER_H_
 #define LOGIC_ACTIONS_ACTIONHANDLER_H_
 
+
 #include "../Data/TextSet.h"
 #include "../Data/AuthorSet.h"
 #include "../Data/QuoteSet.h"
