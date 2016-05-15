@@ -39,6 +39,6 @@ void AuthorSet::remove(const Author& a){
 bool AuthorSet::exists(int id){
 	return m.find(id) != m.end();
 }
-Author AuthorSet::get(int id) const{
+const Author& AuthorSet::get(int id) const{
 	return (*m.find(id)).second;
 }
