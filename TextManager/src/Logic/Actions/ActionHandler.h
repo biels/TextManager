@@ -8,7 +8,7 @@
 #ifndef LOGIC_ACTIONS_ACTIONHANDLER_H_
 #define LOGIC_ACTIONS_ACTIONHANDLER_H_
 
-
+#include "Context.h"
 #include "../Data/TextSet.h"
 #include "../Data/AuthorSet.h"
 #include "../Data/QuoteSet.h"
@@ -55,16 +55,16 @@ public:
 	 */
 	void eliminarText();
 	void subtitueix(string match, string replace);
-	void textosAutor (string autor);
-	void textos();
-	void autors();
-	void info();
-	string autor();
-	void contingut();
+	void textosAutor (string autor) const;
+	void textos() const;
+	void autors() const;
+	void info() const;
+	string autor() const;
+	void contingut() const;
 	void frases(int x, int y);
-	int nombreFrases();
-	int nombreParaules();
-	void taulaFrequencies();
+	int nombreFrases() const;
+	int nombreParaules() const;
+	void taulaFrequencies() const;
 	void frasesExpressio(string exp);
 	void frasesSequencia();
 	//Quotes
