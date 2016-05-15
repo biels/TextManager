@@ -6,9 +6,13 @@
  */
 
 #include "Text.h"
+#include "../Actions/Context.h"
+#include <sstream>
 
 Text::Text(int id) {
-	// TODO Auto-generated constructor stub
+	this->id = id;
+	this->author = -1;
+	this->title = "";
 
 }
 
@@ -28,6 +32,20 @@ void Text::setTitle(const string& title){
 	this->title = title;
 }
 
-Author Text::getAuthor() const{
-	return as.get(author);
+const Author& Text::getAuthor(Context& c) const{
+	return c.getAs().get(author);
+}
+void Text::setAuthor(const Author& author){
+	this->author = author.getId();
+}
+void Text::setContent(const string& content){
+	this->content.clear();
+	istringstream iss(content);
+	string w;
+	while(iss >> w){
+		if(w[w.size()-1] == '.'){
+			//Register sentence
+		}
+		this->content.push_back(w);
+	}
 }

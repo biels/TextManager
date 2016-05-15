@@ -40,7 +40,7 @@ public:
 	 *  \pre Cert.
 	 *  \post El resultat és el nom del paràmetre implícit.
 	 */
-	string getName() const;
+	const string& getName() const;
 
 	/** @brief Estableix el nom de l'autor.
 	 *  \pre Cert.
@@ -52,13 +52,15 @@ public:
 	 *  \pre Cert.
 	 *  \post El resultat és el cognom del paràmetre implícit.
 	 */
-	string getLastName() const;
+	const string& getLastName() const;
 
 	/** @brief Estableix el cognom del paràmetre implícit.
 	 * 	\pre Cert.
 	 * 	\post lastname és el cognom del paràmetre implícit
 	 */
 	void setLastName(const string& lastName);
+
+	void setFullName(const string& fullName);
 
 	/** @brief Mostra les inicials de l'autor
 	 * \pre S'han utilitzat amb èxit les accions setName() i setLastName() del paràmetre implícit. @see setName() @see setLastName()

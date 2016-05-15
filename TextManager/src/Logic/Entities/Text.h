@@ -8,12 +8,12 @@
 #ifndef LOGIC_ENTITIES_TEXT_H_
 #define LOGIC_ENTITIES_TEXT_H_
 
+class Context;
 #include <string>
 #include <vector>
-#include "../Actions/Context.h"
+
 #include "Author.h"
 using namespace std;
-
 /** @class Text
  *  @brief Representa un contingut que té un autor i un títol.
  *
@@ -59,10 +59,11 @@ public:
 	void setTitle(const string& title);
 
 	/** @brief Mostra el nom i cognom de l'autor que ha fet el text.
+	 * Read only, @see AuthorSet.get() to modify
 	 * \pre Cert.
 	 * \post Retorna el nom i cognom del paràmetre implícit.
 	 */
-	Author getAuthor() const;
+	const Author& getAuthor(Context& c) const;
 
 	/** @brief Estableix un autor al text.
 	 *	\pre El paràmetre implícit no té autor.
@@ -74,7 +75,7 @@ public:
 	 *  \pre El paràmetre implícit no té contingut.
 	 *  \post content és el contingut del paràmetre implícit.
 	 */
-	void setContent(const string content);
+	void setContent(const string& content);
 
 	/** @brief Mostra el nombre de frases del contingut del text.
 	 *  \pre Cert.
