@@ -25,7 +25,7 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 
 	t.setContent(contingut);
 	//Set constent
-	cout << "Text afegit";
+	cout << "Text afegit" << endl;
 }
 void ActionHandler::triarText(string s){
 	int id = c.getTs().findByTitle(s);

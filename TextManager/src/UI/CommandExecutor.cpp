@@ -29,8 +29,8 @@ void CommandExecutor::readConsole() {
 			string lin;
 			while(true){
 				getline(cin, lin);
-				if(lin == "****")break;
 				cmd += '\n' + lin;
+				if(lin == "****")break;
 			}
 		}
 		if(cmd == "sortir")break;
@@ -86,7 +86,7 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 			string arg_s = s;
 			while(s[s.length()-1] != delim1[d_i] || (d_i== 2)){
 				iss >> s;
-				if(s == "?")break; //(()) ? handling
+				if(s == "?" || s == "****")break; //(()) ? handling
 				arg_s += " " + s;
 			}
 			args_s.push_back(arg_s);
@@ -105,6 +105,7 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		i++;
 	}
 	executeCommand(keywords, question, args_s);
+	cout << ">> End of command execution" << endl;
 }
 
 void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args) {
@@ -228,7 +229,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	if (!question && keywords[0] == "afegir") {
 		string titol = args[0].substr(1, args[0].size()-2);
 		string autor = args[0].substr(1, args[0].size()-2);
-		//a.afegirText(titol, autor, args_s[2]);
+		a.afegirText(titol, autor, args[2]);
 		return;
 	}
 	//triar text
