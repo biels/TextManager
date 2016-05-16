@@ -9,7 +9,8 @@ TEST(Entites, Author){
 	a1.setLastName("Wilde");
 	ASSERT_TRUE(a1.getName() == "Oscar");
 	ASSERT_TRUE(a1.getLastName() == "Wilde");
-	ASSERT_TRUE(a1.getInitials() == "OW") << " Returned: " << a1.getLastName();
+	std::string initials = a1.getInitials();
+	ASSERT_TRUE(initials == "OW")<< " Returned: " << initials;
 
 	Author a2(1);
 	a2.setFullName("Oscar Wilde");

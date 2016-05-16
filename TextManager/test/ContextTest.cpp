@@ -5,7 +5,9 @@
 
 TEST(Context, AuthorSet){
 	Context c;
-	Author sampleauthor = c.getAs().addNew();
+	Author& sampleauthor = c.getAs().addNew();
+	//c.getAs().get(sampleauthor.getId()).setName("Name");
+
 	ASSERT_TRUE(c.getAs().exists(sampleauthor.getId())) << " Falied to create author (author does not exist)";
 	//const char* sname = "Name";
 	const char* slastName = "LastName";

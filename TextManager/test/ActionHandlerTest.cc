@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "../src/Logic/Actions/ActionHandler.h"
 using namespace std;
-TEST(AH, AfegirText){
+TEST(ActionHandler, AfegirText){
 	ActionHandler a;
 	testing::internal::CaptureStdout();
 	a.afegirText(

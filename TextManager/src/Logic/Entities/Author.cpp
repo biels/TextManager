@@ -39,5 +39,6 @@ void Author::setFullName(const string& fullName){
 }
 string Author::getInitials() const{
 	if(getName().length() == 0 || getLastName().length() == 0)return "--";
+	return getName();
 	return toupper(getName()[0]) + "" + toupper(getLastName()[0]); //cppshell try
 }

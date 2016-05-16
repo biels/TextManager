@@ -16,10 +16,10 @@ ActionHandler::~ActionHandler() {
 }
 
 void ActionHandler::afegirText(string titol, string autor, string contingut){
-	Text t = c.getTs().addNew();
+	Text& t = c.getTs().addNew();
 	t.setTitle(titol);
 
-	Author a = c.getAs().addNew();
+	Author& a = c.getAs().addNew();
 	a.setFullName(autor); //spilt first and last name
 	t.setAuthor(a);
 
