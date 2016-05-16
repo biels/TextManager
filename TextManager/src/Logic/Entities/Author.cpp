@@ -33,10 +33,11 @@ void Author::setLastName(const string& lastName){
 	this->lastName = lastName;
 }
 void Author::setFullName(const string& fullName){
-	istringstream iss("");
+	istringstream iss(fullName);
 	iss >> this->name;
 	iss >> this->lastName;
 }
 string Author::getInitials() const{
-	return toupper(getName()[0]) + "" + toupper(getLastName()[0]);
+	if(getName().length() == 0 || getLastName().length() == 0)return "--";
+	return toupper(getName()[0]) + "" + toupper(getLastName()[0]); //cppshell try
 }

@@ -37,7 +37,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat és el nou autor
 	 */
-	Author addNew()	;
+	Author& addNew()	;
 
 	/**@brief Elimina un autor del conjunt
 	 * \pre Cert
@@ -61,7 +61,7 @@ public:
 	 * \pre L'autor amb identificador id existeix
 	 * \post El resultat és la instància de l'autor amb identificador id
 	 */
-	const Author& get(int id) const;
+	Author& get(int id);
 
 	//Output section
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar

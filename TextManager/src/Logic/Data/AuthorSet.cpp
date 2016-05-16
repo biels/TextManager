@@ -20,7 +20,7 @@ int AuthorSet::getNextID(){
 	lastID++;
 	return lastID;
 }
-Author AuthorSet::addNew(){
+Author& AuthorSet::addNew(){
 	Author a(getNextID());
 	add(a);
 	return get(a.getId());
@@ -39,6 +39,6 @@ void AuthorSet::remove(const Author& a){
 bool AuthorSet::exists(int id){
 	return m.find(id) != m.end();
 }
-const Author& AuthorSet::get(int id) const{
+Author& AuthorSet::get(int id){
 	return (*m.find(id)).second;
 }

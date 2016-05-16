@@ -10,6 +10,6 @@ TEST(AH, AfegirText){
 			"Good friends, good books, and a sleepy conscience: this is the ideal life.");
 	//a.textos();
 	std::string output = testing::internal::GetCapturedStdout();
-	ASSERT_TRUE(output.find("Text afegit") != std::string::npos);
+	ASSERT_TRUE(output.find("Text afegit") != std::string::npos) << "No s'ha detectat \"Text afegit\"";
 }
 
