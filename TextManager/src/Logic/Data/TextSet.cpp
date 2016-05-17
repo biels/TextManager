@@ -20,13 +20,13 @@ int TextSet::getNextID(){
 	return lastID;
 }
 
-Text TextSet::addNew(){
+Text& TextSet::addNew(){
 	Text t(getNextID());
 	add(t);
 	return get(t.getId());
 }
 
-void TextSet::add(const Text& t) {
+void TextSet::add(const Text& t) {//allow copy ?
 	m.insert(make_pair(t.getId(), t));
 }
 
@@ -41,7 +41,7 @@ bool TextSet::exists(int id) {
 	return m.find(id) != m.end();
 }
 
-Text TextSet::get(int id) const{
+Text& TextSet::get(int id){
 	return (*m.find(id)).second;
 }
 

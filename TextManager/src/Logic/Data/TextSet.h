@@ -42,7 +42,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat és el nou text
 	 */
-	Text addNew();
+	Text& addNew();
 
 	/**@brief Elimina un text amb identificador id.
 	 * \pre Cert.
@@ -66,7 +66,7 @@ public:
 	 * \pre Existeix un text amb identificador id.
 	 * \post El resultat és el text amb el títol especificat.
 	 */
-	Text get(int id) const;
+	Text& get(int id);
 
 	/**@brief Obté un text amb el títol especificat.
 	 * \pre Existeix untext amb títol t.
