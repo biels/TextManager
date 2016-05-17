@@ -8,6 +8,7 @@
 #ifndef LOGIC_ENTITIES_QUOTE_H_
 #define LOGIC_ENTITIES_QUOTE_H_
 
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -62,7 +63,7 @@ public:
 	 *	\pre El paràmetre implícit conté la referència a un autor vàlid.
 	 *	\post El resultat és l'identificador complet de la cita.
 	 */
-	string getUniqueIdentifier();
+	string getUniqueIdentifier(Author a);
 
 };
 

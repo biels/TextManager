@@ -20,62 +20,63 @@ private:
 	int lastID;
 	map<int, Quote> m;
 
-	/**@brief Calcula l'identificador del seg√ºent elememnt del conjunt.
+	/**@brief Calcula l'identificador del seg¸ent element del conjunt.
 	 * \pre Cert.
-	 * \post El resultat √©s l'identificador que ha de tenir el seg√ºent element del conjunt.
+	 * \post El resultat Ès l'identificador que ha de tenir el seg¸ent element del conjunt.
 	 */
 	int getNextID() const;
 
 	/**@brief Afegeix una cita
 	 * \pre Cert
-	 * \post S'ha afegit la cita q al par√†metre impl√≠cit
+	 * \post S'ha afegit la cita q al par‡metre implÌcit
 	 */
 	void add(const Quote& q);
+
 public:
 	QuoteSet();
 	virtual ~QuoteSet();
 
 	/**@brief Afegeix un text nou al conjunt
 	 * \pre Cert
-	 * \post El resultat √©s el nou text
+	 * \post El resultat Ès el nou text
 	 */
 	Quote addNew();
 
 	/**@brief Elimina una cita
 	 * \pre Cert
-	 * \post Elimina la cita amb identificador id del par√†metre impl√≠cit
+	 * \post Elimina la cita amb identificador id del par‡metre implÌcit
 	 */
-	void remove(int id);
+	void removeByID(int id);
 
 	/**@brief Elimina una cita
 	 * \pre Cert
-	 * \post Elimina la cita q del par√†metre impl√≠cit
+	 * \post Elimina la cita q del par‡metre implÌcit
 	 */
-	void remove(const Quote& q);
+	void removeByQuote(const Quote& q);
 
 	/**@brief Comprova si existeix una cita
 	 * \pre Cert
-	 * \post El resultat √©s cert si i nom√®s si una cita amb identifocador id pertany al conjunt
+	 * \post El resultat √©s cert si i nomÈs si una cita amb identificador id pertany al conjunt
 	 */
 	bool exists(int id) const;
 
 	/**@brief Consulta la cita amb identificador id
 	 * \pre Existeix una cita am identificador id
-	 * \post El resultat √©s la cita amb identificador id
+	 * \post El resultat Ès la cita amb identificador id
 	 */
 	Quote get(int id) const;
 
 	/**@brief Consulta totes les cites d'un autor amb identificador id
 	 * \pre Existeix un autor amb identificador id
-	 * \post El resultat √©s un conjunt de cites amb totes les cites de l'autor amb identificador id
+	 * \post El resultat Ès un conjunt de cites amb totes les cites de l'autor amb identificador id
 	 */
-	QuoteSet getAllByAuthor(int id);
+	void getAllByAuthor(int id);
 
 	/**@brief Consulta totes les cites que apareixen en un text amb identificador id
 	 * \pre Existeix un text amb identificador id
-	 * \post El resultat √©s un conjunt de cites que cont√© totes les cites que apareixen al text amb identificador id
+	 * \post El resultat Ès un conjunt de cites que contÈ totes les cites que apareixen al text amb identificador id
 	 */
-	QuoteSet getAllByText(int id);
+	void getAllByText(int id);
 };
 
 #endif /* LOGIC_DATA_QUOTESET_H_ */

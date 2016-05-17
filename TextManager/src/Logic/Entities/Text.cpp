@@ -13,7 +13,6 @@ Text::Text(int id) {
 	this->id = id;
 	this->author = -1;
 	this->title = "";
-
 }
 
 Text::~Text() {

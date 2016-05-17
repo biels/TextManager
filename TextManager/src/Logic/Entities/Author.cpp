@@ -10,11 +10,9 @@
 
 Author::Author(int id) {
 	this->id = id;
-
 }
 
 Author::~Author() {
-
 }
 
 int Author::getId() const{
