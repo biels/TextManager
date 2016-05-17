@@ -3,7 +3,7 @@
 #include "../src/Logic/Entities/Quote.h"
 #include "../src/Logic/Entities/Text.h"
 
-TEST(Entites, Author){
+TEST(Entities, Author){
 	Author a1(0);
 	a1.setName("Oscar");
 	a1.setLastName("Wilde");
