@@ -6,6 +6,7 @@
  */
 
 #include "Author.h"
+#include "../Actions/Context.h"
 #include "sstream"
 
 Author::Author(int id) {

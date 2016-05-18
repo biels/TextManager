@@ -30,7 +30,7 @@ private:
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
 
-	string getSentenceByIndex(int index);
+
 
 public:
 	/** @brief Creadora per defecte
@@ -89,6 +89,8 @@ public:
 	 *  \post El resultat Ã©s el nÃºmero de paraules del parÃ metre implÃ­cit.
 	 */
 	int getWordCount();
+
+	string getSentenceByIndex(int index);
 
 	void replace(string match, string replace);
 

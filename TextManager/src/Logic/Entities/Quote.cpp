@@ -7,7 +7,10 @@
 
 #include "Quote.h"
 
+#include "../Actions/Context.h"
+
 Quote::Quote(int id) {
+	textID = -1;
 	startSentenceIndex = 0;
 	endSentenceIndex = 0;
 	this->ID = id;

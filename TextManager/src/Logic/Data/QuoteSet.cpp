@@ -6,7 +6,7 @@
  */
 
 #include "QuoteSet.h"
-
+#include "../Actions/Context.h"
 QuoteSet::QuoteSet() {
 	lastID = 0;
 }

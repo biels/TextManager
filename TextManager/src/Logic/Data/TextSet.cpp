@@ -6,7 +6,7 @@
  */
 
 #include "TextSet.h"
-
+#include "../Actions/Context.h"
 TextSet::TextSet() {
 	this->lastID = 0;
 }
