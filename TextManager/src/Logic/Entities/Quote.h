@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <"../Entities/Text.h">
 
 using namespace std;
 
@@ -18,7 +19,7 @@ using namespace std;
  */
 class Quote {
 private:
-	int ID, textID, startSentenceIndex, endSentenceIndex;
+	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
 
 public:
 	/** @brief Creadora per defecte.
@@ -40,6 +41,9 @@ public:
 	 * \post El resultat és l'identificador de l'autor del paràmetre implícit.
 	 */
 	int getTextID();
+
+	int getQuoteNumber();
+
 
 	/** @brief Estableix l'identificador de l'autor de la cita.
 	 *	\pre Cert.
@@ -65,7 +69,7 @@ public:
 	 */
 	string getUniqueIdentifier(Author a);
 
-	void print();
+	void print(Context& c);
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

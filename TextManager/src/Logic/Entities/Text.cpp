@@ -19,6 +19,18 @@ Text::~Text() {
 	// TODO Auto-generated destructor stub
 }
 
+string Text::getSentenceByIndex(int index) {
+	int start = sentences.find(index)->second;
+	int size = content.size();
+	int end = size - 1;
+	if(index != end) end = sentences.find(index + 1)->second;
+	string s;
+	for(int i = start; i < end; i++){
+		s += (i == start ? "" : " ") + content[i];
+	}
+	return s;
+}
+
 int Text::getId() const{
 	return this->id;
 }
