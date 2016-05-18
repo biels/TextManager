@@ -20,12 +20,16 @@ Quote::~Quote() {
 	// TODO Auto-generated destructor stub
 }
 
-int Quote::getID() const {
+int Quote::getId() const {
 	return ID;
 }
 
 int Quote::getTextID() const {
 	return textID;
+}
+
+Text& Quote::getText(Context& c){
+	return c.getTs().get(textID);
 }
 
 void Quote::setTextID(int id) {

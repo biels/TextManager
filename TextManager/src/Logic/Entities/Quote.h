@@ -34,13 +34,15 @@ public:
 	  * \pre Cert.
 	  * \post El resultat és l'identificador del paràmetre implícit.
 	*/
-	int getID() const;
+	int getId() const;
 
 	/** @brief Mostra l'identificador de l'autor de la cita.
 	 * \pre El paràmetre implícit conté la referència a un autor vàlid.
 	 * \post El resultat és l'identificador de l'autor del paràmetre implícit.
 	 */
 	int getTextID() const;
+
+	Text& getText(Context& c);
 
 	int getQuoteNumber();
 
