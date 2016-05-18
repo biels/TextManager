@@ -54,7 +54,9 @@ public:
 	 * \post El text seleccionat s'ha eliminat. A partir d'aquest moment i fins la propera execució correcta de la funció triarText, es considera que no existeix un últim text triat.
 	 */
 	void eliminarText();
+
 	void subtitueix(string match, string replace);
+
 	void textosAutor (string autor) const;
 	void textos() const;
 	void autors() const;

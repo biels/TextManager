@@ -37,7 +37,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat és el nou autor
 	 */
-	Author& addNew()	;
+	Author& addNew();
 
 	/**@brief Elimina un autor del conjunt
 	 * \pre Cert

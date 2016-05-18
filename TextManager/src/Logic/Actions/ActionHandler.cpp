@@ -38,3 +38,8 @@ void ActionHandler::triarText(string s){
 void ActionHandler::eliminarText(){
 	c.getTs().remove(c.getChosenTextId());
 }
+
+void ActionHandler::subtitueix(string match, string replace){
+	Text& t = c.getTs().get(c.getChosenTextId());
+
+}
