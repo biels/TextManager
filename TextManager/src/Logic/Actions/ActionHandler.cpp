@@ -44,9 +44,8 @@ void ActionHandler::subtitueix(string match, string replace){
 	t.replace(match, replace);
 	cout << "Replaced";
 }
-void ActionHandler::textosAutor (string autor) const{
-	c.getAs().
-	ts.printAllByAuthor();
-
+void ActionHandler::textosAutor (string autor){
+	c.getTs().printAllByAuthor(c.getAs().findByName(autor), c);
+//	ts.printAllByAuthor();
 }
 
