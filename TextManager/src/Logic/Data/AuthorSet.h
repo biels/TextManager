@@ -63,6 +63,7 @@ public:
 	 */
 	Author& get(int id);
 
+	int findByName(string name); // implement
 	//Output section
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar
 	 * \pre Cert
