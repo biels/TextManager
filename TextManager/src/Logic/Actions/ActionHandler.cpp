@@ -45,14 +45,14 @@ void ActionHandler::substitueix(string match, string replace){
 	cout << "Replaced";
 }
 void ActionHandler::textosAutor (string autor){
-	c.getTs().printAllByAuthor(c.getAs().findByName(autor), c);
+	//c.getTs().printAllByAuthor(c.getAs().findByName(autor), c);
 }
 void ActionHandler::textos(){
-	c.getTs().printAll(c);
+	//c.getTs().printAll(c);
 }
 void ActionHandler::autors(){
-	c.getAs().printAuthorList();
+	//c.getAs().printAuthorList();
 }
-void info(){
-	c.
+void ActionHandler::info(){
+
 }
