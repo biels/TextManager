@@ -56,7 +56,7 @@ string Quote::getUniqueIdentifier(Context& c) const {
 	return s;
 }
 
-void Quote::print(Context& c) {
+void Quote::printQuote(Context& c) {
 	cout << getUniqueIdentifier(c) << endl;
 	Text& t = c.getTs().get(textID);
 	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {

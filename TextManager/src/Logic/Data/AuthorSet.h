@@ -16,7 +16,7 @@
 class AuthorSet {
 private:
 	int lastID;
-	map<int, Author> m;
+	map<int, Author> authors;
 
 	/**@brief Calcula l'identificador del següent elememnt del conjunt.
 	 * \pre Cert.

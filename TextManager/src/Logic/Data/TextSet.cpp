@@ -27,32 +27,47 @@ Text& TextSet::addNew(){
 }
 
 void TextSet::add(const Text& t) {//allow copy ?
-	m.insert(make_pair(t.getId(), t));
+	texts.insert(make_pair(t.getId(), t));
 }
 
 void TextSet::remove(int id) {
-	m.erase(m.find(id));
+	texts.erase(texts.find(id));
 }
 void TextSet::remove(const Text& t){
 	this->remove(t.getId());
 }
 
 bool TextSet::exists(int id) {
-	return m.find(id) != m.end();
+	return texts.find(id) != texts.end();
 }
 
 Text& TextSet::get(int id){
-	return (*m.find(id)).second;
+	return (*texts.find(id)).second;
 }
 
 int TextSet::findByTitle(string title) {
-	for(pair<int, Text> p : m){
+	for(pair<int, Text> p : texts){
 		Text t = p.second;
-		if (t.getTitle() == title)return t.getId();
+		if (t.getTitle() == title) return t.getId();
 	}
 	return -1;
 }
 
-void printAllByAuthor(int id, Context& c){
-
+void TextSet::getAllByAuthor (int id) {
+	//TODO NECESARIA?
 }
+
+void TextSet::printAllByAuthor(int id, Context& c){
+	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
+		if ((*it).second.author == id) {
+			printText((*it).first);
+		}
+	}
+}
+
+void TextSet::printAll () {
+	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
+		printText((*it).first);
+	}
+}
+

@@ -46,7 +46,7 @@ Quote& QuoteSet::get(int id) {
 }
 
 void QuoteSet::printAllByAuthor(int id, Context& c) {
-	for (map<int, Quote>::iterator it = m.begin(); it != m.end(); it++){
+	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
 		Quote q = (*it).second;
 		if (q.getText(c).getAuthor(c).getId() == id) {
 			q.print(c);

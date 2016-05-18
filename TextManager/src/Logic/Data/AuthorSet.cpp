@@ -27,18 +27,31 @@ Author& AuthorSet::addNew(){
 }
 
 void AuthorSet::add(const Author& a){
-	m.insert(make_pair(a.getId(), a));
+	authors.insert(make_pair(a.getId(), a));
 }
 
 void AuthorSet::remove(int id){
-	m.erase(m.find(id));
+	authors.erase(authors.find(id));
 }
+
 void AuthorSet::remove(const Author& a){
 	this->remove(a.getId());
 }
+
 bool AuthorSet::exists(int id){
-	return m.find(id) != m.end();
+	return authors.find(id) != authors.end();
 }
+
 Author& AuthorSet::get(int id){
-	return (*m.find(id)).second;
+	return (*authors.find(id)).second;
+}
+
+int AuthorSet::findByName (string name) {
+	return (*authors.find(name).first);
+}
+
+void AuthorSet::printAuthorList() {
+	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
+		//printAuthor(*it);
+	}
 }

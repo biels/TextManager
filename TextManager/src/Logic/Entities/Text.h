@@ -64,7 +64,7 @@ public:
 	 * \pre Cert.
 	 * \post Retorna el nom i cognom del parÃ metre implÃ­cit.
 	 */
-	const Author& getAuthor(Context& c) const;
+	Author& getAuthor(Context& c);
 
 	/** @brief Estableix un autor al text.
 	 *	\pre El parÃ metre implÃ­cit no tÃ© autor.
@@ -116,6 +116,8 @@ public:
 	void printSentenceListByWord(string word);
 
 	void printInfo(Context& c); //TODO IMPLEMENT
+
+	void printText(int id); //TODO Consultar
 };
 
 #endif /* LOGIC_ENTITIES_TEXT_H_ */

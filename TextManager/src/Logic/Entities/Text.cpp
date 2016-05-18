@@ -43,7 +43,7 @@ void Text::setTitle(const string& title){
 	this->title = title;
 }
 
-const Author& Text::getAuthor(Context& c) const{
+Author& Text::getAuthor(Context& c){
 	return c.getAs().get(author);
 }
 void Text::setAuthor(const Author& author){
@@ -61,7 +61,11 @@ void Text::setContent(const string& content){
 	}
 }
 void Text::replace(string match, string replace){
-	for(int i = 0; i < content.size(); i++){
+	for(int i = 0; i < content.size(); ++i){
 		if(content[i] == match)content[i] = replace;
 	}
+}
+
+void Text::printText(int id){
+	//TODO Consultar
 }

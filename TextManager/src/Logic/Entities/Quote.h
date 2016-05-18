@@ -71,7 +71,7 @@ public:
 	 */
 	string getUniqueIdentifier(Context& c) const;
 
-	void print(Context& c);
+	void printQuote(Context& c);
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

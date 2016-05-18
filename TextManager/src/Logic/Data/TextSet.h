@@ -21,7 +21,7 @@ using namespace std;
 class TextSet {
 private:
 	int lastID;
-	map<int, Text> m;
+	map<int, Text> texts;
 
 	/**@brief Calcula l'identificador del següent elememnt del conjunt.
 	 * \pre Cert.
@@ -34,6 +34,7 @@ private:
 	 * \post El paràmetre implícit conté el text t.
 	 */
 	void add(const Text& t);
+
 public:
 	TextSet();
 	virtual ~TextSet();
@@ -78,7 +79,7 @@ public:
 	 * \pre Existeix un autor amb el títol authorID.
 	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id.
 	 */
-	TextSet getAllByAuthor(int id); //invalid
+	TextSet getAllByAuthor(int id); //TODO NECESARIA?
 
 	//Output section
 	void printAll(Context& c);

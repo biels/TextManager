@@ -67,6 +67,8 @@ public:
 	 * \post Retorna les incials del paràmtre implícit.
 	 */
 	string getInitials() const;
+
+	void printAuthor(int id); //TODO Consultar
 };
 
 #endif /* LOGIC_ENTITIES_AUTHOR_H_ */
