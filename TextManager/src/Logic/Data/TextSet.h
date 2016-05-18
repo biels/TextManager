@@ -78,9 +78,11 @@ public:
 	 * \pre Existeix un autor amb el títol authorID.
 	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id.
 	 */
-	TextSet getAllByAuthor(int id);
+	TextSet getAllByAuthor(int id); //invalid
 
 	//Output section
+
+	void printAllByAuthor(int id, Context& c);
 	//TODO Define print functions (freq table, etc)
 };
 

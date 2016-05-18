@@ -53,6 +53,6 @@ int TextSet::findByTitle(string title) {
 	return -1;
 }
 
-TextSet TextSet::getAllByAuthor(int id) {
+void printAllByAuthor(int id, Context& c){
 
 }
