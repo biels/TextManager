@@ -57,16 +57,16 @@ public:
 
 	void subtitueix(string match, string replace);
 
-	void textosAutor (string autor) const;
-	void textos() const;
-	void autors() const;
-	void info() const;
-	string autor() const;
-	void contingut() const;
+	void textosAutor (string autor);
+	void textos();
+	void autors();
+	void info();
+	string autor();
+	void contingut();
 	void frases(int x, int y);
-	int nombreFrases() const;
-	int nombreParaules() const;
-	void taulaFrequencies() const;
+	int nombreFrases();
+	int nombreParaules();
+	void taulaFrequencies();
 	void frasesExpressio(string exp);
 	void frasesSequencia();
 	//Quotes
