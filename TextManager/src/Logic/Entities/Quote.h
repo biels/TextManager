@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <string>
-#include <"../Entities/Text.h">
+#include "Text.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ using namespace std;
  */
 class Quote {
 private:
-	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
+	int ID, quoteNumber, textID, startSentenceIndex, endSentenceIndex;
 
 public:
 	/** @brief Creadora per defecte.
@@ -34,13 +34,13 @@ public:
 	  * \pre Cert.
 	  * \post El resultat és l'identificador del paràmetre implícit.
 	*/
-	int getID();
+	int getID() const;
 
 	/** @brief Mostra l'identificador de l'autor de la cita.
 	 * \pre El paràmetre implícit conté la referència a un autor vàlid.
 	 * \post El resultat és l'identificador de l'autor del paràmetre implícit.
 	 */
-	int getTextID();
+	int getTextID() const;
 
 	int getQuoteNumber();
 
@@ -67,7 +67,7 @@ public:
 	 *	\pre El paràmetre implícit conté la referència a un autor vàlid.
 	 *	\post El resultat és l'identificador complet de la cita.
 	 */
-	string getUniqueIdentifier(Author a);
+	string getUniqueIdentifier(Context& c) const;
 
 	void print(Context& c);
 };

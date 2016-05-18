@@ -20,7 +20,7 @@ int Quote::getID() const {
 	return ID;
 }
 
-int Quote::getTextID const {
+int Quote::getTextID() const {
 	return textID;
 }
 
@@ -30,14 +30,6 @@ void Quote::setTextID(int id) {
 
 int Quote::getQuoteNumber() {
 	return quoteNumber;
-}
-
-int Quote::getStartIndex const {
-	return startSentenceIndex;
-}
-
-int Quote::getEndIndex() const {
-	return endSentenceIndex;
 }
 
 string Quote::getUniqueIdentifier(Context& c) const {
