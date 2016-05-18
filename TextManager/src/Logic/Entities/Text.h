@@ -14,7 +14,6 @@ class Context;
 #include <map>
 #include "Author.h"
 using namespace std;
-
 /** @class Text
  *  @brief Representa un contingut que tÃ© un autor i un tÃ­tol.
  *
@@ -31,13 +30,7 @@ private:
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
 
-	int getSentenceNumber() {
-		//algoritmo
-	}
-
-	int getWordNumber() {
-		//algoritmo
-	}
+	string getSentenceByIndex(int index);
 
 public:
 	/** @brief Creadora per defecte
@@ -119,8 +112,6 @@ public:
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit on apareix word.
 	 */
 	void printSentenceListByWord(string word);
-
-	string getSentenceByIndex(int index);
 };
 
 #endif /* LOGIC_ENTITIES_TEXT_H_ */

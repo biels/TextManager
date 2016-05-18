@@ -8,7 +8,8 @@
 #include "Quote.h"
 
 Quote::Quote(int id) {
-	// TODO Auto-generated constructor stub
+	startSentenceIndex = 0;
+	endSentenceIndex = 0;
 	this->ID = id;
 }
 
@@ -30,6 +31,14 @@ void Quote::setTextID(int id) {
 
 int Quote::getQuoteNumber() {
 	return quoteNumber;
+}
+
+int Quote::getStartIndex() const {
+	return startSentenceIndex;
+}
+
+int Quote::getEndIndex() const {
+	return endSentenceIndex;
 }
 
 string Quote::getUniqueIdentifier(Context& c) const {
