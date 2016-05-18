@@ -235,14 +235,14 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	//triar text
 	if (!question && keywords[0] == "triar") {
 		string s = args[0].substr(1, args[0].size()-2);
-		//a.triarText(s);
+		a.triarText(s);
 		return;
 	}
 	//subtitueix “<paraula>” per “<paraula2>”
 	if (!question && keywords[0] == "substitueix") {
 		string s = args[0].substr(1, args[0].size()-2);
 		string t = args[1].substr(1, args[1].size()-2);
-		//a.substitueix(s, t);
+		a.substitueix(s, t);
 		return;
 	}
 }
