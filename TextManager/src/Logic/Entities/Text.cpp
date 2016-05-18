@@ -48,3 +48,8 @@ void Text::setContent(const string& content){
 		this->content.push_back(w);
 	}
 }
+void Text::replace(string match, string replace){
+	for(int i = 0; i < content.size; i++){
+		if(content[i] == match)content[i] = replace;
+	}
+}

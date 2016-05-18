@@ -25,11 +25,10 @@ private:
 	int id;
 	string title;
 	int author;
-	vector<string> content;
+	vector<string> content; // punctuation signs saved in their own elements
+	vector<pair<int,string > > getFrequencyTable();
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
-
-	void getSentence (int index);
 
 public:
 
@@ -89,6 +88,8 @@ public:
 	 *  \post El resultat és el número de paraules del paràmetre implícit.
 	 */
 	int getWordCount();
+
+	void replace(string match, string replace);
 
 	//Output section
 

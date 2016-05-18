@@ -41,5 +41,12 @@ void ActionHandler::eliminarText(){
 
 void ActionHandler::subtitueix(string match, string replace){
 	Text& t = c.getTs().get(c.getChosenTextId());
+	t.replace(match, replace);
+	cout << "Replaced";
+}
+void ActionHandler::textosAutor (string autor) const{
+	c.getAs().
+	ts.printAllByAuthor();
 
 }
+
