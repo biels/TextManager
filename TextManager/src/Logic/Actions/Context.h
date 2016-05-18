@@ -18,6 +18,7 @@ private:
 	AuthorSet as;
 	QuoteSet qs;
 	int chosenTextID;
+	int lastAssignedQuoteID;
 public:
 	Context();
 	virtual ~Context();
@@ -26,6 +27,7 @@ public:
 	TextSet& getTs();
 	int getChosenTextId() const;
 	void setChosenTextId(int chosenTextId);
+	int getNextQuoteID();
 };
 
 #endif /* LOGIC_ACTIONS_CONTEXT_H_ */

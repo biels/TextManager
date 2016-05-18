@@ -37,3 +37,7 @@ Context::~Context() {
 	// TODO Auto-generated destructor stub
 }
 
+int Context::getNextQuoteID() {
+	lastAssignedQuoteID++;
+	return lastAssignedQuoteID;
+}
