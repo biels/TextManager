@@ -47,7 +47,7 @@ public:
 	 *
 	 * @param words
 	 */
-	void triarText(string s);
+	void triarText(string titol);
 
 	/**@brief Elimina el text seleccionat del sistema
 	 * \pre Hi ha un text seleccionat
