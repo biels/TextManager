@@ -40,7 +40,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat és el nou text
 	 */
-	Quote addNew();
+	Quote& addNew();
 
 	/**@brief Elimina una cita
 	 * \pre Cert
@@ -64,19 +64,19 @@ public:
 	 * \pre Existeix una cita am identificador id
 	 * \post El resultat és la cita amb identificador id
 	 */
-	Quote get(int id) const;
+	Quote& get(int id) const;
 
 	/**@brief Consulta totes les cites d'un autor amb identificador id
 	 * \pre Existeix un autor amb identificador id
 	 * \post El resultat és un conjunt de cites amb totes les cites de l'autor amb identificador id
 	 */
-	void getAllByAuthor(int id);
+	void printAllByAuthor(int id);
 
 	/**@brief Consulta totes les cites que apareixen en un text amb identificador id
 	 * \pre Existeix un text amb identificador id
 	 * \post El resultat és un conjunt de cites que conté totes les cites que apareixen al text amb identificador id
 	 */
-	void getAllByText(int id);
+	void printAllByText(int id);
 };
 
 #endif /* LOGIC_DATA_QUOTESET_H_ */

@@ -9,7 +9,6 @@
 
 AuthorSet::AuthorSet() {
 	lastID = 0;
-
 }
 
 AuthorSet::~AuthorSet() {

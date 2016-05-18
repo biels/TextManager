@@ -18,7 +18,7 @@ using namespace std;
  */
 class Quote {
 private:
-	int ID, authorID, startIndex, endIndex;
+	int ID, authorID, startSentenceIndex, endSentenceIndex;
 
 public:
 	/** @brief Creadora per defecte.
@@ -65,6 +65,7 @@ public:
 	 */
 	string getUniqueIdentifier(Author a);
 
+	void print();
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

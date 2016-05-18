@@ -36,11 +36,16 @@ int Quote::getEndIndex() const {
 	return EndIndex;
 }
 
-string Quote::getUniqueIdentifier(Author a) const {
-	string id;
-	id[0] = a.name()[0];
-	id[1] = a.lastName[0];
-	//id[2] = a.id 			TODO és l'id d'aquell autor?
+string Quote::getUniqueIdentifier(Author a, Context c) const {
+	string s = a.getInitials();
+	int id = c.getNextQuoteID();
+	s += id;
+	//id[2] = a.id		TODO és l'id d'aquell autor?
 	return s;
 }
+
+void Quote::print(int id, Context& c) {
+	cout << getUniqueIdentifier(c.as.get(id))
+}
+
 
