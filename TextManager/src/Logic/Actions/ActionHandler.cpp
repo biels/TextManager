@@ -30,7 +30,8 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 void ActionHandler::triarText(string titol){
 	int id = c.getTs().findByTitle(titol);
 	if (id != -1) {
-		cout << "Text triat: " << c.getChosenTextId();
+		c.setChosenTextId(id);
+		cout << "Text triat: " << c.getChosenTextId() << endl;
 	}else{
 		cout << "No s'ha tobat cap text amb el títol especificat";
 	}
@@ -54,5 +55,5 @@ void ActionHandler::autors(){
 	//c.getAs().printAuthorList();
 }
 void ActionHandler::info(){
-
+	c.getTs().get(c.getChosenTextId()).printInfo(c);
 }

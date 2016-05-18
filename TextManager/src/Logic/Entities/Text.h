@@ -114,6 +114,8 @@ public:
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit on apareix word.
 	 */
 	void printSentenceListByWord(string word);
+
+	void printInfo(Context& c); //TODO IMPLEMENT
 };
 
 #endif /* LOGIC_ENTITIES_TEXT_H_ */
