@@ -39,13 +39,20 @@ void ActionHandler::eliminarText(){
 	c.getTs().remove(c.getChosenTextId());
 }
 
-void ActionHandler::subtitueix(string match, string replace){
+void ActionHandler::substitueix(string match, string replace){
 	Text& t = c.getTs().get(c.getChosenTextId());
 	t.replace(match, replace);
 	cout << "Replaced";
 }
 void ActionHandler::textosAutor (string autor){
 	c.getTs().printAllByAuthor(c.getAs().findByName(autor), c);
-//	ts.printAllByAuthor();
 }
-
+void ActionHandler::textos(){
+	c.getTs().printAll(c);
+}
+void ActionHandler::autors(){
+	c.getAs().printAuthorList();
+}
+void info(){
+	c.
+}

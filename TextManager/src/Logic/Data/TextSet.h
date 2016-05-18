@@ -81,7 +81,7 @@ public:
 	TextSet getAllByAuthor(int id); //invalid
 
 	//Output section
-
+	void printAll(Context& c);
 	void printAllByAuthor(int id, Context& c);
 	//TODO Define print functions (freq table, etc)
 };

@@ -55,7 +55,7 @@ public:
 	 */
 	void eliminarText();
 
-	void subtitueix(string match, string replace);
+	void substitueix(string match, string replace);
 
 	void textosAutor (string autor);
 	void textos();
