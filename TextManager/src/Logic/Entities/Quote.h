@@ -18,7 +18,7 @@ using namespace std;
  */
 class Quote {
 private:
-	int ID, authorID, startSentenceIndex, endSentenceIndex;
+	int ID, textID, startSentenceIndex, endSentenceIndex;
 
 public:
 	/** @brief Creadora per defecte.
@@ -39,13 +39,13 @@ public:
 	 * \pre El paràmetre implícit conté la referència a un autor vàlid.
 	 * \post El resultat és l'identificador de l'autor del paràmetre implícit.
 	 */
-	int getAuthorID();
+	int getTextID();
 
 	/** @brief Estableix l'identificador de l'autor de la cita.
 	 *	\pre Cert.
 	 *	\post identificator és l'identificador de l'autor del paràmetre implícit.
 	 */
-	void setAuthorID(int identificator);
+	void setTextID(int identificator);
 
 	/** @brief Mostra la posició relativa al text on comença la cita.
 	 * 	\pre Cert.

@@ -20,12 +20,12 @@ int Quote::getID() const {
 	return ID;
 }
 
-int Quote::getAuthorID const {
-	return authorID;
+int Quote::getTextID const {
+	return textID;
 }
 
-void Quote::setAuthorID(int autId) {
-	authorID = autID;
+void Quote::setTextID(int id) {
+	textID = id;
 }
 
 int Quote::getStartIndex const {
@@ -36,8 +36,8 @@ int Quote::getEndIndex() const {
 	return EndIndex;
 }
 
-string Quote::getUniqueIdentifier(Author a, Context c) const {
-	string s = a.getInitials();
+string Quote::getUniqueIdentifier(Context& c) const {
+	string s = c.getAs().get(authorID).getInitials();
 	int id = c.getNextQuoteID();
 	s += id;
 	//id[2] = a.id		TODO és l'id d'aquell autor?
@@ -45,7 +45,8 @@ string Quote::getUniqueIdentifier(Author a, Context c) const {
 }
 
 void Quote::print(int id, Context& c) {
-	cout << getUniqueIdentifier(c.as.get(id))
+	cout << getUniqueIdentifier(c) << endl;
+
 }
 
 
