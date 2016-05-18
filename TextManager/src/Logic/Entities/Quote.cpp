@@ -28,25 +28,32 @@ void Quote::setTextID(int id) {
 	textID = id;
 }
 
+int Quote::getQuoteNumber() {
+	return quoteNumber;
+}
+
 int Quote::getStartIndex const {
-	return StartIndex;
+	return startSentenceIndex;
 }
 
 int Quote::getEndIndex() const {
-	return EndIndex;
+	return endSentenceIndex;
 }
 
 string Quote::getUniqueIdentifier(Context& c) const {
-	string s = c.getAs().get(authorID).getInitials();
+	string s = c.getTs().get(textID).getAuthor(c).getInitials();
 	int id = c.getNextQuoteID();
 	s += id;
-	//id[2] = a.id		TODO és l'id d'aquell autor?
+	//id[2] = a.id		TODO Ã©s l'id d'aquell autor?
 	return s;
 }
 
-void Quote::print(int id, Context& c) {
+void Quote::print(Context& c) {
 	cout << getUniqueIdentifier(c) << endl;
-
+	Text& t = c.getTs().get(textID);
+	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {
+		cout << i << " " << t.getSentenceByIndex(i) << endl;
+	}
 }
 
 
