@@ -121,22 +121,21 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		//frases x y ?
 		if(keywords.size() == 3){
 			int x, y;
-			//x = atoi(keywords[1].c_str());
-			//y = atoi(keywords[2].c_str());
-			cout << x + 1 << y + 1;
-			//a.frases(x, y);
+			x = atoi(keywords[1].c_str());
+			y = atoi(keywords[2].c_str());
+			a.frases(x, y);
 			return;
 		}
 		//frases ".." ? i frases <..> ?
 		if(keywords.size() == 2) {
 			//frases <..> ? (sequencia)
 			if (args[0][0] == '"') {
-				//a.frasesSequencia(args[0]);
+				a.frasesSequencia(args[0]);
 				return;
 			}
 			//frases ".." ? (expressió)
 			else {
-				//a.frasesExpressio(args[0]);
+				a.frasesExpressio(args[0]);
 				return;
 			}
 		}
@@ -144,24 +143,24 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	if (question && keywords[0] == "tots") {
 		//tots textos ?
 		if (keywords[1] == "textos") {
-			//a.textos();
+			a.textos();
 			return ;
 		}
 		//tots autors ?
 		else {
-			//a.autors();
+			a.autors();
 			return;
 		}
 	}
 	if (question && keywords[0] == "nombre") {
 		//nombre de frases ?
 		if (keywords[2] == "frases") {
-			//a.nombreFrases();
+			a.nombreFrases();
 			return;
 		}
 		//nombre de paraules ?
 		if (keywords[2] == "paraules") {
-			//a.nombreParaules();
+			a.nombreParaules();
 			return;
 		}
 	}
@@ -169,59 +168,60 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	if (question && keywords[0] == "info") {
 		//info ??
 		if (keywords.size() == 2) {
-			//a.info();
+			a.info();
 			return;
 		}
 		//info cita "<referència>" ?
 		else {
 			string ref = args[0].substr(1, args[0].size()-2);
-			//a.frasesExpressio(ref);
+			a.frasesExpressio(ref);
 			return;
 		}
 	}
 	//autor ?
 	if (question && keywords[0] == "autor") {
-		//a.autor;
+		a.autor();
 		return;
 	}
 	//contingut ?
 	if (question && keywords[0] == "contingut") {
-		//a.contingut();
+		a.contingut();
 		return;
 	}
 	//taula de frequencies ?
 	if (question && keywords[0] == "taula") {
-		//a.taulaFrequencies();
+		a.taulaFrequencies();
 		return;
 	}
 	//cites autor "<autor>" ? i cites ?
 	if (question && keywords[0] == "cites") {
 		//cites ?
 		if (keywords.size() == 2) {
-			//a.cites();
+			a.cites();
 			return;
 		}
 		//cites autor "<autor>"
 		else {
 			string autor = args[0].substr(1, args[0].size()-2);
-			//a.citesAutor(autor);
+			a.citesAutor(autor);
 			return;
 		}
 	}
 	//totes cites ?
 	if (question && keywords[0] == "totes") {
-		//a.totesCites();
+		a.totesCites();
 		return;
 	}
 	if (!question && keywords[0] == "eliminar") {
 		//eliminar text
 		if (keywords[1] == "text") {
-			//a.eliminarText();
+			a.eliminarText();
 			return;
 		}
 		//eliminar cita
 		else {
-			//a.eliminarCita();
+			string ref = args[0].substr(1, args[0].size()-2);
+			a.eliminarCita(ref);
 			return;
 		}
 	}

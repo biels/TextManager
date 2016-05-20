@@ -38,6 +38,7 @@ void ActionHandler::triarText(string titol){
 }
 void ActionHandler::eliminarText(){
 	c.getTs().remove(c.getChosenTextId());
+	//TODO Remove author as well in some cases
 }
 
 void ActionHandler::substitueix(string match, string replace){
@@ -83,14 +84,14 @@ void ActionHandler::frasesExpressio(string exp){
 }
 
 void ActionHandler::afegirCita(int x, int y){
-	Quote& q = c.getQs().addNew();
-	q.setTextID(c.getChosenTextId());
+	Quote& q = c.getQs().addNew(c);
+	q.setTextId(c.getChosenTextId());
 	q.setStartSentenceIndex(x);
 	q.setEndSentenceIndex(y);
 }
 
 void ActionHandler::infoCita(string ref){
-
+	c.getQs().get(c.getQs().findByRef(ref)).printInfo(c);
 }
 
 void ActionHandler::citesAutor(string nom){
@@ -98,7 +99,7 @@ void ActionHandler::citesAutor(string nom){
 }
 
 void ActionHandler::cites(){
-
+	c.getQs().printAllByText(c.getChosenTextId(), c);
 }
 
 void ActionHandler::totesCites(){
