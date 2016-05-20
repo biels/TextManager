@@ -28,9 +28,9 @@ void QuoteSet::add(const Quote& q) {
 	m.insert(make_pair(q.getId(), q));
 }
 
-Quote& QuoteSet::addNew() {
+Quote& QuoteSet::addNew(Context& c) {
 	Quote q(getNextID());
-	q.setQuoteNumber(getNextQuoteNumber());
+	q.setQuoteNumber(getNextQuoteNumber(), c);
 	add(q);
 	return get(q.getId());
 }
@@ -49,6 +49,13 @@ bool QuoteSet::exists(int id) const {
 
 Quote& QuoteSet::get(int id) {
 	return (*m.find(id)).second;
+}
+int QuoteSet::findByRef(string ref) { //TODO MAP LINEAR SEARCH WITHOUT COPYING
+	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+		Quote q = (*it).second;
+		if(q.getUniqueIdentifier() == ref)return q.getId();
+	}
+	return -1;
 }
 void QuoteSet::printAll(Context& c) const{
 	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){

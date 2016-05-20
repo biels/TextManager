@@ -20,7 +20,8 @@ using namespace std;
 class Quote {
 private:
 	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
-
+	string ref;
+	void updateReference(Context& c);
 public:
 	/** @brief Creadora per defecte.
 	 * \pre Cert.
@@ -31,16 +32,16 @@ public:
 	virtual ~Quote();
 
 	/** @brief Mostra l'identificador de la cita.
-	* \pre Cert.
-	* \post El resultat és l'identificador del paràmetre implícit.
-	*/
+	 * \pre Cert.
+	 * \post El resultat és l'identificador del paràmetre implícit.
+	 */
 	int getId() const;
 
 	/** @brief Mostra l'identificador de l'autor de la cita.
 	 * \pre El paràmetre implícit conté la referència a un autor vàlid.
 	 * \post El resultat és l'identificador de l'autor del paràmetre implícit.
 	 */
-	int getTextID() const;
+	int getTextId() const;
 
 	Text& getText(Context& c);
 
@@ -51,9 +52,9 @@ public:
 
 	/** @brief Estableix l'identificador de l'autor de la cita.
 	 *	\pre Cert.
-	 *	\post identificator és l'identificador de l'autor del paràmetre implícit.
+	 *	\post id és l'identificador de l'autor del paràmetre implícit.
 	 */
-	void setTextID(int identificator);
+	void setTextI(int id);
 
 	/** @brief Mostra la posició relativa al text on comença la cita.
 	 * 	\pre Cert.
@@ -72,19 +73,21 @@ public:
 	 *	\pre El paràmetre implícit conté la referència a un autor vàlid.
 	 *	\post El resultat és l'identificador complet de la cita.
 	 */
-	string getUniqueIdentifier(Context& c) const;
+	string getUniqueIdentifier() const;
 
 
-	void print(Context& c);
 
-	void printInfo(Context& c);
 	int getEndSentenceIndex() const;
 	void setEndSentenceIndex(int endSentenceIndex);
 	int getStartSentenceIndex() const;
 	void setStartSentenceIndex(int startSentenceIndex);
-	int getTextId() const;
 	void setTextId(int textId);
-	void setQuoteNumber(int quoteNumber);
+	void setQuoteNumber(int quoteNumber, Context& c);
+
+	//Output zone
+	void print(Context& c)	const;
+
+	void printInfo(Context& c) const;
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */
