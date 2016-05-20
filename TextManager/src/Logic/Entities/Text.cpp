@@ -55,6 +55,9 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 int Text::getWordCount() const{
 	return wordCount;
 }
+int Text::getSentenceCount() const{
+	return sentences.size();
+}
 string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder / stream for efficiency
 	int start = sentences[index];
 	int size = content.size();
@@ -72,11 +75,16 @@ void Text::replace(string match, string replace){
 		if(content[i] == match)content[i] = replace;
 	}
 }
-void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{
+void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{ //pre: Expr != ""
 	//Example expr (({casa pilota} & ({rodona} | {quadrat})) | {aigua})
 	//1. Analyze expr type. Distinguish andSet from boolExpr
 	//[boolExpr]
+	bool isExpr = expr[0] == '(';
+	if(!isExpr){
+		//BoolExpr {word1 word2 word3}
 
+		//assign match
+	}
 	//-> Return
 
 	//2. Split into leftExpr and rigtExpr. Parse operator
@@ -90,7 +98,7 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 	getSentenceListMatchingExpression(rightExpr, right);
 
 	//4. Do logic operations based on op and assign result to match
-
+	//assign match
 }
 
 //Output section
@@ -99,9 +107,10 @@ void Text::printFrequencyTable() const{
 }
 void Text::printSentenceListMatchingExpression(string expr) const{
 	//for(string sentence : text)if(match
+	cout << "All sentences matching " << expr;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
-
+	cout << "All sentences containing " << sequence;
 }
 void Text::printInfo(Context& c) const {
 	cout << "Info: " << getTitle();
@@ -113,6 +122,9 @@ void Text::printContent() const{ //TODO treat . elements and special cases
 		cout << " " << content[i];
 	}
 }
-void Text::printSentenceListInRange(int from, int to){
-
+void Text::printSentenceListInRange(int from, int to){ //pre from < to
+	cout << "All sentences from " << from << " to " << to;
+	for(unsigned int i = from; i <= to; i++){
+		cout << i << " - " << getSentenceByIndex(i);
+	}
 }
