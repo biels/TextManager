@@ -35,8 +35,10 @@ public:
 	//Molt provisional
 	//Texts
 
-	/*! Afegeix un text al sistema.
-	 *
+	/**
+	 * @brief Afegeix un text al sistema.
+	 * \pre El text no és al sistema.
+	 * \post El text és ara al sistema.
 	 * @param titol El títol del text
 	 * @param autor L'autor del text
 	 * @param contingut El contingut del text, paraula per paraula
@@ -44,61 +46,163 @@ public:
 	void afegirText(string titol, string autor, string contingut);
 
 	/**
-	 *
-	 * @param words
+	 * @Brief Tria un text del sistema
+	 *	\pre Hi ha un text amb títol "titol" al sistema.
+	 *	\post Selecciona el text amb titol "titol".
+	 * @param titol Títol del text
 	 */
 	void triarText(string titol);
 
-	/**@brief Elimina el text seleccionat del sistema
+	/**
+	 * @brief Elimina l'últim el text seleccionat del sistema
 	 * \pre Hi ha un text seleccionat
 	 * \post El text seleccionat s'ha eliminat. A partir d'aquest moment i fins la propera execució correcta de la funció triarText, es considera que no existeix un últim text triat.
 	 */
 	void eliminarText();
 
+	/**
+	 * @Brief Canvia totes les aparicions de la primera paraula per la segona en l'últim text triat.
+	 *	\pre Hi ha un text seleccionat
+	 *	\post El text es el mateix però on hi havia "match" ara hi és "replace".
+	 *	@param match paraula que es substituirà
+	 *	@param replace paraula que substituirà a match
+	 */
 	void substitueix(string match, string replace);
 
+	/**
+	 * @Brief Mostra els textos d’un determinat autor
+	 *	\pre Cert
+	 *	\post El resultat és tots els títols dels textos de l'autor.
+	 *	@param autor
+	 */
 	void textosAutor (string autor);
+
+	/**
+	 * @Brief Mostra tots els textos emmagatzemats en el sistema
+	 * \pre Cert
+	 * \post El resultat són tots els textos ordenats per autor i després per títol.
+	 */
 	void textos();
+
+	/**
+	 * @Brief Mostra tots els autors amb textos en el sistema
+	 * \pre Cert
+	 * \post El resultat és tots els autors amb textos. Per cada autor es diu el
+		nombre de textos que hi consten, el nombre total de frases i de paraules del
+		contingut dels seus textos
+	 */
 	void autors();
+
 	/**
 	 * @brief Mostra informació de l'últim text triat
-	 * (autor, títol, nombre de frases, nombre de paraules i cites associades)
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és l'autor, el títol, el nombre de frases, el nombre de paraules i les cites associades de l'últim text triat.
 	 */
 	void info();
+
 	/**
 	 * @brief Mostra l'autor de l'últim text triat.
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és l'autor de l'últim text triat
 	 */
 	void autor();
-	/**@brief mostra el contingut de l'ultim text triat
+
+	/**
+	 * @brief mostra el contingut de l'ultim text triat
 	 * Amb les seves frases numerades a partir de l'1.
 	 * Per mostrar una frase, s'escriura el numero de frase seguit d'un espai i de la frase, amb un unic salt de lnia al nal d'aquesta.
 	 * En el format de sortida, els signes de puntuacio aniran enganxats a la paraula previa i no hi haura ni tabuladors ni dos espais seguits.
 	 */
 	void contingut();
-	/**@brief Mostra les frases entre la x-esima i la y-esima del contingut de l'ultim text triat
+
+	/**
+	 * @brief Mostra les frases entre la x-esima i la y-esima del contingut de l'ultim text triat
 	 * extrems inclosos (si x = y, no es repeteix la frase). Aquesta comanda requereix un interval valid de frases, es a dir, que 1  x  y  n, on n es el nombre total de frases.
-	 * @param x x-èssima frase
-	 * @param y y-èssima frase
+	 * @param x x-èsima frase
+	 * @param y y-èsima frase
 	 */
 	void frases(int x, int y);
-	/**@brief Mostra el nombre de frases del contingut de l'ultim text triat.
+
+	/**
+	 * @brief Mostra el nombre de frases del contingut de l'ultim text triat.
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és el número de frases de l'últim text triat
 	 */
 	void nombreFrases();
+
 	/**@brief Mostra el nombre de paraules del contingut de l'ultim text triat.
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és el número de paraules de l'últim text triat
 	 */
 	void nombreParaules();
+
 	/**@brief mostra totes les paraules del contingut del text ordenades decreixentment per frequencia
-	 * (per a cada paraula la cadena que la representa i la seva frequencia) de l'ultim text triat.
-	 * En cas d'empat de frequencia les paraules s'ordenen creixement, primer per llargada i despres alfabeticament.
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és totes les paraules del text, ordenat decreixentment per freqüència de l'últim text triat. En cas d'empat de freqüència, les paraules s'ordenen creixement, primer per llargada i després alfabèticament.
 	 */
 	void taulaFrequencies();
+
+	/* @Brief Mostra les frases del contingut de l’últim text triat que compleixen l’expressió
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és, per cada frase que cumpleixi exp, el seu número i el seu contingut, ordenades creixentment pel seu número
+	 * @param exp expressió que han de cumplir les frases
+	 */
 	void frasesExpressio(string exp);
-	void frasesSequencia();
-	//Quotes
+
+	/**
+	 * @Brief Mostra les frases on apareix la seqüència de paraules
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és les frases on hi apareix seq.
+	 * @param seq sequüència de paraules que han de tenir les frases
+	 */
+	void frasesSequencia(string seq);
+
+	/**
+	 * @Brief Afegeix una cita al sistema
+	 * \pre Hi ha un text seleccionat i 1 ≤ x ≤ y ≤ n, on n és el nombre total de frases
+	 * \post S'ha afegir una una cita al sistema basada en les frases que van de la x-èsima a la y-èsima del contingut de l’últim text triat.
+	 * @param x x-èsima frase
+	 * @param y y-èsima frase
+	 */
+	void afegirCita (int x, int y);
+
+	/**
+	 * @Brief Mostra informació d’una cita
+	 * \pre Cert
+	 * \post El resultat és l'autor, el títol, el número de la frase inicial i número de la frase final i el contingut de la frase o frases que la componen amb referència ref.
+	 * @param ref referència de la cita
+	 */
+	void infoCita(string ref);
+
+	/**
+	 * @Brief Mostra totes les cites d’un determinat autor
+	 * \pre Cert
+	 * \post El resultat és totes les cites, cadascuna amb la seva referència, el contingut de les frases i títol del text d’on provenen ordenades per referència de l'autor amb nom name.
+	 * @param name Nom de l'autor de les cites que es volen saber
+	 */
+	void citesAutor(string name);
+
+	/**
+	 * @Brief Mostra totes les cites d'un text
+	 * \pre Hi ha un text seleccionat
+	 * \post El resultat és totes les cites de l'últim text triat, cadascuna amb la seva referència, el contingut de les frases i títol del text d’on provenen ordenades per referència
+	 */
 	void cites();
-	void citesAutor();
+
+	/**
+	 * @Brief Mostra totes les cites del sistema
+	 * \pre Cert
+	 * \post El resultat és totes les cites del sistema, cadascuna amb la seva referència, el contingut de les frases, l'autor i el títol del text d'on provenen
+	 */
 	void totesCites();
-	void eliminarCita();
+
+	/**
+	 * @Brief Elimina una cita del sistema
+	 * \pre Cert
+	 * \post S'ha eliminat la cita amb referència ref del sistema
+	 * @param referència de la cita que es vol eliminar
+	 */
+	void eliminarCita(string uid);
 };
 
 #endif /* LOGIC_ACTIONS_ACTIONHANDLER_H_ */
