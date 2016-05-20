@@ -53,12 +53,7 @@ int TextSet::findByTitle(string title) {
 	return -1;
 }
 
-void TextSet::getAllByAuthor (int id) {
-	//TODO NECESARIA?
-}
-
 void TextSet::printAllByAuthor(int id, Context& c){
-
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
 		Text t = (*it).second;
 		if ((*it).second.author == id) {

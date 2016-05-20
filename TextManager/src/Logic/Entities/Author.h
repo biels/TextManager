@@ -40,7 +40,7 @@ public:
 	 *  \pre Cert.
 	 *  \post El resultat és el nom del paràmetre implícit.
 	 */
-	const string& getName() const;
+	string getName() const;
 
 	/** @brief Estableix el nom de l'autor.
 	 *  \pre Cert.
@@ -52,7 +52,7 @@ public:
 	 *  \pre Cert.
 	 *  \post El resultat és el cognom del paràmetre implícit.
 	 */
-	const string& getLastName() const;
+	string getLastName() const;
 
 	/** @brief Estableix el cognom del paràmetre implícit.
 	 * 	\pre Cert.
