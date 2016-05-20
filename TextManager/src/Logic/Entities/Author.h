@@ -60,6 +60,12 @@ public:
 	 */
 	void setLastName(const string& lastName);
 
+	/**
+	 * @brief Estableix el nom complet de l'autor
+	 * \pre L'autor no te nom complet
+	 * \post El resultat és name amb el nom de l'autor i lastName amb el cognom
+	 * @param fullName nom de l'autor sense separar
+	 */
 	void setFullName(const string& fullName);
 
 	/** @brief Mostra les inicials de l'autor
@@ -68,6 +74,11 @@ public:
 	 */
 	string getInitials() const;
 
+	/**
+	 * @brief Imprimeix un autor
+	 * \post Cert
+	 * \pre El resultat és el nom i el cognom de l'autor
+	 */
 	void print() const;
 };
 
