@@ -16,8 +16,7 @@ class Context;
 using namespace std;
 /** @class Text
  *  @brief Representa un contingut que tÃ© un autor i un tÃ­tol.
- *
- *   Els textos poden correspondre a llibres, articles, manuals, etc.
+ *  Els textos poden correspondre a llibres, articles, manuals, etc.
  */
 
 class Text {
@@ -107,17 +106,18 @@ public:
 	 * \pre exp Ã©s una expressiÃ³ booleana de paraules.
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit que compleixen exp.
 	 */
-	void printSentenceListByExpression(string expr);
+	void printSentenceListMatchingExpression(string expr);
 
 	/** @brief Mostra les frases on hi apareix la seqÃ¼Ã¨ncia de paraules en el contingut de l'Ãºltim text triat.
 	 * \pre word Ã©s una seqÃ¼Ã¨ncia de paraules.
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit on apareix word.
 	 */
-	void printSentenceListByWord(string word);
+	void printSentenceListContaining(string word);
 
 	void printInfo(Context& c); //TODO IMPLEMENT
 
-	void printText(int id); //TODO Consultar
+	void printContent(); //TODO Consultar
+	void printSentenceListInRange(int from, int to);
 };
 
 #endif /* LOGIC_ENTITIES_TEXT_H_ */

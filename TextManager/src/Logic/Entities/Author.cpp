@@ -42,6 +42,7 @@ string Author::getInitials() const{
 	return toupper(getName()[0]) + "" + toupper(getLastName()[0]); //cppshell try
 }
 
-void Author::printAuthor(int id) {
-	//TODO Consultar
+void Author::print() const{
+	//TODO Check outpu format
+	cout << getName() << " " << getLastName();
 }

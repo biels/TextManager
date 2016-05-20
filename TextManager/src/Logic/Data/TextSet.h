@@ -82,8 +82,8 @@ public:
 	TextSet getAllByAuthor(int id); //TODO NECESARIA?
 
 	//Output section
-	void printAll(Context& c);
-	void printAllByAuthor(int id, Context& c);
+	void printAll(Context& c) const;
+	void printAllByAuthor(int id, Context& c) const;
 	//TODO Define print functions (freq table, etc)
 };
 

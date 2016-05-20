@@ -44,16 +44,26 @@ bool QuoteSet::exists(int id) const {
 Quote& QuoteSet::get(int id) {
 	return (*m.find(id)).second;
 }
-
-void QuoteSet::printAllByAuthor(int id, Context& c) {
+void QuoteSet::printAll(Context& c) const{
 	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
 		Quote q = (*it).second;
-		if (q.getText(c).getAuthor(c).getId() == id) {
+		q.print(c);
+	}
+}
+void QuoteSet::printAllByAuthor(int id, Context& c) const{
+	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+		Quote q = (*it).second;
+		if (q.getAuthor(c).getId() == id) {
 			q.print(c);
 		}
 	}
 }
 
-void QuoteSet::printAllByText(int id) {
-
+void QuoteSet::printAllByText(int id, Context& c) const{
+	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+		Quote q = (*it).second;
+		if (q.getText(c).getId() == id) {
+			q.print(c);
+		}
+	}
 }

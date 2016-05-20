@@ -58,16 +58,24 @@ void TextSet::getAllByAuthor (int id) {
 }
 
 void TextSet::printAllByAuthor(int id, Context& c){
+
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
+		Text t = (*it).second;
 		if ((*it).second.author == id) {
-			printText((*it).first);
+			t.print
+		}
+	}
+	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+		Quote q = (*it).second;
+		if (q.getAuthor(c).getId() == id) {
+			q.print(c);
 		}
 	}
 }
 
-void TextSet::printAll () {
+void TextSet::printAll(Context& c) const{ //Print what?
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		printText((*it).first);
+		(*it).second.printInfo();
 	}
 }
 

@@ -67,17 +67,21 @@ public:
 	 */
 	Quote& get(int id);
 
+	int findByRef(string ref); // implement
+
+	void printAll(Context& c) const;
+
 	/**@brief Consulta totes les cites d'un autor amb identificador id
 	 * \pre Existeix un autor amb identificador id
 	 * \post El resultat �s un conjunt de cites amb totes les cites de l'autor amb identificador id
 	 */
-	void printAllByAuthor(int id, Context& c);
+	void printAllByAuthor(int id, Context& c) const;
 
 	/**@brief Consulta totes les cites que apareixen en un text amb identificador id
 	 * \pre Existeix un text amb identificador id
 	 * \post El resultat �s un conjunt de cites que cont� totes les cites que apareixen al text amb identificador id
 	 */
-	void printAllByText(int id);
+	void printAllByText(int id, Context& c) const;
 };
 
 #endif /* LOGIC_DATA_QUOTESET_H_ */

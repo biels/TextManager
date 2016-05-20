@@ -66,6 +66,6 @@ void Text::replace(string match, string replace){
 	}
 }
 
-void Text::printText(int id){
+void Text::printContent(){
 	//TODO Consultar
 }
