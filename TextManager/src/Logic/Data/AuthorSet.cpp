@@ -52,6 +52,6 @@ int AuthorSet::findByName (string name) {
 
 void AuthorSet::printAuthorList() {
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
-		//printAuthor(*it);
+		//
 	}
 }
