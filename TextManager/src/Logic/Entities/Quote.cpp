@@ -31,6 +31,9 @@ int Quote::getTextID() const {
 Text& Quote::getText(Context& c){
 	return c.getTs().get(textID);
 }
+Author& Quote::getAuthor(Context& c){
+	return getText(c).getAuthor(c);
+}
 
 void Quote::setTextID(int id) {
 	textID = id;
@@ -56,7 +59,7 @@ string Quote::getUniqueIdentifier(Context& c) const {
 	return s;
 }
 
-void Quote::printQuote(Context& c) {
+void Quote::print(Context& c) {
 	cout << getUniqueIdentifier(c) << endl;
 	Text& t = c.getTs().get(textID);
 	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {

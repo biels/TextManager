@@ -47,11 +47,15 @@ Author& AuthorSet::get(int id){
 }
 
 int AuthorSet::findByName (string name) {
-	return (*authors.find(name).first);
+	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
+		const std::pair<const int, Author> p = *it;
+		if(p.second.getName() == name)return p.first;
+	}
+	return -1;
 }
 
-void AuthorSet::printAuthorList() {
+void AuthorSet::printAuthorList() { //CHECK Format
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
-		//
+		(*it).second.print();
 	}
 }

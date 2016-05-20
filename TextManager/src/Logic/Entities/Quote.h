@@ -31,8 +31,8 @@ public:
 	virtual ~Quote();
 
 	/** @brief Mostra l'identificador de la cita.
-	  * \pre Cert.
-	  * \post El resultat és l'identificador del paràmetre implícit.
+	* \pre Cert.
+	* \post El resultat és l'identificador del paràmetre implícit.
 	*/
 	int getId() const;
 
@@ -43,6 +43,8 @@ public:
 	int getTextID() const;
 
 	Text& getText(Context& c);
+
+	Author& getAuthor(Context& c);
 
 	int getQuoteNumber();
 
@@ -71,7 +73,7 @@ public:
 	 */
 	string getUniqueIdentifier(Context& c) const;
 
-	void printQuote(Context& c);
+	void print(Context& c);
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

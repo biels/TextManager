@@ -68,7 +68,7 @@ public:
 	 */
 	string getInitials() const;
 
-	void printAuthor(int id); //TODO Consultar
+	void print() const;
 };
 
 #endif /* LOGIC_ENTITIES_AUTHOR_H_ */
