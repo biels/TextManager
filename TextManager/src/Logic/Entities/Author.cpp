@@ -19,13 +19,13 @@ Author::~Author() {
 int Author::getId() const{
 	return this->id;
 }
-const string& Author::getName() const{
+string Author::getName() const{
 	return this->name;
 }
 void Author::setName(const string& name){
 	this->name = name;
 }
-const string& Author::getLastName() const{
+string Author::getLastName() const{
 	return this->lastName;
 }
 void Author::setLastName(const string& lastName){

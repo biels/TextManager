@@ -28,10 +28,10 @@ private:
 	 * \post El paràmetre implícit conté l'autor
 	 */
 	void add(const Author& a);
+
 public:
 	AuthorSet();
 	virtual ~AuthorSet();
-	//TODO Getters and setters
 
 	/**@brief Afegeix un autor nou al conjunt
 	 * \pre Cert
@@ -63,8 +63,14 @@ public:
 	 */
 	Author& get(int id);
 
+	/**
+	 * @brief Retorna l'id de l'autor
+	 * \pre Existeix un autor amb nom "name"
+	 * \post El resultat és l'identificador de l'autor "name"
+	 * @param name nom i cognom d'un autor
+	 */
 	int findByName(string name); // implement
-	//Output section
+
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar
 	 * \pre Cert
 	 * \post S'ha escrit la llista  d'autors al canal de sortida estàndar
