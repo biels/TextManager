@@ -76,7 +76,7 @@ void ActionHandler::taulaFrequencies(){
 	c.getChosenText().printFrequencyTable();
 }
 void ActionHandler::frasesSequencia(string seq){
-	c.getChosenText().printSentenceListContaining(seq);
+	c.getChosenText().printSentenceListContainingSequence(seq);
 }
 void ActionHandler::frasesExpressio(string exp){
 	c.getChosenText().printSentenceListMatchingExpression(exp);

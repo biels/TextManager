@@ -26,12 +26,12 @@ private:
 	int author;
 	vector<string> content; // punctuation signs saved in their own elements
 	int wordCount; //Since [.] are stored in vector elements, .size() would be inaccurate
-	map<int, int> sentences;			//1r int: nº frase, 2n int nº paraula
+	vector<int> sentences;			//index: nº frase, 2n int nº paraula
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
 
 
-
+	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
 public:
 	/** @brief Creadora per defecte
 	 * \pre Cert
@@ -94,6 +94,7 @@ public:
 
 	void replace(string match, string replace);
 
+
 	//Output section
 
 	/** @brief Mostra totes les paraules del text ordenades per freqÃ¼Ã¨ncia.
@@ -113,7 +114,7 @@ public:
 	 * \pre word Ã©s una seqÃ¼Ã¨ncia de paraules.
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit on apareix word.
 	 */
-	void printSentenceListContaining(string word) const;
+	void printSentenceListContainingSequence(string sequence) const;
 
 	void printInfo(Context& c) const; //TODO IMPLEMENT
 
