@@ -12,6 +12,7 @@
 Text::Text(int id) {
 	this->id = id;
 	this->author = -1;
+	this->wordCount = 0;
 	this->title = "";
 }
 
@@ -19,17 +20,6 @@ Text::~Text() {
 	// TODO Auto-generated destructor stub
 }
 
-string Text::getSentenceByIndex(int index) {
-	int start = sentences.find(index)->second;
-	int size = content.size();
-	int end = size - 1;
-	if(index != end) end = sentences.find(index + 1)->second;
-	string s;
-	for(int i = start; i < end; i++){
-		s += (i == start ? "" : " ") + content[i];
-	}
-	return s;
-}
 
 int Text::getId() const{
 	return this->id;
@@ -56,10 +46,27 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 	while(iss >> w){
 		if(w[w.size()-1] == '.'){
 			//Register sentence
+		}else{
+			wordCount++;
 		}
 		this->content.push_back(w);
 	}
 }
+int Text::getWordCount() const{
+	return wordCount;
+}
+string Text::getSentenceByIndex(int index) const{
+	int start = sentences.find(index)->second;
+	int size = content.size();
+	int end = size - 1;
+	if(index != end) end = sentences.find(index + 1)->second;
+	string s;
+	for(int i = start; i < end; i++){
+		s += (i == start ? "" : " ") + content[i];
+	}
+	return s;
+}
+
 void Text::replace(string match, string replace){
 	for(unsigned int i = 0; i < content.size(); ++i){
 		if(content[i] == match)content[i] = replace;
@@ -68,7 +75,7 @@ void Text::replace(string match, string replace){
 void Text::printInfo(Context& c) const {
 	cout << "Info: " << getTitle();
 }
-void Text::printContent(){ //TODO treat . elements and special cases
+void Text::printContent() const{ //TODO treat . elements and special cases
 	cout << "Content: " << getTitle();
 	cout << content[0];
 	for(unsigned int i = 1; i < content.size(); ++i){

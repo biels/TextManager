@@ -25,6 +25,7 @@ private:
 	string title;
 	int author;
 	vector<string> content; // punctuation signs saved in their own elements
+	int wordCount; //Since [.] are stored in vector elements, .size() would be inaccurate
 	map<int, int> sentences;			//1r int: nº frase, 2n int nº paraula
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
@@ -81,15 +82,15 @@ public:
 	 *  \pre Cert.
 	 *  \post El resultat Ã©s el nÃºmero de frases del text.
 	 */
-	int getSentenceCount();
+	int getSentenceCount() const;
 
 	/** @brief Mostra el nombre de paraules del contingut del text.
 	 *  \pre Cert.
 	 *  \post El resultat Ã©s el nÃºmero de paraules del parÃ metre implÃ­cit.
 	 */
-	int getWordCount();
+	int getWordCount() const;
 
-	string getSentenceByIndex(int index);
+	string getSentenceByIndex(int index) const;
 
 	void replace(string match, string replace);
 
@@ -100,23 +101,23 @@ public:
 	 * \post El resultat Ã©s totes les paraules del parÃ metre implÃ­cit ordenades decreixentment per freqÃ¼Ã¨ncia.
 	 * En cas d'empat de freqÃ¼Ã¨ncia les paraules s'ordenen creixement, primer per llargada i desprÃ©s alfabÃ¨ticament.
 	 */
-	void printFrequencyTable();
+	void printFrequencyTable() const;
 
 	/** @brief Mostra les frases del contingut del text triat que compleixen l'expressiÃ³.
 	 * \pre exp Ã©s una expressiÃ³ booleana de paraules.
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit que compleixen exp.
 	 */
-	void printSentenceListMatchingExpression(string expr);
+	void printSentenceListMatchingExpression(string expr) const;
 
 	/** @brief Mostra les frases on hi apareix la seqÃ¼Ã¨ncia de paraules en el contingut de l'Ãºltim text triat.
 	 * \pre word Ã©s una seqÃ¼Ã¨ncia de paraules.
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit on apareix word.
 	 */
-	void printSentenceListContaining(string word);
+	void printSentenceListContaining(string word) const;
 
 	void printInfo(Context& c) const; //TODO IMPLEMENT
 
-	void printContent(); //TODO Consultar
+	void printContent() const; //TODO Consultar
 	void printSentenceListInRange(int from, int to);
 };
 
