@@ -12,11 +12,16 @@ QuoteSet::QuoteSet() {
 }
 
 QuoteSet::~QuoteSet() {
+
 }
 
 int QuoteSet::getNextID() {
 	++lastID;
 	return lastID;
+}
+int QuoteSet::getNextQuoteNumber(){
+	++lastQuoteNumber;
+	return lastQuoteNumber;
 }
 
 void QuoteSet::add(const Quote& q) {
@@ -25,6 +30,7 @@ void QuoteSet::add(const Quote& q) {
 
 Quote& QuoteSet::addNew() {
 	Quote q(getNextID());
+	q.setQuoteNumber(getNextQuoteNumber());
 	add(q);
 	return get(q.getId());
 }

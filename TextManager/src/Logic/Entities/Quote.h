@@ -67,15 +67,24 @@ public:
 	 */
 	int getEndIndex() const;
 
+
 	/** @brief Mostra la cadena que identifica exclusivament aquesta cita. Aquesta està fromada per les inicials i un nombre auto incremental.
 	 *	\pre El paràmetre implícit conté la referència a un autor vàlid.
 	 *	\post El resultat és l'identificador complet de la cita.
 	 */
 	string getUniqueIdentifier(Context& c) const;
 
+
 	void print(Context& c);
 
 	void printInfo(Context& c);
+	int getEndSentenceIndex() const;
+	void setEndSentenceIndex(int endSentenceIndex);
+	int getStartSentenceIndex() const;
+	void setStartSentenceIndex(int startSentenceIndex);
+	int getTextId() const;
+	void setTextId(int textId);
+	void setQuoteNumber(int quoteNumber);
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

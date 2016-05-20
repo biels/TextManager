@@ -59,6 +59,34 @@ string Quote::getUniqueIdentifier(Context& c) const {
 	return s;
 }
 
+int Quote::getEndSentenceIndex() const {
+	return endSentenceIndex;
+}
+
+void Quote::setEndSentenceIndex(int endSentenceIndex) {
+	this->endSentenceIndex = endSentenceIndex;
+}
+
+int Quote::getStartSentenceIndex() const {
+	return startSentenceIndex;
+}
+
+void Quote::setStartSentenceIndex(int startSentenceIndex) {
+	this->startSentenceIndex = startSentenceIndex;
+}
+
+int Quote::getTextId() const {
+	return textID;
+}
+
+void Quote::setQuoteNumber(int quoteNumber) {
+	this->quoteNumber = quoteNumber;
+}
+
+void Quote::setTextId(int textId) {
+	textID = textId;
+}
+
 void Quote::print(Context& c) {
 	cout << getUniqueIdentifier(c) << endl;
 	Text& t = c.getTs().get(textID);
