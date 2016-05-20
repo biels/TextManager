@@ -6,8 +6,9 @@
  */
 
 #include "Context.h"
-
+#include "../Entities/Text.h"
 Context::Context() {
+	lastAssignedQuoteID = 0;
 	chosenTextID = -1;
 
 }
@@ -40,4 +41,7 @@ Context::~Context() {
 int Context::getNextQuoteID() {
 	lastAssignedQuoteID++;
 	return lastAssignedQuoteID;
+}
+Text& Context::getChosenText(){
+	return getTs().get(getChosenTextId());
 }

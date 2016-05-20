@@ -11,7 +11,7 @@
 #include "../Data/TextSet.h"
 #include "../Data/AuthorSet.h"
 #include "../Data/QuoteSet.h"
-
+class Text;
 class Context {
 private:
 	TextSet ts;
@@ -28,6 +28,7 @@ public:
 	int getChosenTextId() const;
 	void setChosenTextId(int chosenTextId);
 	int getNextQuoteID();
+	Text& getChosenText();
 };
 
 #endif /* LOGIC_ACTIONS_CONTEXT_H_ */
