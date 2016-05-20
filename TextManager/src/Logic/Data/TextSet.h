@@ -73,7 +73,7 @@ public:
 	 * \pre Existeix untext amb títol t.
 	 * \post El resultat és el text amb el títol especificat.
 	 */
-	int findByTitle(string t);
+	int findByTitle(string t) const;
 
 	/**@brief Obté tots els textos de l'autor amb identificador authorID.
 	 * \pre Existeix un autor amb el títol authorID.

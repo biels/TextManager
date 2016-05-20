@@ -114,7 +114,7 @@ public:
 	 */
 	void printSentenceListContaining(string word);
 
-	void printInfo(Context& c); //TODO IMPLEMENT
+	void printInfo(Context& c) const; //TODO IMPLEMENT
 
 	void printContent(); //TODO Consultar
 	void printSentenceListInRange(int from, int to);

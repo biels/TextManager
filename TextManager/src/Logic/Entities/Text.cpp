@@ -49,7 +49,7 @@ Author& Text::getAuthor(Context& c){
 void Text::setAuthor(const Author& author){
 	this->author = author.getId();
 }
-void Text::setContent(const string& content){
+void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade space for performance
 	this->content.clear();
 	istringstream iss(content);
 	string w;
@@ -61,11 +61,17 @@ void Text::setContent(const string& content){
 	}
 }
 void Text::replace(string match, string replace){
-	for(int i = 0; i < content.size(); ++i){
+	for(unsigned int i = 0; i < content.size(); ++i){
 		if(content[i] == match)content[i] = replace;
 	}
 }
-
-void Text::printContent(){
-	//TODO Consultar
+void Text::printInfo(Context& c) const {
+	cout << "Info: " << getTitle();
+}
+void Text::printContent(){ //TODO treat . elements and special cases
+	cout << "Content: " << getTitle();
+	cout << content[0];
+	for(unsigned int i = 1; i < content.size(); ++i){
+		cout << " " << content[i];
+	}
 }

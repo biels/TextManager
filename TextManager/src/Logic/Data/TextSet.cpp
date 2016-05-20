@@ -45,7 +45,7 @@ Text& TextSet::get(int id){
 	return (*texts.find(id)).second;
 }
 
-int TextSet::findByTitle(string title) {
+int TextSet::findByTitle(string title) const{
 	for(pair<int, Text> p : texts){
 		Text t = p.second;
 		if (t.getTitle() == title) return t.getId();
@@ -53,24 +53,18 @@ int TextSet::findByTitle(string title) {
 	return -1;
 }
 
-void TextSet::printAllByAuthor(int id, Context& c){
+void TextSet::printAllByAuthor(int id, Context& c) const{
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
 		Text t = (*it).second;
-		if ((*it).second.author == id) {
-			t.print
-		}
-	}
-	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
-		Quote q = (*it).second;
-		if (q.getAuthor(c).getId() == id) {
-			q.print(c);
+		if (t.getAuthor(c).getId() == id) {
+			t.printInfo(c); //Print what=?
 		}
 	}
 }
 
 void TextSet::printAll(Context& c) const{ //Print what?
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		(*it).second.printInfo();
+		(*it).second.printInfo(c);
 	}
 }
 
