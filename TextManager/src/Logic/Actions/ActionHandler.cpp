@@ -81,13 +81,27 @@ void ActionHandler::frasesSequencia(string seq){
 void ActionHandler::frasesExpressio(string exp){
 	c.getChosenText().printSentenceListMatchingExpression(exp);
 }
-//Quotes
-void ActionHandler::cites(){
-	c.getQs().printAll(c);
+
+void ActionHandler::afegirCita(int x, int y){
+	c.getChosenText().
 }
-void ActionHandler::citesAutor(string nom){
+
+void ActionHandler::infoCita(string ref){
+
+}
+
+void ActionHandler::CitesAutor(string nom){
 	c.getQs().printAllByAuthor(c.getAs().findByName(nom), c);
 }
+
+void ActionHandler::cites(){
+
+}
+
+void ActionHandler::totesCites(){
+	c.getQs().printAll(c);
+}
+
 void ActionHandler::eliminarCita(string ref){
 	c.getQs().remove(c.getQs().findByRef(ref));
 }
