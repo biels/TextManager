@@ -20,14 +20,19 @@ TEST(Context, AuthorSet){
 
 }
 
-TEST(Context, DISABLED_QuoteSet){ //FIX QS!
+TEST(Context, QuoteSet){ //FIX QS!
 	Context c;
-	//Quote& q1 = c.getQs().addNew();
-	//ASSERT_TRUE(q1.getId() == 0);
+	Text& t1 = c.getTs().addNew();
+	Author& a1 = c.getAs().addNew();
+	a1.setFullName("Full Name");
+	t1.setAuthor(a1);
+	Quote& q1 = c.getQs().addNew(c);
+	q1.setTextId(t1.getId());
+	ASSERT_TRUE(q1.getId() == 5);
 	//TODO Check creation and data persistence
 }
 
-TEST(Context, DISABLED_TextSet){
+TEST(Context, TextSet){
 	Context c;
 	Text& t1 = c.getTs().addNew();
 	ASSERT_TRUE(t1.getId() == 0);
