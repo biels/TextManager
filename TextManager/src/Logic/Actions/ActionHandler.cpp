@@ -24,11 +24,11 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 	t.setAuthor(a);
 
 	t.setContent(contingut);
-	//Set constent
+
 	cout << "Text afegit" << endl;
 }
-void ActionHandler::triarText(string titol){
-	int id = c.getTs().findByTitle(titol);
+void ActionHandler::triarText(string seq){
+	int id = c.getTs().findByTitle(seq);
 	if (id != -1) {
 		c.setChosenTextId(id);
 		cout << "Text triat: " << c.getChosenTextId() << endl;
@@ -56,34 +56,44 @@ void ActionHandler::autors(){
 	c.getAs().printAuthorList();
 }
 void ActionHandler::info(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().printInfo(c);
 }
 void ActionHandler::autor(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().getAuthor(c).print();
 }
 void ActionHandler::contingut(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().printContent();
 }
 void ActionHandler::frases(int x, int y){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().printSentenceListInRange(x, y);
 }
 void ActionHandler::nombreFrases(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	cout << c.getChosenText().getSentenceCount();
 }
 void ActionHandler::nombreParaules(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	cout << c.getChosenText().getWordCount();
 }
 void ActionHandler::taulaFrequencies(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().printFrequencyTable();
 }
 void ActionHandler::frasesSequencia(string seq){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().printSentenceListContainingSequence(seq);
 }
 void ActionHandler::frasesExpressio(string exp){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().printSentenceListMatchingExpression(exp);
 }
 
 void ActionHandler::afegirCita(int x, int y){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getChosenText().extractQuote(x, y, c);
 }
 

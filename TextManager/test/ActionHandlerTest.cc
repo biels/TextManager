@@ -12,5 +12,7 @@ TEST(ActionHandler, AfegirText){
 	//a.textos();
 	std::string output = testing::internal::GetCapturedStdout();
 	ASSERT_TRUE(output.find("Text afegit") != std::string::npos) << "No s'ha detectat \"Text afegit\"";
+
+	a1.triarText("")
 }
 

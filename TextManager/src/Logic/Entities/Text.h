@@ -97,6 +97,8 @@ public:
 
 	Quote& extractQuote(int from, int to, Context& c);
 
+	bool matchesWordListAnywhere(string list, Context& c);
+
 	//Output section
 
 	/** @brief Mostra totes les paraules del text ordenades per freqÃ¼Ã¨ncia.

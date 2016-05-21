@@ -6,11 +6,14 @@
  */
 
 #include "Text.h"
+
+
 #include "Author.h"
 #include "Quote.h"
 #include "../Actions/Context.h"
 #include <sstream>
 #include <iostream>
+#include <list>
 
 Text::Text(int id) {
 	this->id = id;
@@ -49,6 +52,7 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 	while(iss >> w){
 		if(w[w.size()-1] == '.'){
 			//Register sentence
+			sentences.push_back(content.size());
 		}else{
 			wordCount++;
 		}
@@ -84,6 +88,34 @@ Quote& Text::extractQuote(int from, int to, Context& c){
 	q.setStartSentenceIndex(from);
 	q.setEndSentenceIndex(to);
 	return q;
+}
+bool Text::matchesWordListAnywhere(string ls, Context& c){
+	string lsf = ls.substr(1, ls.size()-2); // Remove {}
+	istringstream iss(lsf);
+	list<string> l;
+	string tmp;
+	while(iss >> tmp) l.push_back(tmp);
+
+	istringstream isst(getTitle());
+	while(iss >> tmp){
+		for(list<string>::iterator it; it != l.end(); ++it){
+			if(tmp == (*it))it=l.erase(it);
+		}
+	}
+	if(l.size() == 0)return true;
+	for(list<string>::iterator it; it != l.end(); ++it){
+		Author& a = getAuthor(c);
+		string str = *it;
+		if (a.getName() == str || a.getLastName() == str)it = l.erase(it);
+	}
+	if(l.size() == 0)return true;
+	for(unsigned int i = 0; i < content.size(); ++i){
+		for(list<string>::iterator it; it != l.end(); ++it){
+			if(content[i] == (*it))it=l.erase(it);
+		}
+		if(i % 10 == 0 && l.size() == 0)return true;
+	}
+	return l.size() == 0;
 }
 void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{ //pre: Expr != ""
 	//Example expr (({casa pilota} & ({rodona} | {quadrat})) | {aigua})

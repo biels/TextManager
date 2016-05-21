@@ -47,11 +47,11 @@ public:
 
 	/**
 	 * @brief Tria un text del sistema
-	 *	\pre Hi ha un text amb títol "titol" al sistema.
-	 *	\post Selecciona el text amb titol "titol".
+	 *	\pre Cert
+	 *	\post Selecciona que conté les paraules dins la seqüència seq. En cas de que més d'un tezxt compleixi aquesta condició, el text seleccionat deixa d'existir.
 	 * @param titol Títol del text
 	 */
-	void triarText(string titol);
+	void triarText(string seq);
 
 	/**
 	 * @brief Elimina l'últim el text seleccionat del sistema
@@ -164,8 +164,8 @@ public:
 	 * @brief Afegeix una cita al sistema
 	 * \pre Hi ha un text seleccionat i 1 ≤ x ≤ y ≤ n, on n és el nombre total de frases
 	 * \post S'ha afegir una una cita al sistema basada en les frases que van de la x-èsima a la y-èsima del contingut de l’últim text triat.
-	 * @param x x-èsima frase
-	 * @param y y-èsima frase
+	 * @param x x-èssima frase
+	 * @param y y-èssima frase
 	 */
 	void afegirCita (int x, int y);
 

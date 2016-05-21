@@ -50,15 +50,25 @@ Text& TextSet::get(int id){
 
 int TextSet::findByTitle(string title) const{
 	for(pair<int, Text> p : texts){
-		Text t = p.second;
+		Text& t = p.second;
 		if (t.getTitle() == title) return t.getId();
 	}
 	return -1;
 }
-
+int TextSet::findByWordList(string list, Context& c){ // if more than one, return -1
+	int found = -1;
+	for(pair<int, Text> p : texts){
+		Text& t = p.second;
+		if(t.matchesWordListAnywhere(list, c)){
+			if(found != -1)return -1;
+			found = t.getId();
+		}
+	}
+	return -1;
+}
 void TextSet::printAllByAuthor(int id, Context& c){
-	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		Text t = (*it).second;
+	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
+		Text& t = (*it).second;
 		if (t.getAuthor(c).getId() == id) {
 			t.printInfo(c); //Print what=?
 		}

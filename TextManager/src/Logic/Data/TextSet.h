@@ -78,6 +78,9 @@ public:
 	 */
 	int findByTitle(string t) const;
 
+
+	int findByWordList(string list, Context& c);
+
 	/**@brief Obté tots els textos de l'autor amb identificador authorID.
 	 * \pre Existeix un autor amb el títol authorID.
 	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id.
