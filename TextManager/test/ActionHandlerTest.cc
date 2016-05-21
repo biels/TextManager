@@ -4,6 +4,7 @@ using namespace std;
 ActionHandler a1;
 string output;
 TEST(ActionHandler, AfegirText){
+	Context& c = a1.exposeContext();
 
 	testing::internal::CaptureStdout();
 	a1.afegirText(
@@ -32,4 +33,18 @@ TEST(ActionHandler, TriarText){
 	a1.triarText("{sleepy ideal Twain tresor}");
 	output = testing::internal::GetCapturedStdout();
 	EXPECT_TRUE(output.find("Text triat") != string::npos);
+}
+
+TEST(ActionHandler, EliminarText){
+	Context& c = a1.exposeContext();
+	ASSERT_TRUE(c.existsChosenText());
+	int id = c.getChosenTextId();
+	EXPECT_TRUE(c.getTs().exists(id));
+	a1.eliminarText();
+	ASSERT_FALSE(c.existsChosenText());
+	ASSERT_FALSE(c.getTs().exists(id));
+}
+
+TEST(ActionHandler, SubstitueixPer){
+
 }

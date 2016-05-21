@@ -39,6 +39,7 @@ void ActionHandler::triarText(string seq){
 void ActionHandler::eliminarText(){
 	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getTs().remove(c.getChosenTextId());
+	c.setChosenTextId(-1);
 	//TODO Remove author as well in some cases
 }
 
@@ -118,4 +119,7 @@ void ActionHandler::totesCites(){
 
 void ActionHandler::eliminarCita(string ref){
 	c.getQs().remove(c.getQs().findByRef(ref));
+}
+Context& ActionHandler::exposeContext(){
+	return c;
 }
