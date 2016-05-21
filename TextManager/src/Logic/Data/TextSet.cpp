@@ -7,6 +7,9 @@
 
 #include "TextSet.h"
 #include "../Actions/Context.h"
+#include "../Entities/Text.h"
+#include "../Entities/Quote.h"
+#include "../Entities/Author.h"
 TextSet::TextSet() {
 	this->lastID = 0;
 }
@@ -38,7 +41,7 @@ void TextSet::remove(const Text& t){
 }
 
 bool TextSet::exists(int id) {
-	return texts.find(id) != texts.end();
+	return texts.find(id) != texts.end() ;
 }
 
 Text& TextSet::get(int id){

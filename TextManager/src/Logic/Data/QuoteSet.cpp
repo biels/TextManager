@@ -7,6 +7,9 @@
 
 #include "QuoteSet.h"
 #include "../Actions/Context.h"
+#include "../Entities/Quote.h"
+#include "../Entities/Text.h"
+#include "../Entities/Author.h"
 QuoteSet::QuoteSet() {
 	lastID = 0;
 }

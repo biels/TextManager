@@ -8,12 +8,15 @@
 #ifndef LOGIC_DATA_TEXTSET_H_
 #define LOGIC_DATA_TEXTSET_H_
 
-#include "../Entities/Text.h"
-#include "../Entities/Quote.h"
+
 #include <map>
 #include <string>
 
 using namespace std;
+
+class Text;
+class Quote;
+class Context;
 
 /**@class TextSet
  * @brief Representa un conjunt de textos.

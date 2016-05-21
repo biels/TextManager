@@ -8,9 +8,10 @@
 #ifndef LOGIC_DATA_QUOTESET_H_
 #define LOGIC_DATA_QUOTESET_H_
 
-#include "../Entities/Quote.h"
-#include <map>
 
+#include <map>
+class Quote;
+class Context;
 using namespace std;
 
 /**@class QuoteSet

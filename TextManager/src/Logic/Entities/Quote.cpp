@@ -8,6 +8,7 @@
 #include "Quote.h"
 
 #include "../Actions/Context.h"
+#include "../Entities/Text.h"
 
 Quote::Quote(int id) {
 	textID = -1;

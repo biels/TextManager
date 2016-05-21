@@ -7,6 +7,7 @@
 
 #include "AuthorSet.h"
 #include "../Actions/Context.h"
+#include "../Entities/Author.h"
 
 AuthorSet::AuthorSet() {
 	lastID = 0;

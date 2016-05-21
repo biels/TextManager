@@ -8,8 +8,10 @@
 #ifndef LOGIC_DATA_AUTHORSET_H_
 #define LOGIC_DATA_AUTHORSET_H_
 
-#include "../Entities/Author.h"
 #include <map>
+#include <string>
+using namespace std;
+class Author;
 /**@class AuthorSet
  * @brief Representa un conjunt d'autors.
  */

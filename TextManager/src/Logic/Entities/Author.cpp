@@ -8,6 +8,7 @@
 #include "Author.h"
 #include "../Actions/Context.h"
 #include "sstream"
+#include <iostream>
 
 Author::Author(int id) {
 	this->id = id;

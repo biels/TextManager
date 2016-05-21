@@ -8,8 +8,6 @@
 
 #include <iostream>
 
-#include "Logic/Actions/ActionHandler.h"
-#include "Logic/Data/TextSet.h"
 #include "UI/CommandExecutor.h"
 using namespace std;
 

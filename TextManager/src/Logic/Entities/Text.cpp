@@ -6,8 +6,11 @@
  */
 
 #include "Text.h"
+#include "Author.h"
+#include "Quote.h"
 #include "../Actions/Context.h"
 #include <sstream>
+#include <iostream>
 
 Text::Text(int id) {
 	this->id = id;

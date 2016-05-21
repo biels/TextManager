@@ -7,6 +7,8 @@
 
 #include "Context.h"
 #include "../Entities/Text.h"
+
+
 Context::Context() {
 	chosenTextID = -1;
 
