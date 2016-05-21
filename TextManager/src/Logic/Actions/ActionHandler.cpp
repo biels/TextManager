@@ -28,20 +28,22 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 	cout << "Text afegit" << endl;
 }
 void ActionHandler::triarText(string seq){
-	int id = c.getTs().findByTitle(seq);
+	int id = c.getTs().findByWordList(seq, c);
+	c.setChosenTextId(id);
 	if (id != -1) {
-		c.setChosenTextId(id);
 		cout << "Text triat: " << c.getChosenTextId() << endl;
 	}else{
-		cout << "No s'ha tobat cap text amb el títol especificat";
+		cout << "No s'ha tobat cap text amb la seqüència especificada" << endl;
 	}
 }
 void ActionHandler::eliminarText(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getTs().remove(c.getChosenTextId());
 	//TODO Remove author as well in some cases
 }
 
 void ActionHandler::substitueix(string match, string replace){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	Text& t = c.getTs().get(c.getChosenTextId());
 	t.replace(match, replace);
 	cout << "Replaced";
@@ -106,6 +108,7 @@ void ActionHandler::citesAutor(string nom){
 }
 
 void ActionHandler::cites(){
+	if(!c.existsChosenText()){cout << "error"; return;}
 	c.getQs().printAllByText(c.getChosenTextId(), c);
 }
 

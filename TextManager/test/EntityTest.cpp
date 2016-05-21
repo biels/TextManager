@@ -24,7 +24,7 @@ TEST(Entities, Author){
 TEST(Entities, Text){
 
 
-	Text t1(0);
+	Text& t1 = c2.getTs().addNew();
 	const char* s_title = "Sample text title";
 	t1.setTitle(s_title);
 	const char* s_content =

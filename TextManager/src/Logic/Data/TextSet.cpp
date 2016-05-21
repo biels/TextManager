@@ -64,7 +64,7 @@ int TextSet::findByWordList(string list, Context& c){ // if more than one, retur
 			found = t.getId();
 		}
 	}
-	return -1;
+	return found;
 }
 void TextSet::printAllByAuthor(int id, Context& c){
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
