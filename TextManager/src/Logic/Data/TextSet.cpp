@@ -33,11 +33,23 @@ void TextSet::add(const Text& t) {//allow copy ?
 	texts.insert(make_pair(t.getId(), t));
 }
 
-void TextSet::remove(int id) {
-	texts.erase(texts.find(id));
+void TextSet::remove(int id, Context& c) {
+	map<int, Text>::iterator t = texts.find(id);
+	int authorId = (*t).second.getAuthor(c).getId();
+	texts.erase(t);
+	bool used = false;
+	for(pair<int, Text> p : texts){
+		if(p.second.getAuthor(c).getId() == authorId){
+			used = true;
+			break;
+		}
+	}
+	if(!used){
+		c.getAs().remove(authorId);
+	}
 }
-void TextSet::remove(const Text& t){
-	this->remove(t.getId());
+void TextSet::remove(const Text& t, Context& c){
+	this->remove(t.getId(), c);
 }
 
 bool TextSet::exists(int id) {

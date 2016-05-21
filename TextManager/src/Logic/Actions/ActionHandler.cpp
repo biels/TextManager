@@ -34,7 +34,7 @@ void ActionHandler::triarText(string seq){
 }
 void ActionHandler::eliminarText(){
 	if(!c.existsChosenText()){cout << "error"; return;}
-	c.getTs().remove(c.getChosenTextId());
+	c.getTs().remove(c.getChosenTextId(), c);
 	c.setChosenTextId(-1);
 	//TODO Remove author as well in some cases
 }

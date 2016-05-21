@@ -52,13 +52,13 @@ public:
 	 * \pre Cert.
 	 * \post Elimina el text amb identificador id si existeix.
 	 */
-	void remove(int id);
+	void remove(int id, Context& c);
 
 	/**@brief Elimina un autor del conjunt
 	 * \pre Cert
 	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
 	 */
-	void remove(const Text& t);
+	void remove(const Text& t, Context& c);
 
 	/**@brief Comprova si l'element amb identificador id pertany al conjunt.
 	 * \pre Cert.
