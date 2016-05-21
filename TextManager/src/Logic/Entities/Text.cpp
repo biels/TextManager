@@ -97,20 +97,20 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 	while(iss >> tmp) l.push_back(tmp);
 
 	istringstream isst(getTitle());
-	while(iss >> tmp){
-		for(list<string>::iterator it; it != l.end(); ++it){
+	while(isst >> tmp){
+		for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
 			if(tmp == (*it))it=l.erase(it);
 		}
 	}
 	if(l.size() == 0)return true;
-	for(list<string>::iterator it; it != l.end(); ++it){
+	for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
 		Author& a = getAuthor(c);
-		string str = *it;
+		string str = (*it);
 		if (a.getName() == str || a.getLastName() == str)it = l.erase(it);
 	}
 	if(l.size() == 0)return true;
 	for(unsigned int i = 0; i < content.size(); ++i){
-		for(list<string>::iterator it; it != l.end(); ++it){
+		for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
 			if(content[i] == (*it))it=l.erase(it);
 		}
 		if(i % 10 == 0 && l.size() == 0)return true;

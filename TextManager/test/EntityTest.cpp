@@ -35,11 +35,14 @@ TEST(Entities, Text){
 	//t1.printContent();
 	//EXPECT_EQ(s_content, testing::internal::GetCapturedStdout()) << "Content was not printed as expected";
 
+	EXPECT_FALSE(t1.matchesWordListAnywhere("{Some text words there}", c2));
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{Are which}", c2));
 	EXPECT_FALSE(t1.matchesWordListAnywhere("{rodona quadrat triangle}", c2));
-	EXPECT_TRUE(t1.matchesWordListAnywhere("{Sample strangeword}", c2));
+	EXPECT_FALSE(t1.matchesWordListAnywhere("{Sample strangeword}", c2));
+	EXPECT_TRUE(t1.matchesWordListAnywhere("{Sample text}", c2));
+	EXPECT_TRUE(t1.matchesWordListAnywhere("{title}", c2));
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{code}", c2));
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{profile}", c2));
-	EXPECT_TRUE(t1.matchesWordListAnywhere("{Oscar somebody}", c2));
+	EXPECT_FALSE(t1.matchesWordListAnywhere("{Oscar somebody}", c2));
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{Wilde}", c2));
 }
