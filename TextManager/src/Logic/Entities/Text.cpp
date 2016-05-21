@@ -75,6 +75,13 @@ void Text::replace(string match, string replace){
 		if(content[i] == match)content[i] = replace;
 	}
 }
+Quote& Text::extractQuote(int from, int to, Context& c){
+	Quote& q = c.getQs().addNew();
+	q.setTextId(getId(), c);
+	q.setStartSentenceIndex(from);
+	q.setEndSentenceIndex(to);
+	return q;
+}
 void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{ //pre: Expr != ""
 	//Example expr (({casa pilota} & ({rodona} | {quadrat})) | {aigua})
 	//1. Analyze expr type. Distinguish andSet from boolExpr

@@ -12,7 +12,8 @@ class Context;
 #include <string>
 #include <vector>
 #include <map>
-#include "Author.h"
+class Author;
+class Quote;
 using namespace std;
 /** @class Text
  *  @brief Representa un contingut que tÃ© un autor i un tÃ­tol.
@@ -22,7 +23,7 @@ using namespace std;
 class Text {
 private:
 	int id;
-	string title;
+	string title; //Won't degrade performance since no room for scaling
 	int author;
 	vector<string> content; // punctuation signs saved in their own elements
 	int wordCount; //Since [.] are stored in vector elements, .size() would be inaccurate
@@ -94,6 +95,7 @@ public:
 
 	void replace(string match, string replace);
 
+	Quote& extractQuote(int from, int to, Context& c);
 
 	//Output section
 

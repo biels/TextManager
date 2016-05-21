@@ -18,4 +18,3 @@ TEST(Entities, Author){
 	ASSERT_TRUE(a2.getLastName() == "Wilde");
 	ASSERT_TRUE(a2.getInitials() == "OW");
 }
-

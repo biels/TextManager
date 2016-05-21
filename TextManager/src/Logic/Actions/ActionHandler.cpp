@@ -84,10 +84,7 @@ void ActionHandler::frasesExpressio(string exp){
 }
 
 void ActionHandler::afegirCita(int x, int y){
-	Quote& q = c.getQs().addNew(c);
-	q.setTextId(c.getChosenTextId());
-	q.setStartSentenceIndex(x);
-	q.setEndSentenceIndex(y);
+	c.getChosenText().extractQuote(x, y, c);
 }
 
 void ActionHandler::infoCita(string ref){

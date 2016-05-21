@@ -4,37 +4,62 @@
 #include "../src/Logic/Data/QuoteSet.h"
 #include "../src/Logic/Data/TextSet.h"
 
+Context c1;
 
-TEST(Context, AuthorSet){
-	Context c;
-	Author& sampleauthor = c.getAs().addNew();
+TEST(Context, BasicConsistency){
+	EXPECT_FALSE(c1.existsChosenText());
+	EXPECT_NO_THROW(c1.getAs());
+	EXPECT_NO_THROW(c1.getTs());
+	EXPECT_NO_THROW(c1.getQs());
+}
+
+TEST(Context, IsolatedAuthorCreation){
+
+	Author& a1 = c1.getAs().addNew();
 	//c.getAs().get(sampleauthor.getId()).setName("Name");
 
-	ASSERT_TRUE(c.getAs().exists(sampleauthor.getId())) << " Falied to create author (author does not exist)";
+	ASSERT_TRUE(c1.getAs().exists(a1.getId())) << " Falied to create author (author does not exist)";
 	//const char* sname = "Name";
 	const char* slastName = "LastName";
-	sampleauthor.setName("Name");
-	sampleauthor.setLastName(slastName);
-	Author recovered = c.getAs().get(sampleauthor.getId());
-	ASSERT_TRUE(recovered.getName() == "Name") << " Data persistence error: " << sampleauthor.getName() << recovered.getName();
+	a1.setName("Name");
+	a1.setLastName(slastName);
+	Author recovered = c1.getAs().get(a1.getId());
+	ASSERT_TRUE(recovered.getName() == "Name") << " Data persistence error: " << a1.getName() << recovered.getName();
 
 }
 
-TEST(Context, QuoteSet){ //FIX QS!
-	Context c;
-	Text& t1 = c.getTs().addNew();
-	Author& a1 = c.getAs().addNew();
-	a1.setFullName("Full Name");
+TEST(Context, TextCreation){
+	Context c1;
+	//Check creation and data persistence
+	Text& t1 = c1.getTs().addNew();
+	EXPECT_TRUE(t1.getId() == 1);
+
+	t1.setTitle("Sample title");
+	t1.setContent("W1 w2 w3 w4. W5 w6 w7.");
+
+	Author& a1 = c1.getAs().addNew();
+	a1.setFullName("Sample Name");
 	t1.setAuthor(a1);
-	Quote& q1 = c.getQs().addNew(c);
-	q1.setTextId(t1.getId());
-	ASSERT_TRUE(q1.getId() == 5);
+
+	Text& t1_r = c1.getTs().get(t1.getId());
+	EXPECT_TRUE(t1_r.getTitle() == t1.getTitle() && t1_r.getId() == t1.getId())  << " Data persistence error";
+	EXPECT_EQ(1, t1.getAuthor(c1).getId()) << "Author in text persitence error";
+	EXPECT_EQ(&t1, &t1_r);
+	EXPECT_EQ(&a1, &t1.getAuthor(c1));
+
+	//Select text
+	c1.setChosenTextId(t1.getId());
+
+	//Check id autoincrement
+	Text& t2 = c1.getTs().addNew();
+	EXPECT_TRUE(t2.getId() == t1.getId() + 1);
+}
+
+
+TEST(Context, QuoteCreation){ //FIX QS! //Add function Quote& q = text.extractQuote
+	Quote& q1 = c1.getQs().addNew();
+	q1.setTextId(c1.getChosenTextId(), c1);
+	ASSERT_EQ(1, q1.getId());
 	//TODO Check creation and data persistence
 }
 
-TEST(Context, TextSet){
-	Context c;
-	Text& t1 = c.getTs().addNew();
-	ASSERT_TRUE(t1.getId() == 0);
-	//TODO Check creation and data persistence
-}

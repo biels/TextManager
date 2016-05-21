@@ -10,7 +10,10 @@
 
 #include <iostream>
 #include <string>
-#include "Text.h"
+
+class Context;
+class Author;
+class Text;
 
 using namespace std;
 
@@ -54,7 +57,7 @@ public:
 	 *	\pre Cert.
 	 *	\post id és l'identificador de l'autor del paràmetre implícit.
 	 */
-	void setTextI(int id);
+	void setTextId(int textId, Context& c);
 
 	/** @brief Mostra la posició relativa al text on comença la cita.
 	 * 	\pre Cert.
@@ -81,8 +84,8 @@ public:
 	void setEndSentenceIndex(int endSentenceIndex);
 	int getStartSentenceIndex() const;
 	void setStartSentenceIndex(int startSentenceIndex);
-	void setTextId(int textId);
-	void setQuoteNumber(int quoteNumber, Context& c);
+
+	void setQuoteNumber(int quoteNumber);
 
 	//Output zone
 	void print(Context& c)	const;

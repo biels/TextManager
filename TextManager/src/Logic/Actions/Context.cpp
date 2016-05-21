@@ -8,7 +8,6 @@
 #include "Context.h"
 #include "../Entities/Text.h"
 Context::Context() {
-	lastAssignedQuoteID = 0;
 	chosenTextID = -1;
 
 }
@@ -33,14 +32,11 @@ int Context::getChosenTextId() const {
 void Context::setChosenTextId(int chosenTextId) {
 	chosenTextID = chosenTextId;
 }
-
+bool Context::existsChosenText() const{
+	return chosenTextID >= 0;
+}
 Context::~Context() {
 	// TODO Auto-generated destructor stub
-}
-
-int Context::getNextQuoteID() {
-	lastAssignedQuoteID++;
-	return lastAssignedQuoteID;
 }
 Text& Context::getChosenText(){
 	return getTs().get(getChosenTextId());

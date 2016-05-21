@@ -48,7 +48,7 @@ public:
 	 * \pre Cert
 	 * \post El resultat és el nou text
 	 */
-	Quote& addNew(Context& c);
+	Quote& addNew();
 
 	/**@brief Elimina una cita
 	 * \pre Cert

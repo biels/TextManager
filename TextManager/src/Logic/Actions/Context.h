@@ -18,7 +18,6 @@ private:
 	AuthorSet as;
 	QuoteSet qs;
 	int chosenTextID;
-	int lastAssignedQuoteID;
 public:
 	Context();
 	virtual ~Context();
@@ -26,8 +25,8 @@ public:
 	QuoteSet& getQs();
 	TextSet& getTs();
 	int getChosenTextId() const;
+	bool existsChosenText() const;
 	void setChosenTextId(int chosenTextId);
-	int getNextQuoteID();
 	Text& getChosenText();
 };
 

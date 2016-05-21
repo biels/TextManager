@@ -28,9 +28,9 @@ void QuoteSet::add(const Quote& q) {
 	m.insert(make_pair(q.getId(), q));
 }
 
-Quote& QuoteSet::addNew(Context& c) {
+Quote& QuoteSet::addNew() {
 	Quote q(getNextID());
-	q.setQuoteNumber(getNextQuoteNumber(), c);
+	q.setQuoteNumber(getNextQuoteNumber());
 	add(q);
 	return get(q.getId());
 }

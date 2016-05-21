@@ -28,9 +28,8 @@ int Quote::getTextId() const {
 	return textID;
 }
 void Quote::updateReference(Context& c){
-	string s = c.getTs().get(textID).getAuthor(c).getInitials();
-	int id = c.getNextQuoteID();
-	s += id;
+	string s = "E";// c.getTs().get(textID).getAuthor(c).getInitials();
+	s += getQuoteNumber();
 	//id[2] = a.id		TODO és l'id d'aquell autor?
 	ref = s;
 }
@@ -75,13 +74,13 @@ void Quote::setStartSentenceIndex(int startSentenceIndex) {
 	this->startSentenceIndex = startSentenceIndex;
 }
 
-void Quote::setQuoteNumber(int quoteNumber, Context& c) {
+void Quote::setQuoteNumber(int quoteNumber) {
 	this->quoteNumber = quoteNumber;
-	updateReference(c);
 }
 
-void Quote::setTextId(int textId) {
+void Quote::setTextId(int textId, Context& c) {
 	textID = textId;
+	updateReference(c);
 }
 
 //Output zone
