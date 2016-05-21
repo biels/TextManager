@@ -7,7 +7,7 @@
 
 #include "Author.h"
 #include "../Actions/Context.h"
-#include "sstream"
+#include <sstream>
 #include <iostream>
 
 Author::Author(int id) {
@@ -42,7 +42,11 @@ string Author::getFullName() const{
 }
 string Author::getInitials() const{
 	if(getName().length() == 0 || getLastName().length() == 0)return "--";
-	return toupper(getName()[0]) + "" + toupper(getLastName()[0]); //cppshell try
+	string r;
+	stringstream ss;
+	ss << getName()[0] << getLastName()[0];
+	ss >> r;
+	return r;
 }
 
 void Author::print() const{
