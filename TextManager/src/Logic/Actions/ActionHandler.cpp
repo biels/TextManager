@@ -18,11 +18,7 @@ ActionHandler::~ActionHandler() {
 void ActionHandler::afegirText(string titol, string autor, string contingut){
 	Text& t = c.getTs().addNew();
 	t.setTitle(titol);
-
-	Author& a = c.getAs().addNew();
-	a.setFullName(autor); //spilt first and last name
-	t.setAuthor(a);
-
+	t.setAuthorByFullName(autor, c);
 	t.setContent(contingut);
 
 	cout << "Text afegit" << endl;
@@ -50,7 +46,7 @@ void ActionHandler::substitueix(string match, string replace){
 	cout << "Replaced";
 }
 void ActionHandler::textosAutor (string autor){
-	c.getTs().printAllByAuthor(c.getAs().findByName(autor), c);
+	c.getTs().printAllByAuthor(c.getAs().findByFullName(autor), c);
 }
 void ActionHandler::textos(){
 	c.getTs().printAll(c);
@@ -105,7 +101,7 @@ void ActionHandler::infoCita(string ref){
 }
 
 void ActionHandler::citesAutor(string nom){
-	c.getQs().printAllByAuthor(c.getAs().findByName(nom), c);
+	c.getQs().printAllByAuthor(c.getAs().findByFullName(nom), c);
 }
 
 void ActionHandler::cites(){

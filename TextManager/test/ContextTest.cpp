@@ -34,15 +34,12 @@ TEST(Context, TextCreation){
 	t1.setTitle("Sample title");
 	t1.setContent("W1 w2 w3 w4. W5 w6 w7.");
 
-	Author& a1 = c1.getAs().addNew();
-	a1.setFullName("Sample Name");
-	t1.setAuthor(a1);
+	t1.setAuthorByFullName("Sample Name", c1);
 
 	Text& t1_r = c1.getTs().get(t1.getId());
 	EXPECT_TRUE(t1_r.getTitle() == t1.getTitle() && t1_r.getId() == t1.getId())  << " Data persistence error";
 	EXPECT_EQ(1, t1.getAuthor(c1).getId()) << "Author in text persitence error";
 	EXPECT_EQ(&t1, &t1_r);
-	EXPECT_EQ(&a1, &t1.getAuthor(c1));
 
 	//Select text
 	c1.setChosenTextId(t1.getId());

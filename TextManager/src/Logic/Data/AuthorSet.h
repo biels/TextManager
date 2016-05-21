@@ -71,7 +71,7 @@ public:
 	 * \post El resultat és l'identificador de l'autor "name"
 	 * @param name nom i cognom d'un autor
 	 */
-	int findByName(string name); // implement
+	int findByFullName(string name);
 
 	/**@brief Escriu la llista d'autors al canal de sortida estàndar
 	 * \pre Cert

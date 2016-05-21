@@ -45,18 +45,35 @@ Author& Text::getAuthor(Context& c){
 void Text::setAuthor(const Author& author){
 	this->author = author.getId();
 }
+void Text::setAuthorByFullName(string fullName, Context& c){
+	int id = c.getAs().findByFullName(fullName);
+	if (id == -1) {
+		Author& a = c.getAs().addNew();
+		a.setFullName(fullName);
+		id = a.getId();
+	}
+	author = id;
+}
 void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade space for performance
 	this->content.clear();
 	istringstream iss(content);
 	string w;
 	while(iss >> w){
-		if(w[w.size()-1] == '.'){
-			//Register sentence
-			sentences.push_back(content.size());
+		char lc = w[w.size() - 1];
+		bool isPoint = lc == '.';
+		bool isP = (lc == ',' || lc == '.' || lc == ':' || lc == ';');
+		if (isP) {
+			if(isPoint){
+				//Register sentence
+				sentences.push_back(content.size());
+			}
+			this->content.push_back(w.substr(0, w.size() - 1));
+			this->content.push_back(w.substr(w.size() - 1, 1));
 		}else{
-			wordCount++;
+			this->content.push_back(w);
+
 		}
-		this->content.push_back(w);
+			wordCount++;
 	}
 }
 int Text::getWordCount() const{

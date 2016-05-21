@@ -9,5 +9,6 @@
 int main(int argc, char **argv) {
   //Invoke test running
   ::testing::InitGoogleTest(&argc, argv);
+  //::testing::GTEST_FLAG(filter) = "*Text*";
   return RUN_ALL_TESTS();
 }

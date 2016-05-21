@@ -47,10 +47,10 @@ Author& AuthorSet::get(int id){
 	return (*authors.find(id)).second;
 }
 
-int AuthorSet::findByName (string name) {
+int AuthorSet::findByFullName (string fullName) {
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
 		const std::pair<const int, Author> p = *it;
-		if(p.second.getName() == name)return p.first;
+		if(p.second.getFullName() == fullName)return p.first;
 	}
 	return -1;
 }

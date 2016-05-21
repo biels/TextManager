@@ -73,6 +73,8 @@ public:
 	 */
 	void setAuthor(const Author& author);
 
+	void setAuthorByFullName(string fullName, Context& c);
+
 	/** @brief Estableix el contingut del text.
 	 *  \pre El parÃ metre implÃ­cit no tÃ© contingut.
 	 *  \post content Ã©s el contingut del parÃ metre implÃ­cit.
