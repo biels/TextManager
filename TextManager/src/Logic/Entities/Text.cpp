@@ -113,17 +113,17 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 
 //Output section
 void Text::printFrequencyTable() const{
-	cout << "FrequencyTable"; //TODO
+	cout << "FrequencyTable" << endl; //TODO
 }
 void Text::printSentenceListMatchingExpression(string expr) const{
 	//for(string sentence : text)if(match
-	cout << "All sentences matching " << expr;
+	cout << "All sentences matching " << expr << endl;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
-	cout << "All sentences containing " << sequence;
+	cout << "All sentences containing " << sequence << endl;
 }
-void Text::printInfo(Context& c) const {
-	cout << "Info: " << getTitle();
+void Text::printInfo(Context& c) {
+	cout << getAuthor(c).getFullName() << " " << '"' << getTitle() << '"' << endl;
 }
 void Text::printContent() const{ //TODO treat . elements and special cases
 	cout << "Content: " << getTitle();
@@ -133,8 +133,8 @@ void Text::printContent() const{ //TODO treat . elements and special cases
 	}
 }
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
-	cout << "All sentences from " << from << " to " << to;
-	for(unsigned int i = from; i <= to; i++){
-		cout << i << " - " << getSentenceByIndex(i);
+	cout << "All sentences from " << from << " to " << to << ": " << endl;
+	for(int i = from; i <= to; i++){
+		cout << i << " - " << getSentenceByIndex(i) << endl;
 	}
 }

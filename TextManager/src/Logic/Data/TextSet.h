@@ -89,7 +89,7 @@ public:
 	 * \post
 	 * @param c
 	 */
-	void printAll(Context& c) const;
+	void printAll(Context& c);
 
 	/**
 	 * @brief
@@ -98,8 +98,8 @@ public:
 	 * @param id
 	 * @param c
 	 */
-	void printAllByAuthor(int id, Context& c) const;
-	//TODO Define print functions (freq table, etc)
+	void printAllByAuthor(int id, Context& c);
+
 };
 
 #endif /* LOGIC_DATA_TEXTSET_H_ */

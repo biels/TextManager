@@ -68,6 +68,8 @@ public:
 	 */
 	void setFullName(const string& fullName);
 
+	string getFullName() const;
+
 	/** @brief Mostra les inicials de l'autor
 	 * \pre S'han utilitzat amb èxit les accions setName() i setLastName() del paràmetre implícit. @see setName() @see setLastName()
 	 * \post Retorna les incials del paràmtre implícit.

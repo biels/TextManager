@@ -11,6 +11,7 @@
 #include "../Entities/Text.h"
 #include "../Entities/Author.h"
 QuoteSet::QuoteSet() {
+	lastQuoteNumber = 0;
 	lastID = 0;
 }
 
