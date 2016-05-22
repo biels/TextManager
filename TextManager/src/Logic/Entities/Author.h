@@ -68,6 +68,12 @@ public:
 	 */
 	void setFullName(const string& fullName);
 
+	/**
+	 * @brief
+	 * \pre
+	 * \post
+	 * @return
+	 */
 	string getFullName() const;
 
 	/** @brief Mostra les inicials de l'autor
@@ -81,7 +87,7 @@ public:
 	 * \post Cert
 	 * \pre El resultat és el nom i el cognom de l'autor
 	 */
-	void print() const;
+	void print();
 };
 
 #endif /* LOGIC_ENTITIES_AUTHOR_H_ */
