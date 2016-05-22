@@ -45,4 +45,6 @@ TEST(Entities, Text){
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{profile}", c2));
 	EXPECT_FALSE(t1.matchesWordListAnywhere("{Oscar somebody}", c2));
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{Wilde}", c2));
+
+
 }
