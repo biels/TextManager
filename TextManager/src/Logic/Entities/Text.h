@@ -32,7 +32,7 @@ private:
 	vector<string> getSentenceListByWord();
 
 
-	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
+
 public:
 	/** @brief Creadora per defecte
 	 * \pre Cert
@@ -101,6 +101,9 @@ public:
 
 	bool matchesWordListAnywhere(string list, Context& c);
 
+	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
+
+	void getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool c_op) const;
 	//Output section
 
 	/** @brief Mostra totes les paraules del text ordenades per freqÃ¼Ã¨ncia.
