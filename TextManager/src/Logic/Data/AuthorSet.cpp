@@ -57,7 +57,7 @@ int AuthorSet::findByFullName (string fullName) {
 
 void AuthorSet::printAuthorList(Context& c) {
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
-		Author a = *it.second;
+		Author a = (*it).second;
 		a.print();
 		cout << " " << c.getTs.numberTextsAuthor(a.getId(), c);
 		cout << " " << c.getTs.numberSentencesAuthorTexts(a.getId(), c);
