@@ -87,7 +87,7 @@ public:
 	 * \post Cert
 	 * \pre El resultat és el nom i el cognom de l'autor
 	 */
-	void print();
+	void print() const;
 };
 
 #endif /* LOGIC_ENTITIES_AUTHOR_H_ */

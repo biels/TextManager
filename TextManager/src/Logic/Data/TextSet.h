@@ -84,7 +84,7 @@ public:
 
 	int numberWordsAuthorTexts(int id, Context& c) const;
 
-	int numberSentencesAuthorTexts(int id, Context& c) const
+	int numberSentencesAuthorTexts(int id, Context& c) const;
 
 	int numberTextsAuthor(int id, Context& c) const;
 

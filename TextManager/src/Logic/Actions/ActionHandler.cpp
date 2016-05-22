@@ -52,7 +52,7 @@ void ActionHandler::textos(){
 	c.getTs().printAll(c);
 }
 void ActionHandler::autors(){
-	c.getAs().printAuthorList();
+	c.getAs().printAuthorList(c);
 }
 void ActionHandler::info(){
 	if(!c.existsChosenText()){cout << "error"; return;}

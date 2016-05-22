@@ -8,7 +8,7 @@
 #include "AuthorSet.h"
 #include "../Actions/Context.h"
 #include "../Entities/Author.h"
-
+#include <iostream>
 AuthorSet::AuthorSet() {
 	lastID = 0;
 }
@@ -60,8 +60,8 @@ void AuthorSet::printAuthorList(Context& c) {
 		Author a = (*it).second;
 		a.print();
 		int id = a.getId();
-		cout << " " << c.getTs.numberTextsAuthor(id, c);
-		cout << " " << c.getTs.numberSentencesAuthorTexts(id, c);
-		cout << " " << c.getTs.numberWordsAuthorTexts(id, c) << endl;
+		cout << " " << c.getTs().numberTextsAuthor(id, c);
+		cout << " " << c.getTs().numberSentencesAuthorTexts(id, c);
+		cout << " " << c.getTs().numberWordsAuthorTexts(id, c) << endl;
 	}
 }

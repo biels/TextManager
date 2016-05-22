@@ -11,6 +11,7 @@
 #include <map>
 #include <string>
 using namespace std;
+class Context;
 class Author;
 /**@class AuthorSet
  * @brief Representa un conjunt d'autors.

@@ -83,7 +83,7 @@ int TextSet::findByWordList(string list, Context& c){ // if more than one, retur
 int TextSet::numberWordsAuthorTexts(int id, Context& c) const {
 	int words = 0;
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		Text t = (*it).second();
+		Text t = (*it).second;
 		if (t.getAuthor(c).getId() == id) words += t.getWordCount();
 	}
 	return words;
@@ -92,7 +92,7 @@ int TextSet::numberWordsAuthorTexts(int id, Context& c) const {
 int TextSet::numberSentencesAuthorTexts(int id, Context& c) const{
 	int sent = 0;
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		Text t = (*it).second();
+		Text t = (*it).second;
 		if (t.getAuthor(c).getId() == id) sent += t.getSentenceCount();
 	}
 	return sent;
@@ -101,7 +101,7 @@ int TextSet::numberSentencesAuthorTexts(int id, Context& c) const{
 int TextSet::numberTextsAuthor(int id, Context& c) const{
 	int ntexts = 0;
 	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		Text t = (*it).second();
+		Text t = (*it).second;
 		if (t.getAuthor(c).getId() == id) ++ntexts;
 	}
 	return ntexts;
