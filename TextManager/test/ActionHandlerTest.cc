@@ -121,7 +121,38 @@ TEST(ActionHandler, DISABLED_FrasesXY){
 	EXPECT_TRUE(output.find("8") != string::npos);
 }
 TEST(ActionHandler, FrasesExpr){
+	Context& c = a1.exposeContext();
+	a1.afegirText("Where the wild things are", "Maurice Sendak", "The night Max wore his wolf suit and made mischief of one kind and another. That very night in his room a forest grew and grew. An ocean tumbled by with a private boat for Max and he sailed off. When he came to the place where the wild things are they roared their terrible roars and rolled their eyes. Max tamed them with the magic trick of staring into their yellow eyes without blinking once. They made him king of all wild things.");
+	a1.triarText("{eyes another roars}");
+	ASSERT_TRUE(c.existsChosenText());
 
+	testing::internal::CaptureStdout();
+	a1.frasesExpressio("(({night wolf} | {When}) & {And})");
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_FALSE(output.find("1") != string::npos);
+	EXPECT_FALSE(output.find("4") != string::npos);
+
+	testing::internal::CaptureStdout();
+	a1.frasesExpressio("(({night wolf} | {When}) & {and})");
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_TRUE(output.find("1") != string::npos);
+	EXPECT_TRUE(output.find("4") != string::npos);
+	EXPECT_FALSE(output.find("2") != string::npos);
+
+	testing::internal::CaptureStdout();
+	a1.frasesExpressio("({king} | {roars eyes})");
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_TRUE(output.find("4") != string::npos);
+	EXPECT_TRUE(output.find("6") != string::npos);
+	EXPECT_FALSE(output.find("3") != string::npos);
+
+	testing::internal::CaptureStdout();
+	a1.frasesExpressio("(({tamed} | {mischief}) | {king wild})");
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_TRUE(output.find("1") != string::npos);
+	EXPECT_TRUE(output.find("5") != string::npos);
+	EXPECT_TRUE(output.find("6") != string::npos);
+	EXPECT_FALSE(output.find("2") != string::npos);
 }
 TEST(ActionHandler, FrequencyTable){
 
