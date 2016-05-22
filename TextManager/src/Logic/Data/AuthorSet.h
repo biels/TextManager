@@ -77,7 +77,7 @@ public:
 	 * \pre Cert
 	 * \post S'ha escrit la llista  d'autors al canal de sortida estàndar
 	 */
-	void printAuthorList();
+	void printAuthorList(Context& c);
 };
 
 #endif /* LOGIC_DATA_AUTHORSET_H_ */
