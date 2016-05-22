@@ -21,7 +21,7 @@ class QuoteSet {
 private:
 	int lastID;
 	int lastQuoteNumber;
-	map<int, Quote> m;
+	map<int, Quote> quotes;
 
 	/**@brief Calcula l'identificador del següent element del conjunt.
 	 * \pre Cert.

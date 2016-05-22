@@ -29,7 +29,7 @@ int QuoteSet::getNextQuoteNumber(){
 }
 
 void QuoteSet::add(const Quote& q) {
-	m.insert(make_pair(q.getId(), q));
+	quotes.insert(make_pair(q.getId(), q));
 }
 
 Quote& QuoteSet::addNew() {
@@ -40,7 +40,7 @@ Quote& QuoteSet::addNew() {
 }
 
 void QuoteSet::remove(int id) {
-	m.erase(m.find(id));
+	quotes.erase(quotes.find(id));
 }
 
 void QuoteSet::remove(const Quote& q) {
@@ -48,27 +48,27 @@ void QuoteSet::remove(const Quote& q) {
 }
 
 bool QuoteSet::exists(int id) const {
-	return m.find(id) != m.end();
+	return quotes.find(id) != quotes.end();
 }
 
 Quote& QuoteSet::get(int id) {
-	return (*m.find(id)).second;
+	return (*quotes.find(id)).second;
 }
 int QuoteSet::findByRef(string ref) { //TODO MAP LINEAR SEARCH WITHOUT COPYING
-	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if(q.getUniqueIdentifier() == ref)return q.getId();
 	}
 	return -1;
 }
 void QuoteSet::printAll(Context& c) const{
-	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		q.print(c);
 	}
 }
 void QuoteSet::printAllByAuthor(int id, Context& c) const{
-	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if (q.getAuthor(c).getId() == id) {
 			q.print(c);
@@ -77,7 +77,7 @@ void QuoteSet::printAllByAuthor(int id, Context& c) const{
 }
 
 void QuoteSet::printAllByText(int id, Context& c) const{
-	for (map<int, Quote>::const_iterator it = m.begin(); it != m.end(); it++){
+	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if (q.getText(c).getId() == id) {
 			q.print(c);

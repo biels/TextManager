@@ -81,10 +81,12 @@ public:
 
 	int findByWordList(string list, Context& c);
 
-	/**@brief Obté tots els textos de l'autor amb identificador authorID.
-	 * \pre Existeix un autor amb el títol authorID.
-	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id.
-	 */
+
+	int numberWordsAuthorTexts(int id, Context& c) const;
+
+	int numberSentencesAuthorTexts(int id, Context& c) const
+
+	int numberTextsAuthor(int id, Context& c) const;
 
 	/**
 	 * @brief
@@ -94,12 +96,9 @@ public:
 	 */
 	void printAll(Context& c);
 
-	/**
-	 * @brief
-	 * \pre
-	 * \post
-	 * @param id
-	 * @param c
+	/**@brief Obté tots els textos de l'autor amb identificador authorID.
+	 * \pre Existeix un autor amb el títol authorID.
+	 * \post El resultat és un conjunt de textos que conté els textos de l'autor id.
 	 */
 	void printAllByAuthor(int id, Context& c);
 
