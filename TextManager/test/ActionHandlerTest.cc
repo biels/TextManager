@@ -77,10 +77,12 @@ TEST(ActionHandler, EliminarText){
 TEST(ActionHandler, SubstitueixPer){
 	Context& c = a1.exposeContext();
 	a1.afegirText(
-				"Wx Text",
-				"The Replacer",
-				"W1 w2 w3 w4 w5 w6 w7. W8 w9 w10 w11 w12. W13: w14, w15, w16.");
+			"Wx Text",
+			"The Replacer",
+			"W1 w2 w3 w4 w5 w6 w7. W8 w9 w10 w11 w12. W13: w14, w15, w16.");
 	a1.triarText("{W1 w2 w7}");
+	ASSERT_TRUE(c.existsChosenText());
+	a1.triarText("{W13}");
 	ASSERT_TRUE(c.existsChosenText());
 	a1.substitueix("w2", "aa");
 	a1.triarText("{W1 w2 w7}");
@@ -94,5 +96,36 @@ TEST(ActionHandler, SubstitueixPer){
 	ASSERT_FALSE(c.existsChosenText());
 	a1.triarText("{dd bb Cc}");
 	ASSERT_TRUE(c.existsChosenText());
+}
+
+TEST(ActionHandler, DISABLED_FrasesXY){
+	Context& c = a1.exposeContext();
+	a1.triarText("{ugly meanings}");
+	ASSERT_TRUE(c.existsChosenText());
+
+	testing::internal::CaptureStdout();
+	a1.frases(2, 3);
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_TRUE(output.find("fault") != string::npos);
+	EXPECT_TRUE(output.find("cultivated") != string::npos);
+	EXPECT_FALSE(output.find("all") != string::npos);
+	EXPECT_TRUE(output.find("2") != string::npos);
+	EXPECT_TRUE(output.find("3") != string::npos);
+	EXPECT_FALSE(output.find("4") != string::npos);
+	EXPECT_FALSE(output.find("1") != string::npos);
+	EXPECT_FALSE(output.find("Books") != string::npos);
+
+	testing::internal::CaptureStdout();
+	a1.frases(8, 8);
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_TRUE(output.find("8") != string::npos);
+}
+TEST(ActionHandler, FrasesExpr){
 
 }
+TEST(ActionHandler, FrequencyTable){
+
+}
+
+
+
