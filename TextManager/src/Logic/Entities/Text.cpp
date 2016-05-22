@@ -134,7 +134,7 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 	}
 	return l.size() == 0;
 }
-void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool c_op) const{ //pre: Expr != ""
+void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool& c_op) const{ //pre: Expr != ""
 	//Example expr (({casa pilota} & ({rodona} | {quadrat})) | {aigua})
 	//1. Analyze expr type. Distinguish andSet from boolExpr
 	//[boolExpr]
@@ -142,20 +142,24 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 	string exprf = expr.substr(1, expr.size()-2);
 	string tmp;
 	istringstream iss(exprf);
-	if(!isExpr){
+	if(!isExpr){ //Treat {} as and cond
 		//BoolExpr {word1 word2 word3}
-
+		while(iss >> tmp){
+			for(int i = 0; cond.size(); i++)if(cond[i] == tmp)continue;
+			cond.push_back(tmp);
+		}
+		c_op = true;
 		//assign match
 		return;
 	}
 	//-> Return
 
 	//2. Split into leftExpr and rigtExpr. Parse operator
-	vector<int> left;
-	vector<int> right;
 	bool op; // [false = OR, true = AND]
 	bool op_v = false;
 	string leftExpr, rightExpr;
+
+	//-- Parse expression parts
 	int c = 0;
 	while(iss >> tmp){
 		if(!op_v){
@@ -166,30 +170,67 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 		if(!op_v)leftExpr += (c == 0 ? "" : " ") + tmp;
 		if(op_v)rightExpr += (c == 0 ? "" : " ") + tmp;
 	}
+	//--
 
 	//3. Make recursive calls
-	getSentenceListMatchingExpression(leftExpr, left);
-	getSentenceListMatchingExpression(rightExpr, right);
+	vector<int> match_left, match_right;
+	vector<string> cond_left, cond_right;
+	bool op_left, op_right;
 
-	//4. Do logic operations based on op and assign result to match
+	getSentenceListMatchingExpressionEf(leftExpr, match_left, cond_left, op_left);
+	getSentenceListMatchingExpressionEf(rightExpr, right, cond_right, op_right);
+
+	//4. Execute intelligent linear search where operators cannot be combined
+	//left
+	if(op_left != op){
+		//Execute left
+		//Do the search and modify match
+		getSentenceListMatchingWordListInContext(match, cond_left, op_left);
+		cond_left.clear();
+	}
+	//right
+	if(op_right != op){
+		//Execute right
+		//Do the search and modify match
+		getSentenceListMatchingWordListInContext(match, cond_right, op_right);
+		cond_right.clear();
+	}
+
+	//5. Generate cond and c_op to resolve redundant levels
+	//cond = cond_left + cond_right
+	for(int i = 0; cond_left.size(); i++){
+		for(int i = 0; cond.size(); i++)if(cond_left[i] == cond[i])continue;
+		cond.push_back(cond_left[i]);
+	}
+	for(int i = 0; cond_right.size(); i++){
+		for(int i = 0; cond.size(); i++)if(cond_right[i] == cond[i])continue;
+		cond.push_back(cond_right[i]);
+	}
+	c_op = op;
+
+	//6. Do logic operations based on op to update match
 	if(op){
-		for(int i = 0; left.size(); i++)
-			for(int j = 0; right.size(); j++){
-				if(left[i] == right[j])match.push_back(left[i]);
+		for(int i = 0; match_left.size(); i++)
+			for(int j = 0; match_right.size(); j++){
+				if(match_left[i] == match_right[j])match.push_back(match_left[i]);
 			}
 	}else{
-		match.insert(match.end(), left.begin(), left.end());
-		for(int i = 0; right.size(); i++)
+		match.insert(match.end(), match_left.begin(), match_left.end());
+		for(int i = 0; match_right.size(); i++)
 			for(int j = 0; match.size(); j++){
-				if(right[i] == match[j])match.push_back(right[i]);
+				if(match_right[i] == match[j])match.push_back(match_right[i]);
 			}
 	}
 
 	//assign match
 }
+void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool op) const{
+
+}
 void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{
 	vector<string> cond;
-	getSentenceListMatchingExpressionEf(expr, match, cond, false);
+	bool c_op = false;
+	getSentenceListMatchingExpressionEf(expr, match, cond, c_op);
 }
 //Output section
 void Text::printFrequencyTable() const{
