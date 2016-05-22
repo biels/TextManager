@@ -59,8 +59,9 @@ void AuthorSet::printAuthorList(Context& c) {
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
 		Author a = (*it).second;
 		a.print();
-		cout << " " << c.getTs.numberTextsAuthor(a.getId(), c);
-		cout << " " << c.getTs.numberSentencesAuthorTexts(a.getId(), c);
-		cout << " " << c.getTs.numberWordsAuthorTexts(a.getId(), c) << endl;
+		int id = a.getId();
+		cout << " " << c.getTs.numberTextsAuthor(id, c);
+		cout << " " << c.getTs.numberSentencesAuthorTexts(id, c);
+		cout << " " << c.getTs.numberWordsAuthorTexts(id, c) << endl;
 	}
 }
