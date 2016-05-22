@@ -73,7 +73,7 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 			this->content.push_back(w);
 
 		}
-			wordCount++;
+		wordCount++;
 	}
 }
 int Text::getWordCount() const{
@@ -139,10 +139,14 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 	//1. Analyze expr type. Distinguish andSet from boolExpr
 	//[boolExpr]
 	bool isExpr = expr[0] == '(';
+	string exprf = expr.substr(1, expr.size()-2);
+	string tmp;
+	istringstream iss(exprf);
 	if(!isExpr){
 		//BoolExpr {word1 word2 word3}
 
 		//assign match
+		return;
 	}
 	//-> Return
 
@@ -150,13 +154,37 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 	vector<int> left;
 	vector<int> right;
 	bool op; // [false = OR, true = AND]
+	bool op_v = false;
 	string leftExpr, rightExpr;
+	int c = 0;
+	while(iss >> tmp){
+		if(!op_v){
+			for(int i = 0; tmp[i] == '('; i++)c++;
+			for(int i = tmp.size()-1; tmp[i] == ')'; i--)c--;
+		}
+		if(c == 0 && !op_v) {op = tmp == "&"; op_v = true;}
+		if(!op_v)leftExpr += (c == 0 ? "" : " ") + tmp;
+		if(op_v)rightExpr += (c == 0 ? "" : " ") + tmp;
+	}
 
 	//3. Make recursive calls
 	getSentenceListMatchingExpression(leftExpr, left);
 	getSentenceListMatchingExpression(rightExpr, right);
 
 	//4. Do logic operations based on op and assign result to match
+	if(op){
+		for(int i = 0; left.size(); i++)
+			for(int j = 0; right.size(); j++){
+				if(left[i] == right[j])match.push_back(left[i]);
+			}
+	}else{
+		match.insert(match.end(), left.begin(), left.end());
+		for(int i = 0; right.size(); i++)
+			for(int j = 0; match.size(); j++){
+				if(right[i] == match[j])match.push_back(right[i]);
+			}
+	}
+
 	//assign match
 }
 
@@ -167,6 +195,8 @@ void Text::printFrequencyTable() const{
 void Text::printSentenceListMatchingExpression(string expr) const{
 	//for(string sentence : text)if(match
 	cout << "All sentences matching " << expr << endl;
+	vector<int> match;
+	getSentenceListMatchingExpression(expr, match);
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
 	cout << "All sentences containing " << sequence << endl;
