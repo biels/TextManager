@@ -134,7 +134,7 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 	}
 	return l.size() == 0;
 }
-void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{ //pre: Expr != ""
+void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool c_op) const{ //pre: Expr != ""
 	//Example expr (({casa pilota} & ({rodona} | {quadrat})) | {aigua})
 	//1. Analyze expr type. Distinguish andSet from boolExpr
 	//[boolExpr]
@@ -187,7 +187,10 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 
 	//assign match
 }
-
+void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{
+	vector<string> cond;
+	getSentenceListMatchingExpressionEf(expr, match, cond, false);
+}
 //Output section
 void Text::printFrequencyTable() const{
 	cout << "FrequencyTable" << endl; //TODO
