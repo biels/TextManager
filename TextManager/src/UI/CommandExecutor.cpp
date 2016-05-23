@@ -127,7 +127,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 			return;
 		}
 		//frases ".." ? i frases <..> ?
-		if(keywords.size() == 2) {
+		if(keywords.size() == 1) {
 			//frases <..> ? (sequencia)
 			if (args[0][0] == '"') {
 				a.frasesSequencia(args[0]);
@@ -234,8 +234,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	}
 	//triar text
 	if (!question && keywords[0] == "triar") {
-		string s = args[0].substr(1, args[0].size()-2);
-		a.triarText(s);
+		a.triarText(args[0]);
 		return;
 	}
 	//subtitueix “<paraula>” per “<paraula2>”

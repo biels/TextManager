@@ -166,8 +166,9 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 			for(int i = 0; tmp[i] == '('; i++)c++;
 			for(int i = tmp.size()-1; tmp[i] == ')'; i--)c--;
 		}
-		if(c == 0 && !op_v) {op = tmp == "&"; op_v = true; continue;}
-		if(!op_v)leftExpr += (c == 0 ? "" : " ") + tmp;
+		bool isOp = c == 0 && tmp.length() == 1;
+		if(isOp && !op_v) {op = tmp == "&"; op_v = true; continue;}
+		if(!op_v)leftExpr += (isOp ? "" : " ") + tmp;
 		if(op_v)rightExpr += (c == 0 ? "" : " ") + tmp;
 	}
 	//--
@@ -198,29 +199,29 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 
 	//5. Generate cond and c_op to resolve redundant levels
 	//cond = cond_left + cond_right
-	for(int i = 0; i < cond_left.size(); i++){
-		for(int i = 0; cond.size(); i++)if(cond_left[i] == cond[i])continue;
+	for(unsigned int i = 0; i < cond_left.size(); i++){
+		for(int j = 0; j < cond.size(); j++)if(cond_left[i] == cond[j])continue;
 		cond.push_back(cond_left[i]);
 	}
-	for(int i = 0; i < cond_right.size(); i++){
-		for(int i = 0; cond.size(); i++)if(cond_right[i] == cond[i])continue;
+	for(unsigned int i = 0; i < cond_right.size(); i++){
+		for(int j = 0; j < cond.size(); j++)if(cond_right[i] == cond[j])continue;
 		cond.push_back(cond_right[i]);
 	}
  	c_op = op;
 
 	//6. Do logic operations based on op to update match
-	if(op){
-		for(int i = 0; match_left.size(); i++)
-			for(int j = 0; match_right.size(); j++){
-				if(match_left[i] == match_right[j])match.push_back(match_left[i]);
-			}
-	}else{
-		match.insert(match.end(), match_left.begin(), match_left.end());
-		for(int i = 0; match_right.size(); i++)
-			for(int j = 0; match.size(); j++){
-				if(match_right[i] == match[j])match.push_back(match_right[i]);
-			}
-	}
+//	if(op){
+//		for(int i = 0; match_left.size(); i++)
+//			for(int j = 0; match_right.size(); j++){
+//				if(match_left[i] == match_right[j])match.push_back(match_left[i]);
+//			}
+//	}else{
+//		match.insert(match.end(), match_left.begin(), match_left.end());
+//		for(int i = 0; match_right.size(); i++)
+//			for(int j = 0; match.size(); j++){
+//				if(match_right[i] == match[j])match.push_back(match_right[i]);
+//			}
+//	}
 
 	//assign match
 }
@@ -252,7 +253,7 @@ void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const ve
 			//Sentence context
 			vector<string> remaining(cond);
 			checkSentenceForCondition(i, cond, c_op, remaining);
-			if(c_op && remaining.size() != 0 || !c_op && remaining.size() == cond.size()){
+			if((c_op && remaining.size() != 0) || (!c_op && (remaining.size() == cond.size()))){
 				match.erase(match.begin() + i);
 			}
 		}
@@ -264,7 +265,7 @@ void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const ve
 			//TODO continue if sentence is on match
 			vector<string> remaining(cond);
 			checkSentenceForCondition(i, cond, c_op, remaining);
-			if(c_op && remaining.size() == 0 || !c_op && remaining.size() < cond.size()){
+			if((c_op && remaining.size() == 0) || (!c_op && remaining.size() < cond.size())){
 				match.push_back(i);
 			}
 
