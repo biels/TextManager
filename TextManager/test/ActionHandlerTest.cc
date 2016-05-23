@@ -123,20 +123,26 @@ TEST(ActionHandler, DISABLED_FrasesXY){
 
 TEST(ActionHandler, FrasesExpr_Soft){
 	Context& c = a1.exposeContext();
-	a1.afegirText("T", "Biel Simon",  "Sentence0 word0 word1. Sentence1 word0 word1 word2. Sentence2 word0.");
+	a1.afegirText("T", "Biel Simon",
+			"Sentence0 word0 word1. Sentence1 word0 word1 word2. Sentence2 word0.");
 	a1.triarText("{T}");
 	ASSERT_TRUE(c.existsChosenText());
 
+	a1.frasesExpressio("(({word2} | {word1}) & {word0})"); //S0 & S1
+	a1.frasesExpressio("{word1}");
+	a1.frasesExpressio("(({Sentence1} | {Sentence2}) | {word1})"); // S1
+	//a1.frasesExpressio("(({Sentence2} & {Sentence2}) & {Sentence2})"); // S1
+	a1.frasesExpressio("({word1 word2} & {word0})"); // S1
+	a1.frasesExpressio("({word1} | {word0})"); // S1
+	a1.frasesExpressio("({word0} & {word0})"); // S1
 	a1.frasesExpressio("({Sentence1} & {Sentence0})"); // S1
 
 
 	a1.frasesExpressio("({Sentence1} | {Sentence0})"); // S1
-	a1.frasesExpressio("({Sentence1} & {Sentence1})"); // S1
 
-	a1.frasesExpressio("(({word2} | {word1}) & {word0})"); //S0 & S1
 }
 
-TEST(ActionHandler, DISABLED_FrasesExpr){
+TEST(ActionHandler, FrasesExpr){
 	Context& c = a1.exposeContext();
 	a1.afegirText("Where the wild things are", "Maurice Sendak", "The night Max wore his wolf suit and made mischief of one kind and another. That very night in his room a forest grew and grew. An ocean tumbled by with a private boat for Max and he sailed off. When he came to the place where the wild things are they roared their terrible roars and rolled their eyes. Max tamed them with the magic trick of staring into their yellow eyes without blinking once. They made him king of all wild things.");
 	a1.triarText("{eyes another roars}");

@@ -1,5 +1,9 @@
 #include "gtest/gtest.h"
+#include <vector>
+#include <string>
 #include "TestHeader.h"
+
+using namespace std;
 
 Context c2;
 TEST(Entities, Author){
@@ -46,5 +50,69 @@ TEST(Entities, Text){
 	EXPECT_FALSE(t1.matchesWordListAnywhere("{Oscar somebody}", c2));
 	EXPECT_TRUE(t1.matchesWordListAnywhere("{Wilde}", c2));
 
+
+}
+//void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
+//
+//void getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool& c_op, bool root) const;
+//
+//void getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool c_op, bool m_op) const;
+//
+//void checkSentenceForCondition(int i, const vector<string>& cond, bool c_op,
+//		vector<string>& remaining) const;
+TEST(Text, AlgebraicExpression){
+	Text& t1 = c2.getTs().addNew();
+	t1.setTitle("T");
+	t1.setAuthorByFullName("Biel Simon", c2);
+	t1.setContent("Sentence0 word0. Sentence1 word0 word1. Sentence2 word0 word1 word2. Sentence3.");
+	c2.setChosenTextId(t1.getId());
+
+}
+TEST(Text, getSentenceListMatchingExpression){
+	Text& t1 = c2.getChosenText();
+	vector<int> match;
+	t1.getSentenceListMatchingExpression("{Sentence3}", match);
+	EXPECT_EQ(1, match.size()); match.clear();
+
+	t1.getSentenceListMatchingExpression("({word1} & {word2})", match);
+	EXPECT_EQ(1, match.size());match.clear();
+
+	t1.getSentenceListMatchingExpression("({word1} | {word2})", match);
+	EXPECT_EQ(2, match.size());match.clear();
+
+	t1.getSentenceListMatchingExpression("({word2} | {word1 word0})", match);
+	EXPECT_EQ(3, match.size());match.clear();
+}
+
+TEST(Text, getSentenceListMatchingWordListInContext){
+	Text& t1 = c2.getChosenText();
+	vector<int> match;
+	vector<string> cond;
+	cond.push_back("word1");
+	t1.getSentenceListMatchingWordListInContext(match, cond, true, false); // last is reduce or expand
+	EXPECT_EQ(2, match.size());match.clear();cond.clear();
+
+	cond.push_back("word1");
+	cond.push_back("word2");
+	t1.getSentenceListMatchingWordListInContext(match, cond, true, false);
+	EXPECT_EQ(1, match.size());match.clear();cond.clear();
+
+	cond.push_back("word0");
+	cond.push_back("word2");
+	t1.getSentenceListMatchingWordListInContext(match, cond, false, false);
+	EXPECT_EQ(3, match.size());match.clear();cond.clear();
+
+	cond.push_back("word0");
+	cond.push_back("Sentence3");
+	t1.getSentenceListMatchingWordListInContext(match, cond, false, false);
+	EXPECT_EQ(4, match.size());match.clear();cond.clear();
+
+	cond.push_back("word0");
+	cond.push_back("word2");
+	t1.getSentenceListMatchingWordListInContext(match, cond, false, false);
+	EXPECT_EQ(3, match.size());match.clear();cond.clear();
+}
+
+TEST(Text, checkSentenceForCondition){
 
 }
