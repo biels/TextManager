@@ -117,7 +117,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	cout << endl << "question: " << (question ? "yes" : "no") << endl;
 	//Command execution - single context
 
-	if (question && keywords[0] == "frases"){
+	if (keywords[0] == "frases"){
 		//frases x y ?
 		if(keywords.size() == 3){
 			int x, y;

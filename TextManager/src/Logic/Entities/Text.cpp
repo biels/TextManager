@@ -58,23 +58,27 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 	this->content.clear();
 	istringstream iss(content);
 	string w;
+	int i = 0;
+	sentences.push_back(0);
 	while(iss >> w){
 		char lc = w[w.size() - 1];
-		bool isPoint = lc == '.';
+		bool isDot = lc == '.';
 		bool isP = (lc == ',' || lc == '.' || lc == ':' || lc == ';');
 		if (isP) {
-			if(isPoint){
+			if(isDot){
 				//Register sentence
-				sentences.push_back(content.size());
+				sentences.push_back(i + 2); //Skip dot
 			}
 			this->content.push_back(w.substr(0, w.size() - 1));
 			this->content.push_back(w.substr(w.size() - 1, 1));
+			i++;
 		}else{
 			this->content.push_back(w);
-
+			wordCount++;
 		}
-		wordCount++;
+		i++;
 	}
+	//sentences.push_back(wordCount + 1); //Sentinel
 }
 int Text::getWordCount() const{
 	return wordCount;
@@ -166,9 +170,8 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 			for(int i = 0; tmp[i] == '('; i++)c++;
 			for(int i = tmp.size()-1; tmp[i] == ')'; i--)c--;
 		}
-		bool isOp = c == 0 && tmp.length() == 1;
-		if(isOp && !op_v) {op = tmp == "&"; op_v = true; continue;}
-		if(!op_v)leftExpr += (isOp ? "" : " ") + tmp;
+		if(c == 0 && !op_v && tmp.length() == 1) {op = tmp == "&"; op_v = true; continue;}
+		if(!op_v)leftExpr += tmp + (c == 0  ? "" : " ");
 		if(op_v)rightExpr += (c == 0 ? "" : " ") + tmp;
 	}
 	//--
@@ -200,28 +203,28 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 	//5. Generate cond and c_op to resolve redundant levels
 	//cond = cond_left + cond_right
 	for(unsigned int i = 0; i < cond_left.size(); i++){
-		for(int j = 0; j < cond.size(); j++)if(cond_left[i] == cond[j])continue;
+		for(unsigned int j = 0; j < cond.size(); j++)if(cond_left[i] == cond[j])continue;
 		cond.push_back(cond_left[i]);
 	}
 	for(unsigned int i = 0; i < cond_right.size(); i++){
-		for(int j = 0; j < cond.size(); j++)if(cond_right[i] == cond[j])continue;
+		for(unsigned int j = 0; j < cond.size(); j++)if(cond_right[i] == cond[j])continue;
 		cond.push_back(cond_right[i]);
 	}
- 	c_op = op;
+	c_op = op;
 
 	//6. Do logic operations based on op to update match
-//	if(op){
-//		for(int i = 0; match_left.size(); i++)
-//			for(int j = 0; match_right.size(); j++){
-//				if(match_left[i] == match_right[j])match.push_back(match_left[i]);
-//			}
-//	}else{
-//		match.insert(match.end(), match_left.begin(), match_left.end());
-//		for(int i = 0; match_right.size(); i++)
-//			for(int j = 0; match.size(); j++){
-//				if(match_right[i] == match[j])match.push_back(match_right[i]);
-//			}
-//	}
+	//	if(op){
+	//		for(int i = 0; match_left.size(); i++)
+	//			for(int j = 0; match_right.size(); j++){
+	//				if(match_left[i] == match_right[j])match.push_back(match_left[i]);
+	//			}
+	//	}else{
+	//		match.insert(match.end(), match_left.begin(), match_left.end());
+	//		for(int i = 0; match_right.size(); i++)
+	//			for(int j = 0; match.size(); j++){
+	//				if(match_right[i] == match[j])match.push_back(match_right[i]);
+	//			}
+	//	}
 
 	//assign match
 }
@@ -230,7 +233,7 @@ void Text::checkSentenceForCondition(int i, const vector<string>& cond, bool c_o
 	for (int j = sentences[i]; j < sentences[i + 1]; j++) {
 		//match does not contain size sentinel
 		//content[j] is a word
-		for (int k = 0; k < cond.size(); k++) {
+		for (unsigned int k = 0; k < cond.size(); k++) {
 			if (content[j] == remaining[k]) {
 				if (!c_op)
 					break;
@@ -249,24 +252,37 @@ void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const ve
 	if(m_op){
 		//AND
 		//Discard sentences
-		for(int i = 0; i < match.size(); i++){
+		for(unsigned int i = 0; i < match.size(); i++){
 			//Sentence context
 			vector<string> remaining(cond);
 			checkSentenceForCondition(i, cond, c_op, remaining);
 			if((c_op && remaining.size() != 0) || (!c_op && (remaining.size() == cond.size()))){
-				match.erase(match.begin() + i);
+				for(unsigned int j = 0; j < match.size(); j++){
+					if(match[j] == (int)i){
+						match.erase(match.begin() + j);
+						break;
+					}
+				}
 			}
 		}
 	}else{
 		//OR
 		//Add sentences (existing ones are there for sure)
-		for(int i = 0; i < sentences.size() - 2; i++){
+		for(unsigned int i = 0; i < sentences.size() - 1; i++){
 			//Sentence context
 			//TODO continue if sentence is on match
 			vector<string> remaining(cond);
 			checkSentenceForCondition(i, cond, c_op, remaining);
 			if((c_op && remaining.size() == 0) || (!c_op && remaining.size() < cond.size())){
-				match.push_back(i);
+				bool nf = true;
+				for(unsigned int j = 0; j < match.size(); j++){
+					if(match[j] == i){
+						match.erase(match.begin() + j);
+						nf = false;
+						break;
+					}
+				}
+				if(nf)match.push_back(i);
 			}
 
 		}
@@ -277,7 +293,7 @@ void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const ve
 void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{
 	vector<string> cond;
 	bool c_op = false;
-	for(unsigned int i = 0; i < sentences.size() - 2; i++)match.push_back(i); //Prepare context for and
+	for(unsigned int i = 0; i < sentences.size() - 1; i++)match.push_back(i); //Prepare context for and
 	getSentenceListMatchingExpressionEf(expr, match, cond, c_op);
 }
 //Output section
@@ -289,6 +305,8 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 	cout << "All sentences matching " << expr << endl;
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
+	string s;
+	for(int m : match) s+= m ;
 	for(int m : match)cout << m << endl;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
