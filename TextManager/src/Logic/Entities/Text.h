@@ -30,8 +30,8 @@ private:
 	vector<int> sentences;			//index: nº frase, 2n int nº paraula
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
-
-
+	void checkSentenceForCondition(int i, const vector<string>& cond, bool c_op,
+			vector<string>& remaining) const;
 
 public:
 	/** @brief Creadora per defecte
@@ -103,7 +103,9 @@ public:
 
 	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
 
-	void getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool c_op) const;
+	void getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool& c_op) const;
+
+	void getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool c_op, bool m_op) const;
 	//Output section
 
 	/** @brief Mostra totes les paraules del text ordenades per freqÃ¼Ã¨ncia.

@@ -145,7 +145,7 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 	if(!isExpr){ //Treat {} as and cond
 		//BoolExpr {word1 word2 word3}
 		while(iss >> tmp){
-			for(int i = 0; cond.size(); i++)if(cond[i] == tmp)continue;
+			for(int i = 0; i < cond.size(); i++)if(cond[i] == tmp)continue;
 			cond.push_back(tmp);
 		}
 		c_op = true;
@@ -166,7 +166,7 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 			for(int i = 0; tmp[i] == '('; i++)c++;
 			for(int i = tmp.size()-1; tmp[i] == ')'; i--)c--;
 		}
-		if(c == 0 && !op_v) {op = tmp == "&"; op_v = true;}
+		if(c == 0 && !op_v) {op = tmp == "&"; op_v = true; continue;}
 		if(!op_v)leftExpr += (c == 0 ? "" : " ") + tmp;
 		if(op_v)rightExpr += (c == 0 ? "" : " ") + tmp;
 	}
@@ -178,35 +178,35 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 	bool op_left, op_right;
 
 	getSentenceListMatchingExpressionEf(leftExpr, match_left, cond_left, op_left);
-	getSentenceListMatchingExpressionEf(rightExpr, right, cond_right, op_right);
+	getSentenceListMatchingExpressionEf(rightExpr, match_right, cond_right, op_right);
 
 	//4. Execute intelligent linear search where operators cannot be combined
 	//left
 	if(op_left != op){
 		//Execute left
 		//Do the search and modify match
-		getSentenceListMatchingWordListInContext(match, cond_left, op_left);
+		getSentenceListMatchingWordListInContext(match, cond_left, op_left, op);
 		cond_left.clear();
 	}
 	//right
 	if(op_right != op){
 		//Execute right
 		//Do the search and modify match
-		getSentenceListMatchingWordListInContext(match, cond_right, op_right);
+		getSentenceListMatchingWordListInContext(match, cond_right, op_right, op);
 		cond_right.clear();
 	}
 
 	//5. Generate cond and c_op to resolve redundant levels
 	//cond = cond_left + cond_right
-	for(int i = 0; cond_left.size(); i++){
+	for(int i = 0; i < cond_left.size(); i++){
 		for(int i = 0; cond.size(); i++)if(cond_left[i] == cond[i])continue;
 		cond.push_back(cond_left[i]);
 	}
-	for(int i = 0; cond_right.size(); i++){
+	for(int i = 0; i < cond_right.size(); i++){
 		for(int i = 0; cond.size(); i++)if(cond_right[i] == cond[i])continue;
 		cond.push_back(cond_right[i]);
 	}
-	c_op = op;
+ 	c_op = op;
 
 	//6. Do logic operations based on op to update match
 	if(op){
@@ -224,12 +224,59 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 
 	//assign match
 }
-void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool op) const{
+
+void Text::checkSentenceForCondition(int i, const vector<string>& cond, bool c_op, vector<string>& remaining) const {
+	for (int j = sentences[i]; j < sentences[i + 1]; j++) {
+		//match does not contain size sentinel
+		//content[j] is a word
+		for (int k = 0; k < cond.size(); k++) {
+			if (content[j] == remaining[k]) {
+				if (!c_op)
+					break;
+
+				remaining.erase(remaining.begin() + k);
+				if (c_op && remaining.size() == 0)
+					break; //AND -> Exit when all
+			}
+		}
+	}
+}
+
+void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool c_op, bool m_op) const{
+	//Will always get full match and c_op=AND on first call
+
+	if(m_op){
+		//AND
+		//Discard sentences
+		for(int i = 0; i < match.size(); i++){
+			//Sentence context
+			vector<string> remaining(cond);
+			checkSentenceForCondition(i, cond, c_op, remaining);
+			if(c_op && remaining.size() != 0 || !c_op && remaining.size() == cond.size()){
+				match.erase(match.begin() + i);
+			}
+		}
+	}else{
+		//OR
+		//Add sentences (existing ones are there for sure)
+		for(int i = 0; i < sentences.size() - 2; i++){
+			//Sentence context
+			//TODO continue if sentence is on match
+			vector<string> remaining(cond);
+			checkSentenceForCondition(i, cond, c_op, remaining);
+			if(c_op && remaining.size() == 0 || !c_op && remaining.size() < cond.size()){
+				match.push_back(i);
+			}
+
+		}
+	}
 
 }
+
 void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) const{
 	vector<string> cond;
 	bool c_op = false;
+	for(unsigned int i = 0; i < sentences.size() - 2; i++)match.push_back(i); //Prepare context for and
 	getSentenceListMatchingExpressionEf(expr, match, cond, c_op);
 }
 //Output section
@@ -241,6 +288,7 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 	cout << "All sentences matching " << expr << endl;
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
+	for(int m : match)cout << m << endl;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
 	cout << "All sentences containing " << sequence << endl;
