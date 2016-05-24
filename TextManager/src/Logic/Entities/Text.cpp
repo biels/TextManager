@@ -174,7 +174,7 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 			for(int i = 0; tmp[i] == '('; i++)c++;
 			for(int i = tmp.size()-1; tmp[i] == ')'; i--)c--;
 		}
-		if(c == 0 && !op_v && tmp.length() == 1) {op = tmp == "&"; op_v = true; space = true; continue;}
+		if(c == 0 && !op_v && tmp.length() == 1) {op = tmp == "&"; op_v = true; space = false; continue;}
 		if(!op_v)leftExpr += (space ? " " : "") + tmp;
 		if(op_v)rightExpr += (space ? " " : "") + tmp;
 		space = true;
@@ -254,10 +254,10 @@ void Text::checkSentenceForCondition(int i, const vector<string>& cond, bool c_o
 		//content[j] is a word
 		for (unsigned int k = 0; k < remaining.size(); k++) {
 			if (content[j] == remaining[k]) {
+				remaining.erase(remaining.begin() + k);
 				if (!c_op)
 					break;
 
-				remaining.erase(remaining.begin() + k);
 				if (c_op && remaining.size() == 0)
 					break; //AND -> Exit when all
 			}
