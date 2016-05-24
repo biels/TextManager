@@ -72,19 +72,24 @@ TEST(Text, getSentenceListMatchingExpression){
 	Text& t1 = c2.getChosenText();
 	vector<int> match;
 
-	t1.getSentenceListMatchingExpression("(({word0} & {word1}) | ({word0} & {word1}))", match); //X
+	t1.getSentenceListMatchingExpression("({word2} & {word1 word0})", match); //X
+	EXPECT_EQ(1, match.size());match.clear();
+
+	t1.getSentenceListMatchingExpression("((({word0} | {word1}) | {Sentence2}) & {word2})", match); //X
+	EXPECT_EQ(1, match.size());match.clear(); // 2
+
+	t1.getSentenceListMatchingExpression("({word0 word1 word2} & {Sentence2})", match); //X
+	EXPECT_EQ(1, match.size());match.clear();
+
+
+	t1.getSentenceListMatchingExpression("(({word0} & {word1}) | ({word0} & {word1}))", match);
 	EXPECT_EQ(2, match.size());match.clear(); // 0 1 2
 
-	t1.getSentenceListMatchingExpression("(({word0} | {word1}) | {Sentence2})", match); //X
+	t1.getSentenceListMatchingExpression("(({word0} | {word1}) | {Sentence2})", match);
 	EXPECT_EQ(3, match.size());match.clear(); // 0 1 2
 
 	t1.getSentenceListMatchingExpression("(({word0} & {word1}) | {Sentence2})", match);
 	EXPECT_EQ(2, match.size());match.clear(); // 0 1 2
-
-
-
-	t1.getSentenceListMatchingExpression("((({word0} | {word1}) | {Sentence2}) & {word2})", match); //X
-	EXPECT_EQ(1, match.size());match.clear(); // 2
 
 	t1.getSentenceListMatchingExpression("(({word0} & {word1}) | {Sentence2})", match);
 	EXPECT_EQ(2, match.size());match.clear(); // 1 2
@@ -92,7 +97,7 @@ TEST(Text, getSentenceListMatchingExpression){
 	t1.getSentenceListMatchingExpression("({word1} | {word2})", match);
 	EXPECT_EQ(2, match.size());match.clear();
 
-	t1.getSentenceListMatchingExpression("({word1} & {word2})", match);
+	t1.getSentenceListMatchingExpression("({word1} & {word2})", match); //X
 	EXPECT_EQ(1, match.size());match.clear();
 
 	t1.getSentenceListMatchingExpression("{Sentence2 word0 word1}", match);
@@ -107,8 +112,6 @@ TEST(Text, getSentenceListMatchingExpression){
 	t1.getSentenceListMatchingExpression("{word1 word2}", match);
 	EXPECT_EQ(1, match.size());match.clear();
 
-	t1.getSentenceListMatchingExpression("({word2} & {word1 word0})", match);
-	EXPECT_EQ(1, match.size());match.clear();
 
 	t1.getSentenceListMatchingExpression("({word1} | {word2})", match);
 	EXPECT_EQ(2, match.size());match.clear();
@@ -118,9 +121,6 @@ TEST(Text, getSentenceListMatchingExpression){
 
 	t1.getSentenceListMatchingExpression("({word0} | {Sentence3})", match);
 	EXPECT_EQ(4, match.size());match.clear();
-
-	t1.getSentenceListMatchingExpression("({word0 word1 word2} & {Sentence2})", match);
-	EXPECT_EQ(1, match.size());match.clear();
 
 	t1.getSentenceListMatchingExpression("({word0 word1 word2 other} & {Sentence2})", match);
 	EXPECT_EQ(0, match.size());match.clear();

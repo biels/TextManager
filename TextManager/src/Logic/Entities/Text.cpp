@@ -187,19 +187,17 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 	vector<string> cond_left, cond_right;
 	bool op_left, op_right;
 
-	getSentenceListMatchingExpressionEf(leftExpr, match_left, cond_left, op_left, false);
-	getSentenceListMatchingExpressionEf(rightExpr, match_right, cond_right, op_right, false);
+	getSentenceListMatchingExpressionEf(leftExpr, match, cond_left, op_left, false);
+	getSentenceListMatchingExpressionEf(rightExpr, match, cond_right, op_right, false);
 
 	//4. Execute intelligent linear search where operators cannot be combined
 	//left
-	if(op_left != op){
+	if(op_left != op || op_right != op){
 		//Execute left
 		//Do the search and modify match
 		getSentenceListMatchingWordListInContext(match, cond_left, op_left, op);
 		cond_left.clear();
-	}
-	//right
-	if(op_right != op){
+
 		//Execute right
 		//Do the search and modify match
 		getSentenceListMatchingWordListInContext(match, cond_right, op_right, op);
@@ -224,7 +222,7 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 
 	//6. Execute at root level if necessary
 	if(root && op_right == op && op_left == op){
-		getSentenceListMatchingWordListInContext(match, cond, op, op); //Or with the context, review
+		getSentenceListMatchingWordListInContext(match, cond, op, false); //Or with the context, review
 		//cond.clear(); //Not necessary
 		return;
 	}
