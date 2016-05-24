@@ -104,7 +104,7 @@ public:
 
 	void getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool& c_op, bool root) const;
 
-	void getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool c_op, bool m_op) const;
+	void getSentenceListMatchingWordListInContext(vector<int>& match, vector<string>& cond, bool c_op, bool m_op) const;
 
 	void checkSentenceForCondition(int i, const vector<string>& cond, bool c_op,
 				vector<string>& remaining) const;

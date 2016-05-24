@@ -155,7 +155,8 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 			if(nf)cond.push_back(tmp);
 		}
 		c_op = true;
-		if(true)getSentenceListMatchingWordListInContext(match, cond, c_op, false);
+		if(root)getSentenceListMatchingWordListInContext(match, cond, c_op, false);
+		//cond.clear();
 		//assign match
 		return;
 	}
@@ -223,7 +224,7 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 
 	//6. Execute at root level if necessary
 	if(root && op_right == op && op_left == op){
-		getSentenceListMatchingWordListInContext(match, cond, op, false); //Or with the context, review
+		getSentenceListMatchingWordListInContext(match, cond, op, op); //Or with the context, review
 		//cond.clear(); //Not necessary
 		return;
 	}
@@ -232,6 +233,9 @@ void Text::getSentenceListMatchingExpressionEf(string expr, vector<int>& match, 
 
 
 	//6. Do logic operations based on op to update match
+	if(root){
+
+	}
 	//	if(op){
 	//		for(int i = 0; match_left.size(); i++)
 	//			for(int j = 0; match_right.size(); j++){
@@ -265,7 +269,7 @@ void Text::checkSentenceForCondition(int i, const vector<string>& cond, bool c_o
 	}
 }
 
-void Text::getSentenceListMatchingWordListInContext(vector<int>& match, const vector<string>& cond, bool c_op, bool m_op) const{ //OK
+void Text::getSentenceListMatchingWordListInContext(vector<int>& match, vector<string>& cond, bool c_op, bool m_op) const{ //OK
 	//Will always get full match and c_op=AND on first call
 
 	if(m_op){
