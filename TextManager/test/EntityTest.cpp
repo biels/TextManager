@@ -71,6 +71,19 @@ TEST(Text, AlgebraicExpression){
 TEST(Text, getSentenceListMatchingExpression){
 	Text& t1 = c2.getChosenText();
 	vector<int> match;
+
+	t1.getSentenceListMatchingExpression("({Sentence2} & {Sentence0 word0})", match);
+	EXPECT_EQ(0, match.size());match.clear();
+
+	t1.getSentenceListMatchingExpression("({Sentence2} & ({Sentence3} | {Sentence0}))", match);
+	EXPECT_EQ(0, match.size());match.clear();
+
+	t1.getSentenceListMatchingExpression("(({Sentence3} | {Sentence0}) & {Sentence2})", match);
+	EXPECT_EQ(0, match.size());match.clear();
+
+	t1.getSentenceListMatchingExpression("({Sentence2} & ({Sentence1} | {Sentence0}))", match);
+	EXPECT_EQ(0, match.size());match.clear();
+
 	t1.getSentenceListMatchingExpression("(({Sentence3} | {Sentence3}) | ({Sentence3} | {Sentence0 word0}))", match);
 	EXPECT_EQ(2, match.size());match.clear();
 
