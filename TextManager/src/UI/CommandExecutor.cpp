@@ -176,10 +176,16 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//info cita "<referència>" ?
 		else {
-			string ref = args[0].substr(1, args[0].size()-2);
+			string ref = args[0].substr(1, args[0].length()-2);
 			a.frasesExpressio(ref);
 			return;
 		}
+	}
+	//textos autor ?
+	if (question && keywords[0] == "textos") {
+		string autor = args[0].substr(1, args[0].length()-2);
+		a.textosAutor(autor);
+		return;
 	}
 	//autor ?
 	if (question && keywords[0] == "autor") {
@@ -205,7 +211,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//cites autor "<autor>"
 		else {
-			string autor = args[0].substr(1, args[0].size()-2);
+			string autor = args[0].substr(1, args[0].length()-2);
 			a.citesAutor(autor);
 			return;
 		}
@@ -223,15 +229,15 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//eliminar cita
 		else {
-			string ref = args[0].substr(1, args[0].size()-2);
+			string ref = args[0].substr(1, args[0].length()-2);
 			a.eliminarCita(ref);
 			return;
 		}
 	}
 	//Afegir text
 	if (!question && keywords[0] == "afegir") {
-		string titol = args[0].substr(1, args[0].size()-2);
-		string autor = args[1].substr(1, args[0].size()-2);
+		string titol = args[0].substr(1, args[0].length()-2);
+		string autor = args[1].substr(1, args[0].length()-2);
 		a.afegirText(titol, autor, args[2]);
 		return;
 	}
@@ -242,8 +248,8 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	}
 	//subtitueix “<paraula>” per “<paraula2>”
 	if (!question && keywords[0] == "substitueix") {
-		string s = args[0].substr(1, args[0].size()-2);
-		string t = args[1].substr(1, args[1].size()-2);
+		string s = args[0].substr(1, args[0].length()-2);
+		string t = args[1].substr(1, args[1].length()-2);
 		a.substitueix(s, t);
 		return;
 	}

@@ -111,7 +111,7 @@ void TextSet::printAllByAuthor(int id, Context& c){
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
 		Text& t = (*it).second;
 		if (t.getAuthor(c).getId() == id) {
-			t.printInfo(c); //Print what=?
+			cout << '"' << t.getTitle() << '"' << endl;
 		}
 	}
 }

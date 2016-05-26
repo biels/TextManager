@@ -326,19 +326,20 @@ void Text::printInfo(Context& c) {
 }
 void Text::printContent(){ //TODO treat . elements and special cases
 	int cont = 1;
-	for(int i = 0; i < sentences.size(); i = sentences[i]){
-		cout << cont << " ";
-		for (int j = i; j < sentences[i]; ++j){
-			cout << content[j] << " ";
+	for (int i = 0; i < content.size(); i = sentences[i+1]) {
+		cout << cont;
+		for (int j = i; j < sentences[i+1]-1; ++j){
+			cout << " " << content[j];
 		}
 		++cont;
-		cout << endl;
+		cout << "." << endl;
 	}
-	cout << endl;
+	cout <<  endl;
 }
+
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
 	cout << "All sentences from " << from << " to " << to << ": " << endl;
 	for(int i = from; i <= to; i++){
-		cout << i << " - " << getSentenceByIndex(i) << endl;
+		cout << i << " " << getSentenceByIndex(i) << endl;
 	}
 }
