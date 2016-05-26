@@ -275,24 +275,21 @@ void Text::calculateFrequencyTable() {
 }
 
 void Text::updateFrequencyTable(string match, string replace){
-	auto cmp = [](const pair<string,int>& attr, string& m) -> bool {
-		return attr.first == m;
-	};
 
-	std::vector<pair<string, int>>::iterator itm = std::find_if(
-			frequencyTable.begin(),
-			frequencyTable.end(),
-			[&match] (pair<string,int> p){return p.first == match;}
-	);
-	(*itm).second--;
-	if ((*itm).second == 0) frequencyTable.erase(itm);
-	vector<pair<string, int>>::iterator itr = std::find_if(
-			frequencyTable.begin(),
-			frequencyTable.end(),
-			[&replace] (pair<string,int> p){return p.first == replace;}
-	);
-	if(itr != frequencyTable.end()) (*itr).second++;
-	else frequencyTable.push_back(make_pair(replace, 1));
+//	vector<pair<string, int>>::iterator itm = std::find_if(
+//			frequencyTable.begin(),
+//			frequencyTable.end(),
+//			[&match] (pair<string,int> p){return p.first == match;}
+//	);
+//	(*itm).second--;
+//	if ((*itm).second == 0) frequencyTable.erase(itm);
+//	vector<pair<string, int>>::iterator itr = std::find_if(
+//			frequencyTable.begin(),
+//			frequencyTable.end(),
+//			[&replace] (pair<string,int> p){return p.first == replace;}
+//	);
+//	if(itr != frequencyTable.end()) (*itr).second++;
+//	else frequencyTable.push_back(make_pair(replace, 1));
 }
 
 bool compare(const pair<string, int>& a, const pair<string, int>& b) {
