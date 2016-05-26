@@ -30,7 +30,6 @@ void ActionHandler::triarText(string seq){
 		cout << "triar text " << seq << endl;
 	}
 }
-
 void ActionHandler::eliminarText(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getTs().remove(c.getChosenTextId(), c);

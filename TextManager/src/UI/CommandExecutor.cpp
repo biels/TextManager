@@ -105,16 +105,16 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		i++;
 	}
 	executeCommand(keywords, question, args_s);
-	cout << ">> End of command execution" << endl;
+	//cout << ">> End of command execution" << endl;
 }
 
 void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args) {
 	//Test display
-	cout << "keywords(" << keywords.size() << "):";
-	for(string s : keywords)cout << " [" << s << "]";
-	cout << endl << "args_s(" << args.size() << "):";
-	for(string s : args)cout << " [" << s << "]";
-	cout << endl << "question: " << (question ? "yes" : "no") << endl;
+//	cout << "keywords(" << keywords.size() << "):";
+//	for(string s : keywords)cout << " [" << s << "]";
+//	cout << endl << "args_s(" << args.size() << "):";
+//	for(string s : args)cout << " [" << s << "]";
+//	cout << endl << "question: " << (question ? "yes" : "no") << endl;
 	//Command execution - single context
 
 	if (keywords[0] == "frases"){

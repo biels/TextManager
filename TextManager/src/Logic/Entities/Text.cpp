@@ -274,7 +274,11 @@ void Text::calculateFrequencyTable() {
 					[&] (pair<string,int> p){return p.first == content[i];}
 			);
 		if (it != frequencyTable.end()) (*it).second++;
-		else frequencyTable.push_back(make_pair(content[i], 1));
+		else{
+			if (content[i][0] != '.' and content[i][0] != ',') {
+				frequencyTable.push_back(make_pair(content[i], 1));
+			}
+		}
 	}
 }
 
@@ -296,7 +300,7 @@ void Text::updateFrequencyTable(string match, string replace){
 }
 
 bool compare(const pair<string, int>& a, const pair<string, int>& b) {
-	return ((a.second < b.second) or (a.second == b.second and a.first.size() > b.first.size())
+	return ((a.second > b.second) or (a.second == b.second and a.first.size() < b.first.size())
 			or (a.second == b.second and a.first.size() == b.first.size() and a.first < b.first));
 }
 
