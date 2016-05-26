@@ -12,10 +12,12 @@
 #include <sstream>
 #include <iostream>
 #include <list>
+#include <functional>
 
 #include <algorithm>
 #include <iterator>
-
+using namespace std;
+using std::find_if;
 using std::list;
 using std::set_intersection;
 
@@ -273,10 +275,22 @@ void Text::calculateFrequencyTable() {
 }
 
 void Text::updateFrequencyTable(string match, string replace){
-	vector<pair<string, int>>::iterator itm = std::find(frequencyTable.begin(), frequencyTable.end(), match);
+	auto cmp = [](const pair<string,int>& attr, string& m) -> bool {
+		return attr.first == m;
+	};
+
+	std::vector<pair<string, int>>::iterator itm = std::find_if(
+			frequencyTable.begin(),
+			frequencyTable.end(),
+			[&match] (pair<string,int> p){return p.first == match;}
+	);
 	(*itm).second--;
 	if ((*itm).second == 0) frequencyTable.erase(itm);
-	vector<pair<string, int>>::iterator itr = std::find(frequencyTable.begin(), frequencyTable.end(), replace);
+	vector<pair<string, int>>::iterator itr = std::find_if(
+			frequencyTable.begin(),
+			frequencyTable.end(),
+			[&replace] (pair<string,int> p){return p.first == replace;}
+	);
 	if(itr != frequencyTable.end()) (*itr).second++;
 	else frequencyTable.push_back(make_pair(replace, 1));
 }
