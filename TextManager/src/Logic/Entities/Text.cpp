@@ -6,8 +6,6 @@
  */
 
 #include "Text.h"
-
-
 #include "Author.h"
 #include "Quote.h"
 #include "../Actions/Context.h"
@@ -80,7 +78,6 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 			i++;
 		}else{
 			this->content.push_back(w);
-			//addToFrequencyTable(w);
 			wordCount++;
 		}
 		i++;
@@ -108,7 +105,7 @@ string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder
 void Text::replace(string match, string replace){
 	for(unsigned int i = 0; i < content.size(); ++i){
 		if(content[i] == match)content[i] = replace;
-		//eraseFromFrequencyTable(match)
+		updateFrequencyTable(match, replace);
 	}
 }
 Quote& Text::extractQuote(int from, int to, Context& c){
@@ -222,7 +219,7 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 		bool nf = true;
 		while(iss >> tmp){
 			nf = true;
-			for(int i = 0; i < cond.size(); i++)if(cond[i] == tmp)nf = false;
+			for(int i = 0; i < cond.size(); i++) if(cond[i] == tmp) nf = false;
 			if(nf)cond.push_back(tmp);
 		}
 		getSentenceListMatchingWordListInContext(match, cond, true, false);
@@ -267,17 +264,38 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 	}
 }
 
-void Text::addToFrequencyTable(string s) {
-
+void Text::calculateFrequencyTable() {
+	for(int i = 0; i < content.size(); ++i) {
+		vector<frequencyPair>::iterator it = std::find(frequencyTable.begin(), frequencyTable.end(), content[i]);
+		if (it != frequencyTable.end()) (*it).second++;
+		else frequencyTable.push_back(make_pair(content[i], 1));
+	}
 }
 
-void Text::eraseFromFrequencyTable(string s){
+void Text::updateFrequencyTable(string match, string replace){
+	vector<frequencyPair>::iterator itm = std::find(frequencyTable.begin(), frequencyTable.end(), match);
+	--(*itm).second;
+	if ((*itm).second == 0) frequencyTable.erase(itm);
+	vector<frequencyPair>::iterator itr = std::find(frequencyTable.begin(), frequencyTable.end(), replace);
+	if(itr != frequencyTable.end()) (*itr).second++;
+	else frequencyTable.push_back(make_pair(replace, 1));
+}
 
+bool Text::compare(const pair<string, int>& a, const pair<string, int>& b){
+	return ((a.second < b.second) or (a.second == b.second and a.first.size() > b.first.size())
+			or (a.second == b.second and a.first.size() == b.first.size() and a.first < b.first));
+}
+
+void Text::sortFrequencyTable() {
+	sort(frequencyTable.begin(), frequencyTable.end(), compare);
 }
 
 //Output section
-void Text::printFrequencyTable() const{
-	cout << "FrequencyTable" << endl; //TODO
+void Text::printFrequencyTable() {
+	for(int i = 0; i < frequencyTable.size(); ++i) {
+		cout << frequencyTable[i].first << " " << frequencyTable[i].second << endl;
+	}
+	cout << endl;
 }
 void Text::printSentenceListMatchingExpression(string expr) const{
 	//for(string sentence : text)if(match
@@ -292,7 +310,7 @@ void Text::printSentenceListContainingSequence(string sequence) const{
 void Text::printInfo(Context& c) {
 	cout << getAuthor(c).getFullName() << " " << '"' << getTitle() << '"' << endl;
 }
-void Text::printContent() const{ //TODO treat . elements and special cases
+void Text::printContent(){ //TODO treat . elements and special cases
 	cout << "Content: " << getTitle();
 	cout << content[0];
 	for(unsigned int i = 1; i < content.size(); ++i){

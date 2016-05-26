@@ -11,7 +11,10 @@
 
 Context::Context() {
 	chosenTextID = -1;
+}
 
+Context::~Context() {
+	// TODO Auto-generated destructor stub
 }
 
 AuthorSet& Context::getAs() {
@@ -21,7 +24,6 @@ AuthorSet& Context::getAs() {
 QuoteSet& Context::getQs() {
 	return qs;
 }
-
 
 TextSet& Context::getTs() {
 	return ts;
@@ -33,13 +35,14 @@ int Context::getChosenTextId() const {
 
 void Context::setChosenTextId(int chosenTextId) {
 	chosenTextID = chosenTextId;
+	getChosenText().calculateFrequencyTable();
+	getChosenText().sortFrequencyTable();
 }
+
 bool Context::existsChosenText() const{
 	return chosenTextID >= 0;
 }
-Context::~Context() {
-	// TODO Auto-generated destructor stub
-}
+
 Text& Context::getChosenText(){
 	return getTs().get(getChosenTextId());
 }

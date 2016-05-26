@@ -15,6 +15,8 @@ class Context;
 class Author;
 class Quote;
 using namespace std;
+
+typedef pair<string, int> frequencyPair;
 /** @class Text
  *  @brief Representa un contingut que tÃ© un autor i un tÃ­tol.
  *  Els textos poden correspondre a llibres, articles, manuals, etc.
@@ -30,7 +32,7 @@ private:
 	vector<int> sentences;			//index: nº frase, 2n int nº paraula
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
-	map<string, int> frequencyTable;
+	vector<frequencyPair> frequencyTable;
 
 public:
 	/** @brief Creadora per defecte
@@ -115,11 +117,15 @@ public:
 	 * \post El resultat Ã©s totes les paraules del parÃ metre implÃ­cit ordenades decreixentment per freqÃ¼Ã¨ncia.
 	 * En cas d'empat de freqÃ¼Ã¨ncia les paraules s'ordenen creixement, primer per llargada i desprÃ©s alfabÃ¨ticament.
 	 */
-	void printFrequencyTable() const;
+	void printFrequencyTable();
 
-	void addToFrequencyTable(string s);
+	void calculateFrequencyTable();
 
-	void eraseFromFrequencyTable(string s);
+	bool compare(const pair<string, int>& a, const pair<string, int>& b);
+
+	void sortFrequencyTable();
+
+	void updateFrequencyTable(string match, string replace);
 
 	/** @brief Mostra les frases del contingut del text triat que compleixen l'expressiÃ³.
 	 * \pre exp Ã©s una expressiÃ³ booleana de paraules.
@@ -135,7 +141,7 @@ public:
 
 	void printInfo(Context& c); //TODO IMPLEMENT
 
-	void printContent() const; //TODO Consultar
+	void printContent(); //TODO Consultar
 	void printSentenceListInRange(int from, int to);
 };
 
