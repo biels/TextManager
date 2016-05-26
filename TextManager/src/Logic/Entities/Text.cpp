@@ -41,7 +41,8 @@ string Text::getTitle() const{
 	return this->title;
 }
 
-void Text::setTitle(const string& title){
+void Text::setTitle(string& title){
+	title = title.substr(1, title.length()-1);
 	this->title = title;
 }
 

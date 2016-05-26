@@ -59,7 +59,7 @@ public:
 	 *  \pre El parÃ metre implÃ­cit no tÃ© tÃ­tol
 	 *  \post title Ã©s el tÃ­tol del parÃ metre implÃ­cit.
 	 */
-	void setTitle(const string& title);
+	void setTitle(string& title);
 
 	/** @brief Mostra el nom i cognom de l'autor que ha fet el text.
 	 * Read only, @see AuthorSet.get() to modify

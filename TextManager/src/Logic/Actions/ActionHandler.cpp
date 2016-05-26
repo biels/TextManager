@@ -21,15 +21,13 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 	t.setAuthorByFullName(autor, c);
 	t.setContent(contingut);
 
-	cout << "Text afegit" << endl;
+	cout << "afegir text " << '"' << titol << '"' << endl;
 }
 void ActionHandler::triarText(string seq){
 	int id = c.getTs().findByWordList(seq, c);
 	c.setChosenTextId(id);
 	if (id != -1) {
-		cout << "Text triat: " << c.getChosenTextId() << endl;
-	}else{
-		cout << "No s'ha tobat cap text amb la seqüència especificada" << endl;
+		cout << "triar text {" << seq << "}" << endl;
 	}
 }
 void ActionHandler::eliminarText(){
