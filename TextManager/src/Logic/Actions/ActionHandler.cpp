@@ -20,8 +20,8 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 	t.setTitle(titol);
 	t.setAuthorByFullName(autor, c);
 	t.setContent(contingut);
-
 	cout << "afegir text " << '"' << titol << '"' << endl;
+	cout << endl;
 }
 void ActionHandler::triarText(string seq){
 	int id = c.getTs().findByWordList(seq, c);
@@ -45,53 +45,64 @@ void ActionHandler::substitueix(string match, string replace){
 }
 void ActionHandler::textosAutor (string autor){
 	c.getTs().printAllByAuthor(c.getAs().findByFullName(autor), c);
+	cout << endl;
 }
-void ActionHandler::textos(){
+void ActionHandler::textos(){ //TODO Imprimeix desordenat
 	c.getTs().printAll(c);
+	cout << endl;
 }
 void ActionHandler::autors(){
 	c.getAs().printAuthorList(c);
+	cout << endl;
 }
-void ActionHandler::info(){
+void ActionHandler::info(){ //TODO no fa cout de l'error
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printInfo(c);
 }
 void ActionHandler::autor(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().getAuthor(c).print();
+	cout << endl;
 }
 void ActionHandler::contingut(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printContent();
+	cout << endl;
 }
 void ActionHandler::frases(int x, int y){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printSentenceListInRange(x, y);
+	cout << endl;
 }
 void ActionHandler::nombreFrases(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
-	cout << c.getChosenText().getSentenceCount();
+	cout << c.getChosenText().getSentenceCount() << endl;
 }
 void ActionHandler::nombreParaules(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	cout << c.getChosenText().getWordCount();
+	cout << endl;
 }
 void ActionHandler::taulaFrequencies(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printFrequencyTable();
+	cout << endl;
 }
 void ActionHandler::frasesSequencia(string seq){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printSentenceListContainingSequence(seq);
+	cout << endl;
 }
 void ActionHandler::frasesExpressio(string exp){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printSentenceListMatchingExpression(exp);
+	cout << endl;
 }
 
 void ActionHandler::afegirCita(int x, int y){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().extractQuote(x, y, c);
+	cout << endl;
 }
 
 void ActionHandler::infoCita(string ref){

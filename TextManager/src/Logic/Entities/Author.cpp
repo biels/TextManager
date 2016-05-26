@@ -37,9 +37,12 @@ void Author::setFullName(const string& fullName){
 	iss >> this->name;
 	iss >> this->lastName;
 }
+
 string Author::getFullName() const{
-	return getName() +  " " + getLastName();
+	string lt = getLastName().substr(0, getLastName().size()-1);
+	return getName() +  " " + lt;
 }
+
 string Author::getInitials() const{
 	if(getName().length() == 0 || getLastName().length() == 0)return "--";
 	string r;
