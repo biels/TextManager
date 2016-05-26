@@ -25,6 +25,7 @@ private:
 	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
 	string ref;
 	void updateReference(Context& c);
+
 public:
 	/** @brief Creadora per defecte.
 	 * \pre Cert.

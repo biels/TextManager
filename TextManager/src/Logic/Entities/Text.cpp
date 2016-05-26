@@ -41,8 +41,7 @@ string Text::getTitle() const{
 	return this->title;
 }
 
-void Text::setTitle(string& title){
-	title = title.substr(1, title.length()-1);
+void Text::setTitle(const string& title){
 	this->title = title;
 }
 
@@ -326,11 +325,16 @@ void Text::printInfo(Context& c) {
 	cout << getAuthor(c).getFullName() << " " << '"' << getTitle() << '"' << endl;
 }
 void Text::printContent(){ //TODO treat . elements and special cases
-	cout << "Content: " << getTitle();
-	cout << content[0];
-	for(unsigned int i = 1; i < content.size(); ++i){
-		cout << " " << content[i];
+	int cont = 1;
+	for(int i = 0; i < sentences.size(); i = sentences[i]){
+		cout << cont << " ";
+		for (int j = i; j < sentences[i]; ++j){
+			cout << content[j] << " ";
+		}
+		++cont;
+		cout << endl;
 	}
+	cout << endl;
 }
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
 	cout << "All sentences from " << from << " to " << to << ": " << endl;

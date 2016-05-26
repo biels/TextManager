@@ -231,7 +231,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	//Afegir text
 	if (!question && keywords[0] == "afegir") {
 		string titol = args[0].substr(1, args[0].size()-2);
-		string autor = args[0].substr(1, args[0].size()-2);
+		string autor = args[1].substr(1, args[0].size()-2);
 		a.afegirText(titol, autor, args[2]);
 		return;
 	}

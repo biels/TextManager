@@ -27,9 +27,10 @@ void ActionHandler::triarText(string seq){
 	int id = c.getTs().findByWordList(seq, c);
 	c.setChosenTextId(id);
 	if (id != -1) {
-		cout << "triar text {" << seq << "}" << endl;
+		cout << "triar text " << seq << endl;
 	}
 }
+
 void ActionHandler::eliminarText(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getTs().remove(c.getChosenTextId(), c);
