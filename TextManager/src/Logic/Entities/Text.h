@@ -30,7 +30,7 @@ private:
 	vector<int> sentences;			//index: nº frase, 2n int nº paraula
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
-
+	map<string, int> frequencyTable;
 
 public:
 	/** @brief Creadora per defecte
@@ -116,6 +116,10 @@ public:
 	 * En cas d'empat de freqÃ¼Ã¨ncia les paraules s'ordenen creixement, primer per llargada i desprÃ©s alfabÃ¨ticament.
 	 */
 	void printFrequencyTable() const;
+
+	void addToFrequencyTable(string s);
+
+	void eraseFromFrequencyTable(string s);
 
 	/** @brief Mostra les frases del contingut del text triat que compleixen l'expressiÃ³.
 	 * \pre exp Ã©s una expressiÃ³ booleana de paraules.

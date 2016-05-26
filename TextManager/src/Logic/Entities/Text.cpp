@@ -80,6 +80,7 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 			i++;
 		}else{
 			this->content.push_back(w);
+			//addToFrequencyTable(w);
 			wordCount++;
 		}
 		i++;
@@ -107,6 +108,7 @@ string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder
 void Text::replace(string match, string replace){
 	for(unsigned int i = 0; i < content.size(); ++i){
 		if(content[i] == match)content[i] = replace;
+		//eraseFromFrequencyTable(match)
 	}
 }
 Quote& Text::extractQuote(int from, int to, Context& c){
@@ -264,6 +266,15 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 		set_union(match_left.begin(), match_left.end(), match_right.begin(), match_right.end(), back_inserter(match));
 	}
 }
+
+void Text::addToFrequencyTable(string s) {
+
+}
+
+void Text::eraseFromFrequencyTable(string s){
+
+}
+
 //Output section
 void Text::printFrequencyTable() const{
 	cout << "FrequencyTable" << endl; //TODO
