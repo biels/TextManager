@@ -16,7 +16,7 @@ class Author;
 class Quote;
 using namespace std;
 
-typedef pair<string, int> frequencyPair;
+
 /** @class Text
  *  @brief Representa un contingut que tÃ© un autor i un tÃ­tol.
  *  Els textos poden correspondre a llibres, articles, manuals, etc.
@@ -32,7 +32,7 @@ private:
 	vector<int> sentences;			//index: nº frase, 2n int nº paraula
 	vector<string> getSentenceListByExpression();
 	vector<string> getSentenceListByWord();
-	vector<frequencyPair> frequencyTable;
+	vector<pair<string, int>> frequencyTable;
 
 public:
 	/** @brief Creadora per defecte
@@ -120,8 +120,6 @@ public:
 	void printFrequencyTable();
 
 	void calculateFrequencyTable();
-
-	bool compare(const pair<string, int>& a, const pair<string, int>& b);
 
 	void sortFrequencyTable();
 

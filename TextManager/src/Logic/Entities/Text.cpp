@@ -266,22 +266,22 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 
 void Text::calculateFrequencyTable() {
 	for(int i = 0; i < content.size(); ++i) {
-		vector<frequencyPair>::iterator it = std::find(frequencyTable.begin(), frequencyTable.end(), content[i]);
+		vector<pair<string, int>>::iterator it = std::find(frequencyTable.begin(), frequencyTable.end(), content[i]);
 		if (it != frequencyTable.end()) (*it).second++;
 		else frequencyTable.push_back(make_pair(content[i], 1));
 	}
 }
 
 void Text::updateFrequencyTable(string match, string replace){
-	vector<frequencyPair>::iterator itm = std::find(frequencyTable.begin(), frequencyTable.end(), match);
-	--(*itm).second;
+	vector<pair<string, int>>::iterator itm = std::find(frequencyTable.begin(), frequencyTable.end(), match);
+	(*itm).second--;
 	if ((*itm).second == 0) frequencyTable.erase(itm);
-	vector<frequencyPair>::iterator itr = std::find(frequencyTable.begin(), frequencyTable.end(), replace);
+	vector<pair<string, int>>::iterator itr = std::find(frequencyTable.begin(), frequencyTable.end(), replace);
 	if(itr != frequencyTable.end()) (*itr).second++;
 	else frequencyTable.push_back(make_pair(replace, 1));
 }
 
-bool Text::compare(const pair<string, int>& a, const pair<string, int>& b){
+bool compare(const pair<string, int>& a, const pair<string, int>& b) {
 	return ((a.second < b.second) or (a.second == b.second and a.first.size() > b.first.size())
 			or (a.second == b.second and a.first.size() == b.first.size() and a.first < b.first));
 }
