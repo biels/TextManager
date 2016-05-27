@@ -13,6 +13,7 @@
 #include <iostream>
 #include <list>
 #include <functional>
+#include <string>
 
 #include <algorithm>
 #include <iterator>
@@ -336,18 +337,18 @@ void Text::printInfo(Context& c, bool info) {
 	}
 }
 void Text::printContent(){ //TODO treat . elements and special cases
-	for (int i = 0; i < sentences.size()-1; ++i) {
+	for (int i = 0; i < sentences.size(); ++i) {
 		cout << i+1;
 		for (int j = sentences[i]; j < sentences[i+1]-1; ++j){
-			cout << " " << content[j];
+			std::string w = content[j];
+			cout << (ispunct(w[0]) ? "" : " ") << w;
 		}
-		cout << "." << endl;
 	}
 	cout <<  endl;
 }
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
-	cout << "All sentences from " << from << " to " << to << ": " << endl;
+	cout << "frases " << from << " " << to << " ?" << endl;
 	for(int i = from; i <= to; i++){
 		cout << i << " " << getSentenceByIndex(i) << endl;
 	}

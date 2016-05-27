@@ -122,7 +122,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	if (keywords[0] == "frases"){
 		//frases x y ?
 		if(keywords.size() == 3){
-			if(isdigit(keywords[1][0]) || isdigit(keywords[2][0])){
+			if(!isdigit(keywords[1][0]) || !isdigit(keywords[2][0])){
 				cout << "error";
 				return;
 			}
