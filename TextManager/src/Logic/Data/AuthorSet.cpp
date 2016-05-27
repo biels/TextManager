@@ -61,17 +61,15 @@ int AuthorSet::findByFullName (string name) {
 void AuthorSet::printAuthorList(Context& c) {
 	vector<string> output;
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
-		string out = "";
-		stringstream ss;
-		Author a = (*it).second;
-		int id = a.getId();
-		ss << a.getName();
-		ss << " " << c.getTs().numberTextsAuthor(id, c);
-		ss << " " << c.getTs().numberSentencesAuthorTexts(id, c);
-		ss << " " << c.getTs().numberWordsAuthorTexts(id, c);
-		ss >> out;
+		string out = (*it).second.getName();
 		output.push_back(out);
 	}
 	sort(output.begin(), output.end());
-	for(int i = 0; i < output.size(); i++)cout << output[i] << endl;
+	for(int i = 0; i < output.size(); i++) {
+		cout << output[i];
+		int id = findByFullName(output[i]);
+		cout << " " << c.getTs().numberTextsAuthor(id, c);
+		cout << " " << c.getTs().numberSentencesAuthorTexts(id, c);
+		cout << " " << c.getTs().numberWordsAuthorTexts(id, c) << endl;
+	}
 }
