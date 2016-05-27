@@ -43,6 +43,7 @@ void ActionHandler::substitueix(string match, string replace){
 	Text& t = c.getTs().get(c.getChosenTextId());
 	t.replace(match, replace);
 	cout << "substitueix " << '"' << match << '"' << " per " << '"' << replace << '"' << endl;
+	cout << endl;
 }
 
 void ActionHandler::textosAutor (string autor){
@@ -108,6 +109,7 @@ void ActionHandler::frasesExpressio(string exp){
 void ActionHandler::afegirCita(int x, int y){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().extractQuote(x, y, c);
+	cout << "afegir cita " << x << " " << y << endl;
 	cout << endl;
 }
 
