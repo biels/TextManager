@@ -29,6 +29,7 @@ void ActionHandler::triarText(string seq){
 	if (id != -1) {
 		cout << "triar text " << seq << endl;
 	}
+	cout << endl;
 }
 void ActionHandler::eliminarText(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
@@ -57,7 +58,9 @@ void ActionHandler::autors(){
 }
 void ActionHandler::info(){ //TODO no fa cout de l'error
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
-	c.getChosenText().printInfo(c);
+	cout << "info ?" << endl;
+	c.getChosenText().printInfo(c, true);
+	cout << endl;
 }
 void ActionHandler::autor(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
@@ -66,6 +69,7 @@ void ActionHandler::autor(){
 }
 void ActionHandler::contingut(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	cout << "contingut ?" << endl;
 	c.getChosenText().printContent();
 	cout << endl;
 }
@@ -74,6 +78,7 @@ void ActionHandler::frases(int x, int y){
 	c.getChosenText().printSentenceListInRange(x, y);
 	cout << endl;
 }
+
 void ActionHandler::nombreFrases(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	cout << c.getChosenText().getSentenceCount() << endl;

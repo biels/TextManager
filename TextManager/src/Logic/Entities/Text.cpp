@@ -326,8 +326,14 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 void Text::printSentenceListContainingSequence(string sequence) const{
 	cout << "All sentences containing " << sequence << endl;
 }
-void Text::printInfo(Context& c) {
+
+void Text::printInfo(Context& c, bool info) {
 	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"' << endl;
+	if (info) {
+		cout << "Cites Associades: " << endl;
+		cout << getAuthor(c).getInitials() << endl;
+		c.getQs().printAllByText(getAuthor(c).getId(), c);
+	}
 }
 void Text::printContent(){ //TODO treat . elements and special cases
 	for (int i = 0; i < sentences.size()-1; ++i) {

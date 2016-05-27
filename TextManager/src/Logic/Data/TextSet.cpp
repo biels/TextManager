@@ -6,6 +6,10 @@
  */
 
 #include "TextSet.h"
+
+#include <sstream>
+#include <algorithm>
+
 #include "../Actions/Context.h"
 #include "../Entities/Text.h"
 #include "../Entities/Quote.h"
@@ -118,7 +122,7 @@ void TextSet::printAllByAuthor(int id, Context& c){
 
 void TextSet::printAll(Context& c) { //Print what?
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
-		(*it).second.printInfo(c);
+		(*it).second.printInfo(c, false);
 	}
 }
 

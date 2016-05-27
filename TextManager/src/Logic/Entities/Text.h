@@ -137,7 +137,7 @@ public:
 	 */
 	void printSentenceListContainingSequence(string sequence) const;
 
-	void printInfo(Context& c); //TODO IMPLEMENT
+	void printInfo(Context& c, bool info); //TODO IMPLEMENT
 
 	void printContent(); //TODO Consultar
 	void printSentenceListInRange(int from, int to);
