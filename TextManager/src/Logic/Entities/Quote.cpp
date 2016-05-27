@@ -9,6 +9,7 @@
 
 #include "../Actions/Context.h"
 #include "../Entities/Text.h"
+#include "../Entities/Author.h"
 
 Quote::Quote(int id) {
 	quoteNumber = -1;
@@ -30,7 +31,7 @@ int Quote::getTextId() const {
 	return textID;
 }
 void Quote::updateReference(Context& c){
-	string s = "IN";// c.getTs().get(textID).getAuthor(c).getInitials();
+	string s = c.getTs().get(textID).getAuthor(c).getInitials();
 	s += getQuoteNumber();
 	//id[2] = a.id		TODO és l'id d'aquell autor?
 	ref = s;

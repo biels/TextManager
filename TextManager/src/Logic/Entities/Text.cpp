@@ -342,7 +342,7 @@ void Text::printInfo(Context& c, bool info) {
 void Text::printContent(){ //TODO treat . elements and special cases
 	for (int i = 0; i < sentences.size() - 1; ++i) {
 		cout << i+1;
-		for (int j = sentences[i]; j < sentences[i+1]-1; ++j){
+		for (int j = sentences[i]; j < sentences[i+1]; ++j){
 			std::string w = content[j];
 			cout << (ispunct(w[0]) ? "" : " ") << w;
 		}
@@ -352,7 +352,7 @@ void Text::printContent(){ //TODO treat . elements and special cases
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
 	cout << "frases " << from << " " << to << " ?" << endl;
-	for(int i = from; i <= to; i++){
-		cout << i << " " << getSentenceByIndex(i) << endl;
+	for(int i = from-1; i <= to-1; i++){
+		cout << i+1 << " " << getSentenceByIndex(i) << endl;
 	}
 }

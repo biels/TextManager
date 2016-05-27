@@ -246,8 +246,8 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//afegir cita x y ?
 		else {
-			int x = atoi(keywords[1].c_str());
-			int y = atoi(keywords[2].c_str());
+			int x = atoi(keywords[2].c_str());
+			int y = atoi(keywords[3].c_str());
 			a.afegirCita(x, y);
 			return;
 		}
