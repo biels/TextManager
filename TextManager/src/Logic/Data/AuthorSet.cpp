@@ -64,8 +64,8 @@ void AuthorSet::printAuthorList(Context& c) {
 		string out = "";
 		stringstream ss;
 		Author a = (*it).second;
-		a.print();
 		int id = a.getId();
+		ss << a.getName();
 		ss << " " << c.getTs().numberTextsAuthor(id, c);
 		ss << " " << c.getTs().numberSentencesAuthorTexts(id, c);
 		ss << " " << c.getTs().numberWordsAuthorTexts(id, c);
