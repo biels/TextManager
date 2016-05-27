@@ -50,52 +50,59 @@ void ActionHandler::substitueix(string match, string replace){
 }
 
 void ActionHandler::textosAutor (string autor){
-	cout << "textos autor ?" << endl;
+	cout << "textos autor " << '"' << autor << '"' << endl;
 	c.getTs().printAllByAuthor(c.getAs().findByFullName(autor), c);
 	cout << endl;
 }
 
-void ActionHandler::textos(){ //TODO Imprimeix desordenat
+void ActionHandler::textos(){
+	cout << "tots textos ?" << endl;
 	c.getTs().printAll(c);
 	cout << endl;
 }
 
 void ActionHandler::autors(){
+	cout << "tots autors ?" << endl;
 	c.getAs().printAuthorList(c);
 	cout << endl;
 }
-void ActionHandler::info(){ //TODO no fa cout de l'error
-	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
+
+void ActionHandler::info(){
 	cout << "info ?" << endl;
+	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().printInfo(c, true);
 	cout << endl;
 }
 
 void ActionHandler::autor(){
+	cout << "autor ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().getAuthor(c).print();
 	cout << endl;
 }
 
 void ActionHandler::contingut(){
-	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	cout << "contingut ?" << endl;
+	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().printContent();
 	cout << endl;
 }
 
 void ActionHandler::frases(int x, int y){
+	cout << "frases " << x << " " << y << " ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().printSentenceListInRange(x, y);
 	cout << endl;
 }
 
 void ActionHandler::nombreFrases(){
+	cout << "nombre de frases ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	cout << c.getChosenText().getSentenceCount() << endl;
 }
 
 void ActionHandler::nombreParaules(){
+	cout << "nombre de paraules ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	cout << c.getChosenText().getWordCount();
 	cout << endl;
@@ -109,42 +116,49 @@ void ActionHandler::taulaFrequencies(){
 }
 
 void ActionHandler::frasesSequencia(string seq){
+	cout << "frases " << '"' << seq << '"' << " ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().printSentenceListContainingSequence(seq);
 	cout << endl;
 }
 
 void ActionHandler::frasesExpressio(string exp){
+	cout << "frases " << "{" << exp << "}" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().printSentenceListMatchingExpression(exp);
 	cout << endl;
 }
 
 void ActionHandler::afegirCita(int x, int y){
+	cout << "afegir cita " << x << " " << y << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().extractQuote(x, y, c);
-	cout << "afegir cita " << x << " " << y << endl;
 	cout << endl;
 }
 
 void ActionHandler::infoCita(string ref){
+	cout << "info cita " << '"' << ref << '"' << " ?" << endl;
 	c.getQs().get(c.getQs().findByRef(ref)).printInfo(c);
 }
 
 void ActionHandler::citesAutor(string nom){
+	cout << "cites autor " << '"' << nom << '"' << " ?" << endl;
 	c.getQs().printAllByAuthor(c.getAs().findByFullName(nom), c);
 }
 
 void ActionHandler::cites(){
+	cout << "cites ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getQs().printAllByText(c.getChosenTextId(), c);
 }
 
 void ActionHandler::totesCites(){
+	cout << "totes cites ?" << endl;
 	c.getQs().printAll(c);
 }
 
 void ActionHandler::eliminarCita(string ref){
+	cout << "eliminar cita " << '"' << ref << '"' << endl;
 	c.getQs().remove(c.getQs().findByRef(ref));
 }
 
