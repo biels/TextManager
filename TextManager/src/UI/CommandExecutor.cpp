@@ -24,11 +24,13 @@ void CommandExecutor::readConsole() {
 	string cmd;
 	while(true){
 		getline(cin, cmd);
+		if(cmd == "")continue;
 		const string mls = "afegir text"; //Multi line special command
 		if (cmd.length() >= mls.length() && cmd.substr(0, mls.length()) == mls) {
 			string lin;
 			while(true){
 				getline(cin, lin);
+				if(lin == "")continue;
 				cmd += '\n' + lin;
 				if(lin == "****")break;
 			}
@@ -169,8 +171,8 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	}
 	//info ? i info cita "<referència>" ?
 	if (question && keywords[0] == "info") {
-		//info ??
-		if (keywords.size() == 2) {
+		//info ?
+		if (keywords.size() == 1) {
 			a.info();
 			return;
 		}
