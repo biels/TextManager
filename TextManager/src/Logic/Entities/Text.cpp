@@ -276,7 +276,7 @@ void Text::calculateFrequencyTable() {
 		);
 		if (it != frequencyTable.end()) (*it).second++;
 		else{
-			if (content[i][0] != '.' and content[i][0] != ',') {
+			if (!ispunct(content[i][0])) {
 				frequencyTable.push_back(make_pair(content[i], 1));
 			}
 		}
