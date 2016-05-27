@@ -38,11 +38,11 @@ TEST(ActionHandler, TriarText){
 	testing::internal::CaptureStdout();
 	a1.triarText("{del tresor}");
 	output = testing::internal::GetCapturedStdout();
+
+	a1.triarText("{Wilde}");
 	EXPECT_TRUE(c.existsChosenText());
 
-	testing::internal::CaptureStdout();
-	a1.triarText("{Wilde}");
-	output = testing::internal::GetCapturedStdout();
+	a1.triarText("{Oscar beautiful}");
 	EXPECT_TRUE(c.existsChosenText());
 
 	testing::internal::CaptureStdout();
