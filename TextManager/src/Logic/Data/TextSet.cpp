@@ -6,6 +6,10 @@
  */
 
 #include "TextSet.h"
+
+#include <sstream>
+#include <algorithm>
+
 #include "../Actions/Context.h"
 #include "../Entities/Text.h"
 #include "../Entities/Quote.h"
@@ -108,11 +112,19 @@ int TextSet::numberTextsAuthor(int id, Context& c) const{
 }
 
 void TextSet::printAllByAuthor(int id, Context& c){
+	vector<string> output;
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
 		Text& t = (*it).second;
 		if (t.getAuthor(c).getId() == id) {
-			cout << '"' << t.getTitle() << '"' << endl;
+			string out;
+			stringstream ss(out);
+			ss << '"' << t.getTitle() << '"' << endl;
+			output.push_back(out);
 		}
+	}
+	sort(output.begin(), output.end());
+	for(int i = 0; i < output.size(); i++){
+		cout << output[i];
 	}
 }
 
