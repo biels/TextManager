@@ -98,6 +98,7 @@ void ActionHandler::nombreFrases(){
 	cout << "nombre de frases ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	cout << c.getChosenText().getSentenceCount() << endl;
+	cout << endl;
 }
 
 void ActionHandler::nombreParaules(){
