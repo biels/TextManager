@@ -130,7 +130,7 @@ void TextSet::printAll(Context& c) {
 	vector<string> output;
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
 		Text& t = (*it).second;
-		output.push_back(t.getAuthor(c).getName() + '"' + t.getTitle() + '"');
+		output.push_back(t.getAuthor(c).getName() + " " + '"' + t.getTitle() + '"');
 	}
 	sort(output.begin(), output.end());
 	for(int i = 0; i < output.size(); i++)cout << output[i] << endl;
