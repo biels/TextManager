@@ -55,7 +55,7 @@ void Text::setAuthorByFullName(string fullName, Context& c){
 	int id = c.getAs().findByFullName(fullName);
 	if (id == -1) {
 		Author& a = c.getAs().addNew();
-		a.setFullName(fullName);
+		a.setName(fullName);
 		id = a.getId();
 	}
 	author = id;
@@ -131,10 +131,11 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 		}
 	}
 	if(l.size() == 0)return true;
-	for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
-		Author& a = getAuthor(c);
-		string str = (*it);
-		if (a.getName() == str || a.getLastName() == str)it = l.erase(it);
+	istringstream issa(getAuthor(c).getName());
+	while(issa >> tmp){
+		for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
+			if(tmp == (*it))it=l.erase(it);
+		}
 	}
 	if(l.size() == 0)return true;
 	for(unsigned int i = 0; i < content.size(); ++i){
@@ -269,10 +270,10 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 void Text::calculateFrequencyTable() {
 	for(int i = 0; i < content.size(); ++i) {
 		vector<pair<string, int>>::iterator it = std::find_if(
-					frequencyTable.begin(),
-					frequencyTable.end(),
-					[&] (pair<string,int> p){return p.first == content[i];}
-			);
+				frequencyTable.begin(),
+				frequencyTable.end(),
+				[&] (pair<string,int> p){return p.first == content[i];}
+		);
 		if (it != frequencyTable.end()) (*it).second++;
 		else{
 			if (content[i][0] != '.' and content[i][0] != ',') {
@@ -326,7 +327,7 @@ void Text::printSentenceListContainingSequence(string sequence) const{
 	cout << "All sentences containing " << sequence << endl;
 }
 void Text::printInfo(Context& c) {
-	cout << getAuthor(c).getFullName() << " " << '"' << getTitle() << '"' << endl;
+	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"' << endl;
 }
 void Text::printContent(){ //TODO treat . elements and special cases
 	int cont = 1;

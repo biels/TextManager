@@ -19,8 +19,7 @@ class Author {
 private:
 	int id;
 	string name;
-	string lastName;
-
+	string initials;
 public:
 	/** @brief Crea un autor amb l'identificador especificat.
 	 * \pre Cert.
@@ -48,17 +47,6 @@ public:
 	 */
 	void setName(const string& name);
 
-	/** @brief Mostra el cognom de l'autor.
-	 *  \pre Cert.
-	 *  \post El resultat és el cognom del paràmetre implícit.
-	 */
-	string getLastName() const;
-
-	/** @brief Estableix el cognom del paràmetre implícit.
-	 * 	\pre Cert.
-	 * 	\post lastname és el cognom del paràmetre implícit
-	 */
-	void setLastName(const string& lastName);
 
 	/**
 	 * @brief Estableix el nom complet de l'autor

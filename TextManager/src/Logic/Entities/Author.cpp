@@ -24,36 +24,19 @@ string Author::getName() const{
 	return this->name;
 }
 void Author::setName(const string& name){
-	this->name = name;
-}
-string Author::getLastName() const{
-	return this->lastName;
-}
-void Author::setLastName(const string& lastName){
-	this->lastName = lastName;
-}
-void Author::setFullName(const string& fullName){
-	istringstream iss(fullName);
+	istringstream iss(name);
+	string tmp;
 	iss >> this->name;
-	iss >> this->lastName;
+	this->initials = toupper(name[0]);
+	while(iss >> tmp){
+		this->name += " " + tmp;
+		this->initials += toupper(tmp[0]);
+	}
 }
-
-string Author::getFullName() const{
-	string lt = getLastName().substr(0, getLastName().size()-1);
-	return getName() +  " " + lt;
-}
-
-string Author::getInitials() const{
-	if(getName().length() == 0 || getLastName().length() == 0)return "--";
-	string r;
-	stringstream ss;
-	ss << getName()[0] << getLastName()[0];
-	ss >> r;
-	return r;
-}
-
 void Author::print() const{
 	//TODO Check outpu format
-	string ln = getLastName().substr(0, getLastName().size()-1);
-	cout << getName() << " " << ln;
+	cout << getName() << endl;
+}
+string Author::getInitials() const{
+	return this->initials;
 }
