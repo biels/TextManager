@@ -332,7 +332,7 @@ void Text::printContent(){ //TODO treat . elements and special cases
 	int cont = 1;
 	for (int i = 0; i < content.size(); i = sentences[i+1]) {
 		cout << cont;
-		for (int j = i; j < sentences[i+1]-1; ++j){
+		for (int j = i; j < sentences[i+1]; ++j){
 			cout << " " << content[j];
 		}
 		++cont;

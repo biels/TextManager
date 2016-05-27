@@ -55,5 +55,5 @@ string Author::getInitials() const{
 void Author::print() const{
 	//TODO Check outpu format
 	string ln = getLastName().substr(0, getLastName().size()-1);
-	cout << getName() << " " << ln << endl;
+	cout << getName() << " " << ln;
 }
