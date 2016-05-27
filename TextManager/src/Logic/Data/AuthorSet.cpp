@@ -9,6 +9,7 @@
 #include "../Actions/Context.h"
 #include "../Entities/Author.h"
 #include <iostream>
+#include <sstream>
 AuthorSet::AuthorSet() {
 	lastID = 0;
 }
@@ -56,12 +57,17 @@ int AuthorSet::findByFullName (string name) {
 }
 
 void AuthorSet::printAuthorList(Context& c) {
+	vector<string> output;
 	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
+		string out = "";
+		stringstream ss;
 		Author a = (*it).second;
 		a.print();
 		int id = a.getId();
-		cout << " " << c.getTs().numberTextsAuthor(id, c);
-		cout << " " << c.getTs().numberSentencesAuthorTexts(id, c);
-		cout << " " << c.getTs().numberWordsAuthorTexts(id, c) << endl;
+		ss << " " << c.getTs().numberTextsAuthor(id, c);
+		ss << " " << c.getTs().numberSentencesAuthorTexts(id, c);
+		ss << " " << c.getTs().numberWordsAuthorTexts(id, c);
 	}
+	sort(output.begin(), output.end());
+	for(int i = 0; i < output.size(); i++)cout << output[i] << endl;
 }

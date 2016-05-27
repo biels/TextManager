@@ -82,8 +82,8 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 			i++;
 		}else{
 			this->content.push_back(w);
-			wordCount++;
 		}
+		wordCount++;
 		i++;
 	}
 	//sentences.push_back(wordCount + 1); //Sentinel
