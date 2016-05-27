@@ -27,9 +27,8 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 void ActionHandler::triarText(string seq){
 	int id = c.getTs().findByWordList(seq, c);
 	c.setChosenTextId(id);
-	if (id != -1) {
-		cout << "triar text " << seq << endl;
-	}
+	if (id == -1){cout << "error" << endl << endl; return;}
+	cout << "triar text " << seq << endl;
 	cout << endl;
 }
 
@@ -139,27 +138,32 @@ void ActionHandler::afegirCita(int x, int y){
 void ActionHandler::infoCita(string ref){
 	cout << "info cita " << '"' << ref << '"' << " ?" << endl;
 	c.getQs().get(c.getQs().findByRef(ref)).printInfo(c);
+	cout << endl;
 }
 
 void ActionHandler::citesAutor(string nom){
 	cout << "cites autor " << '"' << nom << '"' << " ?" << endl;
 	c.getQs().printAllByAuthor(c.getAs().findByFullName(nom), c);
+	cout << endl;
 }
 
 void ActionHandler::cites(){
 	cout << "cites ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getQs().printAllByText(c.getChosenTextId(), c);
+	cout << endl;
 }
 
 void ActionHandler::totesCites(){
 	cout << "totes cites ?" << endl;
 	c.getQs().printAll(c);
+	cout << endl;
 }
 
 void ActionHandler::eliminarCita(string ref){
 	cout << "eliminar cita " << '"' << ref << '"' << endl;
 	c.getQs().remove(c.getQs().findByRef(ref));
+	cout << endl;
 }
 
 Context& ActionHandler::exposeContext(){

@@ -82,8 +82,8 @@ void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade 
 			i++;
 		}else{
 			this->content.push_back(w);
-			wordCount++;
 		}
+		wordCount++;
 		i++;
 	}
 	//sentences.push_back(wordCount + 1); //Sentinel
@@ -92,7 +92,7 @@ int Text::getWordCount() const{
 	return wordCount;
 }
 int Text::getSentenceCount() const{
-	return sentences.size();
+	return sentences.size() - 1;
 }
 string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder / stream for efficiency
 	int start = sentences[index];
@@ -335,7 +335,6 @@ void Text::printInfo(Context& c, bool info) {
 	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"' << endl;
 	if (info) {
 		cout << "Cites Associades: " << endl;
-		cout << getAuthor(c).getInitials() << endl;
 		c.getQs().printAllByText(getAuthor(c).getId(), c);
 	}
 }
