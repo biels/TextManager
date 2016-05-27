@@ -13,8 +13,10 @@
 #include <iostream>
 #include <list>
 #include <functional>
+#include <string>
 
 #include <algorithm>
+#include <ios>
 #include <iterator>
 using namespace std;
 using std::find_if;
@@ -336,12 +338,12 @@ void Text::printInfo(Context& c, bool info) {
 	}
 }
 void Text::printContent(){ //TODO treat . elements and special cases
-	for (int i = 0; i < sentences.size()-1; ++i) {
+	for (int i = 0; i < sentences.size(); ++i) {
 		cout << i+1;
 		for (int j = sentences[i]; j < sentences[i+1]-1; ++j){
-			cout << " " << content[j];
+			std::string w = content[j];
+			cout << (ispunct(w[0]) ? "" : " ") << w;
 		}
-		cout << "." << endl;
 	}
 	cout <<  endl;
 }
