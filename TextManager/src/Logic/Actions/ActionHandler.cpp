@@ -42,8 +42,9 @@ void ActionHandler::substitueix(string match, string replace){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	Text& t = c.getTs().get(c.getChosenTextId());
 	t.replace(match, replace);
-	cout << "Replaced";
+	cout << "substitueix " << '"' << match << '"' << " per " << '"' << replace << '"' << endl;
 }
+
 void ActionHandler::textosAutor (string autor){
 	c.getTs().printAllByAuthor(c.getAs().findByFullName(autor), c);
 	cout << endl;
@@ -71,8 +72,8 @@ void ActionHandler::contingut(){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	cout << "contingut ?" << endl;
 	c.getChosenText().printContent();
-	cout << endl;
 }
+
 void ActionHandler::frases(int x, int y){
 	if(!c.existsChosenText()){cout << "error" << endl; return;}
 	c.getChosenText().printSentenceListInRange(x, y);

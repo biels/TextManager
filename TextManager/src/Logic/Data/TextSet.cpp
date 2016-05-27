@@ -116,15 +116,13 @@ void TextSet::printAllByAuthor(int id, Context& c){
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
 		Text& t = (*it).second;
 		if (t.getAuthor(c).getId() == id) {
-			string out;
-			stringstream ss(out);
-			ss << '"' << t.getTitle() << '"' << endl;
+			string out = t.getTitle();
 			output.push_back(out);
 		}
 	}
 	sort(output.begin(), output.end());
 	for(int i = 0; i < output.size(); i++){
-		cout << output[i];
+		cout << '"' << output[i] << '"' << endl;
 	}
 }
 
