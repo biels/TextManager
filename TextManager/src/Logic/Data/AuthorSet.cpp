@@ -10,6 +10,8 @@
 #include "../Entities/Author.h"
 #include <iostream>
 #include <sstream>
+#include <algorithm>
+#include <vector>
 AuthorSet::AuthorSet() {
 	lastID = 0;
 }
