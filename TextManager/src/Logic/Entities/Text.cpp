@@ -351,7 +351,6 @@ void Text::printContent(){ //TODO treat . elements and special cases
 }
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
-	cout << "frases " << from << " " << to << " ?" << endl;
 	for(int i = from-1; i <= to-1; i++){
 		cout << i+1 << " " << getSentenceByIndex(i) << endl;
 	}

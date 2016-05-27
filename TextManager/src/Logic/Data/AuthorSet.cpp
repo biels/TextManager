@@ -64,9 +64,15 @@ void AuthorSet::printAuthorList(Context& c) {
 		Author a = (*it).second;
 		a.print();
 		int id = a.getId();
+<<<<<<< HEAD
 		ss << " " << c.getTs().numberTextsAuthor(id, c);
 		ss << " " << c.getTs().numberSentencesAuthorTexts(id, c);
 		ss << " " << c.getTs().numberWordsAuthorTexts(id, c);
+=======
+		cout << " " << c.getTs().numberTextsAuthor(id, c);
+		cout << " " << c.getTs().numberSentencesAuthorTexts(id, c)-1;
+		cout << " " << c.getTs().numberWordsAuthorTexts(id, c) << endl;
+>>>>>>> branch 'master' of https://github.com/biels/TextManager.git
 	}
 	sort(output.begin(), output.end());
 	for(int i = 0; i < output.size(); i++)cout << output[i] << endl;
