@@ -335,7 +335,6 @@ void Text::printInfo(Context& c, bool info) {
 	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"' << endl;
 	if (info) {
 		cout << "Cites Associades: " << endl;
-		cout << getAuthor(c).getInitials() << endl;
 		c.getQs().printAllByText(getAuthor(c).getId(), c);
 	}
 }

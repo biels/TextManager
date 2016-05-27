@@ -86,8 +86,8 @@ void Quote::setTextId(int textId, Context& c) {
 
 //Output zone
 void Quote::print(Context& c) const{
-	cout << getUniqueIdentifier() << endl;
 	Text& t = c.getTs().get(textID);
+	cout << t.getAuthor(c).getInitials() << endl;
 	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {
 		cout << i << " " << t.getSentenceByIndex(i) << endl;
 	}
