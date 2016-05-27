@@ -92,7 +92,7 @@ int Text::getWordCount() const{
 	return wordCount;
 }
 int Text::getSentenceCount() const{
-	return sentences.size();
+	return sentences.size() - 1;
 }
 string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder / stream for efficiency
 	int start = sentences[index];
