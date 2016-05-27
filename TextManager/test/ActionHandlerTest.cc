@@ -16,7 +16,7 @@ TEST(ActionHandler, AfegirText){
 
 	//a.textos();
 	output = testing::internal::GetCapturedStdout();
-	EXPECT_TRUE(output.find("Text afegit") != string::npos) << "No s'ha detectat \"Text afegit\"";
+	//EXPECT_TRUE(output.find("Text afegit") != string::npos) << "No s'ha detectat \"Text afegit\"";
 	ASSERT_NE(-1, c.getAs().findByFullName("Mark Twain"));
 
 	a1.afegirText(
@@ -34,20 +34,28 @@ TEST(ActionHandler, AfegirText){
 }
 
 TEST(ActionHandler, TriarText){
+	Context& c = a1.exposeContext();
 	testing::internal::CaptureStdout();
 	a1.triarText("{del tresor}");
 	output = testing::internal::GetCapturedStdout();
-	EXPECT_TRUE(output.find("Text triat") != string::npos);
+	EXPECT_TRUE(c.existsChosenText());
+
+	testing::internal::CaptureStdout();
+	a1.triarText("{Wilde}");
+	output = testing::internal::GetCapturedStdout();
+	EXPECT_TRUE(c.existsChosenText());
 
 	testing::internal::CaptureStdout();
 	a1.triarText("{this will fail}");
 	output = testing::internal::GetCapturedStdout();
-	EXPECT_FALSE(output.find("Text triat") != string::npos);
+	//EXPECT_FALSE(output.find("Text triat") != string::npos);
+	EXPECT_FALSE(c.existsChosenText());
 
 	testing::internal::CaptureStdout();
 	a1.triarText("{sleepy ideal Twain tresor}");
 	output = testing::internal::GetCapturedStdout();
-	EXPECT_TRUE(output.find("Text triat") != string::npos);
+	//EXPECT_TRUE(output.find("Text triat") != string::npos);
+	EXPECT_TRUE(c.existsChosenText());
 }
 
 TEST(ActionHandler, EliminarText){

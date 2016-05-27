@@ -8,18 +8,15 @@ using namespace std;
 Context c2;
 TEST(Entities, Author){
 	Author& a1 = c2.getAs().addNew();
-	a1.setName("Oscar");
-	a1.setLastName("Wilde");
-	ASSERT_TRUE(a1.getName() == "Oscar");
-	ASSERT_TRUE(a1.getLastName() == "Wilde");
+	a1.setName("Oscar Wilde");
+	EXPECT_EQ("Oscar Wilde", a1.getName());
 	std::string initials = a1.getInitials();
-	EXPECT_TRUE(initials == "OW")<< " Returned: " << initials;
+	EXPECT_EQ("OW", initials)<< " Returned: " << initials;
 
 	Author& a2 = c2.getAs().addNew();
-	a2.setFullName("Oscar Wilde");
-	ASSERT_TRUE(a2.getName() == "Oscar");
-	ASSERT_TRUE(a2.getLastName() == "Wilde");
-	EXPECT_TRUE(a2.getInitials() == "OW");
+	a2.setName("Biel Simon Rojas");
+	EXPECT_EQ("Biel Simon Rojas", a2.getName());
+	EXPECT_EQ("BSR", a2.getInitials());
 	//Now authors 1 and 2 exist
 	ASSERT_TRUE(c2.getAs().exists(1));
 	ASSERT_TRUE(c2.getAs().exists(2));

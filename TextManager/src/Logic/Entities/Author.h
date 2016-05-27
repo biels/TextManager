@@ -48,22 +48,6 @@ public:
 	void setName(const string& name);
 
 
-	/**
-	 * @brief Estableix el nom complet de l'autor
-	 * \pre L'autor no te nom complet
-	 * \post El resultat és name amb el nom de l'autor i lastName amb el cognom
-	 * @param fullName nom de l'autor sense separar
-	 */
-	void setFullName(const string& fullName);
-
-	/**
-	 * @brief
-	 * \pre
-	 * \post
-	 * @return
-	 */
-	string getFullName() const;
-
 	/** @brief Mostra les inicials de l'autor
 	 * \pre S'han utilitzat amb èxit les accions setName() i setLastName() del paràmetre implícit. @see setName() @see setLastName()
 	 * \post Retorna les incials del paràmtre implícit.

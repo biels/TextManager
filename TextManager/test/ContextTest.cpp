@@ -17,9 +17,7 @@ TEST(Context, IsolatedAuthorCreation){
 
 	ASSERT_TRUE(c1.getAs().exists(a1.getId())) << " Falied to create author (author does not exist)";
 	//const char* sname = "Name";
-	const char* slastName = "LastName";
-	a1.setName("Name");
-	a1.setLastName(slastName);
+	a1.setName("Name");;
 	Author recovered = c1.getAs().get(a1.getId());
 	ASSERT_TRUE(recovered.getName() == "Name") << " Data persistence error: " << a1.getName() << recovered.getName();
 
