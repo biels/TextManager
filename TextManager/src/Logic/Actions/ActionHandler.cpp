@@ -34,6 +34,7 @@ void ActionHandler::triarText(string seq){
 }
 
 void ActionHandler::eliminarText(){
+	cout << "eliminar text" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getTs().remove(c.getChosenTextId(), c);
 	c.setChosenTextId(-1);
@@ -41,14 +42,15 @@ void ActionHandler::eliminarText(){
 }
 
 void ActionHandler::substitueix(string match, string replace){
+	cout << "substitueix " << '"' << match << '"' << " per " << '"' << replace << '"' << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	Text& t = c.getTs().get(c.getChosenTextId());
 	t.replace(match, replace);
-	cout << "substitueix " << '"' << match << '"' << " per " << '"' << replace << '"' << endl;
 	cout << endl;
 }
 
 void ActionHandler::textosAutor (string autor){
+	cout << "textos autor ?" << endl;
 	c.getTs().printAllByAuthor(c.getAs().findByFullName(autor), c);
 	cout << endl;
 }
@@ -100,6 +102,7 @@ void ActionHandler::nombreParaules(){
 }
 
 void ActionHandler::taulaFrequencies(){
+	cout << "taula de frequencies ?" << endl;
 	if(!c.existsChosenText()){cout << "error" << endl << endl; return;}
 	c.getChosenText().printFrequencyTable();
 	cout << endl;

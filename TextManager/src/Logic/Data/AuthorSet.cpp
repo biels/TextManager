@@ -61,7 +61,7 @@ void AuthorSet::printAuthorList(Context& c) {
 		a.print();
 		int id = a.getId();
 		cout << " " << c.getTs().numberTextsAuthor(id, c);
-		cout << " " << c.getTs().numberSentencesAuthorTexts(id, c);
+		cout << " " << c.getTs().numberSentencesAuthorTexts(id, c)-1;
 		cout << " " << c.getTs().numberWordsAuthorTexts(id, c) << endl;
 	}
 }
