@@ -16,6 +16,7 @@
 #include <string>
 
 #include <algorithm>
+#include <ios>
 #include <iterator>
 using namespace std;
 using std::find_if;
