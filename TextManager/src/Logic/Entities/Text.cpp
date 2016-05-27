@@ -101,7 +101,8 @@ string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder
 	if(index != end) end = sentences[index + 1];
 	string s;
 	for(int i = start; i < end; i++){
-		s += (i == start ? "" : " ") + content[i];
+		std::string w = content[i];
+		s += (i == start || ispunct(w[0]) ? "" : " ") + w;
 	}
 	return s;
 }
@@ -323,7 +324,8 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 	cout << "All sentences matching " << expr << endl;
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
-	for(int m : match)cout << m + 1 << endl;
+	sort(match.begin(), match.end());
+	for(int m : match)cout << cout << m + 1 << " " << getSentenceByIndex(m) << endl;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
 	cout << "All sentences containing " << sequence << endl;
@@ -338,14 +340,14 @@ void Text::printInfo(Context& c, bool info) {
 	}
 }
 void Text::printContent(){ //TODO treat . elements and special cases
-	for (int i = 0; i < sentences.size(); ++i) {
+	for (int i = 0; i < sentences.size() - 1; ++i) {
 		cout << i+1;
 		for (int j = sentences[i]; j < sentences[i+1]-1; ++j){
 			std::string w = content[j];
 			cout << (ispunct(w[0]) ? "" : " ") << w;
 		}
+		cout << endl;
 	}
-	cout <<  endl;
 }
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
