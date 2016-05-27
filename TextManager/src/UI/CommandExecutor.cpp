@@ -236,12 +236,21 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 			return;
 		}
 	}
-	//Afegir text
 	if (!question && keywords[0] == "afegir") {
-		string titol = args[0].substr(1, args[0].length()-2);
-		string autor = args[1].substr(1, args[1].length()-2);
-		a.afegirText(titol, autor, args[2]);
-		return;
+		//Afegir text
+		if (keywords[1] == "text") {
+			string titol = args[0].substr(1, args[0].length()-2);
+			string autor = args[1].substr(1, args[1].length()-2);
+			a.afegirText(titol, autor, args[2]);
+			return;
+		}
+		//afegir cita x y ?
+		else {
+			int x = atoi(keywords[1].c_str());
+			int y = atoi(keywords[2].c_str());
+			a.afegirCita(x, y);
+			return;
+		}
 	}
 	//triar text
 	if (!question && keywords[0] == "triar") {
