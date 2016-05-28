@@ -20,8 +20,9 @@ using namespace std;
 class QuoteSet {
 private:
 	int lastID;
-	int lastQuoteNumber;
 	map<int, Quote> quotes;
+
+	map<string, int> lastQuoteNumberMap;
 
 	/**@brief Calcula l'identificador del següent element del conjunt.
 	 * \pre Cert.
@@ -29,11 +30,7 @@ private:
 	 */
 	int getNextID();
 
-	/**@brief Calcula l'identificador del seg�ent element del conjunt.
-	 * \pre Cert.
-	 * \post El resultat �s l'identificador que ha de tenir el seg�ent element del conjunt.
-	 */
-	int getNextQuoteNumber();
+
 
 	/**@brief Afegeix una cita
 	 * \pre Cert
@@ -50,6 +47,12 @@ public:
 	 * \post El resultat és el nou text
 	 */
 	Quote& addNew();
+
+	/**@brief Calcula l'identificador del seg�ent element del conjunt.
+	 * \pre Cert.
+	 * \post El resultat �s l'identificador que ha de tenir el seg�ent element del conjunt.
+	 */
+	int getNextQuoteNumber(string initials);
 
 	/**@brief Elimina una cita
 	 * \pre Cert

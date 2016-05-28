@@ -83,6 +83,7 @@ void Quote::setQuoteNumber(int quoteNumber) {
 
 void Quote::setTextId(int textId, Context& c) {
 	textID = textId;
+	setQuoteNumber(c.getQs().getNextQuoteNumber(getAuthor(c).getInitials()));
 	updateReference(c);
 }
 

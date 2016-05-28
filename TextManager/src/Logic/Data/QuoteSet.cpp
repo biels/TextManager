@@ -11,7 +11,6 @@
 #include "../Entities/Text.h"
 #include "../Entities/Author.h"
 QuoteSet::QuoteSet() {
-	lastQuoteNumber = 0;
 	lastID = 0;
 }
 
@@ -23,9 +22,14 @@ int QuoteSet::getNextID() {
 	++lastID;
 	return lastID;
 }
-int QuoteSet::getNextQuoteNumber(){
-	++lastQuoteNumber;
-	return lastQuoteNumber;
+int QuoteSet::getNextQuoteNumber(string initials){
+	map<string, int>::iterator it = lastQuoteNumberMap.find(initials);
+	if(it == lastQuoteNumberMap.end()){
+		lastQuoteNumberMap.insert(make_pair(initials, 1));
+		return 1;
+	}
+	it->second++;
+	return it->second;
 }
 
 void QuoteSet::add(const Quote& q) {
@@ -34,7 +38,6 @@ void QuoteSet::add(const Quote& q) {
 
 Quote& QuoteSet::addNew() {
 	Quote q(getNextID());
-	q.setQuoteNumber(getNextQuoteNumber());
 	add(q);
 	return get(q.getId());
 }
