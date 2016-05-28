@@ -92,7 +92,7 @@ void Quote::print(Context& c) const{
 	Text& t = c.getTs().get(textID);
 	cout << getUniqueIdentifier() << endl;
 	for(int i = 0; i <= endSentenceIndex - startSentenceIndex; ++i) {
-		cout << i + startSentenceIndex  << " " << content[i] << endl;
+		cout << i + startSentenceIndex  << " " << content[i] << " " << endl;
 	}
 
 }
@@ -103,7 +103,7 @@ void Quote::printInfo(Context& c) const {
 void Quote::updateContent(Context& c) {
 	Text& t = c.getTs().get(textID);
 	content.clear();
-	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {
+	for(int i = startSentenceIndex - 1; i <= endSentenceIndex - 1; ++i) {
 		content.push_back(t.getSentenceByIndex(i));
 	}
 }

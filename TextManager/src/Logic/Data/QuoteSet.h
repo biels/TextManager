@@ -103,7 +103,7 @@ public:
 	 * \pre Existeix un text amb identificador id
 	 * \post El resultat és un conjunt de cites que conté totes les cites que apareixen al text amb identificador id
 	 */
-	void printAllByText(int id, Context& c) const;
+	void printAllByText(int id, bool associated, Context& c) const;
 };
 
 #endif /* LOGIC_DATA_QUOTESET_H_ */

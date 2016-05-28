@@ -79,11 +79,15 @@ void QuoteSet::printAllByAuthor(int id, Context& c) const{
 	}
 }
 
-void QuoteSet::printAllByText(int id, Context& c) const{
+void QuoteSet::printAllByText(int id, bool associated, Context& c) const{
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if (q.getText(c).getId() == id) {
 			q.print(c);
+			if(!associated){
+				q.getText(c).printHeader(c);
+				cout << endl;
+			}
 		}
 	}
 }

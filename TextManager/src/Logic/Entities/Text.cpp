@@ -43,7 +43,7 @@ string Text::getTitle() const{
 	return this->title;
 }
 
-void Text::setTitle(const string& title){
+void Text::setTitle(const string title){
 	this->title = title;
 }
 
@@ -62,7 +62,7 @@ void Text::setAuthorByFullName(string fullName, Context& c){
 	}
 	author = id;
 }
-void Text::setContent(const string& content){ //TODO Buffer by blocksize, trade space for performance
+void Text::setContent(string content){ //TODO Buffer by blocksize, trade space for performance
 	this->content.clear();
 	istringstream iss(content);
 	string w;
@@ -365,15 +365,17 @@ void Text::printSentenceListContainingSequence(string sequence) const{
 	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << " " << endl;
 
 }
-
-void Text::printInfo(Context& c, bool info) {
+void Text::printHeader(Context& c) {
 	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"';
+}
+void Text::printInfo(Context& c, bool info) {
+	printHeader(c);
 	cout << " " << getSentenceCount();
 	cout << " " << getWordCount();
 	cout << endl;
 	if (info) {
 		cout << "Cites Associades:" << endl;
-		c.getQs().printAllByText(getAuthor(c).getId(), c);
+		c.getQs().printAllByText(getAuthor(c).getId(), true, c);
 	}
 }
 void Text::printContent(){ //TODO treat . elements and special cases

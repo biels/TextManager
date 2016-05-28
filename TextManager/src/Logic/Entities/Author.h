@@ -45,7 +45,7 @@ public:
 	 *  \pre Cert.
 	 *  \post name és el nom del paràmetre implícit.
 	 */
-	void setName(const string& name);
+	void setName(const string name);
 
 
 	/** @brief Mostra les inicials de l'autor

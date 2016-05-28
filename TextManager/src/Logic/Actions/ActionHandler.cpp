@@ -112,7 +112,7 @@ void ActionHandler::frasesExpressio(string exp){
 void ActionHandler::afegirCita(int x, int y){
 	if(!c.existsChosenText()){printError(); return;}
 	int sc = c.getChosenText().getSentenceCount();
-	if (x >= sc || y >= sc)return; //Print error ?
+	if (x > sc || y > sc){printError(); return;} //Print error ?
 	c.getChosenText().extractQuote(x, y, c);
 
 }
@@ -129,7 +129,7 @@ void ActionHandler::citesAutor(string nom){
 
 void ActionHandler::cites(){
 	if(!c.existsChosenText()){printError(); return;}
-	c.getQs().printAllByText(c.getChosenTextId(), c);
+	c.getQs().printAllByText(c.getChosenTextId(), false, c);
 
 }
 

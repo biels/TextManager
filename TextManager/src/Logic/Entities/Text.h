@@ -59,7 +59,7 @@ public:
 	 *  \pre El parÃ metre implÃ­cit no tÃ© tÃ­tol
 	 *  \post title Ã©s el tÃ­tol del parÃ metre implÃ­cit.
 	 */
-	void setTitle(const string& title);
+	void setTitle(const string title);
 
 	/** @brief Mostra el nom i cognom de l'autor que ha fet el text.
 	 * Read only, @see AuthorSet.get() to modify
@@ -80,7 +80,7 @@ public:
 	 *  \pre El parÃ metre implÃ­cit no tÃ© contingut.
 	 *  \post content Ã©s el contingut del parÃ metre implÃ­cit.
 	 */
-	void setContent(const string& content);
+	void setContent(string content);
 
 	/** @brief Mostra el nombre de frases del contingut del text.
 	 *  \pre Cert.
@@ -138,7 +138,7 @@ public:
 	 * \post El resultat sÃ³n les frases del parÃ metre implÃ­cit on apareix word.
 	 */
 	void printSentenceListContainingSequence(string sequence) const;
-
+	void printHeader(Context& c);
 	void printInfo(Context& c, bool info); //TODO IMPLEMENT
 
 	void printContent(); //TODO Consultar

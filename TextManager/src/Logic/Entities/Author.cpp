@@ -23,7 +23,7 @@ int Author::getId() const{
 string Author::getName() const{
 	return this->name;
 }
-void Author::setName(const string& name){
+void Author::setName(const string name){
 	istringstream iss(name);
 	string tmp;
 	iss >> this->name;
