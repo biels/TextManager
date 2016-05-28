@@ -118,7 +118,7 @@ void ActionHandler::afegirCita(int x, int y){
 }
 
 void ActionHandler::infoCita(string ref){
-	c.getQs().get(c.getQs().findByRef(ref)).printInfo(c);
+	c.getQs().get(c.getQs().findByRef(ref)).printInfo();
 
 }
 

@@ -25,6 +25,7 @@ class Quote {
 private:
 	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
 	string ref;
+	string header;
 	vector<string> content;
 	void updateReference(Context& c);
 
@@ -89,13 +90,12 @@ public:
 	void setStartSentenceIndex(int startSentenceIndex);
 
 	void setQuoteNumber(int quoteNumber);
-
-	//Output zone
-	void print(Context& c)	const;
-
-	void printInfo(Context& c) const;
 	const string& getContent() const;
 	void updateContent(Context& c);
+
+	//Output zone
+	void print(bool withTextHeader) const;
+	void printInfo() const;
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

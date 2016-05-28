@@ -67,14 +67,14 @@ int QuoteSet::findByRef(string ref) { //TODO MAP LINEAR SEARCH WITHOUT COPYING
 void QuoteSet::printAll(Context& c) const{
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
-		q.print(c);
+		q.print(true);
 	}
 }
 void QuoteSet::printAllByAuthor(int id, Context& c) const{
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if (q.getAuthor(c).getId() == id) {
-			q.print(c);
+			q.print(false);
 		}
 	}
 }
@@ -83,7 +83,7 @@ void QuoteSet::printAllByText(int id, bool associated, Context& c) const{
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if (q.getText(c).getId() == id) {
-			q.print(c);
+			q.print(false);
 			if(!associated){
 				q.getText(c).printHeader(c);
 				cout << endl;
