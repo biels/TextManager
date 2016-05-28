@@ -48,6 +48,7 @@ OW1
 
 autor ?
 Oscar Wilde
+
 afegir text "Where the wild things are"
 
 afegir text "Los sistemas de riego antes del siglo X"
@@ -77,6 +78,7 @@ nombre de frases ?
 
 nombre de paraules ?
 24
+
 taula de frequencies ?
 y 1
 de 1
@@ -102,7 +104,6 @@ cientifica 1
 conceptual 1
 investigacion 1
 reconstruccion 1
-
 
 afegir cita 1 1
 
@@ -221,7 +222,6 @@ distribuyen 1
 ventilacion 1
 sofisticadas 1
 subterraneos 1
-
 
 afegir cita 1 1
 

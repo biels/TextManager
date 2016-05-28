@@ -35,7 +35,7 @@ void Author::setName(const string& name){
 }
 void Author::print() const{
 	//TODO Check outpu format
-	cout << getName();
+	cout << getName() << endl;
 }
 string Author::getInitials() const{
 	return this->initials;

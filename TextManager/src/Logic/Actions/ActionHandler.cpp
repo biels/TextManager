@@ -87,7 +87,7 @@ void ActionHandler::nombreFrases(){
 
 void ActionHandler::nombreParaules(){
 	if(!c.existsChosenText()){printError(); return;}
-	cout << c.getChosenText().getWordCount();
+	cout << c.getChosenText().getWordCount() << endl;
 
 }
 

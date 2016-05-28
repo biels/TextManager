@@ -318,7 +318,6 @@ void Text::printFrequencyTable() {
 	for(int i = 0; i < frequencyTable.size(); ++i) {
 		cout << frequencyTable[i].first << " " << frequencyTable[i].second << endl;
 	}
-	cout << endl;
 }
 void Text::printSentenceListMatchingExpression(string expr) const{
 	vector<int> match;
