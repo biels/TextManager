@@ -208,7 +208,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 	//cites autor "<autor>" ? i cites ?
 	if (question && keywords[0] == "cites") {
 		//cites ?
-		if (keywords.size() == 2) {
+		if (keywords.size() == 1) {
 			a.cites();
 			return;
 		}
