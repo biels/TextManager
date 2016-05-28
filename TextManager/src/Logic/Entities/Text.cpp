@@ -118,6 +118,7 @@ Quote& Text::extractQuote(int from, int to, Context& c){
 	q.setTextId(getId(), c);
 	q.setStartSentenceIndex(from);
 	q.setEndSentenceIndex(to);
+	q.updateContent(c);
 	return q;
 }
 bool Text::matchesWordListAnywhere(string ls, Context& c){

@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Context;
 class Author;
@@ -24,6 +25,7 @@ class Quote {
 private:
 	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
 	string ref;
+	vector<string> content;
 	void updateReference(Context& c);
 
 public:
@@ -92,6 +94,8 @@ public:
 	void print(Context& c)	const;
 
 	void printInfo(Context& c) const;
+	const string& getContent() const;
+	void updateContent(Context& c);
 };
 
 #endif /* LOGIC_ENTITIES_QUOTE_H_ */

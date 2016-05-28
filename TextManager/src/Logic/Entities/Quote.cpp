@@ -7,6 +7,7 @@
 
 #include "Quote.h"
 
+#include <sstream>
 #include "../Actions/Context.h"
 #include "../Entities/Text.h"
 #include "../Entities/Author.h"
@@ -31,10 +32,11 @@ int Quote::getTextId() const {
 	return textID;
 }
 void Quote::updateReference(Context& c){
-	string s = c.getTs().get(textID).getAuthor(c).getInitials();
-	s += getQuoteNumber();
+	stringstream ss;
+	ss << c.getTs().get(textID).getAuthor(c).getInitials();
+	ss << getQuoteNumber();
 	//id[2] = a.id		TODO és l'id d'aquell autor?
-	ref = s;
+	ss >> ref;
 }
 Text& Quote::getText(Context& c){
 	return c.getTs().get(textID);
@@ -87,12 +89,20 @@ void Quote::setTextId(int textId, Context& c) {
 //Output zone
 void Quote::print(Context& c) const{
 	Text& t = c.getTs().get(textID);
-	cout << t.getAuthor(c).getInitials() << endl;
-	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {
-		cout << i << " " << t.getSentenceByIndex(i) << endl;
+	cout << getUniqueIdentifier() << endl;
+	for(int i = 0; i < endSentenceIndex - startSentenceIndex; ++i) {
+		cout << i + startSentenceIndex + 1 << content[i] << endl;
 	}
+
 }
 void Quote::printInfo(Context& c) const {
 	cout << getUniqueIdentifier() << endl;
 }
 
+void Quote::updateContent(Context& c) {
+	Text& t = c.getTs().get(textID);
+	content.clear();
+	for(int i = startSentenceIndex; i <= endSentenceIndex; ++i) {
+		content.push_back(t.getSentenceByIndex(i));
+	}
+}
