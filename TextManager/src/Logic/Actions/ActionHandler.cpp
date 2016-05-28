@@ -25,20 +25,20 @@ void ActionHandler::afegirText(string titol, string autor, string contingut){
 void ActionHandler::triarText(string seq){
 	int id = c.getTs().findByWordList(seq, c);
 	c.setChosenTextId(id);
-	if (id == -1){cout << "error" << endl; return;}
+	if (id == -1){printError(); return;}
 	cout << "triar text " << seq << endl;
 
 }
 
 void ActionHandler::eliminarText(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getTs().remove(c.getChosenTextId(), c);
 	c.setChosenTextId(-1);
 	//TODO Remove author as well in some cases
 }
 
 void ActionHandler::substitueix(string match, string replace){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	Text& t = c.getTs().get(c.getChosenTextId());
 	t.replace(match, replace);
 }
@@ -57,61 +57,61 @@ void ActionHandler::autors(){
 }
 
 void ActionHandler::info(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().printInfo(c, true);
 
 }
 
 void ActionHandler::autor(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().getAuthor(c).print();
 
 }
 
 void ActionHandler::contingut(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().printContent();
 
 }
 
 void ActionHandler::frases(int x, int y){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().printSentenceListInRange(x, y);
 
 }
 
 void ActionHandler::nombreFrases(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	cout << c.getChosenText().getSentenceCount() << endl;
 
 }
 
 void ActionHandler::nombreParaules(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	cout << c.getChosenText().getWordCount();
 
 }
 
 void ActionHandler::taulaFrequencies(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().printFrequencyTable();
 
 }
 
 void ActionHandler::frasesSequencia(string seq){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().printSentenceListContainingSequence(seq);
 
 }
 
 void ActionHandler::frasesExpressio(string exp){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().printSentenceListMatchingExpression(exp);
 
 }
 
 void ActionHandler::afegirCita(int x, int y){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getChosenText().extractQuote(x, y, c);
 
 }
@@ -127,7 +127,7 @@ void ActionHandler::citesAutor(string nom){
 }
 
 void ActionHandler::cites(){
-	if(!c.existsChosenText()){cout << "error" << endl; return;}
+	if(!c.existsChosenText()){printError(); return;}
 	c.getQs().printAllByText(c.getChosenTextId(), c);
 
 }
@@ -138,7 +138,13 @@ void ActionHandler::totesCites(){
 }
 
 void ActionHandler::eliminarCita(string ref){
-	c.getQs().remove(c.getQs().findByRef(ref));
+	int id = c.getQs().findByRef(ref);
+	if (id == -1) {printError(); return;}
+	c.getQs().remove(id);
+}
+
+void ActionHandler::printError() {
+	cout << "error" << endl;
 }
 
 Context& ActionHandler::exposeContext(){

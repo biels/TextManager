@@ -26,6 +26,9 @@
 class ActionHandler {
 private:
 	Context c;
+
+	void printError();
+
 public:
 	ActionHandler();
 	virtual ~ActionHandler();
@@ -206,6 +209,7 @@ public:
 	 * @param referència de la cita que es vol eliminar
 	 */
 	void eliminarCita(string uid);
+
 
 	//TEST ZONE - WILL BE REMOVED
 	Context& exposeContext();

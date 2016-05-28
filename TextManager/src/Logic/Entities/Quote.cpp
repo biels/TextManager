@@ -91,7 +91,7 @@ void Quote::print(Context& c) const{
 	Text& t = c.getTs().get(textID);
 	cout << getUniqueIdentifier() << endl;
 	for(int i = 0; i < endSentenceIndex - startSentenceIndex; ++i) {
-		cout << i + startSentenceIndex + 1 << content[i] << endl;
+		cout << i + startSentenceIndex + 1 << " " << content[i] << endl;
 	}
 
 }
