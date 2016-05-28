@@ -24,6 +24,7 @@ void CommandExecutor::readConsole() {
 	string cmd;
 	while(true){
 		getline(cin, cmd);
+		if(cmd == "sortir")break;
 		cout << cmd << endl;
 		if(cmd == "")continue;
 		const string mls = "afegir text"; //Multi line special command
@@ -36,7 +37,6 @@ void CommandExecutor::readConsole() {
 				if(lin == "****")break;
 			}
 		}
-		if(cmd == "sortir")break;
 		executeCommand(cmd);
 	}
 }
@@ -180,7 +180,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		//info cita "<referència>" ?
 		else {
 			string ref = args[0].substr(1, args[0].length()-2);
-			a.frasesExpressio(ref);
+			a.infoCita(ref);
 			return;
 		}
 	}

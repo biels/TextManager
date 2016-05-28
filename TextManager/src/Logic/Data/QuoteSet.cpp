@@ -6,6 +6,10 @@
  */
 
 #include "QuoteSet.h"
+
+#include <algorithm>
+#include <utility>
+
 #include "../Actions/Context.h"
 #include "../Entities/Quote.h"
 #include "../Entities/Text.h"
@@ -57,37 +61,62 @@ bool QuoteSet::exists(int id) const {
 Quote& QuoteSet::get(int id) {
 	return (*quotes.find(id)).second;
 }
-int QuoteSet::findByRef(string ref) { //TODO MAP LINEAR SEARCH WITHOUT COPYING
+int QuoteSet::findByRef(string ref) const { //TODO MAP LINEAR SEARCH WITHOUT COPYING
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if(q.getUniqueIdentifier() == ref)return q.getId();
 	}
 	return -1;
 }
-void QuoteSet::printAll(Context& c) const{
+bool sortQuotes(string a, string b){
+	return a < b;
+}
+void QuoteSet::printAll(Context& c){
+	vector<string> result;
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
-		q.print(true);
+		result.push_back(q.getUniqueIdentifier());
+	}
+	sort(result.begin(), result.end(), sortQuotes);
+	for(int i = 0; i < result.size(); i++){
+		int id = findByRef(result[i]);
+		if(id != -1){
+			Quote q = get(id);
+			q.print(true);
+		}
 	}
 }
-void QuoteSet::printAllByAuthor(int id, Context& c) const{
+void QuoteSet::printAllByAuthor(int id, Context& c) {
+	vector<string> result;
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
-		if (q.getAuthor(c).getId() == id) {
-			q.print(false);
+		if (q.getAuthor(c).getId() == id)result.push_back(q.getUniqueIdentifier());
+	}
+	sort(result.begin(), result.end(), sortQuotes);
+	for(int i = 0; i < result.size(); i++){
+		int id = findByRef(result[i]);
+		if(id != -1){
+			Quote q = get(id);
+			q.print(true);
 		}
 	}
 }
 
-void QuoteSet::printAllByText(int id, bool associated, Context& c) const{
+void QuoteSet::printAllByText(int id, bool associated, Context& c){
+	vector<string> result;
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if (q.getText(c).getId() == id) {
-			q.print(false);
-			if(!associated){
-				q.getText(c).printHeader(c);
-				cout << endl;
-			}
+			result.push_back(q.getUniqueIdentifier());
 		}
 	}
+	sort(result.begin(), result.end(), sortQuotes);
+	for(int i = 0; i < result.size(); i++){
+		int id = findByRef(result[i]);
+		if(id != -1){
+			Quote q = get(id);
+			q.print(!associated);
+		}
+	}
+
 }

@@ -108,7 +108,11 @@ void Quote::print(bool withTextHeader) const{
 
 }
 void Quote::printInfo() const {
-	cout << getUniqueIdentifier() << endl;
+	cout << header << endl;
+	cout << startSentenceIndex << "-" << endSentenceIndex << endl;
+	for(int i = 0; i <= endSentenceIndex - startSentenceIndex; ++i) {
+		cout << i + startSentenceIndex  << " " << content[i] << " " << endl;
+	}
 }
 
 

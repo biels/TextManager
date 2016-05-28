@@ -236,13 +236,12 @@ Maurice Sendak 1 6 84
 Oscar Wilde 1 8 66
 
 totes cites ?
-OW1
-1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
-2 This is a fault. 
-Oscar Wilde "The Picture of Dorian Gray"
 MB1
 1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta. 
 Mario Bunge "La ciencia. Su metodo y su filosofia"
+MBA1
+1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra. 
+Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
 MS2
 5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once. 
 6 They made him king of all wild things. 
@@ -253,9 +252,10 @@ Maurice Sendak "Where the wild things are"
 MS4
 1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos. 
 Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-MBA1
-1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra. 
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
+2 This is a fault. 
+Oscar Wilde "The Picture of Dorian Gray"
 
 eliminar text
 
@@ -266,13 +266,12 @@ Maurice Sendak 1 6 84
 Oscar Wilde 1 8 66
 
 totes cites ?
-OW1
-1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
-2 This is a fault. 
-Oscar Wilde "The Picture of Dorian Gray"
 MB1
 1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta. 
 Mario Bunge "La ciencia. Su metodo y su filosofia"
+MBA1
+1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra. 
+Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
 MS2
 5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once. 
 6 They made him king of all wild things. 
@@ -283,17 +282,22 @@ Maurice Sendak "Where the wild things are"
 MS4
 1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos. 
 Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-MBA1
-1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra. 
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
+2 This is a fault. 
+Oscar Wilde "The Picture of Dorian Gray"
 
 cites autor "Oscar Wilde" ?
 OW1
 1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
 2 This is a fault. 
+Oscar Wilde "The Picture of Dorian Gray"
 
 info cita "OW1" ?
-error
+Oscar Wilde "The Picture of Dorian Gray"
+1-2
+1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
+2 This is a fault. 
 
 eliminar cita "OW1"
 
@@ -301,6 +305,9 @@ totes cites ?
 MB1
 1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta. 
 Mario Bunge "La ciencia. Su metodo y su filosofia"
+MBA1
+1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra. 
+Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
 MS2
 5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once. 
 6 They made him king of all wild things. 
@@ -311,8 +318,4 @@ Maurice Sendak "Where the wild things are"
 MS4
 1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos. 
 Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-MBA1
-1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra. 
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
 
-sortir
