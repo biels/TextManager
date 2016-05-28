@@ -194,12 +194,12 @@ TEST(Text, checkSentenceForCondition){
 	cond.push_back("word0");
 	cond.push_back("word2");
 	vector<string> remaining(cond);
-	t1.checkSentenceForCondition(2, cond, false, remaining);
+	t1.checkSentenceForCondition(2, false, remaining);
 	EXPECT_LT(remaining.size(), 2);
 
 
 	remaining = cond;
-	t1.checkSentenceForCondition(0, cond, true, remaining);
+	t1.checkSentenceForCondition(0, true, remaining);
 	EXPECT_EQ(1, remaining.size());
 
 }

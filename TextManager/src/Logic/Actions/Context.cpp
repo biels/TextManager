@@ -35,6 +35,7 @@ int Context::getChosenTextId() const {
 
 void Context::setChosenTextId(int chosenTextId) {
 	chosenTextID = chosenTextId;
+	if(chosenTextId == -1)return;
 	getChosenText().calculateFrequencyTable();
 	getChosenText().sortFrequencyTable();
 }

@@ -24,7 +24,6 @@ TEST(Context, IsolatedAuthorCreation){
 }
 
 TEST(Context, TextCreation){
-	Context c1;
 	//Check creation and data persistence
 	Text& t1 = c1.getTs().addNew();
 	EXPECT_TRUE(t1.getId() == 1);
@@ -36,7 +35,7 @@ TEST(Context, TextCreation){
 
 	Text& t1_r = c1.getTs().get(t1.getId());
 	EXPECT_TRUE(t1_r.getTitle() == t1.getTitle() && t1_r.getId() == t1.getId())  << " Data persistence error";
-	EXPECT_EQ(1, t1.getAuthor(c1).getId()) << "Author in text persitence error";
+	EXPECT_EQ(2, t1.getAuthor(c1).getId()) << "Author in text persitence error";
 	EXPECT_EQ(&t1, &t1_r);
 
 	//Select text
