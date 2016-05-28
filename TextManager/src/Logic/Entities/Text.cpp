@@ -150,6 +150,38 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 	}
 	return l.size() == 0;
 }
+void Text::getSentencesMatchingWordList(vector<int>& match, string ls)const{
+	string lsf = ls.substr(1, ls.size()-2); // Remove {}
+	istringstream iss(lsf);
+	vector<string> l;
+	string tmp;
+	while(iss >> tmp) l.push_back(tmp);
+
+	if(l.size() == 0)return;
+
+	for(unsigned int i = 0; i < sentences.size() - 1; i++){
+		//Sentence context
+		int streak = 0;
+		for (int j = sentences[i]; j < sentences[i + 1]; j++) {
+			//match does not contain size sentinel
+			//content[j] is a word
+			if(content[j] != l[streak])streak = 0;
+			if(content[j] == l[streak]){
+				streak++;
+				if(streak == l.size()){
+					match.push_back(i);
+					break;
+				}
+
+			}
+
+
+		}
+
+
+	}
+
+}
 
 void Text::checkSentenceForCondition(int i, bool c_op, vector<string>& remaining) const { //OK
 	for (int j = sentences[i]; j < sentences[i + 1]; j++) {
@@ -325,8 +357,13 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 	sort(match.begin(), match.end());
 	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << " " << endl;
 }
+
 void Text::printSentenceListContainingSequence(string sequence) const{
-	cout << "All sentences containing " << sequence << endl; //TODO!!
+	vector<int> match;
+	getSentencesMatchingWordList(match, sequence);
+	//sort(match.begin(), match.end());
+	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << " " << endl;
+
 }
 
 void Text::printInfo(Context& c, bool info) {

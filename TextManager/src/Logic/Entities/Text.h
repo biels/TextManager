@@ -100,6 +100,8 @@ public:
 
 	Quote& extractQuote(int from, int to, Context& c);
 
+	void getSentencesMatchingWordList(vector<int>& match, string ls) const;
+
 	bool matchesWordListAnywhere(string list, Context& c);
 
 	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
