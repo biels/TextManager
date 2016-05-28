@@ -24,6 +24,7 @@ void CommandExecutor::readConsole() {
 	string cmd;
 	while(true){
 		getline(cin, cmd);
+		cout << cmd << endl;
 		if(cmd == "")continue;
 		const string mls = "afegir text"; //Multi line special command
 		if (cmd.length() >= mls.length() && cmd.substr(0, mls.length()) == mls) {
