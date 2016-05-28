@@ -108,7 +108,7 @@ public:
 
 	void getSentenceListMatchingWordListInContext(vector<int>& match, vector<string>& cond, bool c_op, bool m_op) const;
 
-	void checkSentenceForCondition(int i, const vector<string>& cond, bool c_op,
+	void checkSentenceForCondition(int i, bool c_op,
 				vector<string>& remaining) const;
 	//Output section
 

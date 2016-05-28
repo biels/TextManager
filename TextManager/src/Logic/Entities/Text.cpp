@@ -150,7 +150,7 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 	return l.size() == 0;
 }
 
-void Text::checkSentenceForCondition(int i, const vector<string>& cond, bool c_op, vector<string>& remaining) const { //OK
+void Text::checkSentenceForCondition(int i, bool c_op, vector<string>& remaining) const { //OK
 	for (int j = sentences[i]; j < sentences[i + 1]; j++) {
 		//match does not contain size sentinel
 		//content[j] is a word
@@ -176,7 +176,7 @@ void Text::getSentenceListMatchingWordListInContext(vector<int>& match, vector<s
 		for(unsigned int i = 0; i < match.size(); i++){
 			//Sentence context
 			vector<string> remaining(cond);
-			checkSentenceForCondition(i, cond, c_op, remaining);
+			checkSentenceForCondition(i, c_op, remaining);
 			if((c_op && remaining.size() != 0) || (!c_op && (remaining.size() == cond.size()))){
 				for(unsigned int j = 0; j < match.size(); j++){
 					if(match[j] == (int)i){
@@ -193,7 +193,7 @@ void Text::getSentenceListMatchingWordListInContext(vector<int>& match, vector<s
 			//Sentence context
 			//TODO continue if sentence is on match
 			vector<string> remaining(cond);
-			checkSentenceForCondition(i, cond, c_op, remaining);
+			checkSentenceForCondition(i, c_op, remaining);
 			if((c_op && remaining.size() == 0) || (!c_op && remaining.size() < cond.size())){
 				bool nf = true;
 				for(unsigned int j = 0; j < match.size(); j++){
