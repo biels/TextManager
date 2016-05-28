@@ -333,7 +333,10 @@ void Text::printSentenceListContainingSequence(string sequence) const{
 }
 
 void Text::printInfo(Context& c, bool info) {
-	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"' << endl;
+	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"';
+	cout << " " << getSentenceCount();
+	cout << " " << getWordCount();
+	cout << endl;
 	if (info) {
 		cout << "Cites Associades:" << endl;
 		c.getQs().printAllByText(getAuthor(c).getId(), c);
