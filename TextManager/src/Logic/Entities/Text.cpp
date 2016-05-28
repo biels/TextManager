@@ -323,7 +323,7 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
 	sort(match.begin(), match.end());
-	for(int m : match)cout << cout << m + 1 << " " << getSentenceByIndex(m) << endl;
+	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << " " << endl;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
 	cout << "All sentences containing " << sequence << endl; //TODO!!
