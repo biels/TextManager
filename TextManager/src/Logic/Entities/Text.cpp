@@ -321,15 +321,13 @@ void Text::printFrequencyTable() {
 	cout << endl;
 }
 void Text::printSentenceListMatchingExpression(string expr) const{
-	//for(string sentence : text)if(match
-	cout << "All sentences matching " << expr << endl;
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
 	sort(match.begin(), match.end());
 	for(int m : match)cout << cout << m + 1 << " " << getSentenceByIndex(m) << endl;
 }
 void Text::printSentenceListContainingSequence(string sequence) const{
-	cout << "All sentences containing " << sequence << endl;
+	cout << "All sentences containing " << sequence << endl; //TODO!!
 }
 
 void Text::printInfo(Context& c, bool info) {

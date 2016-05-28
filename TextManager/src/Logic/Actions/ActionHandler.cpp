@@ -111,6 +111,8 @@ void ActionHandler::frasesExpressio(string exp){
 
 void ActionHandler::afegirCita(int x, int y){
 	if(!c.existsChosenText()){printError(); return;}
+	int sc = c.getChosenText().getSentenceCount();
+	if (x >= sc || y >= sc)return; //Print error ?
 	c.getChosenText().extractQuote(x, y, c);
 
 }

@@ -1,4 +1,3 @@
-Hello!
 afegir text "The Picture of Dorian Gray"
 
 afegir text "La ciencia. Su metodo y su filosofia"
@@ -41,8 +40,8 @@ totes cites ?
 afegir cita 1 2
 
 info ?
-Oscar Wilde "The Picture of Dorian Gray"
-Cites Associades: 
+Oscar Wilde "The Picture of Dorian Gray" 8 66
+Cites Associades:
 OW1
 1 This is a fault.
 2 Those who find beautiful meanings in beautiful things are the cultivated.
@@ -145,7 +144,7 @@ All sentences containing "their terrible"
 afegir cita 2 3
 
 cites ?
-MS3
+MS2
 2 An ocean tumbled by with a private boat for Max and he sailed off.
 3 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
 
@@ -153,7 +152,7 @@ eliminar cita "MS1"
 error
 
 cites ?
-MS3
+MS2
 2 An ocean tumbled by with a private boat for Max and he sailed off.
 3 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
 
@@ -162,15 +161,12 @@ afegir cita 5 6
 afegir cita 1 1
 
 info ?
-Maurice Sendak "Where the wild things are"
-Cites Associades: 
-MS3
+Maurice Sendak "Where the wild things are" 6 84
+Cites Associades:
+MS2
 2 An ocean tumbled by with a private boat for Max and he sailed off.
 3 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-MS4
-5 They made him king of all wild things.
-6 
-MS5
+MS3
 1 That very night in his room a forest grew and grew.
 
 triar text {agricultura ganaderia bosques}
@@ -251,19 +247,14 @@ totes cites ?
 OW1
 1 This is a fault.
 2 Those who find beautiful meanings in beautiful things are the cultivated.
-MB2
-1 
-MS3
+MS2
 2 An ocean tumbled by with a private boat for Max and he sailed off.
 3 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-MS4
-5 They made him king of all wild things.
-6 
-MS5
+MS3
 1 That very night in his room a forest grew and grew.
-MS6
+MS4
 1 Hay que elegir.
-MBA7
+MBA5
 1 Estas construcciones se distribuyen por la desertica zona de Nazca, al sur de Peru, que fue el hogar de la cultura del mismo nombre entre los años 200 y 600.
 
 eliminar text
@@ -278,19 +269,14 @@ totes cites ?
 OW1
 1 This is a fault.
 2 Those who find beautiful meanings in beautiful things are the cultivated.
-MB2
-1 
-MS3
+MS2
 2 An ocean tumbled by with a private boat for Max and he sailed off.
 3 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-MS4
-5 They made him king of all wild things.
-6 
-MS5
+MS3
 1 That very night in his room a forest grew and grew.
-MS6
+MS4
 1 Hay que elegir.
-MBA7
+MBA5
 1 Estas construcciones se distribuyen por la desertica zona de Nazca, al sur de Peru, que fue el hogar de la cultura del mismo nombre entre los años 200 y 600.
 
 cites autor "Oscar Wilde" ?
@@ -304,20 +290,14 @@ error
 eliminar cita "OW1"
 
 totes cites ?
-MB2
-1 
-MS3
+MS2
 2 An ocean tumbled by with a private boat for Max and he sailed off.
 3 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-MS4
-5 They made him king of all wild things.
-6 
-MS5
+MS3
 1 That very night in his room a forest grew and grew.
-MS6
+MS4
 1 Hay que elegir.
-MBA7
+MBA5
 1 Estas construcciones se distribuyen por la desertica zona de Nazca, al sur de Peru, que fue el hogar de la cultura del mismo nombre entre los años 200 y 600.
 
 sortir
-See you soon!
