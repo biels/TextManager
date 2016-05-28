@@ -13,8 +13,6 @@ using namespace std;
 
 int main() {
 	CommandExecutor c;
-	cout << "Hello!" << endl;
 	c.readConsole();
-	cout << "See you soon!" << endl;
 	return 0;
 }
