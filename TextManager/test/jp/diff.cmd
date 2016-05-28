@@ -1,0 +1,2 @@
+diff jp_public_entrada.txt jp_custom_tmp_out.txt
+pause

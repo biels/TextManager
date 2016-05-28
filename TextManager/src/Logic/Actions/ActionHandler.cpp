@@ -26,7 +26,6 @@ void ActionHandler::triarText(string seq){
 	int id = c.getTs().findByWordList(seq, c);
 	c.setChosenTextId(id);
 	if (id == -1){printError(); return;}
-	cout << "triar text " << seq << endl;
 
 }
 
