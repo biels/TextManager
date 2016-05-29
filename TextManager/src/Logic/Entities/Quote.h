@@ -25,7 +25,7 @@ class Quote {
 private:
 	int ID, quoteNumber,textID, startSentenceIndex, endSentenceIndex;
 	string ref;
-	string header;
+	string header0, header1;
 	vector<string> content;
 	void updateReference(Context& c);
 
@@ -94,7 +94,7 @@ public:
 	void updateContent(Context& c);
 
 	//Output zone
-	void print(bool withTextHeader) const;
+	void print(bool withTextHeader, bool withAuthor) const;
 	void printInfo() const;
 };
 

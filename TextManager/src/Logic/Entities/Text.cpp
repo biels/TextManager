@@ -355,14 +355,14 @@ void Text::printSentenceListMatchingExpression(string expr) const{
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
 	sort(match.begin(), match.end());
-	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << " " << endl;
+	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << endl;
 }
 
 void Text::printSentenceListContainingSequence(string sequence) const{
 	vector<int> match;
 	getSentencesMatchingWordList(match, sequence);
 	//sort(match.begin(), match.end());
-	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << " " << endl;
+	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << endl;
 
 }
 void Text::printHeader(Context& c) {
@@ -385,12 +385,12 @@ void Text::printContent(){ //TODO treat . elements and special cases
 			std::string w = content[j];
 			cout << (ispunct(w[0]) ? "" : " ") << w;
 		}
-		cout << " " << endl;
+		cout << endl;
 	}
 }
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
 	for(int i = from-1; i <= to-1; i++){
-		cout << i+1 << " " << getSentenceByIndex(i) << " " << endl;
+		cout << i+1 << " " << getSentenceByIndex(i) << endl;
 	}
 }

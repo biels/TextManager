@@ -38,8 +38,9 @@ void Quote::updateReference(Context& c){
 	//id[2] = a.id		TODO és l'id d'aquell autor?
 	ss >> ref;
 	//Update header
-	ss2 << getAuthor(c).getName() << " " << '"' << getText(c).getTitle() << '"';
-	getline(ss2, header);
+	header0 = getAuthor(c).getName();
+	ss2 << '"' << getText(c).getTitle() << '"';
+	getline(ss2, header1);
 }
 Text& Quote::getText(Context& c){
 	return c.getTs().get(textID);
@@ -99,19 +100,22 @@ void Quote::updateContent(Context& c) {
 }
 
 //Output zone
-void Quote::print(bool withTextHeader) const{
+void Quote::print(bool withTextHeader, bool withAuthor) const{
 	cout << getUniqueIdentifier() << endl;
 	for(int i = 0; i <= endSentenceIndex - startSentenceIndex; ++i) {
-		cout << i + startSentenceIndex  << " " << content[i] << " " << endl;
+		cout << i + startSentenceIndex  << " " << content[i] << endl;
 	}
-	if(withTextHeader)cout << header << endl;
-
+	if(withTextHeader){
+			if(withAuthor)cout << header0 << " ";
+			cout << header1;
+			cout << endl;
+	}
 }
 void Quote::printInfo() const {
-	cout << header << endl;
+	cout << header0 << " " << header1 << endl;
 	cout << startSentenceIndex << "-" << endSentenceIndex << endl;
 	for(int i = 0; i <= endSentenceIndex - startSentenceIndex; ++i) {
-		cout << i + startSentenceIndex  << " " << content[i] << " " << endl;
+		cout << i + startSentenceIndex  << " " << content[i] << endl;
 	}
 }
 

@@ -82,7 +82,7 @@ void QuoteSet::printAll(Context& c){
 		int id = findByRef(result[i]);
 		if(id != -1){
 			Quote q = get(id);
-			q.print(true);
+			q.print(true, true);
 		}
 	}
 }
@@ -97,7 +97,8 @@ void QuoteSet::printAllByAuthor(int id, Context& c) {
 		int id = findByRef(result[i]);
 		if(id != -1){
 			Quote q = get(id);
-			q.print(true);
+			q.print(true, false);
+
 		}
 	}
 }
@@ -115,7 +116,7 @@ void QuoteSet::printAllByText(int id, bool associated, Context& c){
 		int id = findByRef(result[i]);
 		if(id != -1){
 			Quote q = get(id);
-			q.print(!associated);
+			q.print(!associated, true);
 		}
 	}
 
