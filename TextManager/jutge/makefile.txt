@@ -8,3 +8,10 @@ program.exe: $(OBJ_FILES)
 
 %.o: %.cpp
 	g++ $(CC_FLAGS) -c -o $@ $
+    
+tar: 
+	tar -cvf *.cc *.hh Makefile
+    
+clean:
+	rm *.o
+	rm *.exe

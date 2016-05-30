@@ -61,7 +61,7 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		}
 		//Parse string args
 		//(({aa bb}) | {cc dd})
-		string delim0 = "\"{(“"; //TODO contar parentesis
+		string delim0 = "\"{(“";
 		string delim1 = "\"})”";
 		bool begins_delim = false;
 		unsigned int d_i = 0;
@@ -87,7 +87,7 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		else{
 			//Is string arg beginning with delim0[d_i]
 			string arg_s = s;
-			while(s[s.length()-1] != delim1[d_i] || (d_i== 2)){
+			while((s[s.length()-1] != delim1[d_i] || s.length() == 1) || (d_i== 2)){
 				iss >> s;
 				if(s == "?" || s == "****")break; //(()) ? handling
 				arg_s += " " + s;
@@ -113,11 +113,11 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 
 void CommandExecutor::executeCommand(vector<string> keywords, bool question, vector<string> args) {
 	//Test display
-//	cout << "keywords(" << keywords.size() << "):";
-//	for(string s : keywords)cout << " [" << s << "]";
-//	cout << endl << "args_s(" << args.size() << "):";
-//	for(string s : args)cout << " [" << s << "]";
-//	cout << endl << "question: " << (question ? "yes" : "no") << endl;
+	cout << "keywords(" << keywords.size() << "):";
+	for(string s : keywords)cout << " [" << s << "]";
+	cout << endl << "args_s(" << args.size() << "):";
+	for(string s : args)cout << " [" << s << "]";
+	cout << endl << "question: " << (question ? "yes" : "no") << endl;
 	//Command execution - single context
 
 	if (keywords[0] == "frases"){
