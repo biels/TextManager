@@ -109,8 +109,10 @@ string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder
 
 void Text::replace(string match, string replace){
 	for(unsigned int i = 0; i < content.size(); ++i){
-		if(content[i] == match)content[i] = replace;
-		updateFrequencyTable(match, replace);
+		if(content[i] == match) {
+		    content[i] = replace;
+		    updateFrequencyTable(match, replace);
+		}
 	}
 }
 Quote& Text::extractQuote(int from, int to, Context& c){
@@ -317,6 +319,7 @@ void Text::calculateFrequencyTable() {
 			}
 		}
 	}
+	sortFrequencyTable();
 }
 
 void Text::updateFrequencyTable(string match, string replace){
@@ -334,6 +337,7 @@ void Text::updateFrequencyTable(string match, string replace){
 	);
 	if(itr != frequencyTable.end()) (*itr).second++;
 	else frequencyTable.push_back(make_pair(replace, 1));
+	sortFrequencyTable();
 }
 
 bool compare(const pair<string, int>& a, const pair<string, int>& b) {
