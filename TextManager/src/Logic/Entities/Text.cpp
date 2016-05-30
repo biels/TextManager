@@ -70,16 +70,20 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 	sentences.push_back(0);
 	while(iss >> w){
 		char lc = w[w.size() - 1];
-		bool isDot = lc == '.';
-		bool isP = (lc == ',' || lc == '.' || lc == ':' || lc == ';');
+		bool isP = ispunct(lc);
+		bool isEnding = isP && lc != ',';
+		bool lonely_p = isP && w.size() == 1;
 		if (isP) {
-			if(isDot){
+			if(isEnding){
 				//Register sentence
-				sentences.push_back(i + 2); //Skip dot
+				sentences.push_back(i + (lonely_p ? 1 : 2)); //Skip dot
 			}
-			this->content.push_back(w.substr(0, w.size() - 1));
-			this->content.push_back(w.substr(w.size() - 1, 1));
-			i++;
+			if(!lonely_p){
+				this->content.push_back(w.substr(0, w.size() - 1));
+				i++;
+			}
+			this->content.push_back(w.substr(w.size() - 1, 1)); //Last char
+
 		}else{
 			this->content.push_back(w);
 		}
