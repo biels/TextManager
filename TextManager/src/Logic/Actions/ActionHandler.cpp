@@ -17,10 +17,16 @@ ActionHandler::~ActionHandler() {
 }
 
 void ActionHandler::afegirText(string titol, string autor, string contingut){
-	Text& t = c.getTs().addNew();
-	t.setTitle(titol);
-	t.setAuthorByFullName(autor, c);
-	t.setContent(contingut);
+	if (c.getTs().titleAlreadyExists(titol) && c.getAs().authorAlreadyExists(autor)){
+		printError();
+		return;
+	}
+	else {
+		Text& t = c.getTs().addNew();
+		t.setTitle(titol);
+		t.setAuthorByFullName(autor, c);
+		t.setContent(contingut);
+	}
 }
 
 void ActionHandler::triarText(string seq){

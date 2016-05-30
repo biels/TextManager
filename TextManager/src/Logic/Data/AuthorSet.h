@@ -10,6 +10,7 @@
 
 #include <map>
 #include <string>
+#include "../Entities/Text.h"
 using namespace std;
 class Context;
 class Author;
@@ -53,6 +54,8 @@ public:
 	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
 	 */
 	void remove(const Author& a);
+
+	bool authorAlreadyExists(const string& autor) const;
 
 	/**@brief Comprova si existeix una cita
 	 * \pre Cert

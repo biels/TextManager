@@ -88,6 +88,8 @@ public:
 
 	int numberTextsAuthor(int id, Context& c) const;
 
+	bool titleAlreadyExists(const string& title) const;
+
 	/**
 	 * @brief
 	 * \pre

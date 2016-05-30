@@ -111,6 +111,12 @@ int TextSet::numberTextsAuthor(int id, Context& c) const{
 	return ntexts;
 }
 
+bool TextSet::titleAlreadyExists(const string& title) const {
+	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
+		if ((*it).second.getTitle() == title) return true;
+	}
+}
+
 void TextSet::printAllByAuthor(int id, Context& c){
 	vector<string> output;
 	for(map<int, Text>::iterator it = texts.begin(); it != texts.end(); ++it) {
