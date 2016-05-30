@@ -68,11 +68,13 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 	string w;
 	int i = 0;
 	sentences.push_back(0);
+	bool nice_ended = false;
 	while(iss >> w){
 		char lc = w[w.size() - 1];
 		bool isP = lc == '.' || lc == '?' || lc == '!' || lc == ';' || lc == ',' || lc == ':';
 		bool isEnding = lc == '.' || lc == '?' || lc == '!';
 		bool lonely_p = isP && w.size() == 1;
+		nice_ended = isEnding;
 		if (isP) {
 			if(isEnding){
 				//Register sentence
@@ -90,7 +92,7 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 		wordCount++;
 		i++;
 	}
-	//sentences.push_back(wordCount + 1); //Sentinel
+	if(!nice_ended)sentences.push_back(i); //Sentinel
 }
 int Text::getWordCount() const{
 	return wordCount;
@@ -398,7 +400,15 @@ void Text::printContent(){ //TODO treat . elements and special cases
 }
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
-	for(int i = from-1; i <= to-1; i++){
-		cout << i+1 << " " << getSentenceByIndex(i) << endl;
-	}
+	for (int i = from-1; i <= to - 1; ++i) {
+			cout << i+1;
+			for (int j = sentences[i]; j < sentences[i+1]; ++j){
+				std::string w = content[j];
+				cout << (ispunct(w[0]) ? "" : " ") << w;
+			}
+			cout << endl;
+		}
+//	for(int i = from-1; i <= to-1; i++){
+//		cout << i+1 << " " << getSentenceByIndex(i) << endl;
+//	}
 }

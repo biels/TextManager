@@ -128,7 +128,7 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		//frases x y ?
 		if(keywords.size() == 3){
 			if(!isdigit(keywords[1][0]) || !isdigit(keywords[2][0])){
-				cout << "error";
+				cout << "error" << endl;
 				return;
 			}
 			int x = atoi(keywords[1].c_str());
@@ -251,6 +251,10 @@ void CommandExecutor::executeCommand(vector<string> keywords, bool question, vec
 		}
 		//afegir cita x y ?
 		else {
+			if(!isdigit(keywords[2][0]) || !isdigit(keywords[3][0])){
+				cout << "error" << endl;
+				return;
+			}
 			int x = atoi(keywords[2].c_str());
 			int y = atoi(keywords[3].c_str());
 			a.afegirCita(x, y);
