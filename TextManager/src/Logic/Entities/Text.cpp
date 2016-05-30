@@ -70,8 +70,8 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 	sentences.push_back(0);
 	while(iss >> w){
 		char lc = w[w.size() - 1];
-		bool isP = ispunct(lc);
-		bool isEnding = isP && lc != ',';
+		bool isP = lc == '.' || lc == '?' || lc == '!' || lc == ';' || lc == ',' || lc == ':';
+		bool isEnding = lc == '.' || lc == '?' || lc == '!';
 		bool lonely_p = isP && w.size() == 1;
 		if (isP) {
 			if(isEnding){
