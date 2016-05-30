@@ -87,10 +87,14 @@ void CommandExecutor::executeCommand(string cmd){ //Això s'haurà de millorar
 		else{
 			//Is string arg beginning with delim0[d_i]
 			string arg_s = s;
-			while((s[s.length()-1] != delim1[d_i] || s.length() == 1) || (d_i== 2)){
+			bool lonely_start_delim = s.length() == 1 && s[0] == delim0[d_i];
+			bool lonely_end_delim = false;
+			while((s[s.length()-1] != delim1[d_i] || lonely_start_delim) || (d_i== 2)){
 				iss >> s;
 				if(s == "?" || s == "****")break; //(()) ? handling
-				arg_s += " " + s;
+				lonely_end_delim = s.length() == 1 && s[0] == delim1[d_i];
+				arg_s += (lonely_start_delim || lonely_end_delim ? "" : " ") + s;
+				lonely_start_delim = false;
 			}
 			args_s.push_back(arg_s);
 		}
