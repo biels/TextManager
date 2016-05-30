@@ -1,4 +1,4 @@
-CPP_FILES := $(wildcard *.cc)
+CPP_FILES := $(wildcard *.cpp)
 OBJ_FILES := $(CPP_FILES:.c=.o)
 LD_FLAGS := -std=c++11
 CC_FLAGS := -D_JUDGE_ -D_GLIBCXX_DEBUG -ansi -O2 -Wall -Wextra -Wno-uninitialized -Wno-sign-compare -std=c++11
