@@ -7,6 +7,7 @@
 
 #include "ActionHandler.h"
 #include "Context.h"
+
 ActionHandler::ActionHandler(){
 
 }
@@ -74,7 +75,7 @@ void ActionHandler::contingut(){
 }
 
 void ActionHandler::frases(int x, int y){
-	if(!c.existsChosenText()){printError(); return;}
+    if(!c.existsChosenText() or y > c.getChosenText().getSentenceCount()){printError(); return;}
 	c.getChosenText().printSentenceListInRange(x, y);
 
 }
@@ -110,7 +111,8 @@ void ActionHandler::frasesExpressio(string exp){
 }
 
 void ActionHandler::afegirCita(int x, int y){
-	if(!c.existsChosenText()){printError(); return;}
+    if(!c.existsChosenText()){printError(); return;}
+    if (y < x) {printError(); return;}
 	int sc = c.getChosenText().getSentenceCount();
 	if (x > sc || y > sc){printError(); return;} //Print error ?
 	c.getChosenText().extractQuote(x, y, c);
