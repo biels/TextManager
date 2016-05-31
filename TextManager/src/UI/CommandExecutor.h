@@ -12,10 +12,12 @@ using namespace std;
 #include <string>
 #include "../Logic/Actions/ActionHandler.h"
 #include "../Logic/Actions/DataStructures/ConditionalExpression.h"
+
 /**@class CommandExecutor
  * @brief Interpreta les comandes que entren pel canal d'entrada estàndar.
  * Aquesta classe s'encarrega únicament de processar la entrada i cridar les accions corresponents a l'ActionHandler.
  */
+
 class CommandExecutor {
 private:
 	ActionHandler a;
@@ -24,11 +26,20 @@ private:
 	static ConditionalExpression parseConditionalExpression(string expr);
 
 public:
+	/**
+	 * @brief Creadora per defecte
+	 * \pre Cert
+	 * \post El resultat és un CommandExecutor nou
+	 */
 	CommandExecutor();
 
+	/**
+	 * @brief Destructora per defecte
+	 */
 	virtual ~CommandExecutor();
 
 	/**@brief Llegeix el canal d'entrada estàndar.
+	 * \pre Cert
 	 * \post El programa finalitzarà la seva execució, perquè l'usuari ho ha demanat.
 	 */
 	void readConsole();
