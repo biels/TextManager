@@ -1,9 +1,7 @@
 //============================================================================
 // Name        : TextManager.cpp
 // Author      : Biel i Alba
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Version     : 1.0.0
 //============================================================================
 
 #include <iostream>
