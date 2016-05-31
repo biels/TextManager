@@ -1,970 +1,337 @@
-afegir text "Don Quijote de la Mancha"
+afegir text "El once ideal"
 
-afegir text "The Picture of Dorian Gray"
+afegir text "Que fue de la bestia"
 
-afegir text "La Metamorfosis"
+triar text {de la}
+error
 
-afegir text "Las cuitas del joven Werther"
+triar text {Once Romero Real Tomas}
+error
 
-triar text {Werther}
-
-contingut ?
-1 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
-2 Estoy solo, y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
-3 Ahora no sabria dibujar, ni siquiera hacer una linea con el lapiz; y, sin embargo, jamas he sido mejor pintor.
-4 Cuando el valle se vela en torno mio con un encaje de vapores; cuando el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
-5 Cuando recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas y diversas plantas.
-6 Cuando siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, y veo las formas innumerables e infinitas de los gusanillos y de los insectos.
-7 Cuando siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, y el soplo del amor sin limites que nos sostiene y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, y el cielo y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro y exclamo: Si yo pudiera expresar todo lo que siento!
-8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
-9 Pero me abismo y me anonada la sublimidad de tan magnificas imagenes.
-10 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
-
-substitueix "lapiz" per "boligrafo"
-
-substitueix "y" per "Y"
-
-frases 3 3 ?
-3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
-
-substitueix "cuando" per "Hola"
-
-frases 4 4 ?
-4 Cuando el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
-
-substitueix "Cuando" per "Hola"
-
-frases 4 6 ?
-4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
-5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+triar text {once Roncero Real Barcelona}
+error
 
 info ?
-Johann Wolfgang von Goethe "Las cuitas del joven Werther" 10 337
-Cites Associades:
-
-afegir cita 1 1
-
-afegir cita 8 8
-
-afegir cita 2 7
-
-afegir cita 2 9
-
-afegir cita 6 7
-
-info cita "JWvG6" ?
 error
 
-info cita "JWvG3" ?
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-2-7
-2 Estoy solo, Y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
-3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
-4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
-5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
-7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+textos autor "Pepe Cerolo" ?
 
-eliminar cita "JWvG3"
+tots autors ?
+Anonimo 1 11 96
+Tomas Roncero 1 13 290
 
-cites ?
-JWvG1
-1 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG2
-8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG4
-2 Estoy solo, Y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
-3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
-4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
-5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
-7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
-8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
-9 Pero me abismo Y me anonada la sublimidad de tan magnificas imagenes.
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG5
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
-7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+triar text {Raul Gonzalez}
 
-triar text {Quijote}
-
-autor ?
-Miguel de Cervantes Saavedra
-
-afegir cita 1 1
-
-contingut ?
-1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-2 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
-3 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
-4 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-5 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
-6 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
-7 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-8 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
-9 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
-10 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-
-info ?
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha" 10 336
-Cites Associades:
-MdCS1
-1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-
-substitueix "Quijote" per "temp"
-
-substitueix "Sancho" per "Quijote"
-
-substitueix "temp" per "Sancho"
-
-contingut ?
-1 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-2 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
-3 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
-4 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-5 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
-6 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
-7 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-8 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
-9 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
-10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-
-afegir cita 10 10
-
-afegir cita 7 6
-error
-
-frases "le dijo" ?
-1 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-4 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-7 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-
-frases "Asi que no debes congojarte por las desgracias que a mi me Suceden" ? 
-
-frases "Asi que no debes congojarte por las desgracias que a mi me suceden hola" ?
-
-frases "Asi que no debes congojarte por las desgracias que a mi me suceden" ?
-
-nombre de paraules ?
-336
-
-nombre de frases ?
-10
-
-tots textos ?
-Frank Kafka "La Metamorfosis"
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
-Oscar Wilde "The Picture of Dorian Gray"
-
-eliminar text
-
-tots textos ?
-Frank Kafka "La Metamorfosis"
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-Oscar Wilde "The Picture of Dorian Gray"
-
-triar text {Dorian gray}
-error
-
-nombre de paraules ?
-error
-
-eliminar text
-error
-
-triar text {Dorian Gray}
-
-frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) & {lalalalalalalalala}) ?
-
-frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) | {lalalalalalalalala}) ?
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-3 Those who find beautiful meanings in beautiful things are the cultivated.
-5 They are the elect to whom beautiful things mean only Beauty.
-8 That is all lalalalalalalalala.
-
-tots textos ?
-Frank Kafka "La Metamorfosis"
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-Oscar Wilde "The Picture of Dorian Gray"
-
-triar text {en que}
-error
-
-autor ?
-error
-
-triar text {en que Kafka}
-
-autor ?
-Frank Kafka
-
-
-contingut ?
-1 Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto.
-2 El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo.
-3 Numerosas patas, penosamente delgadas en comparacion con el grosor normal de sus piernas, se agitaban sin concierto.
-4 Que me ha ocurrido?
-5 No estaba sonyando.
-6 Gregorio Samsa, al despertar, sufrio un duro golpe.
-7 Como puede haber ocurrido esto?
-8 Gregorio se fue.
-9 Una vez fuera, el senyor empezo a correr por el bosque.
-10 Asi termina esta historia!
-
-frases ((({duro} & {golpe}) | {ocurrido me}) | ({senyor} | ({Gregorio} & {Samsa}))) ?
-1 Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto.
-2 El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo.
-4 Que me ha ocurrido?
-6 Gregorio Samsa, al despertar, sufrio un duro golpe.
-9 Una vez fuera, el senyor empezo a correr por el bosque.
-
-frases ((({duro} & {golpe}) | {ocurrido me}) & ({senyor} | ({Gregorio} & {Samsa}))) ?
-6 Gregorio Samsa, al despertar, sufrio un duro golpe.
-
-info cita "FK1" ?
-error
-
-totes cites ?
-JWvG1
-1 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG2
-8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG4
-2 Estoy solo, Y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
-3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
-4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
-5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
-7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
-8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
-9 Pero me abismo Y me anonada la sublimidad de tan magnificas imagenes.
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG5
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
-7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-MdCS1
-1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
-MdCS2
-10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
-
-cites ?
-
-afegir cita 1 2
-
-afegir cita 5 6
-
-afegir cita 8 8
+substitueix "Barcelona" per "Espanyol"
 
 frases x y ?
 error
 
-frases 4 4 ?
-4 Que me ha ocurrido?
+frases 1 12 ?
+1 Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+2 Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+3 En cuanto a los centrales, no ha habido color.
+4 Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+5 Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo.
+6 El primero de los brasilenos ha acaparado mas del 85% de los votos.
+7 La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento.
+8 El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+9 Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+10 Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once.
+11 La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+12 Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo.
 
-cites autor "Frank de Kafka" ?
+frases 2 1 ?
 
-cites autor "Frank Kafka" ?
-FK1
-1 Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto.
-2 El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo.
-"La Metamorfosis"
-FK2
-5 No estaba sonyando.
-6 Gregorio Samsa, al despertar, sufrio un duro golpe.
-"La Metamorfosis"
-FK3
-8 Gregorio se fue.
-"La Metamorfosis"
+frases ({Modric Alonso} | {Casillas Ramos}) ?
+9 Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+12 Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo.
 
-eliminar cita "FK1"
+eliminar text
 
-eliminar cita "JWvG4"
-
-eliminar cita "OW1"
+frases "la sombra"
 error
 
-eliminar cita "MdCS1"
+frases {la}
+error
 
-eliminar cita "JWvG1"
+afegir cita 7 8
+error
+
+afegir text "Que fue de la bestia"
+error
+
+afegir text "El once ideal"
+
+triar text {de la}
+error
+
+triar text {Once Romero Real Tomas}
+error
+
+triar text {once Roncero Real Barcelona}
+error
+
+info ?
+error
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+Anonimo 1 11 96
+Tomas Roncero 1 13 290
+
+afegir text "Que fue de la bestia"
+error
+
+afegir text "El once ideal"
+
+triar text {de la}
+error
+
+triar text {Once Romero Real Tomas}
+error
+
+triar text {once Roncero Real Barcelona}
+error
+
+info ?
+error
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+Anonimo 1 11 96
+Tomas Roncero 1 13 290
+Tomas Rontero 1 13 290
+
+triar text {Raul Gonzalez}
+error
+
+substitueix "Barcelona" per "Espanyol"
+error
+
+frases x y ?
+error
+
+frases 1 12 ?
+error
+
+frases 2 1 ?
+error
+
+afegir text "La obsolescencia programada"
+
+triar text {Paula}
+
+frases ({programada} | {mierda estafan}) ?
+1 La obsolescencia programada es una mierda.
+2 Odio los ordenadores y a los fabricantes de mierda que nos estafan.
+
+frases "la sombra"
+
+frases {la}
+
+afegir cita 7 8
+error
+
+afegir cita 1 9
+error
+
+eliminar text
+
+afegir text "El once ideal"
+error
+
+afegir text "Palabra larga"
+
+cites autor "Tomas Roncero" ?
+
+triar text {Palabra Visio}
+error
+
+subtitueix "kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas" per "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"
+
+triar text {oro acompanan Asi}
+error
+
+taula de frequencies ?
+error
+
+afegir text "Buenos dias princesa!"
+
+afegir text "La ciudad de las mentiras"
+
+triar text {Buenos dias princesa}
+error
 
 totes cites ?
-FK2
-5 No estaba sonyando.
-6 Gregorio Samsa, al despertar, sufrio un duro golpe.
-Frank Kafka "La Metamorfosis"
-FK3
-8 Gregorio se fue.
-Frank Kafka "La Metamorfosis"
-JWvG2
-8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-JWvG5
-6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
-7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-MdCS2
-10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
-
-afegir text "Don Quijote de la Mancha"
-
-afegir text "Golden State Warriors"
-
-triar text {viendole don Quijote}
-
-afegir cita 7 7
-
-triar text {curry}
-error
-
-triar text {Stephen Curry}
-
-autor ?
-Stephen Curry
-
-taula de frequencies ?
-to 6
-me 5
-on 5
-as 4
-he 3
-things 3
-colonel 3
-horrible 3
-in 2
-no 2
-And 2
-Bye 2
-cordial 2
-mistaken 2
-o 1
-If 1
-Is 1
-Ya 1
-am 1
-at 1
-be 1
-do 1
-en 1
-if 1
-la 1
-mr 1
-oh 1
-si 1
-us 1
-bye 1
-day 1
-its 1
-new 1
-que 1
-way 1
-Como 1
-Mile 1
-Pues 1
-Rent 1
-fond 1
-help 1
-high 1
-home 1
-read 1
-said 1
-that 1
-told 1
-vida 1
-were 1
-with 1
-dried 1
-fanny 1
-found 1
-often 1
-twelve 1
-Anxious 1
-Because 1
-Enjoyed 1
-Gravity 1
-demands 1
-entered 1
-esteems 1
-fifteen 1
-minutes 1
-related 1
-settled 1
-sixteen 1
-Finished 1
-Goodness 1
-blessing 1
-dissuade 1
-dwelling 1
-goodness 1
-landlord 1
-raptures 1
-reserved 1
-screened 1
-steepest 1
-
-substitueix "twelve" per "sixteen"
-
-substitueix "fifteen" per "sixteen"
-
-taula de frequencies ?
-to 6
-me 5
-on 5
-as 4
-he 3
-things 3
-colonel 3
-sixteen 3
-horrible 3
-in 2
-no 2
-And 2
-Bye 2
-cordial 2
-mistaken 2
-o 1
-If 1
-Is 1
-Ya 1
-am 1
-at 1
-be 1
-do 1
-en 1
-if 1
-la 1
-mr 1
-oh 1
-si 1
-us 1
-bye 1
-day 1
-its 1
-new 1
-que 1
-way 1
-Como 1
-Mile 1
-Pues 1
-Rent 1
-fond 1
-help 1
-high 1
-home 1
-read 1
-said 1
-that 1
-told 1
-vida 1
-were 1
-with 1
-dried 1
-fanny 1
-found 1
-often 1
-Anxious 1
-Because 1
-Enjoyed 1
-Gravity 1
-demands 1
-entered 1
-esteems 1
-minutes 1
-related 1
-settled 1
-Finished 1
-Goodness 1
-blessing 1
-dissuade 1
-dwelling 1
-goodness 1
-landlord 1
-raptures 1
-reserved 1
-screened 1
-steepest 1
-
-substitueix "colonel" per "things"
-
-taula de frequencies ?
-to 6
-things 6
-me 5
-on 5
-as 4
-he 3
-sixteen 3
-horrible 3
-in 2
-no 2
-And 2
-Bye 2
-cordial 2
-mistaken 2
-o 1
-If 1
-Is 1
-Ya 1
-am 1
-at 1
-be 1
-do 1
-en 1
-if 1
-la 1
-mr 1
-oh 1
-si 1
-us 1
-bye 1
-day 1
-its 1
-new 1
-que 1
-way 1
-Como 1
-Mile 1
-Pues 1
-Rent 1
-fond 1
-help 1
-high 1
-home 1
-read 1
-said 1
-that 1
-told 1
-vida 1
-were 1
-with 1
-dried 1
-fanny 1
-found 1
-often 1
-Anxious 1
-Because 1
-Enjoyed 1
-Gravity 1
-demands 1
-entered 1
-esteems 1
-minutes 1
-related 1
-settled 1
-Finished 1
-Goodness 1
-blessing 1
-dissuade 1
-dwelling 1
-goodness 1
-landlord 1
-raptures 1
-reserved 1
-screened 1
-steepest 1
-
-substitueix "lalala" per "Hola"
-
-taula de frequencies ?
-to 6
-things 6
-me 5
-on 5
-as 4
-he 3
-sixteen 3
-horrible 3
-in 2
-no 2
-And 2
-Bye 2
-cordial 2
-mistaken 2
-o 1
-If 1
-Is 1
-Ya 1
-am 1
-at 1
-be 1
-do 1
-en 1
-if 1
-la 1
-mr 1
-oh 1
-si 1
-us 1
-bye 1
-day 1
-its 1
-new 1
-que 1
-way 1
-Como 1
-Mile 1
-Pues 1
-Rent 1
-fond 1
-help 1
-high 1
-home 1
-read 1
-said 1
-that 1
-told 1
-vida 1
-were 1
-with 1
-dried 1
-fanny 1
-found 1
-often 1
-Anxious 1
-Because 1
-Enjoyed 1
-Gravity 1
-demands 1
-entered 1
-esteems 1
-minutes 1
-related 1
-settled 1
-Finished 1
-Goodness 1
-blessing 1
-dissuade 1
-dwelling 1
-goodness 1
-landlord 1
-raptures 1
-reserved 1
-screened 1
-steepest 1
-
-substitueix "horrible" per "things"
-
-substitueix "things" per "Things"
 
 contingut ?
-1 Enjoyed minutes related as at on!
-2 Is fanny dried as often me.
-3 Como que.
-4 Goodness as reserved, raptures to mistaken steepest: oh screened he.
-5 Gravity he mr sixteen esteems.
-6 Mile home: its new way with high told said.
-7 Finished no Things blessing landlord dwelling dissuade if.
-8 Rent, fond am he in on read.
-9 Anxious cordial, demands settled entered in do to Things.
-10 And on that day Things me mistaken Things me to: Things.
-11 If goodness to me cordial me on Things.
-12 Bye Bye bye!
-13 And sixteen Things were to as us help.
-14 Because on sixteen Things Things to be found.
-15 Pues en.
-16 Ya la vida si o no.
+error
 
-taula de frequencies ?
-Things 9
-to 6
-me 5
-on 5
-as 4
-he 3
-sixteen 3
-in 2
-no 2
-And 2
-Bye 2
-cordial 2
-mistaken 2
-o 1
-If 1
-Is 1
-Ya 1
-am 1
-at 1
-be 1
-do 1
-en 1
-if 1
-la 1
-mr 1
-oh 1
-si 1
-us 1
-bye 1
-day 1
-its 1
-new 1
-que 1
-way 1
-Como 1
-Mile 1
-Pues 1
-Rent 1
-fond 1
-help 1
-high 1
-home 1
-read 1
-said 1
-that 1
-told 1
-vida 1
-were 1
-with 1
-dried 1
-fanny 1
-found 1
-often 1
-Anxious 1
-Because 1
-Enjoyed 1
-Gravity 1
-demands 1
-entered 1
-esteems 1
-minutes 1
-related 1
-settled 1
-Finished 1
-Goodness 1
-blessing 1
-dissuade 1
-dwelling 1
-goodness 1
-landlord 1
-raptures 1
-reserved 1
-screened 1
-steepest 1
+substitueix "Gonzalez" per ""
+error
 
-afegir cita 1 2
+eliminar cita "TR1"
+error
 
-info ?
-Stephen Curry "Golden State Warriors" 16 108
-Cites Associades:
-MdCS2
-10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
-SC1
-1 Enjoyed minutes related as at on!
-2 Is fanny dried as often me.
+info cita "E1" ?
+error
+
+eliminar cita "YH7"
+error
+
+textos autor "Sara Valeska de Pablo" ?
+"La ciudad de las mentiras"
+
+frases 23 18 ?
+error
+
+totes cites ?
+
+triar text {Raul Gonzalez}
+error
+
+substitueix "Barcelona" per "Espanyol"
+error
+
+frases x y ?
+error
+
+frases 1 12 ?
+error
+
+frases 2 1 ?
+error
+
+frases ({Modric Alonso} | {Casillas Ramos}) ?
+error
+
+frases "la sombra"
+error
+
+frases {la}
+error
+
+afegir cita 7 8
+error
+
+subtitueix "Ronaldo" per "Messi"
+
+afegir cita 1 9
+error
 
 eliminar text
+error
 
-info cita "SC1" ?
-Stephen Curry "Golden State Warriors"
-1-2
-1 Enjoyed minutes related as at on!
-2 Is fanny dried as often me.
+afegir text "El once ideal"
+error
 
-eliminar cita "SC1"
+afegir text "Palabra larga"
+error
 
-afegir text "Caminando por la Vida"
+cites autor "Tomas Roncero" ?
 
-triar text {hola adeu}
+triar text {Palabra Bisio}
 
-frases 1 1 ?
-1.
+subtitueix "kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas" per "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"
+
+triar text {oro acompanan Asi}
+error
+
+taula de frequencies ?
+error
+
+afegir text "Buenos dias princesa!"
+error
+
+afegir text "La ciudad de las mentiras"
+error
+
+triar text {Buenos dias princesa}
+error
+
+totes cites ?
 
 contingut ?
-1 .
-2 La frase de sobre esta buida.
-3 Hola, hola, hola.
-4 Adeu, adeu, adeu.
+error
 
-tots autors ?
-Frank Kafka 2 14 126
-Johann Wolfgang von Goethe 1 10 337
-Miguel de Cervantes Saavedra 1 10 337
-Oscar Wilde 1 8 67
+substitueix "Gonzalez" per ""
+error
 
-afegir text "El Quijote II"
+eliminar cita "TR1"
+error
 
-tots textos ?
-Frank Kafka "Caminando por la Vida"
-Frank Kafka "La Metamorfosis"
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
-Miguel de Cervantes Saavedra "El Quijote II"
-Oscar Wilde "The Picture of Dorian Gray"
+info cita "E1" ?
+error
 
-tots autors ?
-Frank Kafka 2 14 126
-Johann Wolfgang von Goethe 1 10 337
-Miguel de Cervantes Saavedra 2 12 351
-Oscar Wilde 1 8 67
+eliminar cita "YH7"
+error
 
-info ?
-Frank Kafka "Caminando por la Vida" 4 13
-Cites Associades:
-FK2
-5 No estaba sonyando.
-6 Gregorio Samsa, al despertar, sufrio un duro golpe.
-FK3
-8 Gregorio se fue.
+textos autor "Sara Valeska de Pablo" ?
+"La ciudad de las mentiras"
 
-textos autor "Miguel de Cervantes Saavedra" ?
-"Don Quijote de la Mancha"
-"El Quijote II"
+frases 23 18 ?
+error
 
-textos autor "Frank Kafka" ?
-"Caminando por la Vida"
-"La Metamorfosis"
+totes cites ?
 
-nombre de paraules ?
-13
+afegir cita 1 9
+error
 
-triar text {Mancha Bla}
+eliminar text
+error
 
-autor ?
-Miguel de Cervantes Saavedra
+afegir text "El once ideal"
+error
 
-afegir cita 2 2
+afegir text "Palabra larga"
+error
 
-info ?
-Miguel de Cervantes Saavedra "El Quijote II" 2 14
-Cites Associades:
-MdCS3
-7 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+cites autor "Tomas Roncero" ?
 
-cites autor "Miguel de Cervantes Saavedra" ?
-MdCS3
-7 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-"Don Quijote de la Mancha"
-MdCS4
-2 Bla, bla, bla!
-"El Quijote II"
+triar text {Palabra Bisio}
+
+subtitueix "kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas" per "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"
+
+triar text {oro acompanan Asi}
+error
 
 taula de frequencies ?
-bla 2
-En 1
-La 1
-de 1
-no 1
-un 1
-Bla 1
-cuyo 1
-lugar 1
-Mancha 1
-nombre 1
-quiero 1
-acordarme 1
-
-substitueix "acordarme" per "bla"
-
-substitueix "Mancha" per "bla"
-
-substitueix "lugar" per "bla"
-
-substitueix "En" per "bla"
-
-substitueix "un" per "bla"
-
-substitueix "La" per "bla"
-
-substitueix "quiero" per "bla"
-
-substitueix "nombre" per "bla"
-
-substitueix "cuyo" per "bla"
-
-substitueix "no" per "bla"
-
-substitueix "de" per "bla"
-
-substitueix "Bla" per "bla"
-
-substitueix "La" per "bla"
-
-frases 1 3 ?
 error
 
-frases 1 2 ?
-1 bla bla bla bla bla bla, bla bla bla bla bla.
-2 bla, bla, bla!
-
-taula de frequencies ?
-bla 14
-
-nombre de paraules ?
-14
-
-frases "Bla" ?
-
-afegir cita 0 1
+afegir text "Buenos dias princesa!"
 error
 
-frases {bla} ?
-1 bla bla bla bla bla bla, bla bla bla bla bla.
-2 bla, bla, bla!
-
-eliminar text 
-
-triar text {Metamorfosis}
-
-eliminar text
-
-tots autors ?
-Frank Kafka 1 4 13
-Johann Wolfgang von Goethe 1 10 337
-Miguel de Cervantes Saavedra 1 10 337
-Oscar Wilde 1 8 67
-
-tots textos ?
-Frank Kafka "Caminando por la Vida"
-Johann Wolfgang von Goethe "Las cuitas del joven Werther"
-Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
-Oscar Wilde "The Picture of Dorian Gray"
-
-triar text {Goethe}
-
-eliminar text 
-
-autor ?
+afegir text "La ciudad de las mentiras"
 error
 
-triar text {en que la Saavedra}
+triar text {Buenos dias princesa}
+error
 
-frases 1 1 ?
-1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
-
-nombre de frases ?
-10
-
-frases ({fue} | {en}) ?
-8 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya en cerca.
-
-eliminar text
-
-triar text {Dorian}
-
-eliminar text
-
-triar text {Vida esta por Kafka Caminando Frank por buida La hola adeu Hola Adeu}
-
-frases 1 1 ?
-1.
+totes cites ?
 
 contingut ?
-1 .
-2 La frase de sobre esta buida.
-3 Hola, hola, hola.
-4 Adeu, adeu, adeu.
+error
 
-eliminar text 
+substitueix "Gonzalez" per ""
+error
 
-tots textos ?
+eliminar cita "TR1"
+error
+
+info cita "E1" ?
+error
+
+eliminar cita "YH7"
+error
+
+textos autor "Sara Valeska de Pablo" ?
+"La ciudad de las mentiras"
+
+frases 23 18 ?
+error
+
+totes cites ?
 

@@ -1,342 +1,370 @@
-afegir text "Don Quijote de la Mancha"
-autor "Miguel de Cervantes Saavedra"
-Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, 
-pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. 
+afegir text "El once ideal"
+autor "Tomas Roncero"
+Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+En cuanto a los centrales, no ha habido color. Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo. El primero de los brasilenos ha acaparado mas del 85% de los votos.
+La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento. El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once. La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo. Lastima que solo sea una encuesta porque hubiera sido fabuloso verlos juntos.
 ****
 
-afegir text "The Picture of Dorian Gray"
-autor "Oscar Wilde"
-Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, or badly written. That is all lalalalalalalalala. 
+afegir text "Que fue de la bestia"
+autor "Anonimo"
+Vamos a empezar esta semana con rugby, y con un jugador legendario de la seleccion inglesa. Es Rory Underwood.
+Quien era? Un jugador de rugby ingles de los ochenta y los noventa.
+Por que se le recuerda? Por ser uno de los mas destacados jugadores de la seleccion inglesa en su epoca y por ser, ademas, piloto de combate en la Royal Air Force.
+Que fue de el? Se retiro del rugby en 1998. En la actualidad, da charlas motivacionales y trabaja como consultor de empresas.
+Sabias que? Su madre es de origen chino y malasio.
 ****
 
-afegir text "La Metamorfosis"
-autor "Frank Kafka"
-Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto. El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo. Numerosas patas, penosamente delgadas en comparacion con el grosor normal de sus piernas, se agitaban sin concierto. Que me ha ocurrido? No estaba sonyando. Gregorio Samsa, al despertar, sufrio un duro golpe. Como puede haber ocurrido esto? Gregorio se fue. Una vez fuera, el senyor empezo a correr por el bosque. Asi termina esta historia!
-****
+triar text {de la}
 
-afegir text "Las cuitas del joven Werther"
-autor "Johann Wolfgang von Goethe"
-Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia. Estoy solo, y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte. Ahora no sabria dibujar, ni siquiera hacer una linea con el lapiz; y, sin embargo, jamas he sido mejor pintor. Cuando el valle se vela en torno mio con un encaje de vapores; cuando el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario. Cuando recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas y diversas plantas. Cuando siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, y veo las formas innumerables e infinitas de los gusanillos y de los insectos. Cuando siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, y el soplo del amor sin limites que nos sostiene y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, y el cielo y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro y exclamo: Si yo pudiera expresar todo lo que siento! Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios! Pero me abismo y me anonada la sublimidad de tan magnificas imagenes. Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
-****
+triar text {Once Romero Real Tomas}
 
-triar text {Werther}
-
-contingut ?
-
-substitueix "lapiz" per "boligrafo"
-
-substitueix "y" per "Y"
-
-frases 3 3 ?
-
-substitueix "cuando" per "Hola"
-
-frases 4 4 ?
-
-substitueix "Cuando" per "Hola"
-
-frases 4 6 ?
+triar text {once Roncero Real Barcelona}
 
 info ?
 
-afegir cita 1 1
+textos autor "Pepe Cerolo" ?
 
-afegir cita 8 8
+tots autors ?
 
-afegir cita 2 7
+triar text {Raul Gonzalez}
 
-afegir cita 2 9
-
-afegir cita 6 7
-
-info cita "JWvG6" ?
-
-info cita "JWvG3" ?
-
-eliminar cita "JWvG3"
-
-cites ?
-
-triar text {Quijote}
-
-autor ?
-
-afegir cita 1 1
-
-contingut ?
-
-info ?
-
-substitueix "Quijote" per "temp"
-
-substitueix "Sancho" per "Quijote"
-
-substitueix "temp" per "Sancho"
-
-contingut ?
-
-afegir cita 10 10
-
-afegir cita 7 6
-
-frases "le dijo" ?
-
-frases "Asi que no debes congojarte por las desgracias que a mi me Suceden" ? 
-
-frases "Asi que no debes congojarte por las desgracias que a mi me suceden hola" ?
-
-frases "Asi que no debes congojarte por las desgracias que a mi me suceden" ?
-
-nombre de paraules ?
-
-nombre de frases ?
-
-tots textos ?
-
-eliminar text
-
-tots textos ?
-
-triar text {Dorian gray}
-
-nombre de paraules ?
-
-eliminar text
-
-triar text {Dorian Gray}
-
-frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) & {lalalalalalalalala}) ?
-
-frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) | {lalalalalalalalala}) ?
-
-tots textos ?
-
-triar text {en que}
-
-autor ?
-
-triar text {en que Kafka}
-
-autor ?
-
-
-contingut ?
-
-frases ((({duro} & {golpe}) | {ocurrido me}) | ({senyor} | ({Gregorio} & {Samsa}))) ?
-
-frases ((({duro} & {golpe}) | {ocurrido me}) & ({senyor} | ({Gregorio} & {Samsa}))) ?
-
-info cita "FK1" ?
-
-totes cites ?
-
-cites ?
-
-afegir cita 1 2
-
-afegir cita 5 6
-
-afegir cita 8 8
+substitueix "Barcelona" per "Espanyol"
 
 frases x y ?
 
-frases 4 4 ?
+frases 1 12 ?
 
-cites autor "Frank de Kafka" ?
+frases 2 1 ?
 
-cites autor "Frank Kafka" ?
+frases ({Modric Alonso} | {Casillas Ramos}) ?
 
-eliminar cita "FK1"
+eliminar text
 
-eliminar cita "JWvG4"
+frases "la sombra"
 
-eliminar cita "OW1"
+frases {la}
 
-eliminar cita "MdCS1"
+afegir cita 7 8
 
-eliminar cita "JWvG1"
+afegir text "Que fue de la bestia"
+autor "Anonimo"
+Vamos a empezar esta semana con rugby, y con un jugador legendario de la seleccion inglesa. Es Rory Underwood.
+Quien era? Un jugador de rugby ingles de los ochenta y los noventa.
+Por que se le recuerda? Por ser uno de los mas destacados jugadores de la seleccion inglesa en su epoca y por ser, ademas, piloto de combate en la Royal Air Force.
+Que fue de el? Se retiro del rugby en 1998. En la actualidad, da charlas motivacionales y trabaja como consultor de empresas.
+Sabias que? Su madre es de origen chino y malasio.
+****
+
+afegir text "El once ideal"
+autor "Tomas Roncero"
+Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+En cuanto a los centrales, no ha habido color. Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo. El primero de los brasilenos ha acaparado mas del 85% de los votos.
+La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento. El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once. La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo. Lastima que solo sea una encuesta porque hubiera sido fabuloso verlos juntos.
+****
+
+triar text {de la}
+
+triar text {Once Romero Real Tomas}
+
+triar text {once Roncero Real Barcelona}
+
+info ?
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+
+afegir text "Que fue de la bestia"
+autor "Anonimo"
+Vamos a empezar esta semana con rugby, y con un jugador legendario de la seleccion inglesa. Es Rory Underwood.
+Quien era? Un jugador de rugby ingles de los ochenta y los noventa.
+Por que se le recuerda? Por ser uno de los mas destacados jugadores de la seleccion inglesa en su epoca y por ser, ademas, piloto de combate en la Royal Air Force.
+Que fue de el? Se retiro del rugby en 1998. En la actualidad, da charlas motivacionales y trabaja como consultor de empresas.
+Sabias que? Su madre es de origen chino y malasio.
+****
+
+afegir text "El once ideal"
+autor "Tomas Rontero"
+Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+En cuanto a los centrales, no ha habido color. Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo. El primero de los brasilenos ha acaparado mas del 85% de los votos.
+La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento. El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once. La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo. Lastima que solo sea una encuesta porque hubiera sido fabuloso verlos juntos.
+****
+
+triar text {de la}
+
+triar text {Once Romero Real Tomas}
+
+triar text {once Roncero Real Barcelona}
+
+info ?
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+
+triar text {Raul Gonzalez}
+
+substitueix "Barcelona" per "Espanyol"
+
+frases x y ?
+
+frases 1 12 ?
+
+frases 2 1 ?
+
+afegir text "La obsolescencia programada"
+autor "Paula Paves Rodriguez"
+La obsolescencia programada es una mierda. Odio los ordenadores y a los fabricantes de mierda que nos estafan. Las cosas deberian de durar mas!
+****
+
+triar text {Paula}
+
+frases ({programada} | {mierda estafan}) ?
+
+frases "la sombra"
+
+frases {la}
+
+afegir cita 7 8
+
+afegir cita 1 9
+
+eliminar text
+
+afegir text "El once ideal"
+autor "Tomas Roncero"
+Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+En cuanto a los centrales, no ha habido color. Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo. El primero de los brasilenos ha acaparado mas del 85% de los votos.
+La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento. El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once. La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo. Lastima que solo sea una encuesta porque hubiera sido fabuloso verlos juntos.
+****
+
+afegir text "Palabra larga"
+autor "Camila Bisio"
+kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas. jhasgdgwydqwygdhsajgxjvsaxhvscgsahcvxsahgdsagjdsaggdagsj o?
+****
+
+cites autor "Tomas Roncero" ?
+
+triar text {Palabra Visio}
+
+subtitueix "kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas" per "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"
+
+triar text {oro acompanan Asi}
+
+taula de frequencies ?
+
+afegir text "Buenos dias princesa!"
+autor "Cristina Navarro"
+Han pasado algo mas de dos anos en la vida de los chicos que forman ?el club de los incomprendidos?. 
+Las cosas han cambiado desde que uno tras otro se fueron encontrando en el camino. 
+Nuevos problemas, secretos, amores, celos, Sin embargo, hasta el momento, su amistad ha podido con todo y con todos.
+Raul, se ha convertido en un atractivo joven y en un lider nato; Valeria, derrocha simpatia por donde pisa, aunque no ha vencido del todo a su timidez; Eli, es la que mas se ha transformado de todos y se los lleva de calle; Maria, vigila y suena tras sus gafas de pasta de color azul; Bruno, no consigue olvidar lo que siente y en lo mas profundo de su corazon espera ser correspondido; y Ester, es la nuera que toda madre querria tener aunque no es tan inocente como todos piensan.
+Son seis chicos que sienten, sufren, aman, creen, rien, evolucionan, como otros chicos de su edad. Pero los seis son especiales. Al menos, para el resto del grupo.
+Conseguiran superar  todas las pruebas que se le van a presentar?
+****
+
+afegir text "La ciudad de las mentiras"
+autor "Sara Valeska de Pablo"
+Stanley Mortison, secretario del consul norteamericano, recluta como informadora a Joan Allison, una joven y atractiva periodista americana recien llegada a la ciudad con ansias de descubrir el mundo. 
+Con el fin de mostrarle los entresijos de la cosmopolita ciudad, encargaran al joven sacerdote educado en Tanger Martin Ugarte que le muestre la ciudad. Esta decision va a provocar una reaccion en cadena de insospechadas consecuencias, poniendo en peligro la neutralidad del Protectorado y sacudiendo la vida de todos los implicados, que tendran que enfrentarse a los intereses del prepotente consul espanol y su aliado, el peligroso consul aleman.
+Aventureros y amantes, espias y traidores acabaran confl uyendo en el centro del tablero, jugando los ultimos movimientos de una partida en la que el engano es parte de la estrategia por obtener el control del mundo.
+****
+
+triar text {Buenos dias princesa}
 
 totes cites ?
 
-afegir text "Don Quijote de la Mancha"
-autor "Miguel de Cervantes Saavedra"
-Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, 
-pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya en cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. 
+contingut ?
+
+substitueix "Gonzalez" per ""
+
+eliminar cita "TR1"
+
+info cita "E1" ?
+
+eliminar cita "YH7"
+
+textos autor "Sara Valeska de Pablo" ?
+
+frases 23 18 ?
+
+totes cites ?
+
+triar text {Raul Gonzalez}
+
+substitueix "Barcelona" per "Espanyol"
+
+frases x y ?
+
+frases 1 12 ?
+
+frases 2 1 ?
+
+frases ({Modric Alonso} | {Casillas Ramos}) ?
+
+frases "la sombra"
+
+frases {la}
+
+afegir cita 7 8
+
+subtitueix "Ronaldo" per "Messi"
+
+afegir cita 1 9
+
+eliminar text
+
+afegir text "El once ideal"
+autor "Tomas Roncero"
+Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+En cuanto a los centrales, no ha habido color. Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo. El primero de los brasilenos ha acaparado mas del 85% de los votos.
+La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento. El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once. La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo. Lastima que solo sea una encuesta porque hubiera sido fabuloso verlos juntos.
 ****
 
-afegir text "Golden State Warriors"
-autor "Stephen Curry"
-Enjoyed minutes related as at on! Is fanny dried as often me. Como que. Goodness as reserved, raptures to mistaken steepest: oh screened he. Gravity he mr sixteen esteems. Mile home: its new way with high told said. Finished no horrible blessing landlord dwelling dissuade if. Rent, fond am he in on read. Anxious cordial, demands settled entered in do to colonel. And on that day horrible me mistaken things me to: horrible. If goodness to me cordial me on colonel. Bye Bye bye! And fifteen things were to as us help. Because on twelve things colonel to be found. Pues en. Ya la vida si o no. 
+afegir text "Palabra larga"
+autor "Camila Bisio"
+kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas. jhasgdgwydqwygdhsajgxjvsaxhvscgsahcvxsahgdsagjdsaggdagsj o?
 ****
 
-triar text {viendole don Quijote}
+cites autor "Tomas Roncero" ?
 
-afegir cita 7 7
+triar text {Palabra Bisio}
 
-triar text {curry}
+subtitueix "kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas" per "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"
 
-triar text {Stephen Curry}
-
-autor ?
+triar text {oro acompanan Asi}
 
 taula de frequencies ?
 
-substitueix "twelve" per "sixteen"
+afegir text "Buenos dias princesa!"
+autor "Cristina Navarro"
+Han pasado algo mas de dos anos en la vida de los chicos que forman ?el club de los incomprendidos?. 
+Las cosas han cambiado desde que uno tras otro se fueron encontrando en el camino. 
+Nuevos problemas, secretos, amores, celos, Sin embargo, hasta el momento, su amistad ha podido con todo y con todos.
+Raul, se ha convertido en un atractivo joven y en un lider nato; Valeria, derrocha simpatia por donde pisa, aunque no ha vencido del todo a su timidez; Eli, es la que mas se ha transformado de todos y se los lleva de calle; Maria, vigila y suena tras sus gafas de pasta de color azul; Bruno, no consigue olvidar lo que siente y en lo mas profundo de su corazon espera ser correspondido; y Ester, es la nuera que toda madre querria tener aunque no es tan inocente como todos piensan.
+Son seis chicos que sienten, sufren, aman, creen, rien, evolucionan, como otros chicos de su edad. Pero los seis son especiales. Al menos, para el resto del grupo.
+Conseguiran superar  todas las pruebas que se le van a presentar?
+****
 
-substitueix "fifteen" per "sixteen"
+afegir text "La ciudad de las mentiras"
+autor "Sara Valeska de Pablo"
+Stanley Mortison, secretario del consul norteamericano, recluta como informadora a Joan Allison, una joven y atractiva periodista americana recien llegada a la ciudad con ansias de descubrir el mundo. 
+Con el fin de mostrarle los entresijos de la cosmopolita ciudad, encargaran al joven sacerdote educado en Tanger Martin Ugarte que le muestre la ciudad. Esta decision va a provocar una reaccion en cadena de insospechadas consecuencias, poniendo en peligro la neutralidad del Protectorado y sacudiendo la vida de todos los implicados, que tendran que enfrentarse a los intereses del prepotente consul espanol y su aliado, el peligroso consul aleman.
+Aventureros y amantes, espias y traidores acabaran confl uyendo en el centro del tablero, jugando los ultimos movimientos de una partida en la que el engano es parte de la estrategia por obtener el control del mundo.
+****
 
-taula de frequencies ?
+triar text {Buenos dias princesa}
 
-substitueix "colonel" per "things"
-
-taula de frequencies ?
-
-substitueix "lalala" per "Hola"
-
-taula de frequencies ?
-
-substitueix "horrible" per "things"
-
-substitueix "things" per "Things"
+totes cites ?
 
 contingut ?
 
-taula de frequencies ?
+substitueix "Gonzalez" per ""
 
-afegir cita 1 2
+eliminar cita "TR1"
 
-info ?
+info cita "E1" ?
+
+eliminar cita "YH7"
+
+textos autor "Sara Valeska de Pablo" ?
+
+frases 23 18 ?
+
+totes cites ?
+
+afegir cita 1 9
 
 eliminar text
 
-info cita "SC1" ?
-
-eliminar cita "SC1"
-
-afegir text "Caminando por la Vida"
-autor "Frank Kafka"
-.
-La frase de sobre esta buida.
-Hola, hola, hola.
-Adeu, adeu, adeu.
+afegir text "El once ideal"
+autor "Tomas Roncero"
+Casillas precisamente barre a sus rivales en la demarcacion de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+Mucho mas renida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y Michel Salgado, con Christian Panucci como actor invitado.
+En cuanto a los centrales, no ha habido color. Sergio Ramos y Fernando Hierro han barrido a sus contrincantes, con Pepe y Sanchis a enorme distancia.
+Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo. El primero de los brasilenos ha acaparado mas del 85% de los votos.
+La eleccion de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ningun momento. El frances ha sumado mas del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+Le acompanan en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Makelele en un teorico equipo reserva.
+Por ultimo, destacar la victoria de Raul Gonzalez como delantero mas valorado por delante de Cristiano Ronaldo, que tambien es indiscutible en el once. La eleccion del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+Asi que el once de oro del Real Madrid en estos ultimos 20 anos seria el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Raul y Cristiano Ronaldo. Lastima que solo sea una encuesta porque hubiera sido fabuloso verlos juntos.
 ****
 
-triar text {hola adeu}
+afegir text "Palabra larga"
+autor "Camila Bisio"
+kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas. jhasgdgwydqwygdhsajgxjvsaxhvscgsahcvxsahgdsagjdsaggdagsj o?
+****
 
-frases 1 1 ?
+cites autor "Tomas Roncero" ?
+
+triar text {Palabra Bisio}
+
+subtitueix "kjasshfdwjqfchskchsacbsajhdcsajhdhsahjdjas" per "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"
+
+triar text {oro acompanan Asi}
+
+taula de frequencies ?
+
+afegir text "Buenos dias princesa!"
+autor "Cristina Navarro"
+Han pasado algo mas de dos anos en la vida de los chicos que forman ?el club de los incomprendidos?. 
+Las cosas han cambiado desde que uno tras otro se fueron encontrando en el camino. 
+Nuevos problemas, secretos, amores, celos, Sin embargo, hasta el momento, su amistad ha podido con todo y con todos.
+Raul, se ha convertido en un atractivo joven y en un lider nato; Valeria, derrocha simpatia por donde pisa, aunque no ha vencido del todo a su timidez; Eli, es la que mas se ha transformado de todos y se los lleva de calle; Maria, vigila y suena tras sus gafas de pasta de color azul; Bruno, no consigue olvidar lo que siente y en lo mas profundo de su corazon espera ser correspondido; y Ester, es la nuera que toda madre querria tener aunque no es tan inocente como todos piensan.
+Son seis chicos que sienten, sufren, aman, creen, rien, evolucionan, como otros chicos de su edad. Pero los seis son especiales. Al menos, para el resto del grupo.
+Conseguiran superar  todas las pruebas que se le van a presentar?
+****
+
+afegir text "La ciudad de las mentiras"
+autor "Sara Valeska de Pablo"
+Stanley Mortison, secretario del consul norteamericano, recluta como informadora a Joan Allison, una joven y atractiva periodista americana recien llegada a la ciudad con ansias de descubrir el mundo. 
+Con el fin de mostrarle los entresijos de la cosmopolita ciudad, encargaran al joven sacerdote educado en Tanger Martin Ugarte que le muestre la ciudad. Esta decision va a provocar una reaccion en cadena de insospechadas consecuencias, poniendo en peligro la neutralidad del Protectorado y sacudiendo la vida de todos los implicados, que tendran que enfrentarse a los intereses del prepotente consul espanol y su aliado, el peligroso consul aleman.
+Aventureros y amantes, espias y traidores acabaran confl uyendo en el centro del tablero, jugando los ultimos movimientos de una partida en la que el engano es parte de la estrategia por obtener el control del mundo.
+****
+
+triar text {Buenos dias princesa}
+
+totes cites ?
 
 contingut ?
 
-tots autors ?
+substitueix "Gonzalez" per ""
 
-afegir text "El Quijote II"
-autor "Miguel de Cervantes Saavedra"
-En un lugar de La Mancha, cuyo nombre no quiero acordarme. Bla, bla, bla!
-****
+eliminar cita "TR1"
 
-tots textos ?
+info cita "E1" ?
 
-tots autors ?
+eliminar cita "YH7"
 
-info ?
+textos autor "Sara Valeska de Pablo" ?
 
-textos autor "Miguel de Cervantes Saavedra" ?
+frases 23 18 ?
 
-textos autor "Frank Kafka" ?
-
-nombre de paraules ?
-
-triar text {Mancha Bla}
-
-autor ?
-
-afegir cita 2 2
-
-info ?
-
-cites autor "Miguel de Cervantes Saavedra" ?
-
-taula de frequencies ?
-
-substitueix "acordarme" per "bla"
-
-substitueix "Mancha" per "bla"
-
-substitueix "lugar" per "bla"
-
-substitueix "En" per "bla"
-
-substitueix "un" per "bla"
-
-substitueix "La" per "bla"
-
-substitueix "quiero" per "bla"
-
-substitueix "nombre" per "bla"
-
-substitueix "cuyo" per "bla"
-
-substitueix "no" per "bla"
-
-substitueix "de" per "bla"
-
-substitueix "Bla" per "bla"
-
-substitueix "La" per "bla"
-
-frases 1 3 ?
-
-frases 1 2 ?
-
-taula de frequencies ?
-
-nombre de paraules ?
-
-frases "Bla" ?
-
-afegir cita 0 1
-
-frases {bla} ?
-
-eliminar text 
-
-triar text {Metamorfosis}
-
-eliminar text
-
-tots autors ?
-
-tots textos ?
-
-triar text {Goethe}
-
-eliminar text 
-
-autor ?
-
-triar text {en que la Saavedra}
-
-frases 1 1 ?
-
-nombre de frases ?
-
-frases ({fue} | {en}) ?
-
-eliminar text
-
-triar text {Dorian}
-
-eliminar text
-
-triar text {Vida esta por Kafka Caminando Frank por buida La hola adeu Hola Adeu}
-
-frases 1 1 ?
-
-contingut ?
-
-eliminar text 
-
-tots textos ?
+totes cites ?
 
 sortir
 
