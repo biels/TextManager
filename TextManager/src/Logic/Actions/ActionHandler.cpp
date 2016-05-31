@@ -131,7 +131,9 @@ void ActionHandler::infoCita(string ref){
 }
 
 void ActionHandler::citesAutor(string nom){
-	c.getQs().printAllByAuthor(c.getAs().findByFullName(nom), c);
+	int id = c.getAs().findByFullName(nom);
+	if(id == -1){printError(); return;}
+	c.getQs().printAllByAuthor(id, c);
 
 }
 
