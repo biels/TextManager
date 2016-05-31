@@ -124,7 +124,7 @@ void ActionHandler::frasesExpressio(string exp){
 void ActionHandler::afegirCita(int x, int y){
     if(!c.existsChosenText()){printError(); return;}
     int sc = c.getChosenText().getSentenceCount();
-	if (x > sc || y > sc || y < x || x == 0 || y == 0 || c.getQs().exists(x-1, y-1, c.getChosenTextId())){printError(); return;}
+	if (x > sc || y > sc || y < x || x <= 0 || y <= 0 || c.getQs().exists(x, y, c.getChosenTextId())){printError(); return;}
 	c.getChosenText().extractQuote(x, y, c);
 
 }
