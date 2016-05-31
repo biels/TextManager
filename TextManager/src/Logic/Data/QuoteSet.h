@@ -15,7 +15,7 @@ class Context;
 using namespace std;
 
 /**@class QuoteSet
- * @brief Representa un conjunt de cites.
+ * @brief Representa el conjunt de cites.
  */
 class QuoteSet {
 private:
@@ -29,8 +29,6 @@ private:
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
 	int getNextID();
-
-
 
 	/**@brief Afegeix una cita
 	 * \pre Cert
@@ -48,9 +46,9 @@ public:
 	 */
 	Quote& addNew();
 
-	/**@brief Calcula l'identificador del seg�ent element del conjunt.
+	/**@brief Calcula l'identificador del següent element del conjunt.
 	 * \pre Cert.
-	 * \post El resultat �s l'identificador que ha de tenir el seg�ent element del conjunt.
+	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
 	int getNextQuoteNumber(string initials);
 
