@@ -15,7 +15,7 @@ using namespace std;
 class Context;
 class Author;
 /**@class AuthorSet
- * @brief Representa un conjunt d'autors.
+ * @brief Representa el conjunt d'autors del sistema.
  */
 class AuthorSet {
 private:
