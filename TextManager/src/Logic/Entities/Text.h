@@ -228,14 +228,14 @@ public:
 	 * \post El resultat són el nombre de frases, el nombre de paraules i les cites associades al text, si info és cert, del text triat
 	 * @param info si és cert, imprimeix les cites associades al text
 	 */
-	void printInfo(Context& c, bool info); //TODO IMPLEMENT
+	void printInfo(Context& c, bool info);
 
 	/**
 	 * @brief Imprimeix el contingut del text
 	 * \pre Hi ha un text triat
 	 * \post El resultat són les frases del text triat
 	 */
-	void printContent(); //TODO Consultar
+	void printContent();
 
 	/**
 	 * @brief Imprimeix algunes frases del text
