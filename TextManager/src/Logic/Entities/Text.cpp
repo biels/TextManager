@@ -178,12 +178,21 @@ void Text::getSentencesMatchingWordList(vector<int>& match, string ls)const{ //T
 
 	for(unsigned int i = 0; i < sentences.size() - 1; i++){
 		//Sentence context
+		//W1 w2 w2 w2 w2 w3.
+
 		int streak = 0;
+		int start = -1;
 		for (int j = sentences[i]; j < sentences[i + 1]; j++) {
 			//match does not contain size sentinel
 			//content[j] is a word
-			if(content[j] != l[streak])streak = 0;
+
+			if(content[j] != l[streak]){
+				if(streak != 0)j = start + 1;
+				streak = 0;
+				start = -1;
+			}
 			if(content[j] == l[streak]){
+				if(start == -1)start = j;
 				streak++;
 				if(streak == l.size()){
 					match.push_back(i);
