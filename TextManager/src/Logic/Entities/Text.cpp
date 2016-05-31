@@ -104,6 +104,7 @@ int Text::getWordCount() const{
 }
 
 int Text::getSentenceCount() const{
+	if(sentences.size() == 1)return 0; //Handle single punct char
 	return sentences.size() - 1;
 }
 
