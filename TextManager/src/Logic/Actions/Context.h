@@ -12,12 +12,18 @@
 #include "../Data/AuthorSet.h"
 #include "../Data/QuoteSet.h"
 class Text;
+
+/**@class Context
+ * @brief
+ */
+
 class Context {
 private:
 	TextSet ts;
 	AuthorSet as;
 	QuoteSet qs;
 	int chosenTextID;
+
 public:
 	Context();
 	virtual ~Context();
