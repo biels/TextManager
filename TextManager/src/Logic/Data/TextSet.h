@@ -19,7 +19,7 @@ class Quote;
 class Context;
 
 /**@class TextSet
- * @brief Representa un conjunt de textos.
+ * @brief Representa el conjunt de textos del sistema.
  */
 class TextSet {
 private:
@@ -78,23 +78,52 @@ public:
 	 */
 	int findByTitle(string t) const;
 
-
+	/** triar per contingut?
+	 * @brief Troba si hi ha
+	 * \pre
+	 * \post
+	 * @param list
+	 */
 	int findByWordList(string list, Context& c);
 
-
+	/**
+	 * @brief Retorna el número de paraules dels textos d'un autor
+	 * \pre Cert
+	 * \post El resultat és el nombre de paraules que tenen tots els textos del autor amb identificador id
+	 * @param id identificador de l'autor
+	 */
 	int numberWordsAuthorTexts(int id, Context& c) const;
 
+	/**
+	 * @brief Retorna el número de frases dels textos d'un autor
+	 * \pre Cert
+	 * \post El resultat és el nombre de frases que tenen tots els textos del autor amb identificador id
+	 * @param id identificador de l'autor
+	 * @return
+	 */
 	int numberSentencesAuthorTexts(int id, Context& c) const;
 
+	/**
+	 * @brief Retorna el número de textos d'un autor.
+	 * \pre Cert
+	 * \post El resultat és el nombre de textos que té l'autor amb identificador id
+	 * @param id identificador de l'autor
+	 */
 	int numberTextsAuthor(int id, Context& c) const;
 
+	/**
+	 * @brief Retrona si el text ja existeix, si el resultat es false, es podrà afegir el text al sistema
+	 * \pre Cert
+	 * \post El resultat és cert si i només sí ja existeix al sistema un text amb mateix títol i autor
+	 * @param title títol del text que es vol afegir
+	 * @param autor autor del text que es vol afegir
+	 */
 	bool textAlreadyExists (const string& title, const string& autor, Context& c) const;
 
 	/**
-	 * @brief
-	 * \pre
-	 * \post
-	 * @param c
+	 * @brief Imprimiex informació del conjunt de textos
+	 * \pre	Cert
+	 * \post El resultat és el nom i el títol de cada text del sistema
 	 */
 	void printAll(Context& c);
 
