@@ -18,6 +18,7 @@
 #include <algorithm>
 #include <ios>
 #include <iterator>
+#include <set>
 using namespace std;
 using std::find_if;
 using std::list;
@@ -122,8 +123,8 @@ string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder
 void Text::replace(string match, string replace){
 	for(unsigned int i = 0; i < content.size(); ++i){
 		if(content[i] == match) {
-		    content[i] = replace;
-		    updateFrequencyTable(match, replace);
+			content[i] = replace;
+			updateFrequencyTable(match, replace);
 		}
 	}
 }
@@ -140,28 +141,26 @@ Quote& Text::extractQuote(int from, int to, Context& c){
 bool Text::matchesWordListAnywhere(string ls, Context& c){
 	string lsf = ls.substr(1, ls.size()-2); // Remove {}
 	istringstream iss(lsf);
-	list<string> l;
+	set<string> l;
 	string tmp;
-	while(iss >> tmp) l.push_back(tmp);
+	while(iss >> tmp) l.insert(tmp);
 
 	istringstream isst(getTitle());
 	while(isst >> tmp){
-		for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
-			if(tmp == (*it))it=l.erase(it);
-		}
+		char lc = tmp[tmp.size() - 1];
+		if(ispunct(lc))tmp = tmp.substr(0, tmp.size() - 1);
+		 l.erase(tmp);
 	}
 	if(l.size() == 0)return true;
 	istringstream issa(getAuthor(c).getName());
 	while(issa >> tmp){
-		for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
-			if(tmp == (*it))it=l.erase(it);
-		}
+		char lc = tmp[tmp.size() - 1];
+		if(ispunct(lc))tmp = tmp.substr(0, tmp.size() - 1);
+		 l.erase(tmp);
 	}
 	if(l.size() == 0)return true;
 	for(unsigned int i = 0; i < content.size(); ++i){
-		for(list<string>::iterator it = l.begin(); it != l.end(); ++it){
-			if(content[i] == (*it))it=l.erase(it);
-		}
+		l.erase(content[i]);
 		if(i % 10 == 0 && l.size() == 0)return true;
 	}
 	return l.size() == 0;
@@ -422,14 +421,14 @@ void Text::printContent(){ //TODO treat . elements and special cases
 
 void Text::printSentenceListInRange(int from, int to){ //pre from < to
 	for (int i = from-1; i <= to - 1; ++i) {
-			cout << i+1;
-			for (int j = sentences[i]; j < sentences[i+1]; ++j){
-				std::string w = content[j];
-				cout << (ispunct(w[0]) ? "" : " ") << w;
-			}
-			cout << endl;
+		cout << i+1;
+		for (int j = sentences[i]; j < sentences[i+1]; ++j){
+			std::string w = content[j];
+			cout << (ispunct(w[0]) ? "" : " ") << w;
 		}
-//	for(int i = from-1; i <= to-1; i++){
-//		cout << i+1 << " " << getSentenceByIndex(i) << endl;
-//	}
+		cout << endl;
+	}
+	//	for(int i = from-1; i <= to-1; i++){
+	//		cout << i+1 << " " << getSentenceByIndex(i) << endl;
+	//	}
 }
