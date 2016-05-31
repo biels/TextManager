@@ -50,9 +50,11 @@ void Text::setTitle(const string title){
 Author& Text::getAuthor(Context& c){
 	return c.getAs().get(author);
 }
+
 void Text::setAuthor(const Author& author){
 	this->author = author.getId();
 }
+
 void Text::setAuthorByFullName(string fullName, Context& c){
 	int id = c.getAs().findByFullName(fullName);
 	if (id == -1) {
@@ -62,6 +64,7 @@ void Text::setAuthorByFullName(string fullName, Context& c){
 	}
 	author = id;
 }
+
 void Text::setContent(string content){ //TODO Buffer by blocksize, trade space for performance
 	this->content.clear();
 	istringstream iss(content);
@@ -94,12 +97,15 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 	}
 	//if(!nice_ended)sentences.push_back(i); //Sentinel COMMENT TO PASS Private 3
 }
+
 int Text::getWordCount() const{
 	return wordCount;
 }
+
 int Text::getSentenceCount() const{
 	return sentences.size() - 1;
 }
+
 string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder / stream for efficiency
 	int start = sentences[index];
 	int size = content.size();
@@ -121,6 +127,7 @@ void Text::replace(string match, string replace){
 		}
 	}
 }
+
 Quote& Text::extractQuote(int from, int to, Context& c){
 	Quote& q = c.getQs().addNew();
 	q.setTextId(getId(), c);
@@ -129,6 +136,7 @@ Quote& Text::extractQuote(int from, int to, Context& c){
 	q.updateContent(c);
 	return q;
 }
+
 bool Text::matchesWordListAnywhere(string ls, Context& c){
 	string lsf = ls.substr(1, ls.size()-2); // Remove {}
 	istringstream iss(lsf);
@@ -158,7 +166,8 @@ bool Text::matchesWordListAnywhere(string ls, Context& c){
 	}
 	return l.size() == 0;
 }
-void Text::getSentencesMatchingWordList(vector<int>& match, string ls)const{ //TODO Arreglarº
+
+void Text::getSentencesMatchingWordList(vector<int>& match, string ls)const{ //TODO
 	string lsf = ls.substr(1, ls.size()-2); // Remove {}
 	istringstream iss(lsf);
 	vector<string> l;
@@ -169,26 +178,29 @@ void Text::getSentencesMatchingWordList(vector<int>& match, string ls)const{ //T
 
 	for(unsigned int i = 0; i < sentences.size() - 1; i++){
 		//Sentence context
+		//W1 w2 w2 w2 w2 w3.
+
 		int streak = 0;
+		int start = -1;
 		for (int j = sentences[i]; j < sentences[i + 1]; j++) {
 			//match does not contain size sentinel
 			//content[j] is a word
-			if(content[j] != l[streak])streak = 0;
+
+			if(content[j] != l[streak]){
+				if(streak != 0)j = start + 1;
+				streak = 0;
+				start = -1;
+			}
 			if(content[j] == l[streak]){
+				if(start == -1)start = j;
 				streak++;
 				if(streak == l.size()){
 					match.push_back(i);
 					break;
 				}
-
 			}
-
-
 		}
-
-
 	}
-
 }
 
 void Text::checkSentenceForCondition(int i, bool c_op, vector<string>& remaining) const { //OK
@@ -361,6 +373,7 @@ void Text::printFrequencyTable() {
 		cout << frequencyTable[i].first << " " << frequencyTable[i].second << endl;
 	}
 }
+
 void Text::printSentenceListMatchingExpression(string expr) const{
 	vector<int> match;
 	getSentenceListMatchingExpression(expr, match);
@@ -372,12 +385,14 @@ void Text::printSentenceListContainingSequence(string sequence) const{
 	vector<int> match;
 	getSentencesMatchingWordList(match, sequence);
 	//sort(match.begin(), match.end());
+	//if (getSentenceByIndex().lenght() < sequence.length)
 	for(int m : match)cout << m + 1 << " " << getSentenceByIndex(m) << endl;
-
 }
+
 void Text::printHeader(Context& c) {
 	cout << getAuthor(c).getName() << " " << '"' << getTitle() << '"';
 }
+
 void Text::printInfo(Context& c, bool info) {
 	printHeader(c);
 	cout << " " << getSentenceCount();
@@ -388,12 +403,13 @@ void Text::printInfo(Context& c, bool info) {
 		c.getQs().printAllByText(getAuthor(c).getId(), true, c);
 	}
 }
+
 void Text::printContent(){ //TODO treat . elements and special cases
 	for (int i = 0; i < sentences.size() - 1; ++i) {
 		cout << i+1;
 		for (int j = sentences[i]; j < sentences[i+1]; ++j){
 			std::string w = content[j];
-			cout << (ispunct(w[0]) ? "" : " ") << w;
+			cout << (ispunct(w[0]) && j != sentences[i] ? "" : " ") << w;
 		}
 		cout << endl;
 	}

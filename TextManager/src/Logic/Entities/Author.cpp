@@ -27,10 +27,10 @@ void Author::setName(const string name){
 	istringstream iss(name);
 	string tmp;
 	iss >> this->name;
-	this->initials = toupper(name[0]);
+	this->initials = name[0];
 	while(iss >> tmp){
 		this->name += " " + tmp;
-		this->initials += toupper(tmp[0]);
+		this->initials += tmp[0];
 	}
 }
 void Author::print() const{

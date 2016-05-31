@@ -14,9 +14,11 @@
 using namespace std;
 class Context;
 class Author;
+
 /**@class AuthorSet
- * @brief Representa un conjunt d'autors.
+ * @brief Representa el conjunt d'autors del sistema.
  */
+
 class AuthorSet {
 private:
 	int lastID;
@@ -27,6 +29,7 @@ private:
 	 * \post El resultat és l'identificador que ha de tenir el següent element del conjunt.
 	 */
 	int getNextID();
+
 	/**@brief Afegeix un autor al conjunt
 	 * \pre Cert
 	 * \post El paràmetre implícit conté l'autor
@@ -34,7 +37,16 @@ private:
 	void add(const Author& a);
 
 public:
+	/**
+	 * @brief Creadora per defecte
+	 * \pre Cert
+	 * \post Crea un AuthorSet amb últim identificador igual a 0
+	 */
 	AuthorSet();
+
+	/**
+	 * @brief Destructora per defecte
+	 */
 	virtual ~AuthorSet();
 
 	/**@brief Afegeix un autor nou al conjunt
@@ -54,8 +66,6 @@ public:
 	 * \post Si el paràmetre implícit conté l'autor, aquest s'elimina
 	 */
 	void remove(const Author& a);
-
-	bool authorAlreadyExists(const string& autor) const;
 
 	/**@brief Comprova si existeix una cita
 	 * \pre Cert

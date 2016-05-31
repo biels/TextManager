@@ -1,0 +1,339 @@
+afegir text "Que fue de la bestia"
+
+afegir text "El once ideal"
+
+triar text {de la}
+error
+
+triar text {Once Romero Real Tom�s}
+error
+
+triar text {once Roncero Real Barcelona}
+error
+
+info ?
+error
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+An�nimo 1 7 96
+Tom�s Roncero 1 13 290
+
+triar text {Ra�l Gonz�lez}
+
+substitueix "Barcelona" per "Espanyol"
+
+frases x y ?
+error
+
+frases 1 12 ?
+1 Casillas precisamente barre a sus rivales en la demarcaci�n de portero con casi un 85 por ciento de los sufragios, muy por delante de Keylor Navas y Bodo Illgner.
+2 Mucho m�s re�ida ha estado la lucha por el puesto de lateral diestro, con un pulso hasta el final entre Dani Carvajal, ganador, y M�chel Salgado, con Christian Panucci como actor invitado.
+3 En cuanto a los centrales, no ha habido color.
+4 Sergio Ramos y Fernando Hierro han barrido a sus 'contrincantes', con Pepe y Sanch�s a enorme distancia.
+5 Lo mismo ha pasado con el lateral zurdo, donde la sombra de Roberto Carlos ha sido demasiado alargada para Marcelo.
+6 El primero de los brasile�os ha acaparado m�s del 85% de los votos.
+7 La elecci�n de los tres centrocampistas se antojaba complicada dada la calidad de los participantes en la encuesta pero el liderazgo de Zidane no se ha puesto en duda en ning�n momento.
+8 El franc�s ha sumado m�s del 30 por ciento de los votos, cuando el tope en su caso era el 33,3.
+9 Le acompa�an en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Mak�l�l� en un te�rico equipo reserva.
+10 Por �ltimo, destacar la 'victoria' de Ra�l Gonz�lez como delantero m�s valorado por delante de Cristiano Ronaldo, que tambi�n es indiscutible en el once.
+11 La elecci�n del tercer punta fue tan cerrada como la del lateral derecho, con Gareth Bale arrebatando la preciada plaza a Predrag Mijatovic.
+12 As� que el once de oro del Real Madrid en estos �ltimos 20 a�os ser�a el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Ra�l y Cristiano Ronaldo.
+
+frases 2 1 ?
+
+frases ({Modric Alonso} | {Casillas Ramos}) ?
+9 Le acompa�an en la medular nada menos que Fernando Redondo y Luka Modric, con Figo, Xabi Alonso y Claude Mak�l�l� en un te�rico equipo reserva.
+12 As� que el once de oro del Real Madrid en estos �ltimos 20 a�os ser�a el integrado por: Casillas; Carvajal, Sergio Ramos, Hierro, Roberto Carlos; Zidane, Modric, Redondo; Bale, Ra�l y Cristiano Ronaldo.
+
+eliminar text
+
+frases "la sombra" ?
+error
+
+
+
+afegir cita 7 8
+error
+
+afegir text "�Que fue de la bestia"
+error
+
+afegir text "El once ideal"
+
+triar text {de la}
+error
+
+triar text {Once Romero Real Tom�s}
+error
+
+triar text {once Roncero Real Barcelona}
+error
+
+info ?
+error
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+An�nimo 1 7 96
+Tom�s Roncero 1 13 290
+
+afegir text "�Que fue de la bestia"
+error
+
+afegir text "El once ideal"
+
+triar text {de la}
+error
+
+triar text {Once Romero Real Tom�s}
+error
+
+triar text {once Roncero Real Barcelona}
+error
+
+info ?
+error
+
+textos autor "Pepe Cerolo" ?
+
+tots autors ?
+An�nimo 1 7 96
+Tom�s Roncero 1 13 290
+Tom�s Rontero 1 13 290
+
+triar text {Ra�l Gonz�lez}
+error
+
+substitueix "Barcelona" per "Espanyol"
+error
+
+frases x y ?
+error
+
+frases 1 12 ?
+error
+
+frases 2 1 ?
+error
+
+afegir text "La obsolescencia programada"
+
+triar text {Paula}
+
+frases ({programada} | {mierda estafan}) ?
+1 La obsolescencia programada es una mierda.
+2 Odio los ordenadores y a los fabricantes de mierda que nos estafan.
+
+frases "la sombra" ?
+
+
+
+afegir cita 7 8
+error
+
+afegir cita 1 9
+error
+
+eliminar text
+
+afegir text "El once ideal"
+error
+
+afegir text "Palabra larga"
+
+cites autor "Tom�s Roncero" ?
+
+triar text {Palabra Visio}
+error
+
+
+
+
+
+triar text {oro acompa�an As�}
+error
+
+taula de frequencies ?
+error
+
+afegir text "�Buenos d�as princesa!"
+
+afegir text "La ciudad de las mentiras"
+
+triar text {Buenos d�as princesa}
+error
+
+totes cites ?
+
+contingut ?
+error
+
+substitueix "Gonz�lez" per ""
+error
+
+eliminar cita "TR1"
+error
+
+info cita "E1" ?
+error
+
+eliminar cita "YH7"
+error
+
+textos autor "Sara Valeska de Pablo" ?
+"La ciudad de las mentiras"
+
+frases 23 18 ?
+error
+
+totes cites ?
+
+triar text {Ra�l Gonz�lez}
+error
+
+substitueix "Barcelona" per "Espanyol"
+error
+
+frases x y ?
+error
+
+frases 1 12 ?
+error
+
+frases 2 1 ?
+error
+
+frases ({Modric Alonso} | {Casillas Ramos}) ?
+error
+
+frases "la sombra" ?
+error
+
+
+
+afegir cita 7 8
+error
+
+afegir cita 1 9
+error
+
+eliminar text
+error
+
+afegir text "El once ideal"
+error
+
+afegir text "Palabra larga"
+error
+
+cites autor "Tom�s Roncero" ?
+
+triar text {Palabra Bisio}
+
+
+
+
+
+triar text {oro acompa�an As�}
+error
+
+taula de frequencies ?
+error
+
+afegir text "�Buenos d�as princesa!"
+error
+
+afegir text "La ciudad de las mentiras"
+error
+
+triar text {Buenos d�as princesa}
+error
+
+totes cites ?
+
+contingut ?
+error
+
+substitueix "Gonz�lez" per ""
+error
+
+eliminar cita "TR1"
+error
+
+info cita "E1" ?
+error
+
+eliminar cita "YH7"
+error
+
+textos autor "Sara Valeska de Pablo" ?
+"La ciudad de las mentiras"
+
+frases 23 18 ?
+error
+
+totes cites ?
+
+afegir cita 1 9
+error
+
+eliminar text
+error
+
+afegir text "El once ideal"
+error
+
+afegir text "Palabra larga"
+error
+
+cites autor "Tom�s Roncero" ?
+
+triar text {Palabra Bisio}
+
+
+
+
+
+triar text {oro acompa�an As�}
+error
+
+taula de frequencies ?
+error
+
+afegir text "�Buenos d�as princesa!"
+error
+
+afegir text "La ciudad de las mentiras"
+error
+
+triar text {Buenos d�as princesa}
+error
+
+totes cites ?
+
+contingut ?
+error
+
+substitueix "Gonz�lez" per ""
+error
+
+eliminar cita "TR1"
+error
+
+info cita "E1" ?
+error
+
+eliminar cita "YH7"
+error
+
+textos autor "Sara Valeska de Pablo" ?
+"La ciudad de las mentiras"
+
+frases 23 18 ?
+error
+
+totes cites ?
+

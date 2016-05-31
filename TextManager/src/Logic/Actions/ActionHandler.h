@@ -27,16 +27,25 @@ class ActionHandler {
 private:
 	Context c;
 
+	/**
+	 * @brief Imprimeix per pantalla error
+	 * \pre Ha hagut un error
+	 * \post El resultat és l'impressió de la paraula error per pantalla
+	 */
 	void printError();
 
 public:
+	/**
+	 * @brief Creadora per defecte
+	 * \pre Cert
+	 * \post El resultat és un ActionHandler nou
+	 */
 	ActionHandler();
+
+	/**
+	 * @brief Destructora per defecte
+	 */
 	virtual ~ActionHandler();
-	//-!!!FALTA DOCUMENTAR!!!
-	//Aquí aniria bé documentar exactament cada funció
-	//amb la descripció del pdf de la pràctica
-	//Molt provisional
-	//Texts
 
 	/**
 	 * @brief Afegeix un text al sistema.
