@@ -93,7 +93,7 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 		}else{
 			this->content.push_back(w);
 		}
-		if(!lonely_p)wordCount++;
+		wordCount++;
 		i++;
 	}
 	//if(!nice_ended)sentences.push_back(i); //Sentinel COMMENT TO PASS Private 3
@@ -104,8 +104,7 @@ int Text::getWordCount() const{
 }
 
 int Text::getSentenceCount() const{
-	if(sentences.size() == 2)return 0; //Handle single punct char
-	return sentences.size() - 1;
+	return sentences.size() - 1; //Taken sentinel into account
 }
 
 string Text::getSentenceByIndex(int index) const{ //TODO Idea, use stringbuilder / stream for efficiency
@@ -400,7 +399,9 @@ void Text::printHeader(Context& c) {
 
 void Text::printInfo(Context& c, bool info) {
 	printHeader(c);
-	cout << " " << getSentenceCount();
+	int sentenceCount = getSentenceCount();
+	if(sentenceCount == 2)sentenceCount = 0;
+	cout << " " << sentenceCount;
 	cout << " " << getWordCount();
 	cout << endl;
 	if (info) {

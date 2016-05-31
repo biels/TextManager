@@ -32,6 +32,39 @@ private:
 	vector<int> sentences;			//index: nº frase, 2n int nº paraula
 	vector<pair<string, int>> frequencyTable;
 
+
+	/**
+	 * \pre i is in the range [0 .. sentences.size() - 1], c_op conté l'operador lògic false = OR, true = AND, remaining conté totes les condicions a evaluar
+	 * \post remaining conté les condicions que no s'han evaluat ja sigui perquè no s'han donat o perquè l'algoritme ha determinat abans que no eren necessàries.
+	 */
+	void checkSentenceForCondition(int i, bool c_op, vector<string>& remaining) const;
+
+	/**
+	 * @brief
+	 * @param match
+	 * @param ls
+	 */
+	void getSentencesMatchingWordList(vector<int>& match, string ls) const;
+
+
+	/**
+	 * @brief Retorna una llista
+	 * @param expr
+	 * @param match
+	 */
+	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
+
+	/**
+	 *
+	 * @param match
+	 * @param cond
+	 * @param c_op
+	 * @param m_op
+	 */
+	void getSentenceListMatchingWordListInContext(vector<int>& match, vector<string>& cond, bool c_op, bool m_op) const;
+
+
+
 public:
 	/** @brief Creadora per defecte
 	 * \pre Cert
@@ -128,53 +161,11 @@ public:
 	Quote& extractQuote(int from, int to, Context& c);
 
 	/**
-	 * @brief
-	 * @param match
-	 * @param ls
-	 */
-	void getSentencesMatchingWordList(vector<int>& match, string ls) const;
-
-	/**
-	 *
-	 * @param list
-	 * @param c
+	 * \pre list Conté
+	 * \post
 	 * @return
 	 */
 	bool matchesWordListAnywhere(string list, Context& c);
-
-	/**
-	 * @brief Retorna una llista
-	 * @param expr
-	 * @param match
-	 */
-	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
-
-	/**
-	 *
-	 * @param expr
-	 * @param match
-	 * @param cond
-	 * @param c_op
-	 * @param root
-	 */
-	void getSentenceListMatchingExpressionEf(string expr, vector<int>& match, vector<string>& cond, bool& c_op, bool root) const;
-
-	/**
-	 *
-	 * @param match
-	 * @param cond
-	 * @param c_op
-	 * @param m_op
-	 */
-	void getSentenceListMatchingWordListInContext(vector<int>& match, vector<string>& cond, bool c_op, bool m_op) const;
-
-	/**
-	 *
-	 * @param i
-	 * @param c_op
-	 * @param remaining
-	 */
-	void checkSentenceForCondition(int i, bool c_op, vector<string>& remaining) const;
 
 
 	/**
