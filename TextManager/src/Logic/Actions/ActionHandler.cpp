@@ -161,7 +161,3 @@ void ActionHandler::eliminarCita(string ref){
 void ActionHandler::printError() {
 	cout << "error" << endl;
 }
-
-Context& ActionHandler::exposeContext(){
-	return c;
-}
