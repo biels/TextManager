@@ -40,26 +40,23 @@ private:
 	void checkSentenceForCondition(int i, bool c_op, vector<string>& remaining) const;
 
 	/**
-	 * @brief
-	 * @param match
-	 * @param ls
+	 * @brief Retorna la llista de frases que contenen les paraules d'una llista consecutivament.
+	 * \pre match és buit, ls conté la llista de paraules separades per espais
+	 * \post Match conté la llista de frases que compleixen la condició
 	 */
 	void getSentencesMatchingWordList(vector<int>& match, string ls) const;
 
 
 	/**
-	 * @brief Retorna una llista
-	 * @param expr
-	 * @param match
+	 * @brief Retorna la llista de frases que compleixen una expressió algebraica booleana
+	 * \pre expr és una expressió amb vàlida sintàcticament, match és buit
+	 * \post match conté el subconjunt de sentences resultant d'aplicar l'expressió expr
 	 */
 	void getSentenceListMatchingExpression(string expr, vector<int>& match) const;
 
-	/**
-	 *
-	 * @param match
-	 * @param cond
-	 * @param c_op
-	 * @param m_op
+	/** @brief Aplica les operacions lògiques especificades sobre subconjunt de frases del text especificat pel paràmetre match inicial
+	 *  \pre match conté el subconjunt de sentences sobre el qual volem aplicar l'operació lògica especificada per m_op amb la condició especificada per cond i el seu operador relatiu c_op
+	 *  \post match conté el subconjunt de sentences resultant
 	 */
 	void getSentenceListMatchingWordListInContext(vector<int>& match, vector<string>& cond, bool c_op, bool m_op) const;
 
@@ -160,10 +157,9 @@ public:
 	 */
 	Quote& extractQuote(int from, int to, Context& c);
 
-	/**
-	 * \pre list Conté
-	 * \post
-	 * @return
+	/**@brief Comprova si el text conté la llista de paraules especificada
+	 * \pre list Conté la llista de paraules amb repeticions permeses
+	 * \post El resultat és cert sí s'ha trobat cada paraula almenys un cop
 	 */
 	bool matchesWordListAnywhere(string list, Context& c);
 
