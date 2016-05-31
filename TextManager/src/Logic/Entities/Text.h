@@ -251,11 +251,11 @@ public:
 	void printContent(); //TODO Consultar
 
 	/**
-	 * @brief
-	 * \pre
-	 * \post
-	 * @param from
-	 * @param to
+	 * @brief Imprimeix algunes frases del text
+	 * \pre Hi ha un text triat
+	 * \post El resultat són les frases del text triar desde from fins a to
+	 * @param from posició del text que indica on comença la primera frase
+	 * @param to posició del text que indica on comença la última frase
 	 */
 	void printSentenceListInRange(int from, int to);
 };
