@@ -36,12 +36,15 @@ private:
 
 public:
 	/**
-	 * @brief Creador per defecte
+	 * @brief Creadora per defecte
 	 * \pre Cert
 	 * \post El resultat és un ActionHandler nou
 	 */
 	ActionHandler();
 
+	/**
+	 * @brief Destructora per defecte
+	 */
 	virtual ~ActionHandler();
 
 	/**
