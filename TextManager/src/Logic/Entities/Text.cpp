@@ -400,7 +400,7 @@ void Text::printContent(){ //TODO treat . elements and special cases
 		cout << i+1;
 		for (int j = sentences[i]; j < sentences[i+1]; ++j){
 			std::string w = content[j];
-			cout << (ispunct(w[0]) ? "" : " ") << w;
+			cout << (ispunct(w[0]) && j != sentences[i] ? "" : " ") << w;
 		}
 		cout << endl;
 	}

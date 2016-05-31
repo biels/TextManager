@@ -118,16 +118,16 @@ void ActionHandler::frasesExpressio(string exp){
 
 void ActionHandler::afegirCita(int x, int y){
     if(!c.existsChosenText()){printError(); return;}
-    if (y < x) {printError(); return;}
-	int sc = c.getChosenText().getSentenceCount();
-	if (x > sc || y > sc){printError(); return;}
+    int sc = c.getChosenText().getSentenceCount();
+	if (x > sc || y > sc || y < x || x == 0 || y == 0){printError(); return;}
 	c.getChosenText().extractQuote(x, y, c);
 
 }
 
 void ActionHandler::infoCita(string ref){
-	c.getQs().get(c.getQs().findByRef(ref)).printInfo();
-
+	int id = c.getQs().findByRef(ref);
+	if(id != -1) c.getQs().get(id).printInfo();
+	else printError();
 }
 
 void ActionHandler::citesAutor(string nom){

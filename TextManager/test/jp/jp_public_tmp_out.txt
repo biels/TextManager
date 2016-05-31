@@ -1,321 +1,970 @@
+afegir text "Don Quijote de la Mancha"
+
 afegir text "The Picture of Dorian Gray"
 
-afegir text "La ciencia. Su metodo y su filosofia"
+afegir text "La Metamorfosis"
 
-tots textos ?
-Mario Bunge "La ciencia. Su metodo y su filosofia"
-Oscar Wilde "The Picture of Dorian Gray"
+afegir text "Las cuitas del joven Werther"
 
-info ?
-error
-
-triar text {moral beautiful charming}
+triar text {Werther}
 
 contingut ?
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-2 This is a fault.
-3 Those who find beautiful meanings in beautiful things are the cultivated.
-4 For these there is hope.
-5 They are the elect to whom beautiful things mean only Beauty.
-6 There is no such thing as a moral or an immoral book.
-7 Books are well written, or badly written.
-8 That is all.
+1 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
+2 Estoy solo, y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
+3 Ahora no sabria dibujar, ni siquiera hacer una linea con el lapiz; y, sin embargo, jamas he sido mejor pintor.
+4 Cuando el valle se vela en torno mio con un encaje de vapores; cuando el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
+5 Cuando recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas y diversas plantas.
+6 Cuando siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, y veo las formas innumerables e infinitas de los gusanillos y de los insectos.
+7 Cuando siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, y el soplo del amor sin limites que nos sostiene y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, y el cielo y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro y exclamo: Si yo pudiera expresar todo lo que siento!
+8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
+9 Pero me abismo y me anonada la sublimidad de tan magnificas imagenes.
+10 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
 
-substitueix "Books" per "Journals"
+substitueix "lapiz" per "boligrafo"
 
-frases 5 7 ?
-5 They are the elect to whom beautiful things mean only Beauty.
-6 There is no such thing as a moral or an immoral book.
-7 Journals are well written, or badly written.
+substitueix "y" per "Y"
 
-textos autor "Mario Bunge" ?
-"La ciencia. Su metodo y su filosofia"
+frases 3 3 ?
+3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
 
-tots autors ?
-Mario Bunge 1 1 24
-Oscar Wilde 1 8 66
+substitueix "cuando" per "Hola"
 
-totes cites ?
+frases 4 4 ?
+4 Cuando el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
 
-afegir cita 1 2
+substitueix "Cuando" per "Hola"
+
+frases 4 6 ?
+4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
+5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
 
 info ?
-Oscar Wilde "The Picture of Dorian Gray" 8 66
+Johann Wolfgang von Goethe "Las cuitas del joven Werther" 10 337
 Cites Associades:
-OW1
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-2 This is a fault.
+
+afegir cita 1 1
+
+afegir cita 8 8
+
+afegir cita 2 7
+
+afegir cita 2 9
+
+afegir cita 6 7
+
+info cita "JWvG6" ?
+error
+
+info cita "JWvG3" ?
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+2-7
+2 Estoy solo, Y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
+3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
+4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
+5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+
+eliminar cita "JWvG3"
+
+cites ?
+JWvG1
+1 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG2
+8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG4
+2 Estoy solo, Y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
+3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
+4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
+5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
+9 Pero me abismo Y me anonada la sublimidad de tan magnificas imagenes.
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG5
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+
+triar text {Quijote}
 
 autor ?
-Oscar Wilde
-
-afegir text "Where the wild things are"
-
-afegir text "Los sistemas de riego antes del siglo X"
-
-afegir text "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-
-tots textos ?
-Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-Mario Bunge "La ciencia. Su metodo y su filosofia"
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
-Maurice Sendak "Where the wild things are"
-Oscar Wilde "The Picture of Dorian Gray"
-
-triar text {Saturn moon}
-error
-
-triar text {el una}
-error
-
-triar text {cientifica filosofia hombre}
-
-contingut ?
-1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta.
-
-nombre de frases ?
-1
-
-nombre de paraules ?
-24
-
-taula de frequencies ?
-y 1
-de 1
-el 1
-es 1
-ha 1
-la 1
-Por 1
-del 1
-mas 1
-que 1
-una 1
-vez 1
-cada 1
-medio 1
-mundo 1
-amplia 1
-exacta 1
-hombre 1
-profunda 1
-alcanzado 1
-cientifica 1
-conceptual 1
-investigacion 1
-reconstruccion 1
+Miguel de Cervantes Saavedra
 
 afegir cita 1 1
 
-triar text {eyes another roars}
-
 contingut ?
-1 The night Max wore his wolf suit and made mischief of one kind and another.
-2 That very night in his room a forest grew and grew.
-3 An ocean tumbled by with a private boat for Max and he sailed off.
-4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-6 They made him king of all wild things.
-
-frases (({night wolf} | {When}) & {And}) ?
-
-frases (({night wolf} | {When}) & {and}) ?
-1 The night Max wore his wolf suit and made mischief of one kind and another.
-4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-
-frases ({king} | {roars eyes}) ?
-4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-6 They made him king of all wild things.
-
-frases (({tamed} | {mischief}) | {king wild}) ?
-1 The night Max wore his wolf suit and made mischief of one kind and another.
-5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-6 They made him king of all wild things.
-
-frases "they terrible" ?
-
-frases "their terrible" ?
-4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-
-afegir cita 2 3
-
-cites ?
-MS1
-2 That very night in his room a forest grew and grew.
-3 An ocean tumbled by with a private boat for Max and he sailed off.
-Maurice Sendak "Where the wild things are"
-
-eliminar cita "MS1"
-
-cites ?
-
-afegir cita 5 6
-
-afegir cita 1 1
+1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+2 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
+3 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
+4 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+5 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
+6 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
+7 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+8 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
+9 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
+10 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
 
 info ?
-Maurice Sendak "Where the wild things are" 6 84
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha" 10 336
 Cites Associades:
-MS2
-5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-6 They made him king of all wild things.
-MS3
-1 The night Max wore his wolf suit and made mischief of one kind and another.
+MdCS1
+1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
 
-triar text {agricultura ganaderia bosques}
+substitueix "Quijote" per "temp"
 
-afegir cita 1 1
+substitueix "Sancho" per "Quijote"
 
-triar text {Puquios riego canales}
+substitueix "temp" per "Sancho"
 
-taula de frequencies ?
-de 7
-el 4
-en 4
-que 4
-la 3
-construcciones 3
-y 2
-se 2
-Los 2
-una 2
-zona 2
-Estas 2
-Nazca 2
-Puquios 2
-espiral 2
-desertica 2
-al 1
-200 1
-600 1
-del 1
-esa 1
-fue 1
-los 1
-por 1
-red 1
-son 1
-sur 1
-Peru 1
-agua 1
-eran 1
-para 1
-años 1
-entre 1
-forma 1
-hasta 1
-hogar 1
-mismo 1
-claves 1
-fueron 1
-hunden 1
-nombre 1
-pueblo 1
-tierra 1
-viento 1
-canales 1
-cultura 1
-especie 1
-pudiera 1
-sistema 1
-conducia 1
-distribuir 1
-sobrevivir 1
-distribuyen 1
-ventilacion 1
-sofisticadas 1
-subterraneos 1
+contingut ?
+1 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+2 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
+3 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
+4 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+5 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
+6 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
+7 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+8 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca.
+9 Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas.
+10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
 
-afegir cita 1 1
+afegir cita 10 10
 
-tots autors ?
-Mar Sierra 1 4 89
-Mario Bunge 1 1 24
-Mariona Blay Andreu 1 4 85
-Maurice Sendak 1 6 84
-Oscar Wilde 1 8 66
+afegir cita 7 6
+error
 
-totes cites ?
-MB1
-1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta.
-Mario Bunge "La ciencia. Su metodo y su filosofia"
-MBA1
-1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra.
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
-MS2
-5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-6 They made him king of all wild things.
-Maurice Sendak "Where the wild things are"
-MS3
-1 The night Max wore his wolf suit and made mischief of one kind and another.
-Maurice Sendak "Where the wild things are"
-MS4
-1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos.
-Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-OW1
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-2 This is a fault.
+frases "le dijo" ?
+1 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+4 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+7 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+
+frases "Asi que no debes congojarte por las desgracias que a mi me Suceden" ? 
+
+frases "Asi que no debes congojarte por las desgracias que a mi me suceden hola" ?
+
+frases "Asi que no debes congojarte por las desgracias que a mi me suceden" ?
+
+nombre de paraules ?
+336
+
+nombre de frases ?
+10
+
+tots textos ?
+Frank Kafka "La Metamorfosis"
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
 Oscar Wilde "The Picture of Dorian Gray"
 
 eliminar text
 
-tots autors ?
-Mar Sierra 1 4 89
-Mario Bunge 1 1 24
-Maurice Sendak 1 6 84
-Oscar Wilde 1 8 66
+tots textos ?
+Frank Kafka "La Metamorfosis"
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+Oscar Wilde "The Picture of Dorian Gray"
+
+triar text {Dorian gray}
+error
+
+nombre de paraules ?
+error
+
+eliminar text
+error
+
+triar text {Dorian Gray}
+
+frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) & {lalalalalalalalala}) ?
+
+frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) | {lalalalalalalalala}) ?
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+5 They are the elect to whom beautiful things mean only Beauty.
+8 That is all lalalalalalalalala.
+
+tots textos ?
+Frank Kafka "La Metamorfosis"
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+Oscar Wilde "The Picture of Dorian Gray"
+
+triar text {en que}
+error
+
+autor ?
+error
+
+triar text {en que Kafka}
+
+autor ?
+Frank Kafka
+
+
+contingut ?
+1 Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto.
+2 El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo.
+3 Numerosas patas, penosamente delgadas en comparacion con el grosor normal de sus piernas, se agitaban sin concierto.
+4 Que me ha ocurrido?
+5 No estaba sonyando.
+6 Gregorio Samsa, al despertar, sufrio un duro golpe.
+7 Como puede haber ocurrido esto?
+8 Gregorio se fue.
+9 Una vez fuera, el senyor empezo a correr por el bosque.
+10 Asi termina esta historia!
+
+frases ((({duro} & {golpe}) | {ocurrido me}) | ({senyor} | ({Gregorio} & {Samsa}))) ?
+1 Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto.
+2 El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo.
+4 Que me ha ocurrido?
+6 Gregorio Samsa, al despertar, sufrio un duro golpe.
+9 Una vez fuera, el senyor empezo a correr por el bosque.
+
+frases ((({duro} & {golpe}) | {ocurrido me}) & ({senyor} | ({Gregorio} & {Samsa}))) ?
+6 Gregorio Samsa, al despertar, sufrio un duro golpe.
+
+info cita "FK1" ?
+error
 
 totes cites ?
-MB1
-1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta.
-Mario Bunge "La ciencia. Su metodo y su filosofia"
-MBA1
-1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra.
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
-MS2
-5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-6 They made him king of all wild things.
-Maurice Sendak "Where the wild things are"
-MS3
-1 The night Max wore his wolf suit and made mischief of one kind and another.
-Maurice Sendak "Where the wild things are"
-MS4
-1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos.
-Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-OW1
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-2 This is a fault.
-Oscar Wilde "The Picture of Dorian Gray"
+JWvG1
+1 Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG2
+8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG4
+2 Estoy solo, Y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte.
+3 Ahora no sabria dibujar, ni siquiera hacer una linea con el boligrafo; Y, sin embargo, jamas he sido mejor pintor.
+4 Hola el valle se vela en torno mio con un encaje de vapores; Hola el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario.
+5 Hola recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas Y diversas plantas.
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
+9 Pero me abismo Y me anonada la sublimidad de tan magnificas imagenes.
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG5
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+MdCS1
+1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
+MdCS2
+10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
 
-cites autor "Oscar Wilde" ?
-OW1
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-2 This is a fault.
-"The Picture of Dorian Gray"
+cites ?
 
-info cita "OW1" ?
-Oscar Wilde "The Picture of Dorian Gray"
-1-2
-1 Those who find ugly meanings in beautiful things are corrupt without being charming.
-2 This is a fault.
+afegir cita 1 2
+
+afegir cita 5 6
+
+afegir cita 8 8
+
+frases x y ?
+error
+
+frases 4 4 ?
+4 Que me ha ocurrido?
+
+cites autor "Frank de Kafka" ?
+
+cites autor "Frank Kafka" ?
+FK1
+1 Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto.
+2 El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo.
+"La Metamorfosis"
+FK2
+5 No estaba sonyando.
+6 Gregorio Samsa, al despertar, sufrio un duro golpe.
+"La Metamorfosis"
+FK3
+8 Gregorio se fue.
+"La Metamorfosis"
+
+eliminar cita "FK1"
+
+eliminar cita "JWvG4"
 
 eliminar cita "OW1"
+error
+
+eliminar cita "MdCS1"
+
+eliminar cita "JWvG1"
 
 totes cites ?
-MB1
-1 Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta.
-Mario Bunge "La ciencia. Su metodo y su filosofia"
-MBA1
-1 Los Puquios son construcciones sofisticadas en forma de espiral que se hunden en la tierra.
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
-MS2
-5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-6 They made him king of all wild things.
-Maurice Sendak "Where the wild things are"
-MS3
-1 The night Max wore his wolf suit and made mischief of one kind and another.
-Maurice Sendak "Where the wild things are"
-MS4
-1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos.
-Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
+FK2
+5 No estaba sonyando.
+6 Gregorio Samsa, al despertar, sufrio un duro golpe.
+Frank Kafka "La Metamorfosis"
+FK3
+8 Gregorio se fue.
+Frank Kafka "La Metamorfosis"
+JWvG2
+8 Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios!
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+JWvG5
+6 Hola siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, Y veo las formas innumerables e infinitas de los gusanillos Y de los insectos.
+7 Hola siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, Y el soplo del amor sin limites que nos sostiene Y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, Y el cielo Y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro Y exclamo: Si yo pudiera expresar todo lo que siento!
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+MdCS2
+10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
+
+afegir text "Don Quijote de la Mancha"
+
+afegir text "Golden State Warriors"
+
+triar text {viendole don Quijote}
+
+afegir cita 7 7
+
+triar text {curry}
+error
+
+triar text {Stephen Curry}
+
+autor ?
+Stephen Curry
+
+taula de frequencies ?
+to 6
+me 5
+on 5
+as 4
+he 3
+things 3
+colonel 3
+horrible 3
+in 2
+no 2
+And 2
+Bye 2
+cordial 2
+mistaken 2
+o 1
+If 1
+Is 1
+Ya 1
+am 1
+at 1
+be 1
+do 1
+en 1
+if 1
+la 1
+mr 1
+oh 1
+si 1
+us 1
+bye 1
+day 1
+its 1
+new 1
+que 1
+way 1
+Como 1
+Mile 1
+Pues 1
+Rent 1
+fond 1
+help 1
+high 1
+home 1
+read 1
+said 1
+that 1
+told 1
+vida 1
+were 1
+with 1
+dried 1
+fanny 1
+found 1
+often 1
+twelve 1
+Anxious 1
+Because 1
+Enjoyed 1
+Gravity 1
+demands 1
+entered 1
+esteems 1
+fifteen 1
+minutes 1
+related 1
+settled 1
+sixteen 1
+Finished 1
+Goodness 1
+blessing 1
+dissuade 1
+dwelling 1
+goodness 1
+landlord 1
+raptures 1
+reserved 1
+screened 1
+steepest 1
+
+substitueix "twelve" per "sixteen"
+
+substitueix "fifteen" per "sixteen"
+
+taula de frequencies ?
+to 6
+me 5
+on 5
+as 4
+he 3
+things 3
+colonel 3
+sixteen 3
+horrible 3
+in 2
+no 2
+And 2
+Bye 2
+cordial 2
+mistaken 2
+o 1
+If 1
+Is 1
+Ya 1
+am 1
+at 1
+be 1
+do 1
+en 1
+if 1
+la 1
+mr 1
+oh 1
+si 1
+us 1
+bye 1
+day 1
+its 1
+new 1
+que 1
+way 1
+Como 1
+Mile 1
+Pues 1
+Rent 1
+fond 1
+help 1
+high 1
+home 1
+read 1
+said 1
+that 1
+told 1
+vida 1
+were 1
+with 1
+dried 1
+fanny 1
+found 1
+often 1
+Anxious 1
+Because 1
+Enjoyed 1
+Gravity 1
+demands 1
+entered 1
+esteems 1
+minutes 1
+related 1
+settled 1
+Finished 1
+Goodness 1
+blessing 1
+dissuade 1
+dwelling 1
+goodness 1
+landlord 1
+raptures 1
+reserved 1
+screened 1
+steepest 1
+
+substitueix "colonel" per "things"
+
+taula de frequencies ?
+to 6
+things 6
+me 5
+on 5
+as 4
+he 3
+sixteen 3
+horrible 3
+in 2
+no 2
+And 2
+Bye 2
+cordial 2
+mistaken 2
+o 1
+If 1
+Is 1
+Ya 1
+am 1
+at 1
+be 1
+do 1
+en 1
+if 1
+la 1
+mr 1
+oh 1
+si 1
+us 1
+bye 1
+day 1
+its 1
+new 1
+que 1
+way 1
+Como 1
+Mile 1
+Pues 1
+Rent 1
+fond 1
+help 1
+high 1
+home 1
+read 1
+said 1
+that 1
+told 1
+vida 1
+were 1
+with 1
+dried 1
+fanny 1
+found 1
+often 1
+Anxious 1
+Because 1
+Enjoyed 1
+Gravity 1
+demands 1
+entered 1
+esteems 1
+minutes 1
+related 1
+settled 1
+Finished 1
+Goodness 1
+blessing 1
+dissuade 1
+dwelling 1
+goodness 1
+landlord 1
+raptures 1
+reserved 1
+screened 1
+steepest 1
+
+substitueix "lalala" per "Hola"
+
+taula de frequencies ?
+to 6
+things 6
+me 5
+on 5
+as 4
+he 3
+sixteen 3
+horrible 3
+in 2
+no 2
+And 2
+Bye 2
+cordial 2
+mistaken 2
+o 1
+If 1
+Is 1
+Ya 1
+am 1
+at 1
+be 1
+do 1
+en 1
+if 1
+la 1
+mr 1
+oh 1
+si 1
+us 1
+bye 1
+day 1
+its 1
+new 1
+que 1
+way 1
+Como 1
+Mile 1
+Pues 1
+Rent 1
+fond 1
+help 1
+high 1
+home 1
+read 1
+said 1
+that 1
+told 1
+vida 1
+were 1
+with 1
+dried 1
+fanny 1
+found 1
+often 1
+Anxious 1
+Because 1
+Enjoyed 1
+Gravity 1
+demands 1
+entered 1
+esteems 1
+minutes 1
+related 1
+settled 1
+Finished 1
+Goodness 1
+blessing 1
+dissuade 1
+dwelling 1
+goodness 1
+landlord 1
+raptures 1
+reserved 1
+screened 1
+steepest 1
+
+substitueix "horrible" per "things"
+
+substitueix "things" per "Things"
+
+contingut ?
+1 Enjoyed minutes related as at on!
+2 Is fanny dried as often me.
+3 Como que.
+4 Goodness as reserved, raptures to mistaken steepest: oh screened he.
+5 Gravity he mr sixteen esteems.
+6 Mile home: its new way with high told said.
+7 Finished no Things blessing landlord dwelling dissuade if.
+8 Rent, fond am he in on read.
+9 Anxious cordial, demands settled entered in do to Things.
+10 And on that day Things me mistaken Things me to: Things.
+11 If goodness to me cordial me on Things.
+12 Bye Bye bye!
+13 And sixteen Things were to as us help.
+14 Because on sixteen Things Things to be found.
+15 Pues en.
+16 Ya la vida si o no.
+
+taula de frequencies ?
+Things 9
+to 6
+me 5
+on 5
+as 4
+he 3
+sixteen 3
+in 2
+no 2
+And 2
+Bye 2
+cordial 2
+mistaken 2
+o 1
+If 1
+Is 1
+Ya 1
+am 1
+at 1
+be 1
+do 1
+en 1
+if 1
+la 1
+mr 1
+oh 1
+si 1
+us 1
+bye 1
+day 1
+its 1
+new 1
+que 1
+way 1
+Como 1
+Mile 1
+Pues 1
+Rent 1
+fond 1
+help 1
+high 1
+home 1
+read 1
+said 1
+that 1
+told 1
+vida 1
+were 1
+with 1
+dried 1
+fanny 1
+found 1
+often 1
+Anxious 1
+Because 1
+Enjoyed 1
+Gravity 1
+demands 1
+entered 1
+esteems 1
+minutes 1
+related 1
+settled 1
+Finished 1
+Goodness 1
+blessing 1
+dissuade 1
+dwelling 1
+goodness 1
+landlord 1
+raptures 1
+reserved 1
+screened 1
+steepest 1
+
+afegir cita 1 2
+
+info ?
+Stephen Curry "Golden State Warriors" 16 108
+Cites Associades:
+MdCS2
+10 Y, viendole don Sancho de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Quijote, que no es un hombre mas que otro si no hace mas que otro.
+SC1
+1 Enjoyed minutes related as at on!
+2 Is fanny dried as often me.
+
+eliminar text
+
+info cita "SC1" ?
+Stephen Curry "Golden State Warriors"
+1-2
+1 Enjoyed minutes related as at on!
+2 Is fanny dried as often me.
+
+eliminar cita "SC1"
+
+afegir text "Caminando por la Vida"
+
+triar text {hola adeu}
+
+frases 1 1 ?
+1.
+
+contingut ?
+1 .
+2 La frase de sobre esta buida.
+3 Hola, hola, hola.
+4 Adeu, adeu, adeu.
+
+tots autors ?
+Frank Kafka 2 14 126
+Johann Wolfgang von Goethe 1 10 337
+Miguel de Cervantes Saavedra 1 10 337
+Oscar Wilde 1 8 67
+
+afegir text "El Quijote II"
+
+tots textos ?
+Frank Kafka "Caminando por la Vida"
+Frank Kafka "La Metamorfosis"
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
+Miguel de Cervantes Saavedra "El Quijote II"
+Oscar Wilde "The Picture of Dorian Gray"
+
+tots autors ?
+Frank Kafka 2 14 126
+Johann Wolfgang von Goethe 1 10 337
+Miguel de Cervantes Saavedra 2 12 351
+Oscar Wilde 1 8 67
+
+info ?
+Frank Kafka "Caminando por la Vida" 4 13
+Cites Associades:
+FK2
+5 No estaba sonyando.
+6 Gregorio Samsa, al despertar, sufrio un duro golpe.
+FK3
+8 Gregorio se fue.
+
+textos autor "Miguel de Cervantes Saavedra" ?
+"Don Quijote de la Mancha"
+"El Quijote II"
+
+textos autor "Frank Kafka" ?
+"Caminando por la Vida"
+"La Metamorfosis"
+
+nombre de paraules ?
+13
+
+triar text {Mancha Bla}
+
+autor ?
+Miguel de Cervantes Saavedra
+
+afegir cita 2 2
+
+info ?
+Miguel de Cervantes Saavedra "El Quijote II" 2 14
+Cites Associades:
+MdCS3
+7 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+
+cites autor "Miguel de Cervantes Saavedra" ?
+MdCS3
+7 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+"Don Quijote de la Mancha"
+MdCS4
+2 Bla, bla, bla!
+"El Quijote II"
+
+taula de frequencies ?
+bla 2
+En 1
+La 1
+de 1
+no 1
+un 1
+Bla 1
+cuyo 1
+lugar 1
+Mancha 1
+nombre 1
+quiero 1
+acordarme 1
+
+substitueix "acordarme" per "bla"
+
+substitueix "Mancha" per "bla"
+
+substitueix "lugar" per "bla"
+
+substitueix "En" per "bla"
+
+substitueix "un" per "bla"
+
+substitueix "La" per "bla"
+
+substitueix "quiero" per "bla"
+
+substitueix "nombre" per "bla"
+
+substitueix "cuyo" per "bla"
+
+substitueix "no" per "bla"
+
+substitueix "de" per "bla"
+
+substitueix "Bla" per "bla"
+
+substitueix "La" per "bla"
+
+frases 1 3 ?
+error
+
+frases 1 2 ?
+1 bla bla bla bla bla bla, bla bla bla bla bla.
+2 bla, bla, bla!
+
+taula de frequencies ?
+bla 14
+
+nombre de paraules ?
+14
+
+frases "Bla" ?
+
+afegir cita 0 1
+error
+
+frases {bla} ?
+1 bla bla bla bla bla bla, bla bla bla bla bla.
+2 bla, bla, bla!
+
+eliminar text 
+
+triar text {Metamorfosis}
+
+eliminar text
+
+tots autors ?
+Frank Kafka 1 4 13
+Johann Wolfgang von Goethe 1 10 337
+Miguel de Cervantes Saavedra 1 10 337
+Oscar Wilde 1 8 67
+
+tots textos ?
+Frank Kafka "Caminando por la Vida"
+Johann Wolfgang von Goethe "Las cuitas del joven Werther"
+Miguel de Cervantes Saavedra "Don Quijote de la Mancha"
+Oscar Wilde "The Picture of Dorian Gray"
+
+triar text {Goethe}
+
+eliminar text 
+
+autor ?
+error
+
+triar text {en que la Saavedra}
+
+frases 1 1 ?
+1 Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro.
+
+nombre de frases ?
+10
+
+frases ({fue} | {en}) ?
+8 Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya en cerca.
+
+eliminar text
+
+triar text {Dorian}
+
+eliminar text
+
+triar text {Vida esta por Kafka Caminando Frank por buida La hola adeu Hola Adeu}
+
+frases 1 1 ?
+1.
+
+contingut ?
+1 .
+2 La frase de sobre esta buida.
+3 Hola, hola, hola.
+4 Adeu, adeu, adeu.
+
+eliminar text 
+
+tots textos ?
 

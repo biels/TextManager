@@ -1,33 +1,342 @@
+afegir text "Don Quijote de la Mancha"
+autor "Miguel de Cervantes Saavedra"
+Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, 
+pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. 
+****
+
 afegir text "The Picture of Dorian Gray"
 autor "Oscar Wilde"
-Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, or badly written. That is all. 
+Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, or badly written. That is all lalalalalalalalala. 
 ****
 
-afegir text "La ciencia. Su metodo y su filosofia"
-autor "Mario Bunge"
-Por medio de la investigacion cientifica, el hombre ha alcanzado una reconstruccion conceptual del mundo que es cada vez mas amplia, profunda y exacta. 
+afegir text "La Metamorfosis"
+autor "Frank Kafka"
+Una manyana, tras un suenyo intranquilo, Gregorio Samsa se desperto convertido en un monstruoso insecto. El senyor estaba echado de espaldas sobre un duro caparazon y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo. Numerosas patas, penosamente delgadas en comparacion con el grosor normal de sus piernas, se agitaban sin concierto. Que me ha ocurrido? No estaba sonyando. Gregorio Samsa, al despertar, sufrio un duro golpe. Como puede haber ocurrido esto? Gregorio se fue. Una vez fuera, el senyor empezo a correr por el bosque. Asi termina esta historia!
 ****
 
-tots textos ?
+afegir text "Las cuitas del joven Werther"
+autor "Johann Wolfgang von Goethe"
+Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia. Estoy solo, y me felicito de vivir en este pais, el mas a proposito para almas como la mia, soy tan dichoso, mi querido amigo, me sojuzga de tal modo la idea de reposar, que no me ocupo de mi arte. Ahora no sabria dibujar, ni siquiera hacer una linea con el lapiz; y, sin embargo, jamas he sido mejor pintor. Cuando el valle se vela en torno mio con un encaje de vapores; cuando el sol de mediodia centellea sobre la impenetrable sombra de mi bosque sin conseguir otra cosa que filtrar entre las hojas algunos rayos que penetran hasta el fondo del santuario. Cuando recostado sobre la crecida hierba, cerca de la cascada, mi vista, mas proxima a la tierra, descubre multitud de menudas y diversas plantas. Cuando siento mas cerca de mi corazon los rumores de vida de ese pequenyo mundo que palpita en los tallos de las hojas, y veo las formas innumerables e infinitas de los gusanillos y de los insectos. Cuando siento, en fin, la presencia del Todopoderoso, que nos ha creado a su imagen, y el soplo del amor sin limites que nos sostiene y nos mece en el seno de una eterna alegria; amigo mio, si los primeros fulgores del alba me acarician, y el cielo y el mundo que me rodean se reflejan en mi espiritu como la imagen de una mujer adorada, entonces suspiro y exclamo: Si yo pudiera expresar todo lo que siento! Si todo lo que dentro de mi se agita con tanto calor, con tanta exuberancia de vida, pudiera yo extenderlo sobre el papel, convirtiendo este en espejo de mi alma, como mi alma es espejo de Dios! Pero me abismo y me anonada la sublimidad de tan magnificas imagenes. Reina en mi espiritu una alegria admirable, muy parecida a las dulces alboradas de la primavera, de que gozo aqui con delicia.
+****
 
-info ?
-
-triar text {moral beautiful charming}
+triar text {Werther}
 
 contingut ?
 
-substitueix "Books" per "Journals"
+substitueix "lapiz" per "boligrafo"
 
-frases 5 7 ?
+substitueix "y" per "Y"
 
-textos autor "Mario Bunge" ?
+frases 3 3 ?
 
-tots autors ?
+substitueix "cuando" per "Hola"
+
+frases 4 4 ?
+
+substitueix "Cuando" per "Hola"
+
+frases 4 6 ?
+
+info ?
+
+afegir cita 1 1
+
+afegir cita 8 8
+
+afegir cita 2 7
+
+afegir cita 2 9
+
+afegir cita 6 7
+
+info cita "JWvG6" ?
+
+info cita "JWvG3" ?
+
+eliminar cita "JWvG3"
+
+cites ?
+
+triar text {Quijote}
+
+autor ?
+
+afegir cita 1 1
+
+contingut ?
+
+info ?
+
+substitueix "Quijote" per "temp"
+
+substitueix "Sancho" per "Quijote"
+
+substitueix "temp" per "Sancho"
+
+contingut ?
+
+afegir cita 10 10
+
+afegir cita 7 6
+
+frases "le dijo" ?
+
+frases "Asi que no debes congojarte por las desgracias que a mi me Suceden" ? 
+
+frases "Asi que no debes congojarte por las desgracias que a mi me suceden hola" ?
+
+frases "Asi que no debes congojarte por las desgracias que a mi me suceden" ?
+
+nombre de paraules ?
+
+nombre de frases ?
+
+tots textos ?
+
+eliminar text
+
+tots textos ?
+
+triar text {Dorian gray}
+
+nombre de paraules ?
+
+eliminar text
+
+triar text {Dorian Gray}
+
+frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) & {lalalalalalalalala}) ?
+
+frases ((({Those} | {ugly}) | ({meanings} | ({things} & {beautiful}))) | {lalalalalalalalala}) ?
+
+tots textos ?
+
+triar text {en que}
+
+autor ?
+
+triar text {en que Kafka}
+
+autor ?
+
+
+contingut ?
+
+frases ((({duro} & {golpe}) | {ocurrido me}) | ({senyor} | ({Gregorio} & {Samsa}))) ?
+
+frases ((({duro} & {golpe}) | {ocurrido me}) & ({senyor} | ({Gregorio} & {Samsa}))) ?
+
+info cita "FK1" ?
 
 totes cites ?
+
+cites ?
+
+afegir cita 1 2
+
+afegir cita 5 6
+
+afegir cita 8 8
+
+frases x y ?
+
+frases 4 4 ?
+
+cites autor "Frank de Kafka" ?
+
+cites autor "Frank Kafka" ?
+
+eliminar cita "FK1"
+
+eliminar cita "JWvG4"
+
+eliminar cita "OW1"
+
+eliminar cita "MdCS1"
+
+eliminar cita "JWvG1"
+
+totes cites ?
+
+afegir text "Don Quijote de la Mancha"
+autor "Miguel de Cervantes Saavedra"
+Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, 
+pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. Todas estas borrascas que nos suceden son senyales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aqui se sigue que, habiendo durado mucho el mal, el bien esta ya en cerca. Asi que, no debes congojarte por las desgracias que a mi me suceden, pues a ti no te cabe parte dellas. Y, viendole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sabete, Sancho, que no es un hombre mas que otro si no hace mas que otro. 
+****
+
+afegir text "Golden State Warriors"
+autor "Stephen Curry"
+Enjoyed minutes related as at on! Is fanny dried as often me. Como que. Goodness as reserved, raptures to mistaken steepest: oh screened he. Gravity he mr sixteen esteems. Mile home: its new way with high told said. Finished no horrible blessing landlord dwelling dissuade if. Rent, fond am he in on read. Anxious cordial, demands settled entered in do to colonel. And on that day horrible me mistaken things me to: horrible. If goodness to me cordial me on colonel. Bye Bye bye! And fifteen things were to as us help. Because on twelve things colonel to be found. Pues en. Ya la vida si o no. 
+****
+
+triar text {viendole don Quijote}
+
+afegir cita 7 7
+
+triar text {curry}
+
+triar text {Stephen Curry}
+
+autor ?
+
+taula de frequencies ?
+
+substitueix "twelve" per "sixteen"
+
+substitueix "fifteen" per "sixteen"
+
+taula de frequencies ?
+
+substitueix "colonel" per "things"
+
+taula de frequencies ?
+
+substitueix "lalala" per "Hola"
+
+taula de frequencies ?
+
+substitueix "horrible" per "things"
+
+substitueix "things" per "Things"
+
+contingut ?
+
+taula de frequencies ?
 
 afegir cita 1 2
 
 info ?
 
+eliminar text
+
+info cita "SC1" ?
+
+eliminar cita "SC1"
+
+afegir text "Caminando por la Vida"
+autor "Frank Kafka"
+.
+La frase de sobre esta buida.
+Hola, hola, hola.
+Adeu, adeu, adeu.
+****
+
+triar text {hola adeu}
+
+frases 1 1 ?
+
+contingut ?
+
+tots autors ?
+
+afegir text "El Quijote II"
+autor "Miguel de Cervantes Saavedra"
+En un lugar de La Mancha, cuyo nombre no quiero acordarme. Bla, bla, bla!
+****
+
+tots textos ?
+
+tots autors ?
+
+info ?
+
+textos autor "Miguel de Cervantes Saavedra" ?
+
+textos autor "Frank Kafka" ?
+
+nombre de paraules ?
+
+triar text {Mancha Bla}
+
 autor ?
+
+afegir cita 2 2
+
+info ?
+
+cites autor "Miguel de Cervantes Saavedra" ?
+
+taula de frequencies ?
+
+substitueix "acordarme" per "bla"
+
+substitueix "Mancha" per "bla"
+
+substitueix "lugar" per "bla"
+
+substitueix "En" per "bla"
+
+substitueix "un" per "bla"
+
+substitueix "La" per "bla"
+
+substitueix "quiero" per "bla"
+
+substitueix "nombre" per "bla"
+
+substitueix "cuyo" per "bla"
+
+substitueix "no" per "bla"
+
+substitueix "de" per "bla"
+
+substitueix "Bla" per "bla"
+
+substitueix "La" per "bla"
+
+frases 1 3 ?
+
+frases 1 2 ?
+
+taula de frequencies ?
+
+nombre de paraules ?
+
+frases "Bla" ?
+
+afegir cita 0 1
+
+frases {bla} ?
+
+eliminar text 
+
+triar text {Metamorfosis}
+
+eliminar text
+
+tots autors ?
+
+tots textos ?
+
+triar text {Goethe}
+
+eliminar text 
+
+autor ?
+
+triar text {en que la Saavedra}
+
+frases 1 1 ?
+
+nombre de frases ?
+
+frases ({fue} | {en}) ?
+
+eliminar text
+
+triar text {Dorian}
+
+eliminar text
+
+triar text {Vida esta por Kafka Caminando Frank por buida La hola adeu Hola Adeu}
+
+frases 1 1 ?
+
+contingut ?
+
+eliminar text 
+
+tots textos ?
+
+sortir
+
