@@ -324,6 +324,7 @@ void Text::getSentenceListMatchingExpression(string expr, vector<int>& match) co
 }
 
 void Text::calculateFrequencyTable() {
+	frequencyTable.clear();
 	for(int i = 0; i < content.size(); ++i) {
 		vector<pair<string, int>>::iterator it = std::find_if(
 				frequencyTable.begin(),
@@ -341,6 +342,10 @@ void Text::calculateFrequencyTable() {
 }
 
 void Text::updateFrequencyTable(string match, string replace){
+	if(frequencyTable.size() == 0){
+		calculateFrequencyTable();
+		return;
+	}
 	vector<pair<string, int>>::iterator itm = std::find_if(
 			frequencyTable.begin(),
 			frequencyTable.end(),
