@@ -120,7 +120,7 @@ void ActionHandler::afegirCita(int x, int y){
     if(!c.existsChosenText()){printError(); return;}
     if (y < x) {printError(); return;}
 	int sc = c.getChosenText().getSentenceCount();
-	if (x > sc || y > sc){printError(); return;} //Print error ?
+	if (x > sc || y > sc){printError(); return;}
 	c.getChosenText().extractQuote(x, y, c);
 
 }
