@@ -25,6 +25,11 @@ private:
 	int chosenTextID;
 
 public:
+	/**
+	 * @brief Creadora per defecte
+	 * \pre Cert
+	 * \post Crea un Context sense conjunt de textos, ni conjunt d'autors, ni conjunt de cites, i amb identificador de text igual a -1
+	 */
 	Context();
 	virtual ~Context();
 
