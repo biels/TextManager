@@ -85,7 +85,8 @@ void ActionHandler::contingut(){
 }
 
 void ActionHandler::frases(int x, int y){
-    if(!c.existsChosenText() or y > c.getChosenText().getSentenceCount()){printError(); return;}
+	int sc = c.getChosenText().getSentenceCount();
+    if(!c.existsChosenText() || x > sc || y > sc || y < x || x <= 0 || y <= 0){printError(); return;}
 	c.getChosenText().printSentenceListInRange(x, y);
 
 }
