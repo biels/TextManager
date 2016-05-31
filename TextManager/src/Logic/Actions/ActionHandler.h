@@ -35,13 +35,14 @@ private:
 	void printError();
 
 public:
+	/**
+	 * @brief Creador per defecte
+	 * \pre Cert
+	 * \post El resultat és un ActionHandler nou
+	 */
 	ActionHandler();
+
 	virtual ~ActionHandler();
-	//-!!!FALTA DOCUMENTAR!!!
-	//Aquí aniria bé documentar exactament cada funció
-	//amb la descripció del pdf de la pràctica
-	//Molt provisional
-	//Texts
 
 	/**
 	 * @brief Afegeix un text al sistema.
