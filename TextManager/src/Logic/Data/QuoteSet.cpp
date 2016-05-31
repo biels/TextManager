@@ -58,6 +58,14 @@ bool QuoteSet::exists(int id) const {
 	return quotes.find(id) != quotes.end();
 }
 
+bool QuoteSet::exists(int startIndex, int endIndex, int textId) const{
+	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
+		Quote q = (*it).second;
+		if(q.getStartSentenceIndex() == startIndex && q.getEndSentenceIndex() == endIndex && q.getTextId() == textId)return true;
+	}
+	return false;
+}
+
 Quote& QuoteSet::get(int id) {
 	return (*quotes.find(id)).second;
 }

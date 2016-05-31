@@ -70,6 +70,8 @@ public:
 	 */
 	bool exists(int id) const;
 
+	bool exists(int startIndex, int endIndex, int textId) const;
+
 	/**@brief Consulta la cita amb identificador id
 	 * \pre Existeix una cita amb identificador id
 	 * \post El resultat és la cita amb identificador id
