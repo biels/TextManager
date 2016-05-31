@@ -95,7 +95,7 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 		wordCount++;
 		i++;
 	}
-	if(!nice_ended)sentences.push_back(i); //Sentinel COMMENT TO PASS Private 3
+	//if(!nice_ended)sentences.push_back(i); //Sentinel COMMENT TO PASS Private 3
 }
 
 int Text::getWordCount() const{
