@@ -43,7 +43,7 @@ public:
 	QuoteSet& getQs();
 
 	/**
-	 * @brief Retorna un conjunt de texts
+	 * @brief Retorna un conjunt de textos
 	 * \pre Cert
 	 * \post El resultat és el conjunt de textos del sistema
 	 */
