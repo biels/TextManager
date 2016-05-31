@@ -69,7 +69,7 @@ bool QuoteSet::exists(int startIndex, int endIndex, int textId) const{
 Quote& QuoteSet::get(int id) {
 	return (*quotes.find(id)).second;
 }
-int QuoteSet::findByRef(string ref) const { //TODO MAP LINEAR SEARCH WITHOUT COPYING
+int QuoteSet::findByRef(string ref) const {
 	for (map<int, Quote>::const_iterator it = quotes.begin(); it != quotes.end(); it++){
 		Quote q = (*it).second;
 		if(q.getUniqueIdentifier() == ref)return q.getId();

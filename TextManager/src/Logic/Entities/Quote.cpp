@@ -21,7 +21,7 @@ Quote::Quote(int id) {
 }
 
 Quote::~Quote() {
-	// TODO Auto-generated destructor stub
+
 }
 
 int Quote::getId() const {
@@ -35,7 +35,6 @@ void Quote::updateReference(Context& c){
 	stringstream ss, ss2;
 	ss << c.getTs().get(textID).getAuthor(c).getInitials();
 	ss << getQuoteNumber();
-	//id[2] = a.id		TODO és l'id d'aquell autor?
 	ss >> ref;
 	//Update header
 	header0 = getAuthor(c).getName();

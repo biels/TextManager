@@ -8,7 +8,6 @@
 #ifndef LOGIC_ENTITIES_AUTHOR_H_
 #define LOGIC_ENTITIES_AUTHOR_H_
 
-//#include "../Actions/Context.h"
 #include <string>
 
 using namespace std;

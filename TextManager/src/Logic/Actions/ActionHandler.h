@@ -218,10 +218,6 @@ public:
 	 * @param referència de la cita que es vol eliminar
 	 */
 	void eliminarCita(string uid);
-
-
-	//TEST ZONE - WILL BE REMOVED
-	Context& exposeContext();
 };
 
 #endif /* LOGIC_ACTIONS_ACTIONHANDLER_H_ */

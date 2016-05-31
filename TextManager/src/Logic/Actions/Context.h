@@ -14,7 +14,7 @@
 class Text;
 
 /**@class Context
- * @brief
+ * @brief Conté el context del programa. Permet accedir a tota la informació present al sistema.
  */
 
 class Context {

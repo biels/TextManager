@@ -39,7 +39,6 @@ void ActionHandler::triarText(string seq){
 void ActionHandler::eliminarText(){
 	if(!c.existsChosenText()){printError(); return;}
 	int aId = c.getChosenText().getAuthor(c).getId();
-	//Remove author as well in some cases
 	if (c.getTs().countAllWithAuthor(aId, c) <= 1) {
 		c.getAs().remove(aId);
 	}

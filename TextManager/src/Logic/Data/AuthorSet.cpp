@@ -64,7 +64,7 @@ void AuthorSet::printAuthorList(Context& c) {
 		output.push_back(out);
 	}
 	sort(output.begin(), output.end());
-	for(int i = 0; i < output.size(); i++) {
+	for(unsigned int i = 0; i < output.size(); i++) {
 		cout << output[i];
 		int id = findByFullName(output[i]);
 		cout << " " << c.getTs().numberTextsAuthor(id, c);

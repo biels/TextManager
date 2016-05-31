@@ -14,7 +14,7 @@ Context::Context() {
 }
 
 Context::~Context() {
-	// TODO Auto-generated destructor stub
+
 }
 
 AuthorSet& Context::getAs() {
