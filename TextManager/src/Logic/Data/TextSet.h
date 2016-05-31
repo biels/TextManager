@@ -72,6 +72,8 @@ public:
 	 */
 	Text& get(int id);
 
+	int countAllWithAuthor(int id, Context& c);
+
 	/**@brief Obté un text amb el títol especificat.
 	 * \pre Existeix untext amb títol t.
 	 * \post El resultat és el text amb el títol especificat.

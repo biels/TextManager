@@ -41,16 +41,16 @@ void TextSet::remove(int id, Context& c) {
 	map<int, Text>::iterator t = texts.find(id);
 	int authorId = (*t).second.getAuthor(c).getId();
 	texts.erase(t);
-	bool used = false;
-	for(pair<int, Text> p : texts){
-		if(p.second.getAuthor(c).getId() == authorId){
-			used = true;
-			break;
-		}
-	}
-	if(!used){
-		c.getAs().remove(authorId);
-	}
+//	bool used = false;
+//	for(pair<int, Text> p : texts){
+//		if(p.second.getAuthor(c).getId() == authorId){
+//			used = true;
+//			break;
+//		}
+//	}
+//	if(!used){
+//		c.getAs().remove(authorId);
+//	}
 }
 void TextSet::remove(const Text& t, Context& c){
 	this->remove(t.getId(), c);
@@ -62,6 +62,15 @@ bool TextSet::exists(int id) {
 
 Text& TextSet::get(int id){
 	return (*texts.find(id)).second;
+}
+
+int TextSet::countAllWithAuthor(int id, Context& c){
+	int cnt = 0;
+	for(pair<int, Text> p : texts){
+		Text& t = p.second;
+		if (t.getAuthor(c).getId() == id)cnt++;
+	}
+	return cnt;
 }
 
 int TextSet::findByTitle(string title) const{

@@ -73,6 +73,7 @@ public:
 	 */
 	bool exists(int id);
 
+
 	/**@brief Retorna l'autor amb l'identificador especificat
 	 * \pre L'autor amb identificador id existeix
 	 * \post El resultat és la instància de l'autor amb identificador id

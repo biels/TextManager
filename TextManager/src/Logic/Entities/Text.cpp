@@ -74,7 +74,7 @@ void Text::setContent(string content){ //TODO Buffer by blocksize, trade space f
 	bool nice_ended = false;
 	while(iss >> w){
 		char lc = w[w.size() - 1];
-		bool isP = lc == '.' || lc == '?' || lc == '!' || lc == ';' || lc == ',' || lc == ':';
+		bool isP = lc == '.' || lc == '?' || lc == '¡' ||  lc == '¡'  || lc == '!' || lc == ';' || lc == ',' || lc == ':';
 		bool isEnding = lc == '.' || lc == '?' || lc == '!';
 		bool lonely_p = isP && w.size() == 1;
 		nice_ended = isEnding;
