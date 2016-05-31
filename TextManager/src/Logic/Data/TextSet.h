@@ -88,7 +88,7 @@ public:
 
 	int numberTextsAuthor(int id, Context& c) const;
 
-	bool titleAlreadyExists(const string& title) const;
+	bool textAlreadyExists (const string& title, const string& autor, Context& c) const;
 
 	/**
 	 * @brief

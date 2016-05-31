@@ -17,7 +17,7 @@ ActionHandler::~ActionHandler() {
 }
 
 void ActionHandler::afegirText(string titol, string autor, string contingut){
-	if (c.getTs().titleAlreadyExists(titol) && c.getAs().authorAlreadyExists(autor)){
+	if (c.getTs().textAlreadyExists(titol, autor, c)){
 		printError();
 		return;
 	}

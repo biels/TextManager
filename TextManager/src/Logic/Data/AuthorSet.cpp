@@ -46,13 +46,6 @@ bool AuthorSet::exists(int id){
 	return authors.find(id) != authors.end();
 }
 
-bool AuthorSet::authorAlreadyExists(const string& autor) const {
-	for(map<int, Author>::const_iterator it = authors.begin(); it != authors.end(); ++it) {
-		if ((*it).second.getName() == autor) return true;
-	}
-	return false;
-}
-
 Author& AuthorSet::get(int id){
 	return (*authors.find(id)).second;
 }

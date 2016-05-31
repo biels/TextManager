@@ -55,8 +55,6 @@ public:
 	 */
 	void remove(const Author& a);
 
-	bool authorAlreadyExists(const string& autor) const;
-
 	/**@brief Comprova si existeix una cita
 	 * \pre Cert
 	 * \post El resultat és cert si i nomès si una cita amb identifocador id pertany al conjunt

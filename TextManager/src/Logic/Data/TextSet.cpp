@@ -111,10 +111,18 @@ int TextSet::numberTextsAuthor(int id, Context& c) const{
 	return ntexts;
 }
 
-bool TextSet::titleAlreadyExists(const string& title) const {
-	for(map<int, Text>::const_iterator it = texts.begin(); it != texts.end(); ++it) {
-		if ((*it).second.getTitle() == title) return true;
+bool TextSet::textAlreadyExists (const string& title, const string& autor, Context& c) const {
+	bool titleIs = false;
+	map<int, Text>::const_iterator it = texts.begin();
+	while (it != texts.end() and !titleIs) {
+		Text t = (*it).second;
+		if (t.getTitle() == title) {
+			titleIs = true;
+			if (t.getAuthor(c).getName() == autor) return true;
+		}
+		++it;
 	}
+	return false;
 }
 
 void TextSet::printAllByAuthor(int id, Context& c){
