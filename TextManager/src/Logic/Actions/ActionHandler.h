@@ -27,6 +27,11 @@ class ActionHandler {
 private:
 	Context c;
 
+	/**
+	 * @brief Imprimeix per pantalla error
+	 * \pre Ha hagut un error
+	 * \post El resultat és l'impressió de la paraula error per pantalla
+	 */
 	void printError();
 
 public:
