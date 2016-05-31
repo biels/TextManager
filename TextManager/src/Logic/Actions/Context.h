@@ -31,6 +31,10 @@ public:
 	 * \post Crea un Context sense conjunt de textos, ni conjunt d'autors, ni conjunt de cites, i amb identificador de text igual a -1
 	 */
 	Context();
+
+	/**
+	 * @brief Destructora per defecte
+	 */
 	virtual ~Context();
 
 	/**
