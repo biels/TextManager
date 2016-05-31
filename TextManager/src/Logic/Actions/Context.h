@@ -21,12 +21,56 @@ private:
 public:
 	Context();
 	virtual ~Context();
+
+	/**
+	 * @brief Retorna un conjunt d'autors
+	 * \pre Cert
+	 * \post El resultat és el conjunt d'autors del sistema
+	 */
 	AuthorSet& getAs();
+
+	/**
+	 * @brief Retorna un conjunt de cites
+	 * \pre Cert
+	 * \post El resultat és el conjunt de cites del sistema
+	 */
 	QuoteSet& getQs();
+
+	/**
+	 * @brief Retorna un conjunt de texts
+	 * \pre Cert
+	 * \post El resultat és el conjunt de textos del sistema
+	 */
 	TextSet& getTs();
+
+	/**
+	 * @brief Retorna l'id d'un text
+	 * \pre Hi ha un text triar
+	 * \post El resultat és l'identificador del text triat
+	 */
 	int getChosenTextId() const;
+
+	/**
+	 * @brief Retorna si existeix un text triat
+ 	 * \pre Cert
+	 * \post El resultat és true si hi ha un text triat, i false en qualsevol altre cas
+	 * @return
+	 */
 	bool existsChosenText() const;
+
+	/**
+	 * @brief Estableix un id al text triat
+	 * \pre Hi ha un text triat
+	 * \post El text triat ja té el seu identificador establert
+	 * @param chosenTextId identificador del text
+	 */
 	void setChosenTextId(int chosenTextId);
+
+	/**
+	 * @brief Retorna un text
+	 * \pre Hi ha un text triat
+	 * \post El resultat és el text triat
+	 */
 	Text& getChosenText();
 };
 
